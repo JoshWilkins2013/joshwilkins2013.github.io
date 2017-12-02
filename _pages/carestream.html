@@ -1,0 +1,111 @@
+---
+title: Carestream
+category: Experience
+order: 1
+icon: dashboard
+---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Josh Wilkins</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/main.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+
+    {% include header.html %}
+
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+
+      <div class="page-content">
+        <div class="page-header">
+          <img src="img/Banners/Carestream_Banner.png">
+        </div>
+
+        <section>
+          <div class="container-fluid">
+			<div class="row">
+			  <div class="col-lg-6">
+                <div class="block">
+                  <h4>Electrical Test Technician</h4>
+				  <h6>05/25/2015 - 01/08/2016</h6>
+                  <table class="table table-striped table-sm">
+                    <tbody>
+                      <tr>
+                        <th><a href="#/" onclick="task11()">AGM lead-acid battery test fixture</a></th>
+                      </tr>
+					  <tr>
+                        <th><a href="#/" onclick="task12()">Battery life enhancement</a></th>
+                      </tr>
+					  <tr>
+                        <th><a href="#/" onclick="task13()">X-ray machine bucky pcb: Failure diagnosis</a></th>
+                      </tr>
+					</tbody>
+                  </table>
+                </div>
+
+                <div class="block">
+                  <h4>Automation Test Lead</h4>
+				  <h6>05/23/16 - 02/10/2017</h6>
+                  <table class="table table-striped table-sm">
+                    <tbody>
+                      <tr>
+                        <th><a href="#/" onclick="task21()">Automation test framework management</a></th>
+                      </tr>
+					  <tr>
+                        <th><a href="#/" onclick="task22()">Intra-division communication enhancement</a></th>
+                      </tr>
+					  <tr>
+                        <th><a href="#/" onclick="task23()">Agile practices: Scrum and Test Driven Development</a></th>
+                      </tr>
+                      <tr>
+                        <th><a href="#/" onclick="task24()">Leadership / Management</a></th>
+                      </tr>
+					</tbody>
+                  </table>
+                </div>
+              </div>
+			  <div class="col-lg-6">
+			    <div class="block">
+                  <div id="details-title" class="title"><strong>Default Title</strong></div>
+                  <div id="details-description">
+  				    <div class="mySlides slideshow-container">
+                      <div id="CarestreamSlider"></div>
+                      <a class="prev" onclick="CarestreamSlides(CarestreamSlideIndex -= 1)">&#10094;</a>
+                      <a class="next" onclick="CarestreamSlides(CarestreamSlideIndex += 1)">&#10095;</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {% include footer.html %}
+
+      </div>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/front.js"></script>
+	<script src="js/carestream.js"></script>
+  </body>
+</html>

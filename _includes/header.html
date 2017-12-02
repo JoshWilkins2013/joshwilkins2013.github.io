@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="css/header.css" id="theme-stylesheet">
+<header class="header">
+  <nav class="navbar navbar-expand-lg">
+
+    <div class="search-panel">
+      <div class="search-inner d-flex align-items-center justify-content-center">
+        <div class="close-btn">Close <i class="fa fa-close"></i></div>
+        <form action="#">
+          <div class="form-group">
+            <input type="search" name="search" placeholder="What are you searching for...">
+            <button type="submit" class="submit">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="navbar-brand">
+      <div class="avatar"><img src="img/avatar.png" alt="..." class="img-fluid rounded-circle"></div>
+      <div class="brand-text brand-big visible">
+        <strong class="text-primary">Josh</strong> <strong class="text-primary">Wilkins</strong><br>
+        <strong class="small">Electrical</strong> <strong class="small">Engineer</strong>
+      </div>
+
+      <div class="brand-text brand-sm">
+        <strong>Josh</strong> <strong>Wilkins</strong><br>
+        <strong class="text-primary small">Electrical</strong> <strong class="text-primary small">Engineer</strong>
+      </div>
+
+      <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+    </div>
+
+    <div class="navbar-navigation">
+      <span><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></span>
+      <span class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link">Navigate <i class="fa fa-ellipsis-v"></i></a>
+        <ul class="dropdown-menu">
+          <li class="single"><a href="index"><h6>HOME</h6></a></li>
+          {% assign categories = site.pages | group_by: 'category' | sort: 'name' | reverse %}
+          {% for cat in categories %}
+            <li><strong class="text-uppercase">{{ cat.name }}</strong>
+              <ul class="list-unstyled">
+                {% assign items = cat.items | sort: 'order' %}
+                {% for item in items %}
+                  <li><a href="{{item.title | slugify}}">{{item.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+          <li class="single"><a href="contact"><h6>CONTACT</h6></a></li>
+        </ul>
+      </span>
+    </div>
+
+  </nav>
+</header>

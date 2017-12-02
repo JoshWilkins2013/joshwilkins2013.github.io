@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="css/sidebar.css" id="theme-stylesheet">
+<nav id="sidebar">
+  <ul class="list-unstyled">
+    <li class="{% if page.url == '/' %} highlight {% endif %}"><a href="index"><i class="icon-home"></i>Home</a></li>
+
+    <!-- Figuring out which category is active -->
+    {% assign categories = site.pages | group_by: 'category' | sort: 'name' | reverse %}
+    {% for cat in categories %}
+      {% assign items = cat.items | sort: 'order' %}
+      {% for item in items %}
+        {% if item.url == page.url %}
+          {% assign active_cat = cat.name %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    <!-- Actually creating the side panel now -->
+    {% for cat in categories %}
+
+      <!-- Figuring out categories icon -->
+      {% if cat.name == 'Projects' %}
+        {% assign icon = 'layers' %}
+      {% elsif cat.name == 'Education' %}
+        {% assign icon = 'flask' %}
+      {% else %}
+        {% assign icon = 'dashboard' %}
+      {% endif %}
+
+      {% if cat.name == active_cat %}
+        <li class="highlight"><a href="#{{ cat.name }}" aria-expanded="true" data-toggle="collapse"><i class="icon-{{ icon }}"></i>{{ cat.name }}</a>
+      {% else %}
+        <li><a href="#{{ cat.name }}" aria-expanded="false" data-toggle="collapse"><i class="icon-{{ icon }}"></i>{{ cat.name }}</a>
+      {% endif %}
+          <ul id="{{ cat.name }}" class="collapse list-unstyled {% if cat.name == active_cat %} show {% endif %}">
+            {% assign items = cat.items | sort: 'order' %}
+              {% for item in items %}
+                {% if item.url == page.url %}
+                  <li class="active"><a href="{{ item.title | slugify }}">{{ item.title }}</a></li>
+                {% else %}
+                  <li><a href="{{ item.title | slugify }}">{{ item.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+          </ul>
+        </li>
+    {% endfor %}
+    <li class="{% if page.url == '/contact.html' %} highlight {% endif %}"> <a href="contact"> <i class="icon-mail"></i>Contact</a></li>
+  </ul>
+
+  <div id="social-icons" class="row">
+    <div id="icon-container">
+      <a href="https://github.com/JoshWilkins2013" target="_blank"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/joshwilkins2013/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </div>
+  </div>
+</nav>

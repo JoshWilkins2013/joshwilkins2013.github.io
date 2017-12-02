@@ -1,0 +1,86 @@
+---
+title: Contact
+---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Josh Wilkins</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/main.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+	{% include header.html %}
+
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+	  
+	  <div class="page-content">
+        <div class="page-header">
+            <h4> Contact Me </h4>
+        </div>
+
+        <section>
+          <form id="formaction" method="POST">
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="contact-block">
+                    <input id="Name" type="text" name="Name" required class="input-material"><br>
+                    <label for="Name">Name</label><br>
+
+                    <input id="Email" type="text" name="Email" required class="input-material"><br>
+                    <label for="Email">Email</label><br>
+
+                    <input id="PhoneNumber" type="text" name="PhoneNumber" required class="input-material"><br>
+                    <label for="PhoneNumber">Phone #</label>
+                  </div>
+                </div>
+
+                <div class="col-sm-8">
+                  <div class="contact-block">
+                    <textarea rows="8" class="form-control" name="Message" placeholder="Message" id="Message" required data-validation-required-message="Please enter a message."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 contact-button">
+                  <button type="submit" value="Send">Send</button>
+                </div>
+              </div>
+
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_next" value="thanks" />
+          </form>
+          <script>
+            var contactform =  document.getElementById('formaction');
+            contactform.setAttribute('action', '//formspree.io/' + 'joshwilkins2013' + '@' + 'gmail' + '.' + 'com');
+          </script>
+        </section>
+
+        {% include footer.html %}
+
+      </div>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/front.js"></script>
+  </body>
+</html>

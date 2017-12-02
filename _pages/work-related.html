@@ -1,0 +1,125 @@
+---
+title: Work Related
+category: Projects
+order: 2
+icon: layers
+---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Josh Wilkins</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/main.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+    {% include header.html %}
+
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+	  
+      <div class="page-content">
+        <div class="page-header">
+            <h4> Work Projects </h4>
+        </div>
+        
+		<section>
+          <div class="container-fluid">
+            <div class="row">
+
+              <div class="col-lg-4">
+                <div class="block">
+                  <a href="#/">  <h3> Misc PCBs </h3> </a>
+
+				  <p> Designed some miscellaneous PCBs including a low power synthesizer, a generic PI Filter, and some misc eval boards. </p>
+
+                  <div class="slideshow-container">
+  				    <div id="PCBSlider" class="mySlides"></div>
+					<a class="prev" onclick="PCBSlides(PCBSlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="PCBSlides(PCBSlideIndex += 1)">&#10095;</a>
+				  </div>
+                </div>
+
+                <div class="block">
+                  <a href="#/">  <h3> Comm Device </h3> </a>
+
+				  <p> One of the things I built while at Carestream. </p>
+
+                  <div class="slideshow-container">
+  				    <div id="BoxSlider" class="mySlides"></div>
+					<a class="prev" onclick="BoxSlides(BoxSlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="BoxSlides(BoxSlideIndex += 1)">&#10095;</a>
+				  </div>
+
+                </div>
+              </div>
+
+			  <div class="col-lg-4">
+                <div class="block">
+                  <a href="#/">  <h3> BeagleBone Black </h3> </a>
+				  
+				  <p> Utilized the programmable real time units (PRUs) on the beaglebone black to implement an adjustable
+                      low bandwidth PI filter. Also used them to communicate with an AD9912 DDS via SPI for use in a
+                      programmable phase noise injection device.<br>
+                      <a href=\"https://github.com/JoshWilkins2013/BBB\" target=\"_blank\">Repository</a>
+                  </p>
+
+                  <div class="slideshow-container">
+  				    <div id="BBBSlider" class="mySlides"></div>
+					<a class="prev" onclick="BBBSlides(BBBSlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="BBBSlides(BBBSlideIndex += 1)">&#10095;</a>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="block">
+                  <a href="#/"> <h3> Synthesizer </h3> </a>
+
+                  <p> Designed a high frequency synthesizer by implementing a cascaded PLL with an output power level controller.
+                      It was optimized to minimize phase noise and the results were over 10 times better than commercially available components.
+                      The enclosure was created using interchangeable RF shielded rack mount units to minimize EMI effects.
+                      There are two reasons for it's unreasonable size: The first reason, is that the design consists entirely of connectorized eval PCBs.
+                      The second reason, is that my (much smaller) design of the enclosure was turned down to ensure post-construction configurability.
+                  </p>
+
+				  <div class="slideshow-container">
+  				    <div id="SynthSlider" class="mySlides"></div>
+					<a class="prev" onclick="SynthSlides(SynthSlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="SynthSlides(SynthSlideIndex += 1)">&#10095;</a>
+				  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+		
+		{% include footer.html %}
+
+      </div>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/front.js"></script>
+	<script src="js/work_related.js"></script>
+  </body>
+</html>

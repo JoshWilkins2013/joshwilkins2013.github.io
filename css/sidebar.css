@@ -1,0 +1,234 @@
+nav#sidebar::-webkit-scrollbar { width: 9px; height: 3px;}
+nav#sidebar::-webkit-scrollbar-button {  background-color: #666; }
+nav#sidebar::-webkit-scrollbar-track {  background-color: #646464;}
+nav#sidebar::-webkit-scrollbar-track-piece { background-color: #000;}
+nav#sidebar::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+nav#sidebar::-webkit-scrollbar-corner { background-color: #646464;}}
+nav#sidebar::-webkit-resizer { background-color: #666;}
+
+nav#sidebar {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  top: 71px;
+  bottom: 0;
+  background: #2d3035;
+  color: #6a6c70;
+  border-right: 1px solid #34373d;
+  overflow-y: auto;
+}
+
+nav#sidebar a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+nav#sidebar a[data-toggle="collapse"]::after {
+  content: '\f104';
+  display: inline-block;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'FontAwesome';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+
+nav#sidebar a[aria-expanded="true"]::after {
+  content: '\f107';
+}
+
+nav#sidebar a i {
+  font-size: 1.2em;
+  margin-right: 10px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+nav#sidebar ul ul a {
+  padding: 14px;
+  padding-left: 60px;
+  background: #22252a;
+}
+
+nav#sidebar ul {
+  max-height: none;
+}
+
+nav#sidebar ul a {
+  padding: 18px 20px;
+  display: block;
+  font-weight: 400;
+}
+
+nav#sidebar ul a:hover {
+  background: #34373d;
+}
+
+nav#sidebar ul a:hover i {
+  color: #cc5200;
+}
+
+nav#sidebar ul a i {
+  margin-right: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding-right: 20px;
+  border-right: 1px solid #454649;
+}
+
+nav#sidebar li {
+  position: relative;
+}
+
+nav#sidebar li::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  background: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+nav#sidebar li.active::before {
+  background: #cc5200;
+}
+
+nav#sidebar li.active a {
+  color: #cc5200;
+}
+
+.highlight i {
+  color: #cc5200;
+}
+
+.highlight p {
+  color: #cc5200;
+  display: inline;
+}
+
+
+/* ========================================================== */
+/*     Shrinked Sidebar
+/* ========================================================== */
+nav#sidebar.shrinked {
+  width: 80px;
+}
+
+/* Sidebar Media Query ----------------------------------- */
+@media (max-width: 1199px) {
+  .page-content {
+    width: 100%;
+  }
+  .page-content.active {
+    width: calc(100% - 80px);
+  }
+  nav#sidebar {
+    width: 80px;
+    margin-left: -80px;
+  }
+  nav#sidebar .sidebar-header {
+    padding: 10px;
+  }
+  nav#sidebar .sidebar-header .title {
+    display: none;
+  }
+  nav#sidebar span.heading {
+    margin-left: 0;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+  }
+  nav#sidebar ul {
+    max-height: none;
+  }
+  nav#sidebar ul a {
+    padding: 12px 5px;
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  nav#sidebar ul i {
+    font-size: 1.2rem;
+    text-align: center !important;
+    width: 100%;
+    display: block !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  nav#sidebar ul ul a {
+    padding-left: 10px;
+  }
+  nav#sidebar.shrinked {
+    margin-left: 0;
+  }
+  nav#sidebar a[data-toggle="collapse"]::after {
+    content: '\f107';
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 88%;
+    left: 50%;
+  }
+}
+
+/* ========================================================== */
+/*     SOCIAL ICONS
+/* ========================================================== */
+#social-icons {
+  margin: 0;
+}
+
+#icon-container {
+  margin: 0 auto;
+}
+
+#social-icons a {
+  display: inline-block;
+  text-align: center;
+}
+
+#social-icons i {
+  margin: 0 !important;
+  padding-top: 5px;
+  color: #cc5200;
+  width: 30px;
+  height: 30px;
+}
+
+#social-icons i:hover {
+  color: #000000;
+}
+
+#social-icons i::after {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cc5200;
+  border-radius: 3px;
+  -webkit-transform: rotate(45deg);
+      moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+       -o-transition: all 300ms;
+          transition: all 300ms;
+}
+
+#social-icons i:hover::after{
+  background: #cc5200;
+  border: 1px solid #000000;
+  z-index: -1;
+}

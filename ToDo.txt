@@ -1,0 +1,29 @@
+Do Anytime:
+- Add pictures to Education courses (& sliders where necessary)
+- Add Solidworks Models to everything that needs it (ENR 153, Quadcopter, etc..)
+- Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
+- Add Kaggle Icon to Social Links
+- Fix and uncomment sections
+- Add email check to email contact field
+- Fix contact page field error messages styling
+- Fix Search button
+- Prevent highlighting caused by autofill on contacts page
+- Scrollbar in sidebar doenst account for icons
+- Improve thanks page
+- Improve 404 page
+- Add MCC Tribune and RIT Tiger to Banner
+- Add img/Carestream/Bucky2 to website
+- Fix table text
+
+Explore / Investigate:
+- Add modal or pages for additional project info
+- Slider on home page for diff pics of me
+- Add tempco results to Input Step Response Script section
+- Add seo jekyll tag
+- Footer options (Social icons to footer, Contact button, site map, other?)
+- Attempt to improve image loading speed (Note liquid just uses same html reference to image)
+- Expanding a sidebar item should collapse all the others
+
+Minor Updates:
+- Make titles orange (and remove hyperlinks)
+- Fix pictures (remove backgrounds)

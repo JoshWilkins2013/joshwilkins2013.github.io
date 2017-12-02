@@ -1,0 +1,249 @@
+/* ========================================================== */
+/*     NavBar Main
+/* ========================================================== */
+nav.navbar {
+  background: #2d3035;
+  color: #8a8d93;
+  padding: 0;
+  border-bottom: 1px solid #34373d;
+  z-index: 9998;
+  position: fixed;
+  width: 100%;
+}
+
+nav.navbar .sidebar-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #282b2f;
+  color: #8a8d93;
+  font-size: 1.1rem;
+  border: 2px solid #3d4148;
+  outline: none;
+  vertical-align: middle;
+}
+
+nav.navbar .sidebar-toggle:hover {
+  background: #282b2f;
+  color: #cc5200;
+  border: 2px dashed #cc5200;
+}
+
+nav.navbar a {
+  color: inherit;
+}
+
+nav.navbar .brand-text {
+  display: none;
+  font-weight: 700;
+}
+
+nav.navbar .brand-text.visible {
+  display: inline-block;
+}
+
+nav.navbar a.nav-link {
+  padding: 0;
+}
+
+.navbar .brand-text {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.navbar-brand strong{
+  font-size: 1rem;
+}
+
+.navbar-navigation {
+  position: absolute;
+  right: 20px;
+}
+
+.navbar-navigation span {
+  margin: 5px;
+}
+
+.avatar {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 5px;
+  padding: 4px;
+  border: 3px solid #282b2f;
+  vertical-align: middle;
+}
+
+/* ========================================================== */
+/*     NavBar Drop-Down Menu (Navigation Menu)
+/* ========================================================== */
+.dropdown-menu {
+  color: #8a8d93;
+  background: #2d3035;
+  left: auto;
+  border: 2px solid #393c43;
+  -webkit-box-shadow: 0 0 15px rgba(34, 37, 42, 0.95);
+  box-shadow: 0 0 15px rgba(34, 37, 42, 0.95);
+  padding: 0px 20px 10px 20px;
+  z-index: 9999 !important;
+  right: 0 !important;
+  min-width: 200px;
+}
+
+.dropdown-menu a {
+  padding: 5px 15px !important;
+}
+
+.dropdown-menu strong {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: block;
+  text-decoration: underline;
+}
+
+.dropdown-menu ul a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.9em !important;
+}
+
+.dropdown-menu ul a:hover {
+  color: #cc5200 !important;
+}
+
+nav.navbar .dropdown .dropdown-menu {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav.navbar .dropdown .dropdown-menu.active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.single h6{
+  margin: 10px -10px -10px -15px;
+  display: block;
+  text-decoration: underline;
+}
+
+.single a:hover {
+  background: none;
+  color: #cc5200 !important;
+}
+
+/* ========================================================== */
+/*     NavBar Drop-down Effect
+/* ========================================================== */
+nav.navbar .dropdown .dropdown-menu {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav.navbar .dropdown .dropdown-menu.active {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* ========================================================== */
+/*     Search Panel
+/* ========================================================== */
+nav.navbar .search-panel {
+  display: none;
+}
+
+nav.navbar .search-inner {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(45, 48, 53, 0.95);
+  z-index: 999;
+}
+
+nav.navbar .search-inner .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 1.1em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+nav.navbar .search-inner form {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+nav.navbar .search-inner .form-group {
+  position: relative;
+}
+
+nav.navbar .search-inner .submit {
+  background: none;
+  font-size: 2.3rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #8a8d93;
+  border: none;
+  font-weight: 700 !important;
+}
+
+nav.navbar .search-inner input {
+  background: none;
+  width: 100%;
+  font-size: 2rem;
+  border: none;
+  border-bottom: 1px solid #444951;
+  color: #8a8d93;
+}
+
+nav.navbar .search-inner input::-moz-placeholder {
+  font-family: "Muli", sans-serif;
+  font-weight: 300 !important;
+  color: #585a5f;
+}
+
+nav.navbar .search-inner input::-webkit-input-placeholder {
+  font-family: "Muli", sans-serif;
+  font-weight: 300 !important;
+  color: #585a5f;
+}
+
+nav.navbar .search-inner input:-ms-input-placeholder {
+  font-family: "Muli", sans-serif;
+  font-weight: 300 !important;
+  color: #585a5f;
+}
+
+/* ========================================================== */
+/*     Navbar Media Query
+/* ========================================================== */
+@media (max-width: 1199px) {
+  nav.navbar .search-inner form input {
+    font-size: 1.25rem !important;
+  }
+  nav.navbar .search-inner form button.submit {
+    position: absolute;
+    font-size: 2rem;
+    top: 50px;
+    display: block;
+    width: 100%;
+  }
+  nav.navbar .sidebar-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  nav.navbar .sidebar-toggle {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+}

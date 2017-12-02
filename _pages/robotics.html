@@ -1,0 +1,144 @@
+---
+title: Robotics
+category: Projects
+order: 1
+icon: layers
+---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Josh Wilkins</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/main.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+	{% include header.html %}
+    
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+	  
+      <div class="page-content">
+        <div class="page-header">
+            <h4> Robotics Projects </h4>
+        </div>
+        
+		<section>
+          <div class="container-fluid">
+            <div class="row">
+
+              <div class="col-lg-4">
+                <div class="block">
+                  <a href="#/"> <h3> ASEE Competition 2014</h3>
+				  <h5> Indie 500 </h5> </a>
+                  <p> A national robotics competition that was held in Indianapolis, Indiana.
+                      The objective was to autonomously navigate a, much smaller, model of the Indianapolis 500 track.
+                      This model contained obstacles to increase the difficulty of the challenge. </p>
+
+                  <div class="slideshow-container">
+                    <p id="IndieSlider" class="mySlides"></p>
+                    <a class="prev" onclick="IndieSlides(indieSlideIndex -= 1)">&#10094;</a>
+                    <a class="next" onclick="IndieSlides(indieSlideIndex += 1)">&#10095;</a>
+                  </div>
+                </div>
+
+                <div class="block">
+                  <h3> <a href="#/"> Quadcopter </a></h3>
+
+				  <p> My quadcopter build. Went through two design iterations before deciding to pass the project along.
+                      Just needs a central processor to handle orientation and motor control. </p>
+
+                  <div class="slideshow-container">
+  				    <div id="QuadcopterSlider" class="mySlides"></div>
+				    <a class="prev" onclick="QuadcopterSlides(QuadcopterSlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="QuadcopterSlides(QuadcopterSlideIndex += 1)">&#10095;</a>
+				  </div>
+
+                </div>
+              </div>
+
+			  <div class="col-lg-4">
+                <div class="block">
+                  <a href="#/">  <h3> ASEE Competition 2015</h3>
+				  <h5> Fish Derby </h5> </a>
+
+                  <p> A national robotics competition that was held in Seattle, Washington. The objective was to autonomously
+				    collect the wooden fish cut-outs placed along two circles on an 8x8 foot track. Once collected, the robot had
+				    to deposit these wooden fish cut-outs into the corresponding colored bins located on the corners of the track.<br>
+                    <a href="Storage\Projects\ASEE_2015_Rules.pdf" target="_blank">
+                      <button type="submit">Rules</button>
+                    </a>
+				  </p>
+
+				  <div class="slideshow-container">
+  				    <div id="DerbySlider" class="mySlides"></div>
+					<a class="prev" onclick="DerbySlides(derbySlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="DerbySlides(derbySlideIndex += 1)">&#10095;</a>
+				  </div>
+
+                </div>
+                <div class="block">
+                  <h3> <a href="#/"> McLaren F1 </a></h3>
+
+                  <p> A first-year, in-class robotics competition. Multiple objectives including track navigation
+                      and tractor pull. Design entirely up to students; I chose to model it after a McLaren F1.
+                  </p>
+
+				  <div class="slideshow-container">
+  				    <div id="ENR153Slider" class="mySlides"></div>
+				    <a class="prev" onclick="ENR153Slides(ENR153SlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="ENR153Slides(ENR153SlideIndex += 1)">&#10095;</a>
+				  </div>
+
+                </div>
+              </div>
+
+			  <div class="col-lg-4">
+                <div class="block">
+                  <h3> <a href="#/"> ATtiny Swarm </a></h3>
+
+                  <p> A programmable and rechargeable set of robots whose functionality could be changed through the addition of an attachment 'shield'.
+				  With the abstraction of functionality into modular shields, design costs plummeted and new design possibilities emerged.
+				  By attaching the shield to one of the two base designs (line follow or obstacle avoidance), the base designs electronics were overriden and the shield's functionality took over.
+				  For example, if a Bluetooth control shield were attached to the line following base design,
+				  the robot would then be controlled via BT instead of its normal behavior of following a line.
+				  </p>
+
+				  <div class="slideshow-container">
+  				    <div id="ATtinySlider" class="mySlides"></div>
+				    <a class="prev" onclick="ATtinySlides(ATtinySlideIndex -= 1)">&#10094;</a>
+				    <a class="next" onclick="ATtinySlides(ATtinySlideIndex += 1)">&#10095;</a>
+				  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {% include footer.html %}
+
+      </div>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/front.js"></script>
+	<script src="../js/robotics.js"></script>
+  </body>
+</html>

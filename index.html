@@ -1,0 +1,82 @@
+---
+---
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Josh Wilkins</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/main.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+    
+    {% include header.html %}
+
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+	  
+      <div class="page-content">
+        <div class="block" style="margin-top: 0;">
+          <div class="container-fluid">
+            <img src="img/ME.png" width="50%">
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <a href="Storage\Home\Resume.pdf" target="_blank">
+                <button type="submit" style="margin-top: 30px">Resum&eacute</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+		<section>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="block">
+                  <h3> About Me </h3>
+				  <p> I grew up in the small town of Avon, NY. In the spring of 2013, I graduated from high school, 4th in my class.
+                    I continued my education at MCC (Monroe Community College), where I obtained my associates degree in Engineering Science.
+                    The following semester, I transferred into RIT (Rochester Institute of Technology), where I received my Bachelor's Degree in Electrical Engineering.
+                    I finished the 5 year program in 3.5 years, graduating in the top 1% of the students graduating that year.
+                    While attending school, I worked at Carestream Health; first as an electrical test technician and then as the software automation testing lead.
+                    After RIT, I landed a job as a hardware engineer at Microsemi in Beverly, MA, where I am currently working.
+                    <br><br>
+                    I am a passionate Electrical Engineer (as illustrated through my extensive project work) with a focus on analog design.
+                    I have a strong interest in control systems and feedback designs and I have a growing interest in machine learning.
+                    Hopefully, through this website and it's content, you will have a better understanding of my commitment to learning.
+                    I encourage you to reach out to me, even if its just to say hi!
+                    Feel free to suggest project ideas, submit job offers, or show me some interesting new technology.
+                    I'm also interested in collaborating on new projects with people!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+		
+		{% include footer.html %}
+		
+      </div>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="js/front.js"></script>
+  </body>
+</html>
