@@ -3,7 +3,6 @@ Do Anytime:
 - Add Solidworks Models to everything that needs it (ENR 153, Quadcopter, etc..)
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
 - Add Kaggle Icon to Social Links
-- Fix and uncomment sections
 - Add email check to email contact field
 - Fix contact page field error messages styling
 - Fix Search button
@@ -11,9 +10,8 @@ Do Anytime:
 - Scrollbar in sidebar doenst account for icons
 - Improve thanks page
 - Improve 404 page
-- Add MCC Tribune and RIT Tiger to Banner
-- Add img/Carestream/Bucky2 to website
-- Fix table text
+- Fix and uncomment sections
+- Go through extras folder
 
 Explore / Investigate:
 - Add modal or pages for additional project info
