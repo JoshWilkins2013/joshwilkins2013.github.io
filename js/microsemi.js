@@ -78,7 +78,7 @@ function task8() {
 	is better than the noise floor of the instruments. For example, the comparison of comb generator technologies;\
 	Non-linear transmission line vs the standard step recovery diode.<br>\
 	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a>\
-	 / <a href=\"https://mybinder.org/v2/gh/JoshWilkins2013/JupyterNotebooks/master?filepath=AltPhaseNoiseMeasSys%2FAltPhaseNoiseMeasSys.ipynb\" target=\"_blank\">Binder</a><br><br>"
+	 / <a href=\"https://mybinder.org/v2/gh/JoshWilkins2013/JupyterNotebooks/master?filepath=AltPhaseNoiseMeasSys%2FAltPhaseNoiseMeasSys.ipynb\" target=\"_blank\">Binder</a><br><br>\
 	<a href=\"Storage\\AltPhaseNoiseMeasSys.pdf\" target=\"_blank\"><button type=\"submit\">PDF</button></a>"
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "<strong>Alternative Phase Noise Measurement System</strong>";
