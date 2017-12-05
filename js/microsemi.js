@@ -56,14 +56,33 @@ function task4() {
 function task6() {
 	var description = "Created an adjustable output power stabalizer cirucit by utilizing an envelope detector.\
 	Additionally maximized the output power level through the selection of components<br>\
-	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks\" target=\"_blank\">Repository</a><br><br>\
+	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/OutputPowerController\" target=\"_blank\">Repository</a><br><br>\
 	<a href=\"Storage\\OutputPowerController.pdf\" target=\"_blank\"><button type=\"submit\">PDF</button></a>"
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "<strong>Output Power Level Controller</strong>";
 };
 
+function task8() {
+	var description = "An alternative phase noise measurement system for use when the phase noise of the device under test\
+	is better than the noise floor of the instruments. For example, the comparison of comb generator technologies;\
+	Non-linear transmission line vs the standard step recovery diode.<br>\
+	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>\
+	<a href=\"Storage\\AltPhaseNoiseMeasSys.pdf\" target=\"_blank\"><button type=\"submit\">PDF</button></a>"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "<strong>Alternative Phase Noise Measurement System</strong>";
+};
+
+function task9() {
+	var description = "Characterizing the temperature dependency of the synthesizer. Approximated by characterizing\
+	its largest contributor, a bandpass filter.<br>\
+	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/TemperatureDependence\" target=\"_blank\">Repository</a><br><br>\
+	<a href=\"Storage\\TemperatureDependence.pdf\" target=\"_blank\"><button type=\"submit\">PDF</button></a>"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "<strong>Temperature Dependency Testing</strong>";
+};
+
 function task10() {
-	var description = "Converted the Matlab script found \
+	var description = "Converted the Matlab script found\
 	<a href=\"https://www.mathworks.com/matlabcentral/fileexchange/8844-phase-noise?focused=5065243&tab=function&requestedDomain=www.mathworks.com\" target=\"_blank\">here</a> \
 	into python to inject phase noise into any model. Useful for phase noise degradation testing and helps define its effect on allan deviation.<br>\
 	<a href=\"https://github.com/JoshWilkins2013/AddPhaseNoise\" target=\"_blank\">Repository</a>"
@@ -84,17 +103,5 @@ function task7() {
 	var description = "DDS Spur finder"
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "<strong>DDS Spur Finder</strong>";
-};
-
-function task8() {
-	var description = "Close In phase noise -- NLTL vs other comb gen tech, Synth phase noise meas, better than instruments"
-	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>Alternative Phase Noise Measurement Methods</strong>";
-};
-
-function task9() {
-	var description = "Temperature Dependency Testing -- Divider circuit, BPF characterization"
-	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>Temperature Dependency Testing</strong>";
 };
 */
