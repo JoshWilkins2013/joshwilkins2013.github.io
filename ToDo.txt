@@ -12,6 +12,8 @@ Do Anytime:
 - Improve 404 page
 - Fix and uncomment sections
 - Go through extras folder
+- Fix pictures (remove backgrounds)
+- Make titles orange (and remove hyperlinks)
 
 Explore / Investigate:
 - Add modal or pages for additional project info
@@ -21,7 +23,3 @@ Explore / Investigate:
 - Footer options (Social icons to footer, Contact button, site map, other?)
 - Attempt to improve image loading speed (Note liquid just uses same html reference to image)
 - Expanding a sidebar item should collapse all the others
-
-Minor Updates:
-- Make titles orange (and remove hyperlinks)
-- Fix pictures (remove backgrounds)
