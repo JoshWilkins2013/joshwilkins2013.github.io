@@ -2,3 +2,6 @@ collections:
   pages:
     output: true
     permalink: /:title
+
+plugins:
+  - jekyll-seo-tag
