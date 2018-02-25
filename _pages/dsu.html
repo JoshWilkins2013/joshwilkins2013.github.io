@@ -1,0 +1,113 @@
+---
+title: DSU
+category: Education
+order: 3
+icon: flask
+---
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+	  
+	  <div class="page-content">
+        <div class="page-header" style="margin-top: 0;">
+          <div class="container-fluid">
+            <img src="img/Banners/DSU_Banner.png" width="100%">
+          </div>
+        </div>
+        <a href="Storage\Education\DSU_Transcript.pdf" target="_blank">
+          <button type="submit" style="margin-bottom: 20px">Transcript</button>
+        </a>
+
+        <section class="no-padding-top">
+          <div class="container-fluid">
+            <div class="row">
+			  <div class="col-lg-6">
+                <div class="block">
+                  <a href="#/" onclick="LifeAtDSU()"> <h5>Life at DSU</h5></a>
+                  <table class="table table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th><center>Course Name</center></th>
+                        <th><center>Credits</center></th>
+                        <th><center>Course #</center></th>
+                        <th><center>Grade</center></th>
+                      </tr>
+                    </thead>
+					<tbody>  
+                      <tr>
+						<th><a href="#/" onclick="INFS762()">Data Warehousing and Data Mining</a></th>
+                        <td><center>3</center></td>
+                        <td><center>INFS 762</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+					  <tr>
+						<th><a href="#/" onclick="INFS772()">Programming for Data Analytics</a></th>
+                        <td><center>3</center></td>
+                        <td><center>INFS 772</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+                      <tr>
+						<th><a href="#/" onclick="INFS774()">Big Data Analytics</a></th>
+                        <td><center>3</center></td>
+                        <td><center>INFS 774</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+                      <tr>
+						<th><a href="#/" onclick="STAT700()">Statistical Programming</a></th>
+                        <td><center>3</center></td>
+                        <td><center>STAT 700</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+                      <tr>
+						<th><a href="#/" onclick="STAT701()">Modern Applied Statistics I</a></th>
+                        <td><center>3</center></td>
+                        <td><center>STAT 701</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+                      <tr>
+						<th><a href="#/" onclick="STAT702()">Modern Applied Statistics II</a></th>
+                        <td><center>3</center></td>
+                        <td><center>STAT 702</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+                      <tr>
+						<th><a href="#/" onclick="INFS768()">Predictive Analytics for Decision Making</a></th>
+                        <td><center>3</center></td>
+                        <td><center>INFS 768</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+                      <tr>
+						<th><a href="#/" onclick="INFS770()">Advanced Data Mining Applications</a></th>
+                        <td><center>3</center></td>
+                        <td><center>INFS 770</center></td>
+                        <td><center>XX</center></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+			  <div class="col-lg-6">
+			    <div class="block">
+			      <div id="course-title" class="title"><strong>Life at DSU</strong></div>
+                  <div id="course-description">
+                    After a year working full-time as an electrical engineer at Microsemi, I started attending
+                    classes at Dakota State University (DSU).
+                  </div>
+                  <p id="course-extra"></p>
+			    </div>
+			  </div>
+            </div>
+          </div>
+        </section>
+
+        {% include footer.html %}
+
+      </div>
+    </div>
+    <script src="js/dsu.js"></script>
+  </body>
+</html>

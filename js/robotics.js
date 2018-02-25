@@ -8,7 +8,10 @@ var albums = {
 		],
 		"Derby": [
 			"<img src=\"img/Robotics/ASEE_Derby/Robot.png\"><p>Assembled Robot</p>",
-			"<img src=\"img/Robotics/ASEE_Derby/Track.png\"><p>Track</p>"
+			"<img src=\"img/Robotics/ASEE_Derby/New_Design.png\"><p>SolidWorks Design</p>",
+			"<img src=\"img/Robotics/ASEE_Derby/Track.png\"><p>Track</p>",
+			"<img src=\"img/Robotics/ASEE_Derby/Original_Design.png\"><p>Original SolidWorks Design</p>",
+			"<img src=\"img/Robotics/ASEE_Derby/Original_Design_ASM.png\"><p>Original SolidWorks Design</p>"
 		],
 		"ATtiny": [
 			"<img src=\"img/Robotics/ATtiny/Robots.png\"><p>Assembled Robots</p>",
@@ -21,7 +24,11 @@ var albums = {
 			"<img src=\"img/Robotics/ATtiny/Model.png\"><p>Rev 3 Model</p>"
 		],
 		"Quadcopter": [
-			"<img src=\"img/Robotics/Quadcopter/Build.png\"><p>Quadcopter Layout</p>"
+			"<img src=\"img/Robotics/Quadcopter/Build.png\"><p>Quadcopter Layout</p>",
+			"<img src=\"img/Robotics/Quadcopter/Original_Design.png\"><p>Original SolidWorks Design</p>",
+			"<img src=\"img/Robotics/Quadcopter/Original_Design_ASM.png\"><p>Original SolidWorks Design</p>",
+			"<img src=\"img/Robotics/Quadcopter/New_Design.png\"><p>Updated SolidWorks Design</p>",
+			"<img src=\"img/Robotics/Quadcopter/New_Design_ASM.png\"><p>Updated SolidWorks Design</p>"
 		],
 		"ENR153": [
 			"<img src=\"img/Robotics/ENR153/Front.png\"><p>Front View</p>",
