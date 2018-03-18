@@ -4,7 +4,6 @@ Verify:
 
 Do Anytime:
 - Add pictures to Education courses (& sliders where necessary)
-- Add Solidworks Models to everything that needs it (ENR 153, Quadcopter, etc..)
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
 - Add Kaggle Icon to Social Links
 - Add email check to email contact field
@@ -13,7 +12,6 @@ Do Anytime:
 - Scrollbar in sidebar doenst account for icons
 - Improve thanks page
 - Improve 404 page
-- Fix and uncomment sections
 - Go through extras folder
 - Fix pictures (remove backgrounds)
 - Make titles orange (and remove hyperlinks)
