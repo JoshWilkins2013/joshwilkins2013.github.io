@@ -15,6 +15,8 @@ Do Anytime:
 - Go through extras folder
 - Fix pictures (remove backgrounds)
 - Make titles orange (and remove hyperlinks)
+- Replace jupyter pdfs with html pages?
+- Add interactive codeblocks (or embed notebooks)
 
 Explore / Investigate:
 - Add modal or pages for additional project info
