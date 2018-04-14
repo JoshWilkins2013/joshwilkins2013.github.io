@@ -9,6 +9,7 @@ body {
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
+  caret-color: red;
 }
 
 section {
@@ -56,13 +57,10 @@ input:-webkit-autofill {
   position: relative;
 }
 
-.mySlides {
-  height: 400px;
-}
 
 .mySlides img {
-  position: absolute;
-  max-height: calc(100% - 1.5rem);
+  position: relative;
+  max-height: 600px;
   max-width: 100%;
   top : 0;
   left: 0;
@@ -74,9 +72,9 @@ input:-webkit-autofill {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: calc(50% - 2.25rem);
-  width: auto;
-  padding: 16px;
+  top: 0;
+  bottom: 0;
+  padding: 0 16px 0 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -95,12 +93,12 @@ input:-webkit-autofill {
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
 }
 
 .prev {
   left: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 5px 5px 0;
 }
 
 .prev:hover, .next:hover {
