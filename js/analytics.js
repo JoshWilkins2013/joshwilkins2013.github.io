@@ -6,6 +6,7 @@ var albums = {
 		"PriceBot": [
 			"<img src=\"img/Analytics/PriceBot/Cars_Output.svg\"><p>Merged Honda Civic Results</p>",
 			"<img src=\"img/Analytics/PriceBot/Apt_Output.svg\"><p>Merged Apt Results</p>"
+			"<img src=\"img/Analytics/PriceBot/Houses_Output.svg\"><p>House Results</p>"
 		],
 		"House": [
 			"<img src=\"img/Analytics/House/Typical.png\"><p>Typical Scenario</p>",
