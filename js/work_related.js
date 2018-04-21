@@ -23,6 +23,15 @@ var albums = {
 		"Box": [
 		    "<img src=\"img/Work_Related/Box/Box1.png\"><p>Interface Box</p>",
             "<img src=\"img/Work_Related/Box/Box2.png\"><p>Inside Box</p>"
+        ],
+        "AtomicClock": [
+		    "<img src=\"img/Work_Related/AtomicClock/GUI.png\"><p>User Interface</p>",
+            "<img src=\"img/Work_Related/AtomicClock/Tempco_Stepped.png\"><p>Stepped Tempco Run</p>"
+            "<img src=\"img/Work_Related/AtomicClock/Tempco_Continuous.png\"><p>Continuous Tempco Run</p>"
+            "<img src=\"img/Work_Related/AtomicClock/Tempco_PolyFit.png\"><p>Polynomial Fit of Tempco Runs</p>"
+            "<img src=\"img/Work_Related/AtomicClock/Aging.png\"><p>Aging Output Across Files</p>"
+            "<img src=\"img/Work_Related/AtomicClock/Adev_Single.png\"><p>Adev on one File</p>"
+            "<img src=\"img/Work_Related/AtomicClock/Adev_Multi.png\"><p>Adev Averaged Across Files</p>"
         ]
 }
 
@@ -60,4 +69,13 @@ function BoxSlides(n) {
   if (n > albums["Box"].length) {BoxSlideIndex = 1}
   if (n < 1) {BoxSlideIndex = albums["Box"].length}
   document.getElementById("BoxSlider").innerHTML = albums["Box"][BoxSlideIndex-1];
+}
+
+var AtomicClockSlideIndex = 1;
+AtomicClockSlides(AtomicClockSlideIndex);
+function AtomicClockSlides(n) {
+  var i;
+  if (n > albums["AtomicClock"].length) {AtomicClockSlideIndex = 1}
+  if (n < 1) {AtomicClockSlideIndex = albums["AtomicClock"].length}
+  document.getElementById("AtomicClockSlider").innerHTML = albums["AtomicClock"][AtomicClockSlideIndex-1];
 }
