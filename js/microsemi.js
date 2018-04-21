@@ -58,7 +58,7 @@ function task4() {
 function task5() {
 	var description = "Created a tool that was able to sync our official Agile database with our Microsoft Access parts library.\
 	Our parts library was the backend of all of our schematic designs, containing all of the part numbers and corresponding item information of all our parts.\
-	The problem was that this often got outdated due to a lack of process control (we didnt have a component engineer for awhile).
+	The problem was that this often got outdated due to a lack of process control (we didnt have a component engineer for awhile).\
 	So I wrote this tool to update all of our schematics and parts database to keep in sync with our official documentation of it."
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "<strong>Agile Database Sync Tool</strong>";

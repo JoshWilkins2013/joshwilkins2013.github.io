@@ -26,11 +26,11 @@ var albums = {
         ],
         "AtomicClock": [
 		    "<img src=\"img/Work_Related/AtomicClock/GUI.png\"><p>User Interface</p>",
-            "<img src=\"img/Work_Related/AtomicClock/Tempco_Stepped.png\"><p>Stepped Tempco Run</p>"
-            "<img src=\"img/Work_Related/AtomicClock/Tempco_Continuous.png\"><p>Continuous Tempco Run</p>"
-            "<img src=\"img/Work_Related/AtomicClock/Tempco_PolyFit.png\"><p>Polynomial Fit of Tempco Runs</p>"
-            "<img src=\"img/Work_Related/AtomicClock/Aging.png\"><p>Aging Output Across Files</p>"
-            "<img src=\"img/Work_Related/AtomicClock/Adev_Single.png\"><p>Adev on one File</p>"
+            "<img src=\"img/Work_Related/AtomicClock/Tempco_Stepped.png\"><p>Stepped Tempco Run</p>",
+            "<img src=\"img/Work_Related/AtomicClock/Tempco_Continuous.png\"><p>Continuous Tempco Run</p>",
+            "<img src=\"img/Work_Related/AtomicClock/Tempco_PolyFit.png\"><p>Polynomial Fit of Tempco Runs</p>",
+            "<img src=\"img/Work_Related/AtomicClock/Aging.png\"><p>Aging Output Across Files</p>",
+            "<img src=\"img/Work_Related/AtomicClock/Adev_Single.png\"><p>Adev on one File</p>",
             "<img src=\"img/Work_Related/AtomicClock/Adev_Multi.png\"><p>Adev Averaged Across Files</p>"
         ]
 }
