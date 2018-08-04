@@ -1,7 +1,6 @@
 Should do:
 - Update Microsemi page
 - Replace jupyter pdfs with html pages
-- Center avatar image in circle
 
 Verify:
 - Prevent highlighting caused by autofill on contacts page

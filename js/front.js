@@ -10,7 +10,6 @@ $(function () {
         $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(100).removeClass('active');
     });
 
-
     // ------------------------------------------------------- //
     // Search Popup
     // ------------------------------------------------------ //
@@ -21,7 +20,6 @@ $(function () {
     $('.search-panel .close-btn').on('click', function () {
         $('.search-panel').fadeOut(100);
     });
-
 
     // ------------------------------------------------------- //
     // Sidebar Functionality
@@ -35,11 +33,11 @@ $(function () {
         if ($('.sidebar-toggle').hasClass('active')) {
             $('.navbar-brand .brand-sm').addClass('visible');
             $('.navbar-brand .brand-big').removeClass('visible');
-            $(this).find('i').attr('class', 'fa fa-long-arrow-right');
+            $(this).find('i').attr('class', 'fa fa-long-arrow-right arrow');
         } else {
             $('.navbar-brand .brand-sm').removeClass('visible');
             $('.navbar-brand .brand-big').addClass('visible');
-            $(this).find('i').attr('class', 'fa fa-long-arrow-left');
+            $(this).find('i').attr('class', 'fa fa-long-arrow-left arrow');
         }
     });
 });

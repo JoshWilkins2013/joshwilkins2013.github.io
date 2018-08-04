@@ -21,12 +21,22 @@ nav.navbar .sidebar-toggle {
   border: 2px solid #3d4148;
   outline: none;
   vertical-align: middle;
+  -webkit-transform: rotateY(360deg); /* Not sure why this is needed */
 }
 
 nav.navbar .sidebar-toggle:hover {
   background: #282b2f;
   color: #cc5200;
   border: 2px dashed #cc5200;
+}
+
+.arrow-button {
+  position: absolute;
+  vertical-align: middle;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 }
 
 nav.navbar a {
@@ -69,10 +79,15 @@ nav.navbar a.nav-link {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin-right: 5px;
   padding: 4px;
   border: 3px solid #282b2f;
   vertical-align: middle;
+}
+
+.avatar-image {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Not quite center without this line */
 }
 
 /* ========================================================== */
