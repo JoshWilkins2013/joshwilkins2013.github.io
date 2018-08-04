@@ -1,6 +1,5 @@
 Should do:
 - Update Microsemi page
-- Fix arrows for image sliders to be centered
 - Replace jupyter pdfs with html pages
 - Center avatar image in circle
 

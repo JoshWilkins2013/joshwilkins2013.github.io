@@ -21,7 +21,7 @@ var albums = {
 			"<img src=\"img/Work_Related/PCB/100MHzOCXO_Board.png\"><p>Another OCXO Eval Board</p>"
 		],
 		"Box": [
-		    "<img src=\"img/Work_Related/Box/Box1.png\"><p>Divider Box</p>",
+		    "<img src=\"img/Work_Related/Box/DividerBox.png\"><p>Divider Box</p>",
 		    "<img src=\"img/Work_Related/Box/Box1.png\"><p>Interface Box</p>",
             "<img src=\"img/Work_Related/Box/Box2.png\"><p>Inside Box</p>"
         ],

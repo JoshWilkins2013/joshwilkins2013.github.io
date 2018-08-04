@@ -4,9 +4,7 @@ title: Josh Wilkins
 <html>
   {% include head.html %}
   <body>
-    
     {% include header.html %}
-
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
 	  
@@ -14,8 +12,8 @@ title: Josh Wilkins
         <div class="block" style="margin-top: 0;">
           <div class="slideshow-container">
             <div id="MeSlider" class="mySlides"></div>
-            <a class="prev" onclick="MeSlides(MeSlideIndex -= 1)">&#10094;</a>
-            <a class="next" onclick="MeSlides(MeSlideIndex += 1)">&#10095;</a>
+            <a class="prev" onclick="MeSlides(MeSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+            <a class="next" onclick="MeSlides(MeSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
           </div>
           <div class="row">
             <div class="col-sm-12">
@@ -51,9 +49,7 @@ title: Josh Wilkins
             </div>
           </div>
         </section>
-		
 		{% include footer.html %}
-		
       </div>
     </div>
   <script src="index.js"></script>

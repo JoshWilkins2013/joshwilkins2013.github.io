@@ -72,6 +72,12 @@ input:-webkit-autofill {
   margin : auto;
 }
 
+.arrow {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Not quite center without this line */
+}
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -82,16 +88,10 @@ input:-webkit-autofill {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  
-  /* Prevent highlighting of directional arrows */
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
+
+    /* Prevent highlighting of directional arrows */
         -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+            user-select: none; /* Chrome and Opera */
 }
 
 .next {
