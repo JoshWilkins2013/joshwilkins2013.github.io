@@ -12,8 +12,10 @@ title: Josh Wilkins
 	  
       <div class="page-content">
         <div class="block" style="margin-top: 0;">
-          <div class="container-fluid">
-            <img src="img/ME.png" width="50%">
+          <div class="slideshow-container">
+            <div id="MeSlider" class="mySlides"></div>
+            <a class="prev" onclick="MeSlides(MeSlideIndex -= 1)">&#10094;</a>
+            <a class="next" onclick="MeSlides(MeSlideIndex += 1)">&#10095;</a>
           </div>
           <div class="row">
             <div class="col-sm-12">
@@ -29,13 +31,13 @@ title: Josh Wilkins
             <div class="row">
               <div class="col-lg-12">
                 <div class="block">
-                  <h3> About Me </h3>
+                  <h3 class="block-header"> About Me </h3>
 				  <p> I grew up in the small town of Avon, NY. In the spring of 2013, I graduated from high school, 4th in my class.
-                    I continued my education at MCC (Monroe Community College), where I obtained my associates degree in Engineering Science.
+                    From there, I continued my education at MCC (Monroe Community College), where I obtained my associates degree in Engineering Science.
                     The following semester, I transferred into RIT (Rochester Institute of Technology), where I received my Bachelor's Degree in Electrical Engineering.
                     I finished the 5 year program in 3.5 years, graduating in the top 1% of the students graduating that year.
                     While attending school, I worked at Carestream Health; first as an electrical test technician and then as the software automation testing lead.
-                    After RIT, I landed a job as a hardware engineer at Microsemi in Beverly, MA, where I am currently working.
+                    After RIT, I landed a job as an electrical engineer at Microsemi (now Microchip) in Beverly, MA, where I am currently working.
                     <br><br>
                     I am a passionate Electrical Engineer (as illustrated through my extensive project work) with a focus on analog design.
                     I have a strong interest in control systems and feedback designs and I have a growing interest in machine learning.
@@ -54,6 +56,6 @@ title: Josh Wilkins
 		
       </div>
     </div>
-
+  <script src="index.js"></script>
   </body>
 </html>

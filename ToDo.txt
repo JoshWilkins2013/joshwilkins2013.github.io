@@ -1,3 +1,9 @@
+Should do:
+- Update Microsemi page
+- Fix arrows for image sliders to be centered
+- Replace jupyter pdfs with html pages
+- Center avatar image in circle
+
 Verify:
 - Prevent highlighting caused by autofill on contacts page
 - Add seo jekyll tag
@@ -14,13 +20,10 @@ Do Anytime:
 - Improve 404 page
 - Go through extras folder
 - Fix pictures (remove backgrounds)
-- Make titles orange (and remove hyperlinks)
-- Replace jupyter pdfs with html pages?
 - Add interactive codeblocks (or embed notebooks)
 
 Explore / Investigate:
 - Add modal or pages for additional project info
-- Slider on home page for diff pics of me
 - Footer options (Social icons to footer, Contact button, site map, other?)
 - Attempt to improve image loading speed (Note liquid just uses same html reference to image)
 - Expanding a sidebar item should collapse all the others
