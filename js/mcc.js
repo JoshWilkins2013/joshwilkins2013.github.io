@@ -18,7 +18,7 @@ function ENR153() {
 	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports."
 	document.getElementById("course-title").innerHTML = "<strong>Graphing & Machining</strong>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR153.png\" width=100%>";
+	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR153.jpg\" width=100%>";
 };
 
 function ENR157() {
@@ -30,7 +30,7 @@ function ENR157() {
 	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation."
 	document.getElementById("course-title").innerHTML = "<strong><strong>Digital Electronics & Microcontrollers</strong></strong>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR157.png\" width=100%>";
+	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR157.jpg\" width=100%>";
 };
 
 function ENR161() {
@@ -49,7 +49,7 @@ function ENR251() {
 	will be presented. Topics include equivalent force systems, equilibrium, structural mechanics, friction, properties of surfaces."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<strong>Statics</strong>";
-	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR251.png\" width=100%>";
+	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR251.jpg\" width=100%>";
 };
 
 function ENR253() {

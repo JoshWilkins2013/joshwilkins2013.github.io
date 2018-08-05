@@ -1,8 +1,8 @@
 var albums = {
 		"Me": [
-		    "<img src=\"img/ME.png\" style=\"width:50%\">",
-		    "<img src=\"img/ME2.png\" style=\"width:50%\">",
-		    "<img src=\"img/ME3.png\" style=\"width:50%\">"
+		    "<img src=\"img/ME.jpg\" style=\"width:50%\">",
+		    "<img src=\"img/ME2.jpg\" style=\"width:50%\">",
+		    "<img src=\"img/ME3.jpg\" style=\"width:50%\">"
 		]
 }
 

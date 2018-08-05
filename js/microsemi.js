@@ -1,7 +1,7 @@
 var album = ["<img src=\"img/Microsemi/CSAC.png\"><p>CSAC</p>",
 			"<img src=\"img/Microsemi/MAC.png\"><p>MAC</p>",
-			"<img src=\"img/Microsemi/5071A.png\"><p>5071A Cs Atomic Clock</p>",
-			"<img src=\"img/Microsemi/5125A.png\"><p>Phase Noise Test Set</p>",
+			"<img src=\"img/Microsemi/5071A.jpg\"><p>5071A Cs Atomic Clock</p>",
+			"<img src=\"img/Microsemi/5125A.jpg\"><p>Phase Noise Test Set</p>",
 			]
 
 var MicrosemiSlideIndex = 1;

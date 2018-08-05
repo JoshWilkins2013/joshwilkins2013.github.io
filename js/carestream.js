@@ -1,6 +1,6 @@
-var album = ["<img src=\"img/Carestream/CBCT.png\"><p>CBCT: 3d X-Rays</p>",
-			"<img src=\"img/Carestream/Revo.png\"><p>Revo: Mobile X-Ray Machine</p>",
-			"<center><img src=\"img/Carestream/Desk.png\"><p>My Desk</p>"
+var album = ["<img src=\"img/Carestream/CBCT.jpg\"><p>CBCT: 3d X-Rays</p>",
+			"<img src=\"img/Carestream/Revo.jpg\"><p>Revo: Mobile X-Ray Machine</p>",
+			"<center><img src=\"img/Carestream/Desk.jpg\"><p>My Desk</p>"
 			]
 
 var CarestreamSlideIndex = 1;
@@ -41,7 +41,7 @@ function task21() {
 	var description = "Refactored the entire automation framework following the structure below (A page-based infrastructure).\
 	Also managed and updated the automated test suites to verify the functionality of software.\
 	Wrote scripts to automate the machine calibration processes as well.<br><br>\
-	<img src=\"img\\Carestream\\Framework.png\" width=50%>"
+	<img src=\"img\\Carestream\\Framework.jpg\" width=50%>"
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "<strong>Framework</strong>";
 };
@@ -58,7 +58,7 @@ function task22() {
 function task23() {
 	var description = "Utilized Agile practices and actively participated daily in scrum meetings.\
 	Utilized test driven development practices to ensure quality software.<br><br>\
-	<img src=\"img\\Carestream\\TDD.png\" width=50%>"
+	<img src=\"img\\Carestream\\TDD.jpg\" width=50%>"
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "<strong>Kanban</strong>";
 };

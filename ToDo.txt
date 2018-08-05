@@ -8,6 +8,7 @@ Verify:
 - Add seo jekyll tag
 
 Do Anytime:
+- Fix page height (or block heights?) in projects so that image loading doesnt jump
 - Add pictures to Education courses (& sliders where necessary)
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
 - Add Kaggle Icon to Social Links
