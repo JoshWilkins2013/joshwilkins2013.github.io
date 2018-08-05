@@ -5,8 +5,8 @@ var albums = {
 		"VArm": [
 			"<img src=\"img/Misc_Hobby/VArm/VArm1.jpg\"><p>Finished Build</p>",
 			"<img src=\"img/Misc_Hobby/VArm/Test.jpg\"><p>Test Subject</p>",
-			"<img src=\"img/Misc_Hobby/VArm/VArm2.jpg\"><br><br><p>User Mounted</p>",
-			"<img src=\"img/Misc_Hobby/VArm/VArm3.jpg\"><br><br><p>User Mounted</p>",
+			"<img src=\"img/Misc_Hobby/VArm/VArm2.jpg\"><p>User Mounted</p>",
+			"<img src=\"img/Misc_Hobby/VArm/VArm3.jpg\"><p>Another User Mounted</p>",
 			"<img src=\"img/Misc_Hobby/VArm/PCB.jpg\"><p>PCB</p>",
 			"<img src=\"img/Misc_Hobby/VArm/Valves.jpg\"><p>Valve System</p>",
 			"<img src=\"img/Misc_Hobby/VArm/Integration.jpg\"><p>System Integration</p>",
@@ -14,7 +14,7 @@ var albums = {
 		],
 		"Ambilight": [
 			"<img src=\"img/Misc_Hobby/Ambilight/Ambilight.jpg\"><p>System Launch</p>",
-			"<img src=\"img/Misc_Hobby/Ambilight/Connections.jpg\"><p>System Launch</p>"
+			"<img src=\"img/Misc_Hobby/Ambilight/Connections.jpg\"><p>Connections</p>"
 		],
 		"Misc": [
 			"<img src=\"img/Misc_Hobby/Misc/Computer_Inside.jpg\"><p>Inside My Computer</p>",

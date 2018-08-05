@@ -4,7 +4,6 @@ Should do:
 - Update DSU description
 - Change from small/large screen inverts left menu in/out
 - Fix page height (or block heights?) in projects so that image loading doesnt jump
-- Move text caption under images
 
 Verify:
 - Add seo jekyll tag

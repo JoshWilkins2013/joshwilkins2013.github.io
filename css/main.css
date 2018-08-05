@@ -118,11 +118,8 @@ input:-webkit-autofill {
 
 /* Caption text */
 .mySlides p {
-  color: #f2f2f2;
-  font-size: 15px;
-  margin: 0;
   position: absolute;
-  bottom: 0;
+  color: #f2f2f2;
   width: 100%;
   text-align: center;
 }
@@ -252,7 +249,7 @@ i[class*='icon-'] {
 }
 
 .block {
-  padding: 20px;
+  padding: 20 20 40 20;
   background: #2d3035;
   color: #8a8d93;
   margin-bottom: 30px;
