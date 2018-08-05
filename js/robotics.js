@@ -2,42 +2,42 @@ var albums = {
 		"Indie": [
 			"<img src=\"img/Robotics/ASEE_Indie/Robot.png\"><p>SolidWorks Model</p>",
 			"<img src=\"img/Robotics/ASEE_Indie/Robot_Exploded.png\"><p>SolidWorks Exploded Model</p>",
-			"<img src=\"img/Robotics/ASEE_Indie/Robot_Assembled1.png\"><p>Assembled Robot</p>",
-			"<img src=\"img/Robotics/ASEE_Indie/Robot_Assembled2.png\"><p>Assembled Robot</p>",
+			"<img src=\"img/Robotics/ASEE_Indie/Robot_Assembled1.jpg\"><p>Assembled Robot</p>",
+			"<img src=\"img/Robotics/ASEE_Indie/Robot_Assembled2.jpg\"><p>Assembled Robot</p>",
 			"<img src=\"img/Robotics/ASEE_Indie/Track.png\"><p>Track</p>"
 		],
 		"Derby": [
-			"<img src=\"img/Robotics/ASEE_Derby/Robot.png\"><p>Assembled Robot</p>",
+			"<img src=\"img/Robotics/ASEE_Derby/Robot.jpg\"><p>Assembled Robot</p>",
 			"<img src=\"img/Robotics/ASEE_Derby/New_Design.png\"><p>SolidWorks Design</p>",
 			"<img src=\"img/Robotics/ASEE_Derby/Track.png\"><p>Track</p>",
 			"<img src=\"img/Robotics/ASEE_Derby/Original_Design.png\"><p>Original SolidWorks Design</p>",
 			"<img src=\"img/Robotics/ASEE_Derby/Original_Design_ASM.png\"><p>Original SolidWorks Design</p>"
 		],
 		"ATtiny": [
-			"<img src=\"img/Robotics/ATtiny/Robots.png\"><p>Assembled Robots</p>",
-			"<img src=\"img/Robotics/ATtiny/Original.png\"><p>Prototype</p>",
-			"<img src=\"img/Robotics/ATtiny/Rev1_Schematic.png\"><p>Rev 1 Schematic</p>",
-			"<img src=\"img/Robotics/ATtiny/Rev1_Robot.png\"><p>Rev 1 Robot</p>",
-			"<img src=\"img/Robotics/ATtiny/Rev2_Schematics.png\"><p>Rev 2 Schematic</p>",
-			"<img src=\"img/Robotics/ATtiny/Rev2_Robot.png\"><p>Rev 2 Robot</p>",
-			"<img src=\"img/Robotics/ATtiny/Rev3_Schematic.png\"><p>Rev 3 Schematic</p>",
+			"<img src=\"img/Robotics/ATtiny/Robots.jpg\"><p>Assembled Robots</p>",
+			"<img src=\"img/Robotics/ATtiny/Original.jpg\"><p>Prototype</p>",
+			"<img src=\"img/Robotics/ATtiny/Rev1_Schematic.jpg\"><p>Rev 1 Schematic</p>",
+			"<img src=\"img/Robotics/ATtiny/Rev1_Robot.jpg\"><p>Rev 1 Robot</p>",
+			"<img src=\"img/Robotics/ATtiny/Rev2_Schematics.jpg\"><p>Rev 2 Schematic</p>",
+			"<img src=\"img/Robotics/ATtiny/Rev2_Robot.jpg\"><p>Rev 2 Robot</p>",
+			"<img src=\"img/Robotics/ATtiny/Rev3_Schematic.jpg\"><p>Rev 3 Schematic</p>",
 			"<img src=\"img/Robotics/ATtiny/Model.png\"><p>Rev 3 Model</p>"
 		],
 		"Quadcopter": [
-			"<img src=\"img/Robotics/Quadcopter/Build.png\"><p>Quadcopter Layout</p>",
+			"<img src=\"img/Robotics/Quadcopter/Build.jpg\"><p>Quadcopter Layout</p>",
 			"<img src=\"img/Robotics/Quadcopter/Original_Design.png\"><p>Original SolidWorks Design</p>",
 			"<img src=\"img/Robotics/Quadcopter/Original_Design_ASM.png\"><p>Original SolidWorks Design</p>",
 			"<img src=\"img/Robotics/Quadcopter/New_Design.png\"><p>Updated SolidWorks Design</p>",
 			"<img src=\"img/Robotics/Quadcopter/New_Design_ASM.png\"><p>Updated SolidWorks Design</p>"
 		],
 		"ENR153": [
-			"<img src=\"img/Robotics/ENR153/Front.png\"><p>Front View</p>",
-			"<img src=\"img/Robotics/ENR153/Back.png\"><p>Rear View</p>",
-			"<img src=\"img/Robotics/ENR153/Inside.png\"><p>Inside View</p>",
-			"<img src=\"img/Robotics/ENR153/Gears.png\"><p>Gear Assembly</p>",
-			"<img src=\"img/Robotics/ENR153/Top.png\"><p>3D Printed Shell</p>",
-			"<img src=\"img/Robotics/ENR153/McLarenF1_Front.png\"><p>Model Front</p>",
-			"<img src=\"img/Robotics/ENR153/McLarenF1_Back.png\"><p>Model Rear</p>"
+			"<img src=\"img/Robotics/ENR153/Front.jpg\"><p>Front View</p>",
+			"<img src=\"img/Robotics/ENR153/Back.jpg\"><p>Rear View</p>",
+			"<img src=\"img/Robotics/ENR153/Inside.jpg\"><p>Inside View</p>",
+			"<img src=\"img/Robotics/ENR153/Gears.jpg\"><p>Gear Assembly</p>",
+			"<img src=\"img/Robotics/ENR153/Top.jpg\"><p>3D Printed Shell</p>",
+			"<img src=\"img/Robotics/ENR153/McLarenF1_Front.jpg\"><p>Model Front</p>",
+			"<img src=\"img/Robotics/ENR153/McLarenF1_Back.jpg\"><p>Model Rear</p>"
 		]
 }
 
