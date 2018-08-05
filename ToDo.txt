@@ -2,6 +2,7 @@ Should do:
 - Update Microsemi page
 - Replace jupyter pdfs with html pages
 - Add other education things including NIST / IEEE
+- Make avatar/text lead to home page
 
 Verify:
 - Prevent highlighting caused by autofill on contacts page
