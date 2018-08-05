@@ -3,25 +3,25 @@ var albums = {
 			"<img src=\"img/Misc_Hobby/Wilmake/Wilmake.png\"><p>SolidWorks Model</p>"
 		],
 		"VArm": [
-			"<img src=\"img/Misc_Hobby/VArm/VArm1.png\"><p>Finished Build</p>",
-			"<img src=\"img/Misc_Hobby/VArm/Test.png\"><p>Test Subject</p>",
-			"<img src=\"img/Misc_Hobby/VArm/VArm2.png\"><br><br><p>User Mounted</p>",
-			"<img src=\"img/Misc_Hobby/VArm/VArm3.png\"><br><br><p>User Mounted</p>",
-			"<img src=\"img/Misc_Hobby/VArm/PCB.png\"><p>PCB</p>",
-			"<img src=\"img/Misc_Hobby/VArm/Valves.png\"><p>Valve System</p>",
-			"<img src=\"img/Misc_Hobby/VArm/Integration.png\"><p>System Integration</p>",
-			"<img src=\"img/Misc_Hobby/VArm/Valve_System.png\"><p>Valve Flow Diagram</p>"
+			"<img src=\"img/Misc_Hobby/VArm/VArm1.jpg\"><p>Finished Build</p>",
+			"<img src=\"img/Misc_Hobby/VArm/Test.jpg\"><p>Test Subject</p>",
+			"<img src=\"img/Misc_Hobby/VArm/VArm2.jpg\"><br><br><p>User Mounted</p>",
+			"<img src=\"img/Misc_Hobby/VArm/VArm3.jpg\"><br><br><p>User Mounted</p>",
+			"<img src=\"img/Misc_Hobby/VArm/PCB.jpg\"><p>PCB</p>",
+			"<img src=\"img/Misc_Hobby/VArm/Valves.jpg\"><p>Valve System</p>",
+			"<img src=\"img/Misc_Hobby/VArm/Integration.jpg\"><p>System Integration</p>",
+			"<img src=\"img/Misc_Hobby/VArm/Valve_System.jpg\"><p>Valve Flow Diagram</p>"
 		],
 		"Ambilight": [
-			"<img src=\"img/Misc_Hobby/Ambilight/Ambilight.png\"><p>System Launch</p>",
-			"<img src=\"img/Misc_Hobby/Ambilight/Connections.png\"><p>System Launch</p>"
+			"<img src=\"img/Misc_Hobby/Ambilight/Ambilight.jpg\"><p>System Launch</p>",
+			"<img src=\"img/Misc_Hobby/Ambilight/Connections.jpg\"><p>System Launch</p>"
 		],
 		"Misc": [
-			"<img src=\"img/Misc_Hobby/Misc/Computer_Inside.png\"><p>Inside My Computer</p>",
-			"<img src=\"img/Misc_Hobby/Misc/Computer.png\"><p>Outside My Computer</p>",
-			"<img src=\"img/Misc_Hobby/Misc/Desk.png\"><p>Desk</p>",
+			"<img src=\"img/Misc_Hobby/Misc/Computer_Inside.jpg\"><p>Inside My Computer</p>",
+			"<img src=\"img/Misc_Hobby/Misc/Computer.jpg\"><p>Outside My Computer</p>",
+			"<img src=\"img/Misc_Hobby/Misc/Desk.jpg\"><p>Desk</p>",
 			"<img src=\"img/Misc_Hobby/Misc/PowerSupply.png\"><p>Dual Supply Adjustable PSU</p>",
-			"<img src=\"img/Misc_Hobby/Misc/3D_Printer.png\"><p>Old 3D Printer</p>"
+			"<img src=\"img/Misc_Hobby/Misc/3D_Printer.jpg\"><p>Old 3D Printer</p>"
 		]
 
 }
