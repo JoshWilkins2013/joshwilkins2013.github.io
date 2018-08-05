@@ -9,12 +9,12 @@ var albums = {
 			"<img src=\"img/Wood_Working/Coffee_Mug/Side.png\"><p>Missing Finish</p>"
 		],
 		"TTT": [
-			"<img src=\"img/Wood_Working/3D_TTT/Blocks.png\"><p>Complete Set</p>",
-			"<img src=\"img/Wood_Working/3D_TTT/No_Blocks.png\"><p>Without Blocks</p>"
+			"<img src=\"img/Wood_Working/3D_TTT/Blocks.jpg\"><p>Complete Set</p>",
+			"<img src=\"img/Wood_Working/3D_TTT/No_Blocks.jpg\"><p>Without Blocks</p>"
 		],
 		"Chest": [
-			"<img src=\"img/Wood_Working/Chest/Iso.png\"><p>Front</p>",
-			"<img src=\"img/Wood_Working/Chest/Inside.png\"><p>Inside</p>",
+			"<img src=\"img/Wood_Working/Chest/Iso.jpg\"><p>Front</p>",
+			"<img src=\"img/Wood_Working/Chest/Inside.jpg\"><p>Inside</p>",
 		]
 }
 
