@@ -11,7 +11,7 @@ function LifeAtRIT() {
       who believes having a degree makes you an engineer is outright wrong. Experience is what truly makes someone better\
       at something. If you are looking to hire someone, please look at their project work and work experience. This will\
       at least give you a sense of the person's dedication and commitment to self-improvement."
-	document.getElementById("course-title").innerHTML = "<strong>Life at RIT</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Life at RIT</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -26,7 +26,7 @@ function EEEE220() {
 	The lab sessions enforce and complement the concepts and design principles exposed in the\
 	lecture through the use of CAD tools and emulation in a commercial FPGA. This course assumes\
 	a background in C programming."
-	document.getElementById("course-title").innerHTML = "<strong>Digital Systems II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Digital Systems II</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -37,7 +37,7 @@ function EEEE260() {
 	physics of carrier concentration, motion in crystals, energy band models, drift and diffusion\
 	currents) as well as the operation of pn junction diodes, bipolar junction transistors (BJT),\
 	metal-oxide-semiconductor (MOS) capacitors and MOS field-effect transistors."
-	document.getElementById("course-title").innerHTML = "<strong>Intro to Semiconductor Devices</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Intro to Semiconductor Devices</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -47,7 +47,7 @@ function EEEE346() {
 	structures, functions, and arrays), pointers, classes, operator overloading, inheritance, polymorphism,\
 	data structures, class string, and STL. At the end of the semester, everyone will\
 	have the working knowledge of C++. Projects will be assigned to build your C++ programming skills."
-	document.getElementById("course-title").innerHTML = "<strong>Advanced Programming</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Advanced Programming</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -68,7 +68,7 @@ function EEEE353() {
 	and Laplace transform is also covered. Finally, an introduction to the design of digital filters,\
 	which includes filter block diagrams for Finite Impulse Response (FIR) and Infinite Impulse\
 	Response (IIR) filters is introduced."
-	document.getElementById("course-title").innerHTML = "<strong>Linear Systems</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Linear Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -88,7 +88,7 @@ function EEEE374() {
 	matching techniques, TE and TM waves in rectangular waveguides. experiments using stateof-art\
 	RF equipment illustrating fundamental wave propagation and reflection concepts, design\
 	projects with state-of-art EM modeling tools."
-	document.getElementById("course-title").innerHTML = "<strong>EM Fields & Transmission Lines</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">EM Fields & Transmission Lines</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -104,7 +104,7 @@ function EEEE381() {
 	diodes and diode circuits, including rectifying and clamping circuits, as well as Zener diodebased\
 	voltage regulation; (8) Ideal operational amplifier (op amp) circuits in non-inverting\
 	and inverting configurations."
-	document.getElementById("course-title").innerHTML = "<strong>Electronics I</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Electronics I</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -120,7 +120,7 @@ function EEEE414() {
 	PID control; root-locus analysis and design; frequency-response design and Nyquist stability. A\
 	laboratory will provide students with hands-on analysis and design-build-test experience, and\
 	includes the use of computer-aided design software such as MATLAB."
-	document.getElementById("course-title").innerHTML = "<strong>Classical Control</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Classical Control</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -137,7 +137,7 @@ function EEEE482() {
 	of NMOS and CMOS inverters; (8) combinational and sequential CMOS logic networks;\
 	(9) dynamic CMOS logic networks, including precharge-evaluate, domino and transmission\
 	gate techniques; (10) special topics, including static and dynamic MOS memory and lowpower logic."
-	document.getElementById("course-title").innerHTML = "<strong>Electronics II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Electronics II</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -149,7 +149,7 @@ function EEEE483() {
 	control of electromechanical systems are studied. High-performance MATLAB environment\
 	is used to simulate, analyze and control mechatronic systems. Application of digital signal\
 	processors and microcontrollers in mechatronics are introduced. Case studies are covered."
-	document.getElementById("course-title").innerHTML = "<strong>Mechatronics</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Mechatronics</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -162,7 +162,7 @@ function EEEE484() {
 	Phase-locked loop and its application. Introduction to digital communication. Binary ASK, FSK\
 	and PSK. Noise effects. Optimum detection: matched filters, maximum-likelihood reception.\
 	Computer simulation."
-	document.getElementById("course-title").innerHTML = "<strong>Communication Systems</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Communication Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -176,7 +176,7 @@ function EEEE485() {
 	addition, robotics system modeling, control, and applications will be explored. Students will\
 	design electronic interfaces and controllers for mechanical devices. Finally, sensor and actuator\
 	selection, installation, and application strategies will be explored."
-	document.getElementById("course-title").innerHTML = "<strong>Robotic Systems</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Robotic Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -189,7 +189,7 @@ function EEEE497() {
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
 	which is fully tested and documented."
-	document.getElementById("course-title").innerHTML = "<strong>Senior Design Project I</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Senior Design Project I</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -202,7 +202,7 @@ function EEEE498() {
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
 	which is fully tested and documented"
-	document.getElementById("course-title").innerHTML = "<strong>Senior Design Project II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Senior Design Project II</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -215,7 +215,7 @@ function EEEE579() {
 	and Bessel-Thompson polynomials; standard filter stages; magnitude and frequency scaling;\
 	low-pass filter design; design of high-pass, band-pass and band-reject filters; passive ladder\
 	filter network design; frequency dependent negative resistance networks; switched capacitor filters."
-	document.getElementById("course-title").innerHTML = "<strong>Analog Filter Design</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Analog Filter Design</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -226,7 +226,7 @@ function EEEE593() {
 	band-limited and distorting channels, filter design, equalizers, optimal detection for channels\
 	with memory, synchonization methods, non-linear modulation, and introduction to multipath\
 	fading channels, spread spectrum and OFDM."
-	document.getElementById("course-title").innerHTML = "<strong>Digital Data Communication</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Digital Data Communication</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -239,7 +239,7 @@ function EEEE661() {
 	conversion of one form to the other, minimal realization, solution of state equations,\
 	controllability, observability, design of control systems for desired performance, state feedback,\
 	observers and their realizations."
-	document.getElementById("course-title").innerHTML = "<strong>Modern Control Theory</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Control Theory</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -256,7 +256,7 @@ function EEEE663() {
 	Some fundamental material on real-time operating systems and multiprocessor considerations\
 	for real-time systems will also be presented. Examples include scheduling algorithms,\
 	priority inversion, and hardware-software co-design."
-	document.getElementById("course-title").innerHTML = "<strong>RTOS & Embedded Systems</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">RTOS & Embedded Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -265,7 +265,7 @@ function MATH326() {
 	var description = "This course provides an introduction to boundary value problems. Topics include Fourier\
 	series, separation of variables, Laplace's equation, the heat equation, and the wave equation\
 	in Cartesian and polar coordinate systems."
-	document.getElementById("course-title").innerHTML = "<strong>Boundary Value Problems</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Boundary Value Problems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -274,7 +274,7 @@ function MATH381() {
 	var description = "This course covers the algebra of complex numbers, analytic functions, Cauchy-Riemann\
 	equations, complex integration, Cauchy's integral theorem and integral formulas, Taylor\
 	and Laurent series, residues, real integrals by complex methods, and conformal mappings."
-	document.getElementById("course-title").innerHTML = "<strong>Complex Variables</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Complex Variables</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -283,7 +283,7 @@ function MATH441() {
 	var description = "This course covers basic set theory, number theory, groups, subgroups, cyclic and permutation\
 	groups, Lagrange and Sylow theorems, quotient groups, and isomorphism theorems.\
 	Group Theory finds applications in other scientific disciplines like physics and chemistry."
-	document.getElementById("course-title").innerHTML = "<strong>Abstract Algebra</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Abstract Algebra</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };

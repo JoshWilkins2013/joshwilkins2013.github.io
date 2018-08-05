@@ -18,7 +18,7 @@ function task11() {
 	Wrote excel macros to analyze and plot results.<br><br>\
 	<img src=\"img\\Carestream\\AGM.png\" width=50%>"
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>AGM Battery Test Fixture</strong>";
+	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">AGM Battery Test Fixture</h5>";
 };
 
 function task12() {
@@ -27,14 +27,14 @@ function task12() {
 	<a href=\"Storage\\Carestream\\Balancing2.pdf\" target=\"_blank\"><button type=\"submit\">Solution2</button></a><br>\
 	<img src=\"img\\Carestream\\SwitchedCaps.png\" width=50%>"
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>Battery Life Enhancement</strong>";
+	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">Battery Life Enhancement</h5>";
 };
 
 function task13() {
 	var description = "Analyzed and debugged problems on the PCBs within the X-Ray machine buckies.<br><br>\
 	<img src=\"img\\Carestream\\Bucky.png\" width=50%>"
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>X-Ray Bucky</strong>";
+	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">X-Ray Bucky</h5>";
 };
 
 function task21() {
@@ -43,7 +43,7 @@ function task21() {
 	Wrote scripts to automate the machine calibration processes as well.<br><br>\
 	<img src=\"img\\Carestream\\Framework.jpg\" width=50%>"
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>Framework</strong>";
+	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">Framework</h5>";
 };
 
 function task22() {
@@ -52,7 +52,7 @@ function task22() {
 	new features and development areas to the automation team. The automation team reports any bugs to the developers to \
 	fix before it gets to QA. QA needs to be aware of both of these things and helps the automation team correctly test the software."
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>Communication</strong>";
+	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">Communication</h5>";
 };
 
 function task23() {
@@ -60,7 +60,7 @@ function task23() {
 	Utilized test driven development practices to ensure quality software.<br><br>\
 	<img src=\"img\\Carestream\\TDD.jpg\" width=50%>"
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>Kanban</strong>";
+	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">Kanban</h5>";
 };
 
 function task24() {
@@ -69,5 +69,5 @@ function task24() {
 	and ensuring both the QA team and the software developers had a good understanding of the changes being made to the software.\
 	I was also responsible for training the new (official) automation lead, which happened just before I left Carestream"
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<strong>Leadership / Management</strong>";
+	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">Leadership / Management</strong>";
 };

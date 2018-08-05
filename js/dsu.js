@@ -1,7 +1,7 @@
 function LifeAtDSU() {
 	var description = "After a year working full-time as an electrical engineer at Microsemi, I started attending\
     classes at Dakota State University (DSU)."
-	document.getElementById("course-title").innerHTML = "<strong>Life at DSU</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Life at DSU</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -10,7 +10,7 @@ function INFS762() {
 	var description = "The main concepts, components, and various architectures of Data Warehouse. Advanced data\
 	analysis and optimization of Data Warehouse Design. Data Warehousing and OLAP tools. Applying data mining\
 	algorithms to retrieve highly specialized information or knowledge about the data stored in the Data Warehouse."
-	document.getElementById("course-title").innerHTML = "<strong>Data Warehousing and Data Mining</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Data Warehousing and Data Mining</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -24,7 +24,7 @@ function INFS772() {
 	use Python for effective data analysis.  Specific topics addressed include: vector computation and mathematics\
 	with NumPy, statistical computation with SciPy, working with tabular data with Pandas,\
 	and implementing analytics algorithms using Python."
-	document.getElementById("course-title").innerHTML = "<strong>Programming for Data Analytics</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Programming for Data Analytics</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -46,7 +46,7 @@ function INFS774() {
 	<li> Performing analytics with predictive models, text analytics, and streaming data</li>\
 	<li> Data visualization and communication of analytical findings.</li>\
 	State-of-the-art tools are integrated throughout the course to provide hands-on exercises with relevant techniques."
-	document.getElementById("course-title").innerHTML = "<strong>Big Data Analytics</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Big Data Analytics</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -54,7 +54,7 @@ function INFS774() {
 function STAT700() {
 	var description = "Fundamentals of statistical programming languages including descriptive and visual analytics\
 	in R and SAS, and programming fundamentals of SAS and R including logic, loops, macros and functions."
-	document.getElementById("course-title").innerHTML = "<strong>Statistical Programming</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Statistical Programming</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -66,7 +66,7 @@ function STAT701() {
 	interpretation of the methods. The last section of the class will focus on longitudinal and repeated measure\
 	models and conclude with an overview of techniques from meta-analysis\
 	and large-scale inference."
-	document.getElementById("course-title").innerHTML = "<strong>Modern Applied Statistics I</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Applied Statistics I</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -76,7 +76,7 @@ function STAT702() {
 	Component Analysis, Multidimensional Scaling, and Cluster Analysis. From there we will move on to an introduction\
 	to supervised learning methods and pattern recognition with a focus on algorithmic methods. The course will finish\
 	with an overview of statistical prediction analysis relevant to business intelligence and analytics."
-	document.getElementById("course-title").innerHTML = "<strong>Modern Applied Statistics II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Applied Statistics II</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -89,7 +89,7 @@ function INFS768() {
 	and neural networks, association analysis techniques such as market basket analysis, and cluster analysis techniques\
 	such as K-means clustering. Applications of each of the techniques for decision-making applications will be\
 	emphasized. Utilization of predictive analytics software is incorporated."
-	document.getElementById("course-title").innerHTML = "<strong>Predictive Analytics for Decision Making</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Predictive Analytics for Decision Making</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -101,7 +101,7 @@ function INFS770() {
 	variable transformation, model building, and model comparison will be covered. Students will participate in one\
 	or more major data mining projects in the course. Through formal presentations students will gain experience in\
 	delivering the findings to an audience in an effective manner. Utilization of predictive analysis software is incorporated."
-	document.getElementById("course-title").innerHTML = "<strong>Advanced Data Mining Applications</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Advanced Data Mining Applications</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };

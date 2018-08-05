@@ -1,15 +1,14 @@
 Should do:
 - Update Microsemi page
-- Replace jupyter pdfs with html pages
 - Add other education things including NIST / IEEE
-- Make avatar/text lead to home page
+- Update DSU description
+- Change from small/large screen inverts left menu in/out
+- Fix page height (or block heights?) in projects so that image loading doesnt jump
 
 Verify:
-- Prevent highlighting caused by autofill on contacts page
 - Add seo jekyll tag
 
 Do Anytime:
-- Fix page height (or block heights?) in projects so that image loading doesnt jump
 - Add pictures to Education courses (& sliders where necessary)
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
 - Add Kaggle Icon to Social Links
@@ -26,5 +25,4 @@ Do Anytime:
 Explore / Investigate:
 - Add modal or pages for additional project info
 - Footer options (Social icons to footer, Contact button, site map, other?)
-- Attempt to improve image loading speed (Note liquid just uses same html reference to image)
 - Expanding a sidebar item should collapse all the others

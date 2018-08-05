@@ -5,7 +5,7 @@ function LifeAtMCC() {
       of the Engineering Leadership Council. I helped start fundraisers, host trips to neighboring universities, and\
       helped other students through the engineering program. Again I decided to join the robotics competition and again\
       we placed 2nd. I graduated that spring (2015) with an associates degree in Engineering Science."
-	document.getElementById("course-title").innerHTML = "<strong>Life at MCC</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Life at MCC</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
@@ -16,7 +16,7 @@ function ENR153() {
 	Prototyping will be done using manual and CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
 	geometric relations, external references, equations, and design tables will be emphasized. A design-build project will require students to build a working prototype \
 	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports."
-	document.getElementById("course-title").innerHTML = "<strong>Graphing & Machining</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Graphing & Machining</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR153.jpg\" width=100%>";
 };
@@ -28,7 +28,7 @@ function ENR157() {
 	feedback control, sensor interfacing and signal conditioning. Students will use schematic capture and VHDL programming to implement the digital systems on a \
 	Field Programmable Gate Array (FPGA) development board. Various add-on power supply and sensor boards will also be utilized in the laboratory component of the course.\
 	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation."
-	document.getElementById("course-title").innerHTML = "<strong><strong>Digital Electronics & Microcontrollers</strong></strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\"><h5 style=\"color:#cc5200\">Digital Electronics & Microcontrollers</h5></h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR157.jpg\" width=100%>";
 };
@@ -40,7 +40,7 @@ function ENR161() {
 	include linear algebra, graphing, and data analysis. The course will conclude with a design project using LabVIEW and LEGO Mindstorms robots. \
 	Students will prepare and deliver written and oral reports documenting their design process."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Engineering Computing I</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Engineering Computing I</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -48,7 +48,7 @@ function ENR251() {
 	var description = "Fundamentals of statics applied to problems of engineering interest. A vector algebra approach\
 	will be presented. Topics include equivalent force systems, equilibrium, structural mechanics, friction, properties of surfaces."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Statics</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Statics</h5>";
 	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR251.jpg\" width=100%>";
 };
 
@@ -57,7 +57,7 @@ function ENR253() {
 	operational amplifier models, topological properties of circuits, complete response for RC, RL and RLC circuits;\
 	phasor concepts for RLC circuit driven by sinusoidal forcing functions. The laboratory will provide examples of these concepts."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Circuit Analysis I</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Circuit Analysis I</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -66,7 +66,7 @@ function ENR254() {
 	Laplace transform analysis; transfer functions; passive and active filter design and analysis; Bode plots;\
 	magnetically coupled networks; two-port networks; and Fourier series and transforms."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Circuit Analysis II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Circuit Analysis II</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -74,7 +74,7 @@ function ENR256() {
 	var description = "Fundamentals of the theory of elasticity will be presented. Stress-strain relations will be applied to the study of \
 	the mechanics of deformable solids including the analysis of beams, shafts, and columns, and the use of energy methods."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Mechanics of Materials</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Mechanics of Materials</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -83,7 +83,7 @@ function ENR259() {
 	Students will be encouraged to choose a project from an intercollegiate engineering design competition. Teams will design and build a working prototype, \
 	keep an engineering notebook, submit a weekly time sheets, create a final design report, and make a final oral presentation."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Engineering Design Lab</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Engineering Design Lab</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -94,7 +94,7 @@ function ENR261() {
 	functions and decision making programming constructs utilized in short script files. Some larger projects may include the development of a graphical user interface (GUI)\
 	to handle the program inputs, solution options and outputs."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Engineering Computing II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Engineering Computing II</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -103,7 +103,7 @@ function MTH211() {
 	first order separable differential equations, indeterminate limit forms, improper integrals, infinite series, Taylor polynomials, and power series.\
 	A specific calculator may be required of students in this course."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Calculus II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Calculus II</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -112,7 +112,7 @@ function MTH212() {
 	and vectors, and the calculus of vector-valued functions are covered. A specific calculator will be required of all students in this course. Students are advised \
 	to check with the Mathematics Department."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Calculus III</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Calculus III</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -121,7 +121,7 @@ function MTH220() {
 	Topics will include propositional and predicate logic, elementary number theory, mathematical induction, set theory, combinatorics, functions, and relations. \
 	Methods of proof will be developed in a variety of mathematical contexts."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Discrete Mathematics</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Discrete Mathematics</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -132,7 +132,7 @@ function MTH225() {
 	and the Laplace Transform. In addition to analytical methods, quantitative and qualitative analysis will be employed through the use of Euler’s Method, \
 	phase lines, phase planes, and slope fields."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Differential Equations</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Differential Equations</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -140,7 +140,7 @@ function MTH230() {
 	var description = "Topics include systems of linear equations, vectors and matrices, determinants, vector spaces, linear \
 	transformations, eigenvectors and eigenvalues, and inner product spaces."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Linear Algebra</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Linear Algebra</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -150,7 +150,7 @@ function CHE151() {
 	Topics include a brief review of problem solving using dimensional analysis, graphing, and significant figures; chemical stoichiometry; gas laws; thermochemistry; \
 	an in-depth treatment of atomic structure, periodicity, and chemical bonding; phase relationships."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>General College Chemistry I</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">General College Chemistry I</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -158,7 +158,7 @@ function PHY161() {
 	var description = "An introductory course in classical mechanics using calculus; intended for those seeking a concentration in engineering, mathematics,\
 	or natural science. Topics include kinematics, Newton's Laws, work, energy, momentum, rotational motion of rigid bodies, and harmonic motion."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>University Physics I</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">University Physics I</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -166,7 +166,7 @@ function PHY261() {
 	var description = "An introduction to electric and magnetic fields. Topics include Coulomb's, Gauss's, Biot-Savart, Ampere's, \
 	Faraday's Laws, and Maxwell's Equations."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>University Physics II</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">University Physics II</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -174,7 +174,7 @@ function PHY262() {
 	var description = "An introductory course in modern physics for those who have completed two semesters of University Physics. \
 	Topics include relativity, quantum mechanics, and the application of quantum mechanics to atomic and nuclear structure."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Modern Physics</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Physics</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
@@ -184,6 +184,6 @@ function CSC202() {
 	Interrupts and Parallel Port Programming. Laboratory work will focus on program development, implementation and debugging techniques. Several programming projects will be assigned \
 	to be completed outside of class and in lab. A final project and student presentation are required."
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "<strong>Programming Embedded Microcontrollers in C & Assembly</strong>";
+	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Programming Embedded Microcontrollers in C & Assembly</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
