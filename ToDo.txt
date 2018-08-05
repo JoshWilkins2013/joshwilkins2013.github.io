@@ -1,6 +1,7 @@
 Should do:
 - Update Microsemi page
 - Replace jupyter pdfs with html pages
+- Add other education things including NIST / IEEE
 
 Verify:
 - Prevent highlighting caused by autofill on contacts page

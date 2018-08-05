@@ -26,6 +26,14 @@ a {
 
 .block-header {
   color: #cc5200;
+  padding-bottom: .2em;
+  border-bottom:solid 4px black;
+}
+
+.block-subheader {
+  color: #8a8d93;
+  padding-top: .5em;
+  font-size: .65em;
 }
 
 /* ========================================================== */
