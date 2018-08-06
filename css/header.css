@@ -11,6 +11,7 @@ nav.navbar {
   width: 100%;
 }
 
+/* Arrow to toggle sidebar */
 nav.navbar .sidebar-toggle {
   width: 36px;
   height: 36px;
@@ -252,13 +253,5 @@ nav.navbar .search-inner input:-ms-input-placeholder {
     top: 50px;
     display: block;
     width: 100%;
-  }
-  nav.navbar .sidebar-toggle {
-    width: 36px;
-    height: 36px;
-  }
-  nav.navbar .sidebar-toggle {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
   }
 }

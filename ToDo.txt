@@ -5,15 +5,16 @@ Should do:
 - Change from small/large screen inverts left menu in/out
 - Fix page height (or block heights?) in projects so that image loading doesnt jump
 - Ability to add sliders to education / experience blocks
+- Expanding a sidebar item should collapse all the others
 
 Verify:
 - Add seo jekyll tag
 
 Do Anytime:
 - Add pictures to Education courses (& sliders where necessary)
+- Fix course descriptions
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
 - Add email check to email contact field
-- Fix contact page field error messages styling
 - Fix Search button
 - Improve thanks page
 - Improve 404 page
@@ -23,5 +24,4 @@ Do Anytime:
 
 Explore / Investigate:
 - Add modal or pages for additional project info
-- Footer options (Social icons to footer, Contact button, site map, other?)
-- Expanding a sidebar item should collapse all the others
+- Footer options (Social icons to footer, Contact button, site map, other? Easter Egg?)
