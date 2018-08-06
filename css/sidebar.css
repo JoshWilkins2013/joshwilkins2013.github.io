@@ -9,7 +9,6 @@ nav#sidebar::-webkit-resizer { background-color: #666;}
 nav#sidebar {
   position: fixed;
   width: 280px;
-  height: 100%;
   top: 71px;
   bottom: 0;
   background: #2d3035;
@@ -130,6 +129,8 @@ nav#sidebar.shrinked {
   nav#sidebar {
     width: 80px;
     margin-left: -80px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   nav#sidebar .sidebar-header {
     padding: 10px;
@@ -175,13 +176,18 @@ nav#sidebar.shrinked {
     top: 88%;
     left: 50%;
   }
+  #icon-container {
+    position: absolute;
+    text-align: center;
+    margin: 0 0 20 0 !important;
+  }
 }
 
 /* ========================================================== */
 /*     SOCIAL ICONS
 /* ========================================================== */
 #social-icons {
-  margin: 0;
+  margin: 0 0 20 0;
 }
 
 #icon-container {

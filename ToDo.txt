@@ -15,7 +15,6 @@ Do Anytime:
 - Add email check to email contact field
 - Fix contact page field error messages styling
 - Fix Search button
-- Scrollbar in sidebar doenst account for icons
 - Improve thanks page
 - Improve 404 page
 - Go through extras folder
