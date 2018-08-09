@@ -21,9 +21,11 @@ var albums = {
 			"<img src=\"img/Work_Related/PCB/100MHzOCXO_Board.jpg\"><p>Another OCXO Eval Board</p>"
 		],
 		"Box": [
-		    "<img src=\"img/Work_Related/Box/DividerBox.jpg\"><p>Divider Box</p>",
-		    "<img src=\"img/Work_Related/Box/Box1.jpg\"><p>Interface Box</p>",
-            "<img src=\"img/Work_Related/Box/Box2.jpg\"><p>Inside Box</p>"
+		    "<img src=\"img/Work_Related/Misc/DividerBox.jpg\"><p>Divider Box</p>",
+		    "<img src=\"img/Work_Related/Misc/TranslationDevice.png\"><p>Frequency Translation Device</p>",
+		    "<img src=\"img/Work_Related/Misc/BMiscox1.jpg\"><p>Interface Box</p>",
+            "<img src=\"img/Work_Related/Misc/Box2.jpg\"><p>Inside Box</p>"
+
         ],
         "AtomicClock": [
 		    "<img src=\"img/Work_Related/AtomicClock/GUI.jpg\"><p>User Interface</p>",
