@@ -1,16 +1,35 @@
-var album = ["<img src=\"img/Microsemi/CSAC.png\"><p>CSAC</p>",
-			"<img src=\"img/Microsemi/MAC.png\"><p>MAC</p>",
-			"<img src=\"img/Microsemi/5071A.jpg\"><p>5071A Cs Atomic Clock</p>",
-			"<img src=\"img/Microsemi/5125A.jpg\"><p>Phase Noise Test Set</p>",
-			]
+var albums = {
+            "Microsemi": [
+                "<img src=\"img/Microsemi/CSAC.png\"><p>CSAC</p>",
+                "<img src=\"img/Microsemi/MAC.png\"><p>MAC</p>",
+                "<img src=\"img/Microsemi/5071A.jpg\"><p>5071A Cs Atomic Clock</p>",
+                "<img src=\"img/Microsemi/5125A.jpg\"><p>Phase Noise Test Set</p>"
+			],
+            "Synth": [
+                "<img src=\"img/Work_Related/Synth/Iso.jpg\"><p>Isometric View</p>",
+                "<img src=\"img/Work_Related/Synth/Front.jpg\"><p>Front View</p>",
+                "<img src=\"img/Work_Related/Synth/Layer.jpg\"><p>Example Layer</p>",
+                "<img src=\"img/Work_Related/Synth/Model.png\"><p>SolidWorks Model</p>",
+                "<img src=\"img/Work_Related/Synth/IAASR.png\"><p>My Model</p>",
+		    ]
+}
 
 var MicrosemiSlideIndex = 1;
 MicrosemiSlides(MicrosemiSlideIndex);
 function MicrosemiSlides(n) {
   var i;
-  if (n > album.length) {MicrosemiSlideIndex = 1}
-  if (n < 1) {MicrosemiSlideIndex = album.length}
-  document.getElementById("MicrosemiSlider").innerHTML = album[MicrosemiSlideIndex-1];
+  if (n > albums["Microsemi"].length) {MicrosemiSlideIndex = 1}
+  if (n < 1) {MicrosemiSlideIndex = albums["Microsemi"].length}
+  document.getElementById("MicrosemiSlider").innerHTML = albums["Microsemi"][MicrosemiSlideIndex-1];
+}
+
+var SynthSlideIndex = 1;
+SynthSlides(SynthSlideIndex);
+function SynthSlides(n) {
+  var i;
+  if (n > albums["Synth"].length) {SynthSlideIndex = 1}
+  if (n < 1) {SynthSlideIndex = albums["Synth"].length}
+  document.getElementById("SynthSlider").innerHTML = albums["Synth"][SynthSlideIndex-1];
 }
 
 function task1() {
@@ -18,7 +37,13 @@ function task1() {
     It was optimized to minimize phase noise and the results were over 10 times better than commercially available components.\
     The enclosure was created using interchangeable RF shielded rack mount units to minimize EMI effects.\
     Was also responsible for the design of the internal layout, front panel components, and the final build and assembly.<br><br>\
-    <img src=\"img\\Work_Related\\Synth\\Iso.jpg\" width=50%>"
+    <div class=\"slideshow-container\">\
+      <div id=\"SynthSlider\" class=\"myslides\">\
+        <img src=\"img/Work_Related/Synth/Iso.jpg\"><p>Isometric View</p>\
+      </div>\
+      <a class=\"prev\" onclick=\"SynthSlides(SynthSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"SynthSlides(SynthSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+    </div>"
 	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">High Frequency Synthesizer</h5>";
     document.getElementById("details-description").innerHTML = description;
 };
@@ -99,8 +124,7 @@ function task9() {
 	var description = "Converted the Matlab script found\
 	<a href=\"https://www.mathworks.com/matlabcentral/fileexchange/8844-phase-noise?focused=5065243&tab=function&requestedDomain=www.mathworks.com\" target=\"_blank\">here</a> \
 	into python to inject phase noise into any model. Useful for phase noise degradation testing and helps define its effect on allan deviation.<br>\
-	<a href=\"https://github.com/JoshWilkins2013/AddPhaseNoise\" target=\"_blank\">Repository</a>"
+	<a href=\"https://github.com/JoshWilkins2013/Tools/tree/master/AddPhaseNoise\" target=\"_blank\">Repository</a>"
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "<h5 style=\"color:#cc5200\">Phase Noise Injection</h5>";
 };
-

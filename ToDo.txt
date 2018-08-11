@@ -2,14 +2,14 @@ Should do:
 - Update Microsemi page
 - Add other education things including NIST / IEEE
 - Update DSU description
-- Fix page height (or block heights?) in projects so that image loading doesnt jump
-- Ability to add sliders to education / experience blocks
-- Expanding a sidebar item should collapse all the others
+- Fix page height (or block heights?) in projects so that image loading doesnt jump (maybe min block height)
+- Skill proficiencies
 
 Verify:
 - Add seo jekyll tag
 
 Do Anytime:
+- Arrows in sidebar dont always work now
 - Add pictures to Education courses (& sliders where necessary)
 - Fix course descriptions
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
