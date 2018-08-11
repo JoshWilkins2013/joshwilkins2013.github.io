@@ -4,6 +4,8 @@ Should do:
 - Update DSU description
 - Fix page height (or block heights?) in projects so that image loading doesnt jump (maybe min block height)
 - Skill proficiencies
+- Add sliders to experience blocks
+- Remove Work-Related section?
 
 Verify:
 - Add seo jekyll tag

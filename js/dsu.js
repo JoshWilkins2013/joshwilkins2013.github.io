@@ -105,3 +105,25 @@ function INFS770() {
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
+
+function ECON730() {
+    var description = "This course utilizes micro- and macroeconomic theory and empirical analysis to improve decision-making \
+    skills and incorporates significant information technology integration. Major microeconomics topics include demand analysis and estimation, \
+    cost analysis and estimation, market structures, pricing strategies, and game theory. Major macroeconomics topics include \
+    the operation of credit markets, monetary and fiscal policy, analysis and prediction of macroeconomic variables, foreign currency markets, \
+    and international trade. Technology integration includes: The use of Internet-based resources to supply data for analysis and information \
+    on current issues relevant to the course; the use of simulations, games, and computer applications to reinforce economic concepts; \
+    and the introduction of software tools that enhance the summary and presentation of economic information in a professional setting."
+    document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Economics For Decision Making</h5>";
+	document.getElementById("course-description").innerHTML = description;
+	document.getElementById("course-extra").innerHTML = "";
+}
+
+function BADM712() {
+    var description = "This course emphasizes the application of financial theory and concepts to the development of effective \
+    financial strategies for maximization of the firm value and shareholder wealth. Topics include capital budgeting, cash flow analysis, \
+    capital structure, cost of capital, working capital management, and security valuation, as well as effective spreadsheet analyses."
+    document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Advanced Business Finance</h5>";
+	document.getElementById("course-description").innerHTML = description;
+	document.getElementById("course-extra").innerHTML = "";
+}

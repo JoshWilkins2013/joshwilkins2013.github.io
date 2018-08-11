@@ -23,7 +23,7 @@ var albums = {
 		"Box": [
 		    "<img src=\"img/Work_Related/Misc/DividerBox.jpg\"><p>Divider Box</p>",
 		    "<img src=\"img/Work_Related/Misc/TranslationDevice.png\"><p>Frequency Translation Device</p>",
-		    "<img src=\"img/Work_Related/Misc/BMiscox1.jpg\"><p>Interface Box</p>",
+		    "<img src=\"img/Work_Related/Misc/Box1.jpg\"><p>Interface Box</p>",
             "<img src=\"img/Work_Related/Misc/Box2.jpg\"><p>Inside Box</p>"
 
         ],
