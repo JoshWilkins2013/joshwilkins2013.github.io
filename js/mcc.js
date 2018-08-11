@@ -11,9 +11,9 @@ function LifeAtMCC() {
 };
 
 function ENR153() {
-	var description = "An introduction to solid modeling, computer aided manufacturing, the engineering design process, and machine shop operations.\
-	Students will use SolidWorks software to design parts and assemblies. CamWorks software will be used to create tool paths for common 2.5 axis milling operations. \
-	Prototyping will be done using manual and CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
+	var description = "An introduction to solid modeling, computer aided manufacturing, the engineering design process, and machine shop operations. \
+	SolidWorks will be used to design parts and assemblies. CamWorks will be used to create tool paths for common 2.5 axis milling operations. \
+	Prototyping will be done using CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
 	geometric relations, external references, equations, and design tables will be emphasized. A design-build project will require students to build a working prototype \
 	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Graphing & Machining</h5>";
@@ -23,10 +23,9 @@ function ENR153() {
 
 function ENR157() {
 	var description = "This course introduces the basic logic functions, components and methodologies used in the design of digital systems. \
-	Digital electronic topics will include the basic logic gates, Boolean algebra, number systems, digital arithmetic, combinational logic circuits, multiplexers, \
-	decoders and flip-flops and registers. Digital system applications will include counters, magnitude comparators, Analog-to-Digital and Digital-to-Analog conversions, \
-	feedback control, sensor interfacing and signal conditioning. Students will use schematic capture and VHDL programming to implement the digital systems on a \
-	Field Programmable Gate Array (FPGA) development board. Various add-on power supply and sensor boards will also be utilized in the laboratory component of the course.\
+	This course covers basic logic gates, boolean algebra, number systems, digital arithmetic, combinational logic circuits, multiplexers, \
+	decoders, flip-flops and registers. Digital system applications will include counters, magnitude comparators, ADCs, DACs, \
+	feedback control, sensor interfacing, and signal conditioning. Schematic capture and VHDL programming will be implemented in a digital system on an FPGA.\
 	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\"><h5 style=\"color:#cc5200\">Digital Electronics & Microcontrollers</h5></h5>";
 	document.getElementById("course-description").innerHTML = description;
@@ -34,19 +33,18 @@ function ENR157() {
 };
 
 function ENR161() {
-	var description = "Students will be introduced to methods for solving a variety of engineering related problems using Microsoft Excel and LabVIEW.\
-	Microsoft Excel topics will include functions, graphing, matrices, linear regression, statistics, and root finding. Students will use LabVIEW to \
-	create programs that include a variety of data types, functions, loop and case structures, and graphical user interfaces. LabVIEW programs will \
-	include linear algebra, graphing, and data analysis. The course will conclude with a design project using LabVIEW and LEGO Mindstorms robots. \
-	Students will prepare and deliver written and oral reports documenting their design process."
+	var description = "An introduction to solving a variety of engineering related problems using Microsoft Excel and LabVIEW.\
+	Excel topics include functions, graphing, matrices, linear regression, statistics, and root finding. LabVIEW topics \
+	include a variety of data types, functions, loops, case structures, and graphical user interfaces. LabVIEW programs will \
+	include linear algebra, graphing, and data analysis. A final design project will be implemented using LabVIEW and LEGO Mindstorms robotics."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Engineering Computing I</h5>";
 	document.getElementById("course-extra").innerHTML = "";
 };
 
 function ENR251() {
-	var description = "Fundamentals of statics applied to problems of engineering interest. A vector algebra approach\
-	will be presented. Topics include equivalent force systems, equilibrium, structural mechanics, friction, properties of surfaces."
+	var description = "Fundamentals of statics applied to problems of engineering interest. A vector algebra approach \
+	will be presented. Topics include equivalent force systems, equilibrium, structural mechanics, friction, and properties of surfaces."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Statics</h5>";
 	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR251.jpg\" width=100%>";

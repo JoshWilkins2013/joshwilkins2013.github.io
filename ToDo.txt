@@ -2,7 +2,6 @@ Should do:
 - Update Microsemi page
 - Add other education things including NIST / IEEE
 - Update DSU description
-- Change from small/large screen inverts left menu in/out
 - Fix page height (or block heights?) in projects so that image loading doesnt jump
 - Ability to add sliders to education / experience blocks
 - Expanding a sidebar item should collapse all the others
@@ -18,10 +17,9 @@ Do Anytime:
 - Fix Search button
 - Improve thanks page
 - Improve 404 page
-- Go through extras folder
 - Fix pictures (remove backgrounds)
-- Add interactive codeblocks (or embed notebooks)
 
 Explore / Investigate:
 - Add modal or pages for additional project info
 - Footer options (Social icons to footer, Contact button, site map, other? Easter Egg?)
+- Add interactive codeblocks (or embed notebooks)

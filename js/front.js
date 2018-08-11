@@ -22,7 +22,7 @@ $(function () {
     });
 
     // ------------------------------------------------------- //
-    // Sidebar Functionality
+    // Sidebar <-- Functionality
     // ------------------------------------------------------ //
     $('.sidebar-toggle').on('click', function () {
         $(this).toggleClass('active');
@@ -40,4 +40,27 @@ $(function () {
             $(this).find('i').attr('class', 'fa fa-long-arrow-left arrow');
         }
     });
+
+    // ------------------------------------------------------- //
+    // Sidebar Collapsing Non-Active Items
+    // ------------------------------------------------------ //
+    $('.closed').on('click', function () {
+        $('.open').toggleClass('closed');
+        $('.open').find('ul').toggleClass('show');
+        $('.open').toggleClass('open');
+
+        $(this).toggleClass('open');
+        $(this).toggleClass('closed');
+    });
+
+    // Not sure why this part is needed, the above code should work fine but doesn't
+    $('.special').on('click', function () {
+        $('.open').toggleClass('closed');
+        $('.open').find('ul').toggleClass('show');
+        $('.open').toggleClass('open');
+
+        $(this).toggleClass('open');
+        $(this).toggleClass('closed');
+    });
+
 });

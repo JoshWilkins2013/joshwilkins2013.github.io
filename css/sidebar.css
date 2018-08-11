@@ -20,6 +20,7 @@ nav#sidebar {
 nav#sidebar a {
   color: inherit;
   position: relative;
+  text-decoration: none;
 }
 
 /* List item arrows */
@@ -86,6 +87,10 @@ nav#sidebar li.active::before {
 
 nav#sidebar li.active a {
   color: #cc5200;
+}
+
+nav#sidebar p{
+  display: inline;
 }
 
 /* Highlights associated list and sub list items */
