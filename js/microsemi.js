@@ -2,8 +2,8 @@ var albums = {
             "Microsemi": [
                 "<img src=\"img/Microsemi/CSAC.png\"><p>CSAC</p>",
                 "<img src=\"img/Microsemi/MAC.png\"><p>MAC</p>",
-                "<img src=\"img/Microsemi/5071A.jpg\"><p>5071A Cs Atomic Clock</p>",
-                "<img src=\"img/Microsemi/5125A.jpg\"><p>Phase Noise Test Set</p>"
+                "<img src=\"img/Microsemi/5071A.png\"><p>5071A Cs Atomic Clock</p>",
+                "<img src=\"img/Microsemi/5125A.png\"><p>Phase Noise Test Set</p>"
 			],
             "Synth": [
                 "<img src=\"img/Work_Related/Synth/Iso.jpg\"><p>Isometric View</p>",
@@ -33,6 +33,7 @@ function SynthSlides(n) {
 }
 
 function task1() {
+    SynthSlideIndex = 1;
 	var description = "Designed and assembled a high frequency synthesizer by implementing a cascaded PLL with an output power level controller.\
     It was optimized to minimize phase noise and the results were over 10 times better than commercially available components.\
     The enclosure was created using interchangeable RF shielded rack mount units to minimize EMI effects.\
