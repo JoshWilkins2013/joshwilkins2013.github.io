@@ -4,13 +4,13 @@ Should do:
 - Update DSU description
 - Fix page height (or block heights?) in projects so that image loading doesnt jump (maybe min block height)
 - Skill proficiencies
-- Add sliders to experience blocks
+- Arrows in sidebar went missing (aria expand tag?)
+- Table expand close on way up (but not on way down?)
 
 Verify:
 - Add seo jekyll tag
 
 Do Anytime:
-- Arrows in sidebar dont always work now
 - Add pictures to Education courses (& sliders where necessary)
 - Fix course descriptions
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages

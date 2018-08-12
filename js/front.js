@@ -45,15 +45,17 @@ $(function () {
     // Sidebar Collapsing Non-Active Items
     // ------------------------------------------------------ //
     $('.closed').on('click', function () {
-        $('.open').toggleClass('closed');
-        $('.open').find('ul').toggleClass('show');
-        $('.open').toggleClass('open');
+        $('.open').find('ul').removeClass('show');
+        $('.open').addClass('closed');
+        $('.open').removeClass('open');
 
-        $(this).toggleClass('open');
-        $(this).toggleClass('closed');
+        $(this).addClass('open');
+        $(this).removeClass('closed');
+        $(this).find('ul').addClass('show');
     });
 
     // Not sure why this part is needed, the above code should work fine but doesn't
+    // Has to do with sidebar item starting open
     $('.special').on('click', function () {
         $('.open').toggleClass('closed');
         $('.open').find('ul').toggleClass('show');
@@ -61,6 +63,20 @@ $(function () {
 
         $(this).toggleClass('open');
         $(this).toggleClass('closed');
+        $(this).find('ul').toggleClass('show');
+    });
+
+    // ------------------------------------------------------- //
+    // Table Collapsing Non-Active Items
+    // ------------------------------------------------------ //
+    $('.t_closed').on('mouseover', function () {
+//        $('.t_open').find('ul').removeClass('show');
+//        $('.t_open').addClass('t_closed');
+//        $('.t_open').removeClass('t_open');
+
+        $(this).addClass('t_open');
+        $(this).removeClass('t_closed');
+        $(this).find('ul').addClass('show');
     });
 
 });
