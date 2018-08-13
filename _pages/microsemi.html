@@ -21,7 +21,7 @@ icon: dashboard
         <section class="no-padding-top">
           <div class="container-fluid">
             <div class="row">
-			  <div class="col-lg-6">
+			  <div class="col-lg-5">
                 <div class="block">
                   <h4 style="color:#8a8d93" class="block-header">
                     <span style="float:left"> Electrical Engineer </span>
@@ -32,13 +32,13 @@ icon: dashboard
                     <tbody>  
                       <tr>
                         <th class="t_closed" onmouseover="Synthesizer()">
-                          High Frequency Synthesizer
+                          Frequency Synthesizer (GHz)
                           <ul class="collapse show" style="margin-bottom:0">
-                            <li><a href="#/">Cascaded PLL Design & Simulation</a></li>
-                            <li><a href="#/">Prototype Design, Layout, & Assembly</a></li>
-                            <li><a href="#/">Frequency Doubler & Output Power Controller</a></li>
-                            <li><a href="#/">Associated Board Spins</a></li>
-                            <li><a href="#/">Reduction of Temperature Dependency</a></li>
+                            <li><a onclick="PLL()" href="#/">Cascaded PLL Design & Simulation</a></li>
+                            <li><a onclick="Prototype()" href="#/">Prototype Design, Layout, & Assembly</a></li>
+                            <li><a onclick="OutputPower()" href="#/">Frequency Doubler & Output Power Controller</a></li>
+                            <li><a onclick="Boards()" href="#/">Associated Board Spins</a></li>
+                            <li><a onclick="TempDependence()" href="#/">Reduction of Temperature Dependency</a></li>
                           </ul>
                         </th>
                       </tr>
@@ -46,10 +46,10 @@ icon: dashboard
                         <th class="t_closed" onmouseover="AtomicClock()">
                           Atomic Clock GUI
                           <ul class="collapse show" style="margin-bottom:0">
-                            <li><a href="#/">Long-Term Aging Rate Determination</a></li>
-                            <li><a href="#/">Temperature Compensation & Verification</a></li>
-                            <li><a href="#/">Clock Locktime Analysis via Power Cycling</a></li>
-                            <li><a href="#/">Product Independent Data Analysis</a></li>
+                            <li><a onclick="Aging()" href="#/">Long-Term Aging Rate Determination</a></li>
+                            <li><a onclick="Tempco()" href="#/">Temperature Compensation & Verification</a></li>
+                            <li><a onclick="LockTime()" href="#/">Clock Locktime Analysis via Power Cycling</a></li>
+                            <li><a onclick="DataAnalysis()" href="#/">Product Independent Data Analysis</a></li>
                           </ul>
                         </th>
                       </tr>
@@ -69,10 +69,10 @@ icon: dashboard
                         <th class="t_closed" onmouseover="Presentations()">
                           Informative Presentations
                           <ul class="collapse show" style="margin-bottom:0">
-                            <li><a href="#/">Minimizing Quantization Error</a></li>
-                            <li><a href="#/">Python Data Structures</a></li>
-                            <li><a href="#/">Introduction to Pandas for Python</a></li>
-                            <li><a href="#/">Allan Deviation</a></li>
+                            <li><a onclick="Quantization()" href="#/">Minimizing Quantization Error</a></li>
+                            <li><a onclick="Structures()" href="#/">Python Data Structures</a></li>
+                            <li><a onclick="Pandas()" href="#/">Introduction to Pandas for Python</a></li>
+                            <li><a onclick="AllanDeviation()" href="#/">Allan Deviation</a></li>
                           </ul>
                         </th>
                       </tr>
@@ -86,12 +86,13 @@ icon: dashboard
                   </table>
                 </div>
               </div>
-			  <div class="col-lg-6">
+			  <div class="col-lg-7">
 			    <div class="block">
-			      <div id="details-title" class="title"><h5 style="color:#cc5200">Frequency & Timing Division</h5></div>
+			      <div id="details-title" class=""><h4 style="color:#cc5200">Frequency & Timing Division</h4></div>
+                  <div id="details-subtitle"><h6 style="color:#000000"></h6></div>
                   <div id="details-description">
                     <p>
-                      After I had finished my undergraduate degree, I left Carestream and went to work for Microsemi in Beverly, MA.
+                      After I finished my undergraduate degree, I left Carestream and went to work for Microsemi in Beverly, MA.
                       This branch of Microsemi is the Frequency and Timing Division (FTD). Their primary focus is on the creation
                       of the most accurate and precise atomic clocks (in the world). Such precision creates many challenges in the
                       design process and requires the utmost attention to detail. Not long after I started working for Microsemi, they
