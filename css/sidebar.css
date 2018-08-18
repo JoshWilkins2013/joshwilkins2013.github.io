@@ -1,10 +1,4 @@
-nav#sidebar::-webkit-scrollbar { width: 9px; height: 3px;}
-nav#sidebar::-webkit-scrollbar-button {  background-color: #666; }
-nav#sidebar::-webkit-scrollbar-track {  background-color: #646464;}
-nav#sidebar::-webkit-scrollbar-track-piece { background-color: #000;}
-nav#sidebar::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
-nav#sidebar::-webkit-scrollbar-corner { background-color: #646464;}}
-nav#sidebar::-webkit-resizer { background-color: #666;}
+
 
 nav#sidebar {
   position: fixed;

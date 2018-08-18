@@ -39,13 +39,13 @@ a {
 /* ========================================================== */
 /*     ScrollBar
 /* ========================================================== */
-body::-webkit-scrollbar { width: 9px; height: 3px;}
-body::-webkit-scrollbar-button {  background-color: #666; }
-body::-webkit-scrollbar-track {  background-color: #646464;}
-body::-webkit-scrollbar-track-piece { background-color: #000;}
-body::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
-body::-webkit-scrollbar-corner { background-color: #646464;}}
-body::-webkit-resizer { background-color: #666;}
+::-webkit-scrollbar { width: 9px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}}
+::-webkit-resizer { background-color: #666;}
 
 /* ========================================================== */
 /*     Autofill
@@ -60,6 +60,18 @@ body::-webkit-resizer { background-color: #666;}
 input:-webkit-autofill {
     -webkit-animation-name: autofill;
     -webkit-animation-fill-mode: both;
+}
+
+/* ========================================================== */
+/*     Table Row Highlighting
+/* ========================================================== */
+th div {
+  cursor: pointer;
+  width: 100%;
+}
+
+th div:hover {
+  background-color: #000;
 }
 
 /* ========================================================== */
@@ -219,7 +231,7 @@ input {
 
 .page-content {
   background: #22252a;
-  min-height: 100vh;
+  min-height: calc(100vh - 71px - 67px);
   width: calc(100% - 280px);
   padding: 0;
   text-align: center;
@@ -273,6 +285,11 @@ i[class*='icon-'] {
 
 .details-title {
   margin-bottom: 0;
+}
+
+iframe {
+  min-height: 600px;
+  border: 2px black solid;
 }
 
 /* ========================================================== */

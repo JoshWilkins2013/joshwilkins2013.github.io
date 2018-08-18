@@ -8,7 +8,6 @@ icon: layers
   {% include head.html %}
   <body>
     {% include header.html %}
-
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
 	  
@@ -20,12 +19,28 @@ icon: layers
 		<section>
           <div class="container-fluid">
             <div class="row">
-			  
+
 			  <div class="col-lg-4">
 
                 <div class="block">
+                  <h3 class="block-header"> V-Arm </h3>
+
+				  <p> A partial body immersion device for VR which allows the user to physically interact with virtual objects.
+                      By manipulating the user's arm in response to virtual interactions with objects, a form of kinesthetic feedback is provided.
+                      The initial design was constructed with what are known as air muscles.
+                  </p>
+
+                  <div class="slideshow-container">
+  				    <div id="VArmSlider" class="mySlides"></div>
+				    <a class="prev" onclick="VArmSlides(VArmSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+				    <a class="next" onclick="VArmSlides(VArmSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+				  </div>
+
+                </div>
+
+                <div class="block">
                   <h3 class="block-header"> Wilmake </h3>
-				  
+
 				  <p> Unsatisfied with the 3D printer I had bought on Kickstarter, I decided to create an all encompassing 3D printer, scanner,
                       laser engraver, and CNC milling machine. Built during my freshman year in college, I was just short of launching my own Kickstarter campaign before
                       one of the very first all encompassing printers launced: Meet <a href="https://www.kickstarter.com/projects/2117384013/flux-all-in-one-3d-printer-unlimited-elegant-simpl/updates" target="_blank">Flux</a>,
@@ -39,6 +54,9 @@ icon: layers
 				  </div>
                 </div>
 
+              </div>
+
+			  <div class="col-lg-4">
                 <div class="block">
                   <h3 class="block-header"> Misc </h3>
 
@@ -49,25 +67,6 @@ icon: layers
 				    <a class="prev" onclick="MiscSlides(MiscSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
 				    <a class="next" onclick="MiscSlides(MiscSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
 				  </div>
-                </div>
-
-              </div>
-
-			  <div class="col-lg-4">
-                <div class="block">
-                  <h3 class="block-header"> V-Arm </h3>
-				  
-				  <p> A partial body immersion device for VR which allows the user to physically interact with virtual objects.
-                      By manipulating the user's arm in response to virtual interactions with objects, a form of kinesthetic feedback is provided.
-                      The initial design was constructed with what are known as air muscles.
-                  </p>
-
-                  <div class="slideshow-container">
-  				    <div id="VArmSlider" class="mySlides"></div>
-				    <a class="prev" onclick="VArmSlides(VArmSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="VArmSlides(VArmSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
                 </div>
               </div>
 			  

@@ -31,10 +31,12 @@ icon: dashboard
                   <table class="table table-striped table-sm">
                     <tbody>  
                       <tr>
-                        <th class="t_closed" onmouseover="Synthesizer()">
-                          Frequency Synthesizer (GHz)
-                          <ul class="collapse show" style="margin-bottom:0">
+                        <th class="t_closed" onclick="Synthesizer()">
+                          <div>Frequency Synthesizer (GHz)</div>
+                          <ul class="collapse" style="margin-bottom:0">
+                            <!--
                             <li><a onclick="PLL()" href="#/">Cascaded PLL Design & Simulation</a></li>
+                            -->
                             <li><a onclick="Prototype()" href="#/">Prototype Design, Layout, & Assembly</a></li>
                             <li><a onclick="OutputPower()" href="#/">Frequency Doubler & Output Power Controller</a></li>
                             <li><a onclick="Boards()" href="#/">Associated Board Spins</a></li>
@@ -43,44 +45,51 @@ icon: dashboard
                         </th>
                       </tr>
 					  <tr>
-                        <th class="t_closed" onmouseover="AtomicClock()">
-                          Atomic Clock GUI
-                          <ul class="collapse show" style="margin-bottom:0">
-                            <li><a onclick="Aging()" href="#/">Long-Term Aging Rate Determination</a></li>
+                        <th class="t_closed" onclick="AtomicClock()">
+                          <div>Atomic Clock GUI</div>
+                          <ul class="collapse" style="margin-bottom:0">
                             <li><a onclick="Tempco()" href="#/">Temperature Compensation & Verification</a></li>
+                            <li><a onclick="Aging()" href="#/">Long-Term Aging Rate Determination</a></li>
+                            <li><a onclick="ADev()" href="#/">Allan Deviation Averaging</a></li>
+                            <!--
                             <li><a onclick="LockTime()" href="#/">Clock Locktime Analysis via Power Cycling</a></li>
                             <li><a onclick="DataAnalysis()" href="#/">Product Independent Data Analysis</a></li>
+                            -->
                           </ul>
                         </th>
                       </tr>
                       <tr>
-                        <th class="t_closed" onmouseover="Embedded()">
-                          Embedded Programming
-                          <ul class="collapse show" style="margin-bottom:0">
-                            <li><a href="#/">Programmable Real Time Units (PRU's)</a></li>
-                            <li><a href="#/">Code Abstraction: Assembly Macros & C Library</a></li>
-                            <li><a href="#/">Generic SPI Communication Protocol</a></li>
-                            <li><a href="#/">Phase Noise Profile Generator</a></li>
-                            <li><a href="#/">Low BW Digital PI Filter</a></li>
+                        <th class="t_closed" onclick="Embedded()">
+                          <div>Embedded Programming</div>
+                          <ul class="collapse" style="margin-bottom:0">
+                            <!--
+                            <li><a onclick="" href="#/">Programmable Real Time Units (PRU's)</a></li>
+                            <li><a onclick="" href="#/">Code Abstraction: Assembly Macros & C Library</a></li>
+                            <li><a onclick="" href="#/">Generic SPI Communication Protocol</a></li>
+                            -->
+                            <li><a onclick="AddPhase()" href="#/">Phase Noise Profile Generator</a></li>
+                            <li><a onclick="AltPhaseNoise()" href="#/">Phase Noise Measurement System</a></li>
                           </ul>
                         </th>
                       </tr>
                       <tr>
-                        <th class="t_closed" onmouseover="Presentations()">
-                          Informative Presentations
-                          <ul class="collapse show" style="margin-bottom:0">
+                        <th class="t_closed" onclick="Presentations()">
+                          <div>Informative Presentations</div>
+                          <ul class="collapse" style="margin-bottom:0">
                             <li><a onclick="Quantization()" href="#/">Minimizing Quantization Error</a></li>
                             <li><a onclick="Structures()" href="#/">Python Data Structures</a></li>
-                            <li><a onclick="Pandas()" href="#/">Introduction to Pandas for Python</a></li>
+                            <li><a onclick="Jupyter()" href="#/">Introduction to Jupyter</a></li>
+                            <!--
+                            <li><a onclick="Pandas()" href="#/">Introduction to Pandas</a></li>
                             <li><a onclick="AllanDeviation()" href="#/">Allan Deviation</a></li>
+                            -->
                           </ul>
                         </th>
                       </tr>
-                      <tr onmouseover="funcDelay= setTimeout('task5()', 150)" onmouseout="clearTimeout(funcDelay)">
-                        <th>Agile Database Sync Tool</th>
-                      </tr>
-                      <tr onmouseover="funcDelay= setTimeout('task7()', 150)" onmouseout="clearTimeout(funcDelay)">
-                        <th>Alternative Phase Noise Measurement System</th>
+                      <tr onclick="AgileSync()">
+                        <th>
+                          <div>Agile Database Sync Tool</div>
+                        </th>
                       </tr>
 					</tbody>
                   </table>

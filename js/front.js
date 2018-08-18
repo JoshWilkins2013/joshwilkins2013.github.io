@@ -69,14 +69,13 @@ $(function () {
     // ------------------------------------------------------- //
     // Table Collapsing Non-Active Items
     // ------------------------------------------------------ //
-    $('.t_closed').on('mouseover', function () {
-//        $('.t_open').find('ul').removeClass('show');
-//        $('.t_open').addClass('t_closed');
-//        $('.t_open').removeClass('t_open');
+    $('.t_closed').on('click', function () {
+        $('.t_open').find('ul').removeClass('show');
+        $('.t_open').addClass('t_closed');
+        $('.t_open').removeClass('t_open');
 
         $(this).addClass('t_open');
         $(this).removeClass('t_closed');
         $(this).find('ul').addClass('show');
     });
-
 });
