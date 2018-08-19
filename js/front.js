@@ -49,9 +49,18 @@ $(function () {
         $('.open').addClass('closed');
         $('.open').removeClass('open');
 
+        /* Arrows */
+        $('.fa-angle-down').addClass('fa-angle-left')
+        $('.fa-angle-down').removeClass('fa-angle-down')
+
         $(this).addClass('open');
         $(this).removeClass('closed');
+        $(this).removeClass('collapsed');
         $(this).find('ul').addClass('show');
+
+        /* Arrows */
+        $(this).find('i').next().next().removeClass('fa-angle-left')
+        $(this).find('i').next().next().addClass('fa-angle-down')
     });
 
     // Not sure why this part is needed, the above code should work fine but doesn't
@@ -61,9 +70,17 @@ $(function () {
         $('.open').find('ul').toggleClass('show');
         $('.open').toggleClass('open');
 
+        /* Arrows */
+        $('.fa-angle-down').addClass('fa-angle-left')
+        $('.fa-angle-down').removeClass('fa-angle-down')
+
         $(this).toggleClass('open');
         $(this).toggleClass('closed');
         $(this).find('ul').toggleClass('show');
+
+        /* Arrows */
+        $(this).find('i').next().next().removeClass('fa-angle-left')
+        $(this).find('i').next().next().addClass('fa-angle-down')
     });
 
     // ------------------------------------------------------- //

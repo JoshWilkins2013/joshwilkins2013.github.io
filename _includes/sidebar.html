@@ -27,9 +27,9 @@
       {% endif %}
 
       {% if cat.name == active_cat %}
-    <li class="open highlight special"><a href="#{{ cat.name }}"><i class="icon-{{ icon }}"></i><p class="highlight">{{ cat.name }}</p></a>
+    <li class="open highlight special"><a href="#{{ cat.name }}"><i class="icon-{{ icon }}"></i><p class="highlight">{{ cat.name }}</p><i class="fas fa-angle-down"></i></a>
       {% else %}
-    <li class="closed"><a href="#{{ cat.name }}"><i class="icon-{{ icon }}"></i><p>{{ cat.name }}</p></a>
+    <li class="closed"><a href="#{{ cat.name }}"><i class="icon-{{ icon }}"></i><p>{{ cat.name }}</p><i class="fas fa-angle-left"></i></a>
       {% endif %}
           <ul id="{{ cat.name }}" class="collapse list-unstyled {% if cat.name == active_cat %} show {% endif %}">
             {% assign items = cat.items | sort: 'order' %}

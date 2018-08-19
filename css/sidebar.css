@@ -18,18 +18,24 @@ nav#sidebar a {
 }
 
 /* List item arrows */
-nav#sidebar a[data-toggle="collapse"]::after {
-  content: '\f104';
-  transform: translateY(-50%);
-  font-family: 'FontAwesome';
+.fa-angle-left {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   right: 20px;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* Down arrow for expanded side panel item */
-nav#sidebar a[aria-expanded="true"]::after {
-  content: '\f107';
+.fa-angle-down {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Drop down items background / position */
@@ -133,14 +139,6 @@ nav#sidebar p{
   }
   nav#sidebar ul ul a {
     padding-left: 10px;
-  }
-  nav#sidebar a[data-toggle="collapse"]::after {
-    content: '\f107';
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 88%;
-    left: 50%;
   }
   #icon-container {
     position: absolute;

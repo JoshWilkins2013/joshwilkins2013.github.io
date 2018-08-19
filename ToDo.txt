@@ -3,8 +3,8 @@ Should do:
 - Update DSU description
 - Fix page height (or block heights?) in projects so that image loading doesnt jump (maybe min block height)
 - Skill proficiencies
-- Arrows in sidebar went missing (aria expand tag?)
 - Go through things completed doc (And browse through associated fogbugz cases)
+- Make transitions work on sidebar and header arrow
 
 Microsemi Page:
 - Fix Freq Synth Block (So not the same as prototype block)

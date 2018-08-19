@@ -128,13 +128,6 @@ nav.navbar a.nav-link {
   color: #cc5200 !important;
 }
 
-nav.navbar .dropdown .dropdown-menu {
-  -webkit-transform: translateY(50px);
-  transform: translateY(50px);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
 nav.navbar .dropdown .dropdown-menu.active {
   -webkit-transform: translateY(0);
   transform: translateY(0);
