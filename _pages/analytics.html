@@ -41,22 +41,20 @@ icon: layers
               <div class="col-lg-4">
                 <div class="block">
                   <h3 class="block-header"> Make/Model Comparison </h3>
-				  <p> A direct result of the Price Abstracter, I analyzed which car model was best within each make. From that information,
+                  <p> A direct result of the Price Abstracter, I analyzed which car model was best within each make. From that information,
                       I determined the best model across all makes (Nissan Versa). The results indicate that cars with higher initial values depreciate faster.
                       So the cheapest car is the best car to buy if you are going to buy new. If the prices were to be normalized by their intial price,
                       a more even distribution of depreciation rates would probably be seen, just indicating that all cars depreciate at the same weighted rate.
                       <br> <a href="https://github.com/JoshWilkins2013/PriceBot/tree/master/docs/Analysis" target="_blank"> Link </a> to Notebook<br>
-                      <a href="Storage\Projects\MakeModelComparison.html" target="_blank">
-                        <button type="submit">The Analysis</button>
-                      </a>
                   </p>
-
-                  <div class="slideshow-container">
-  				    <div id="MakeModelSlider" class="mySlides"></div>
-				    <a class="prev" onclick="MakeModelSlides(MakeModelSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="MakeModelSlides(MakeModelSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
+                  <div id="details-description">
+                    <button onclick="MakeModelAnalysis()" type="submit">The Analysis</button><br><br>
+                    <div class="slideshow-container">
+  				      <div id="MakeModelSlider" class="mySlides"></div>
+				        <a class="prev" onclick="MakeModelSlides(MakeModelSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+				        <a class="next" onclick="MakeModelSlides(MakeModelSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                    </div>
+                  </div>
                 </div>
               </div>
 

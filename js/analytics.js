@@ -34,6 +34,12 @@ function MakeModelSlides(n) {
   document.getElementById("MakeModelSlider").innerHTML = albums["MakeModel"][MakeModelSlideIndex-1];
 }
 
+function MakeModelAnalysis() {
+    var description = "\
+    <iframe src=\"Storage/Analysis/MakeModelComparison.html\" width=\"100%\"></iframe>"
+    document.getElementById("details-description").innerHTML = description;
+}
+
 var HouseSlideIndex= 1;
 HouseSlides(HouseSlideIndex);
 function HouseSlides(n) {

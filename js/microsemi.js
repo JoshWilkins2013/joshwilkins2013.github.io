@@ -121,12 +121,12 @@ function Synthesizer() {
     }
 }
 
-function PLL() {
-	var description = ""
-	var subtitle = "<h6 style=\"color:#000000\">PLL Design & Sim</h6>";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
-};
+//function PLL() {
+//	var description = ""
+//	var subtitle = "<h6 style=\"color:#000000\">PLL Design & Sim</h6>";
+//    document.getElementById("details-subtitle").innerHTML = subtitle;
+//    document.getElementById("details-description").innerHTML = description;
+//};
 
 var ProtoSlideIndex = 1;
 ProtoSlides(ProtoSlideIndex);
@@ -165,9 +165,7 @@ function OutputPower() {
     PowerSlideIndex = 1;
 	var description = "Created an adjustable output power stabalizer cirucit by utilizing an envelope detector.\
 	Additionally maximized the output power level through the selection of components<br>\
-	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/OutputPowerController\" target=\"_blank\">Repository</a>\
-	/ <a href=\"https://hub.mybinder.org/user/joshwilkins2013-jupyternotebooks-3n08z26a/notebooks/Work/OutputPowerController/OutputPowerController.ipynb\" target=\"_blank\">Binder</a><br><br>\
-	<button onclick=OutputPowerAnalysis() type=\"submit\">The Analysis</button><br><br>\
+	<a onclick=\"OutputPowerAnalysis()\" href=\"#/\">Analysis</a><br><br>\
 	<div class=\"slideshow-container\">\
       <div id=\"PowerSlider\" class=\"myslides\">\
         <img src=\"img/Microsemi/Synth/Power/Design.png\"><p>Controller Design</p>\
@@ -182,9 +180,7 @@ function OutputPower() {
 
 function OutputPowerAnalysis() {
     var description = "Created an adjustable output power stabalizer cirucit by utilizing an envelope detector.\
-	Additionally maximized the output power level through the selection of components<br>\
-	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/OutputPowerController\" target=\"_blank\">Repository</a>\
-	/ <a href=\"https://hub.mybinder.org/user/joshwilkins2013-jupyternotebooks-3n08z26a/notebooks/Work/OutputPowerController/OutputPowerController.ipynb\" target=\"_blank\">Binder</a><br><br>\
+	Additionally maximized the output power level through the selection of components<br><br>\
 	<iframe src=\"Storage/Analysis/OutputPowerController.html\" width=\"100%\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
 }
@@ -200,7 +196,7 @@ function PCBSlides(n) {
 
 function Boards() {
     PCBSlideIndex = 1;
-	var description = "Designed some miscellaneous PCBs including a low power synthesizer, a generic PI Filter, and some misc eval boards\
+	var description = "Designed some miscellaneous PCBs including a low power synthesizer, a generic PI Filter, and some misc eval boards<br><br>\
     <div class=\"slideshow-container\">\
       <div id=\"PCBSlider\" class=\"myslides\">\
         <img src=\"img/Microsemi/PCB/LowPowSynth_Board.jpg\"><p>Low Power Synthesizer</p>\
@@ -226,9 +222,7 @@ function TempDependence() {
     TempDividerSlideIndex = 1;
 	var description = "Characterizing the temperature dependency of the synthesizer. Approximated by characterizing\
 	its largest contributor, a bandpass filter.<br>\
-	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/TemperatureDependence\" target=\"_blank\">Repository</a>\
-	 / <a href=\"https://hub.mybinder.org/user/joshwilkins2013-jupyternotebooks-3n08z26a/notebooks/Work/TemperatureDependence/TemperatureDependence.ipynb\" target=\"_blank\">Binder</a><br><br>\
-	<a href=\"Storage\\Analysis\\TemperatureDependence.pdf\" target=\"_blank\"><button type=\"submit\">PDF</button></a><br><br>\
+	<a href=\"#/\">Analysis</a><br><br>\
 	<div class=\"slideshow-container\">\
       <div id=\"TempDividerSlider\" class=\"myslides\">\
         <img src=\"img/Microsemi/Misc/DividerBox.jpg\"><p>Divider Box</p>\
@@ -241,6 +235,11 @@ function TempDependence() {
     document.getElementById("details-description").innerHTML = description;
 };
 
+//function TempDependenceAnalysis() {
+//    var description = "Characterizing the temperature dependency of the synthesizer. Approximated by characterizing\
+//	its largest contributor, a bandpass filter.<br>"
+//    document.getElementById("details-description").innerHTML = description;
+//}
 
 /******************************************/
 /************ Atomic Clock GUI ************/
@@ -473,9 +472,7 @@ function Quantization() {
 	var description = "An attempt at reducing the quantization error due to signal sampling.\
 	The typical SNR due to quantization error is about 6 dB per bit.\
 	By preconditioning the signal, this error can be reduced to improve the SNR to about 10 dB per bit!<br>\
-	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/QuantizationError\" target=\"_blank\">Repository</a>\
-	/ <a href=\"https://hub.mybinder.org/user/joshwilkins2013-jupyternotebooks-3n08z26a/notebooks/Work/QuantizationError/QuantizationError.ipynb\" target=\"_blank\">Binder</a><br><br>\
-    <button onclick=QuantizationAnalysis() type=\"submit\">The Analysis</button><br><br>\
+	<a onclick=\"QuantizationAnalysis()\" href=\"#/\">Analysis</a><br><br>\
     <div class=\"slideshow-container\">\
       <div id=\"QuantizationSlider\" class=\"myslides\">\
         <img src=\"img/Microsemi/Presentations/Quantization/Results.png\"><p>Results</p>\
@@ -491,10 +488,7 @@ function Quantization() {
 function QuantizationAnalysis() {
     var description = "An attempt at reducing the quantization error due to signal sampling.\
 	The typical SNR due to quantization error is about 6 dB per bit.\
-	By preconditioning the signal, this error can be reduced to improve the SNR to about 10 dB per bit!\
-	Presented the results to the engineering team in a \"lunch and learn\" meeting.<br>\
-	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/QuantizationError\" target=\"_blank\">Repository</a>\
-	/ <a href=\"https://hub.mybinder.org/user/joshwilkins2013-jupyternotebooks-3n08z26a/notebooks/Work/QuantizationError/QuantizationError.ipynb\" target=\"_blank\">Binder</a><br><br>\
+	By preconditioning the signal, this error can be reduced to improve the SNR to about 10 dB per bit!<br><br>\
 	<iframe src=\"Storage/Analysis/QuantizationError.html\" width=\"100%\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
 };
@@ -522,39 +516,51 @@ function Jupyter() {
     document.getElementById("details-description").innerHTML = description;
 };
 
-function Pandas() {
-	var description = ""
-	var subtitle = "<h6 style=\"color:#000000\">Pandas</h6>";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
-};
-
-function AllanDeviation() {
-	var description = "Until recently, the accuracy and stability of atomic clocks was difficult to measure and it was\
-	not easy to compare the performance of two atomic clocks. Allan deviation alieves this problem (essentially a rolling standard deviation)"
-	var subtitle = "<h6 style=\"color:#000000\">Allan Deviation</h6>";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
-};
+//function Pandas() {
+//	var description = ""
+//	var subtitle = "<h6 style=\"color:#000000\">Pandas</h6>";
+//    document.getElementById("details-subtitle").innerHTML = subtitle;
+//    document.getElementById("details-description").innerHTML = description;
+//};
+//
+//function AllanDeviation() {
+//	var description = "Until recently, the accuracy and stability of atomic clocks was difficult to measure and it was\
+//	not easy to compare the performance of two atomic clocks. Allan deviation alieves this problem (essentially a rolling standard deviation)"
+//	var subtitle = "<h6 style=\"color:#000000\">Allan Deviation</h6>";
+//    document.getElementById("details-subtitle").innerHTML = subtitle;
+//    document.getElementById("details-description").innerHTML = description;
+//};
 
 
 /******************************************/
 /************** Misc / Other **************/
 /******************************************/
+function NoteworthyMentions() {
+    var description = "Collection of miscellaneous projects worth mentioning"
+    var title = "<h4 style=\"color:#cc5200\">Noteworthy Mentions</h4>";
+    if (document.getElementById("details-title").innerHTML != title) {
+        document.getElementById("details-title").innerHTML = title;
+        document.getElementById("details-subtitle").innerHTML = "";
+        document.getElementById("details-description").innerHTML = description;
+    }
+}
+
 function AgileSync() {
-	var description = "Created a tool that was able to sync our official Agile database with our Microsoft Access parts library.\
-	Our parts library was the backend of all of our schematic designs, containing all of the part numbers and corresponding item information of all our parts.\
-	The problem was that this often got outdated due to a lack of process control (we didnt have a component engineer for awhile).\
-	So I wrote this tool to update all of our schematics and parts database to keep in sync with our official documentation of it."
-    var title = "<h4 style=\"color:#cc5200\">Agile Database Sync Tool</h4>";
-    document.getElementById("details-title").innerHTML = title;
-    document.getElementById("details-subtitle").innerHTML = "";
+	var description = "Created a tool that was able to sync our official Agile Product Lifecycle Management (PLM) database with our Mentor Graphic's parts library.\
+	This parts library was the backend of all of our schematic designs, containing all of the part numbers and corresponding item information of all our parts.\
+	This was often outdated due to a lack of process control since we didnt have a component engineer for awhile.\
+	So I wrote a script to update all of our schematics and parts database to keep in sync with our official documentation of it.\
+	This is a $500K <a href=\"https://www.xplm.com/our-solutions/plm-integrations/oracle-agile-plm/eda/oracle-agile-plm-integration-for-mentor-graphics-pads/\">tool</a>\
+	offered by Agile, probably with more bells and whistles of course, but my semi-manual script got the job done."
+    var subtitle = "<h6 style=\"color:#000000\">Agile Database Sync Tool</h6>";
+    document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
 
 function Translate() {
-	var description = "<ul><li>10 MHz translation device; a tool utilized to minutely and precisely shift the output\
-	frequency of a device without greatly affecting its phase noise performance</li><li>Something else</li><ul>"
+	var description = "10 MHz translation device; a tool utilized to minutely and precisely shift the output\
+	frequency of a device without greatly affecting its phase noise performance<br><br>\
+	<img src=\"img/Microsemi/Misc/TranslationDevice.png\" width=100%>"
     var subtitle = "<h6 style=\"color:#000000\">10 MHz Translation Device</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;

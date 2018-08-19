@@ -15,10 +15,10 @@ function ENR153() {
 	SolidWorks will be used to design parts and assemblies. CamWorks will be used to create tool paths for common 2.5 axis milling operations. \
 	Prototyping will be done using CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
 	geometric relations, external references, equations, and design tables will be emphasized. A design-build project will require students to build a working prototype \
-	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports."
+	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports.<br><br>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Graphing & Machining</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR153.jpg\" width=100%>";
+	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR153.jpg\" width=75%>";
 };
 
 function ENR157() {
@@ -26,10 +26,10 @@ function ENR157() {
 	This course covers basic logic gates, boolean algebra, number systems, digital arithmetic, combinational logic circuits, multiplexers, \
 	decoders, flip-flops and registers. Digital system applications will include counters, magnitude comparators, ADCs, DACs, \
 	feedback control, sensor interfacing, and signal conditioning. Schematic capture and VHDL programming will be implemented in a digital system on an FPGA.\
-	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation."
+	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation.<br><br>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\"><h5 style=\"color:#cc5200\">Digital Electronics & Microcontrollers</h5></h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR157.jpg\" width=100%>";
+	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR157.jpg\" width=75%>";
 };
 
 function ENR161() {
@@ -44,10 +44,10 @@ function ENR161() {
 
 function ENR251() {
 	var description = "Fundamentals of statics applied to problems of engineering interest. A vector algebra approach \
-	will be presented. Topics include equivalent force systems, equilibrium, structural mechanics, friction, and properties of surfaces."
+	will be presented. Topics include equivalent force systems, equilibrium, structural mechanics, friction, and properties of surfaces.<br><br>"
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Statics</h5>";
-	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR251.jpg\" width=100%>";
+	document.getElementById("course-extra").innerHTML = "<img src=\"img/MCC/ENR251.jpg\" width=75%>";
 };
 
 function ENR253() {

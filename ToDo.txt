@@ -1,14 +1,18 @@
 Should do:
-- Update Microsemi page
 - Add other education things including NIST / IEEE
 - Update DSU description
 - Fix page height (or block heights?) in projects so that image loading doesnt jump (maybe min block height)
 - Skill proficiencies
 - Arrows in sidebar went missing (aria expand tag?)
-- Table expand close on way up (but not on way down?)
+- Go through things completed doc (And browse through associated fogbugz cases)
 
-Verify:
-- Add seo jekyll tag
+Microsemi Page:
+- Fix Freq Synth Block (So not the same as prototype block)
+- Update phase noise injection block
+- Fix temp dependency block
+- Update Atomic Clock GUI images
+- Fix commented blocks
+- Go through images to make sure nothing is missed
 
 Do Anytime:
 - Add pictures to Education courses (& sliders where necessary)
@@ -19,8 +23,11 @@ Do Anytime:
 - Improve thanks page
 - Improve 404 page
 - Fix pictures (remove backgrounds)
+- Add ability to exapand (button in corner?) to single item in projects page (modal?)
+- Where to put binder link?
 
 Explore / Investigate:
 - Add modal or pages for additional project info
 - Footer options (Social icons to footer, Contact button, site map, other? Easter Egg?)
-- Add interactive codeblocks (or embed notebooks)
+- Interactive codeblocks
+- Verify seo jekyll tag

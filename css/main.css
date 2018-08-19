@@ -63,18 +63,6 @@ input:-webkit-autofill {
 }
 
 /* ========================================================== */
-/*     Table Row Highlighting
-/* ========================================================== */
-th div {
-  cursor: pointer;
-  width: 100%;
-}
-
-th div:hover {
-  background-color: #000;
-}
-
-/* ========================================================== */
 /*     IMAGE SLIDER
 /* ========================================================== */
 .slideshow-container {
@@ -314,12 +302,21 @@ iframe {
   transition: all 0.3s;
 }
 
+tbody tr:hover {
+    cursor: pointer;
+    background-color: #000 !important;
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #282b2f;
 }
 
-.table-striped tbody tr:nth-of-type(odd):hover {
-  background-color: #26292d;
+th div:hover {
+  background-color: #000;
+}
+
+tbody .t_open:hover {
+  background-color: #282b2f !important;
 }
 
 @media (max-width: 991px) {
