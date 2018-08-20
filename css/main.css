@@ -37,6 +37,40 @@ a {
 }
 
 /* ========================================================== */
+/*     Expanding Blocks
+/* ========================================================== */
+.expander {
+  position: relative;
+  text-align: right;
+  height: 15px;
+}
+
+.expander i {
+  position: relative;
+  font-size: 25px;
+  right: -20px;
+  padding: 5px;
+}
+
+.nodisp{
+  display: none;
+}
+
+.project {
+    padding: 0 20 20 20 !important;
+}
+
+
+@media (max-width: 991px) {
+  .expander {
+    display: none;
+  }
+  .project {
+    padding: 20 20 20 20 !important;
+  }
+}
+
+/* ========================================================== */
 /*     ScrollBar
 /* ========================================================== */
 ::-webkit-scrollbar { width: 9px; height: 3px;}
@@ -255,6 +289,7 @@ i[class*='icon-'] {
   background: #2d3035;
   color: #8a8d93;
   margin-bottom: 30px;
+  border: 2px solid black;
 }
 
 .block .title {

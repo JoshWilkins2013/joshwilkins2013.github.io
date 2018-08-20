@@ -23,11 +23,11 @@ Do Anytime:
 - Improve thanks page
 - Improve 404 page
 - Fix pictures (remove backgrounds)
-- Add ability to exapand (button in corner?) to single item in projects page (modal?)
 - Where to put binder link?
 
 Explore / Investigate:
 - Add modal or pages for additional project info
+- Expanding Experience or Educational blocks
 - Footer options (Social icons to footer, Contact button, site map, other? Easter Egg?)
 - Interactive codeblocks
 - Verify seo jekyll tag

@@ -95,4 +95,14 @@ $(function () {
         $(this).removeClass('t_closed');
         $(this).find('ul').addClass('show');
     });
+
+    // ------------------------------------------------------- //
+    // Expanding Blocks
+    // ------------------------------------------------------ //
+    $('.fa-plus-square').on('click', function () {
+        $('.block').toggleClass('nodisp');
+        var block = $(this).closest("div").parent();
+        block.removeClass('nodisp');
+        block.parent().toggleClass('col-lg-4 col-lg-12');
+    });
 });
