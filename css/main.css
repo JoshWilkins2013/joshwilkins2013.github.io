@@ -125,14 +125,15 @@ input:-webkit-autofill {
   top: 0;
   bottom: 0;
   padding: 0 16px 0 16px;
+  margin-bottom: 20px;
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
 
     /* Prevent highlighting of directional arrows */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Chrome and Opera */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Chrome and Opera */
 }
 
 .next {

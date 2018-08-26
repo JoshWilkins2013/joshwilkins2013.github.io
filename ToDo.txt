@@ -1,10 +1,11 @@
 Should do:
 - Add other education things including NIST / IEEE
 - Update DSU description
-- Fix page height (or block heights?) in projects so that image loading doesnt jump (maybe min block height)
+- Fix block heights in projects so that image loading doesnt jump (min block height to largest image?)
 - Skill proficiencies
 - Go through things completed doc (And browse through associated fogbugz cases)
 - Make transitions work on sidebar and header arrow
+- Prev/Next arrow resets scroll sometimes?
 
 Microsemi Page:
 - Fix Freq Synth Block (So not the same as prototype block)
@@ -15,7 +16,7 @@ Microsemi Page:
 - Go through images to make sure nothing is missed
 
 Do Anytime:
-- Add pictures to Education courses (& sliders where necessary)
+- Add pictures to Education courses (& sliders where necessary & final reports?)
 - Fix course descriptions
 - Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
 - Add email check to email contact field

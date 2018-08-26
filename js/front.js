@@ -104,5 +104,6 @@ $(function () {
         var block = $(this).closest("div").parent();
         block.removeClass('nodisp');
         block.parent().toggleClass('col-lg-4 col-lg-12');
+        $(this).toggleClass('fa-plus-square fa-minus-square')
     });
 });

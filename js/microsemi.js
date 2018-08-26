@@ -21,6 +21,7 @@ var albums = {
 		    ],
 		    "Power": [
 		        "<img src=\"img/Microsemi/Synth/Power/Design.png\"><p>Controller Design</p>",
+                "<img src=\"img/Microsemi/Synth/Power/Results.png\"><p>Controller Results</p>",
                 "<img src=\"img/Microsemi/Synth/Power/ADL6010.png\"><p>ADL6010 Envelope Detector</p>",
                 "<img src=\"img/Microsemi/Synth/Power/ADL6010_Response.png\"><p>ADL6010 Response Time</p>",
                 "<img src=\"img/Microsemi/Synth/Power/ADL6010_Bode.png\"><p>ADL6010 Bode Plot</p>",
@@ -32,16 +33,23 @@ var albums = {
                 "<img src=\"img/Microsemi/AtomicClock/GUI.jpg\"><p>User Interface</p>"
             ],
             "Aging": [
-                "<img src=\"img/Microsemi/AtomicClock/Aging.jpg\"><p>Aging Output Across Files</p>"
+                "<img src=\"img/Microsemi/AtomicClock/Aging/Aging.png\"><p>Aging Output Across Files</p>"
             ],
             "ADev": [
-                "<img src=\"img/Microsemi/AtomicClock/Adev_Single.jpg\"><p>Adev on one File</p>",
-                "<img src=\"img/Microsemi/AtomicClock/Adev_Multi.jpg\"><p>Adev Averaged Across Files</p>"
+                "<img src=\"img/Microsemi/AtomicClock/ADev/Adev_Single.jpg\"><p>Adev on one File</p>",
+                "<img src=\"img/Microsemi/AtomicClock/ADev/Adev_Multi.jpg\"><p>Adev Averaged Across Files</p>"
             ],
             "Tempco": [
-                "<img src=\"img/Microsemi/AtomicClock/Tempco_Stepped.jpg\"><p>Stepped Tempco Run</p>",
-                "<img src=\"img/Microsemi/AtomicClock/Tempco_Continuous.jpg\"><p>Continuous Tempco Run</p>",
-                "<img src=\"img/Microsemi/AtomicClock/Tempco_PolyFit.jpg\"><p>Polynomial Fit of Tempco Runs</p>"
+                "<img src=\"img/Microsemi/AtomicClock/Tempco/Stepped_Regions.png\"><p>Stepped Regions of Interest</p>",
+                "<img src=\"img/Microsemi/AtomicClock/Tempco/Hysteresis.png\"><p>Hysteresis Effect</p>",
+                "<img src=\"img/Microsemi/AtomicClock/Tempco/Tempco_Continuous.png\"><p>Continuous Tempco Run</p>",
+                "<img src=\"img/Microsemi/AtomicClock/Tempco/Tempco_PolyFit.png\"><p>Polynomial Fit of Tempco Runs</p>"
+            ],
+            "Data": [
+                "<img src=\"img/Microsemi/AtomicClock/DataAnalysis/FreqJumps_Temp.png\"><p>Frequency Jumps vs Temperature</p>",
+                "<img src=\"img/Microsemi/AtomicClock/DataAnalysis/FreqJumps_Time.png\"><p>Frequency Jumps vs Time</p>",
+                "<img src=\"img/Microsemi/AtomicClock/DataAnalysis/TCXO_Freq.png\"><p>TCXO Root Cause</p>",
+                "<img src=\"img/Microsemi/AtomicClock/DataAnalysis/Heartbeat.png\"><p>Frequency Noisy Region</p>",
             ],
             "Quantization": [
                 "<img src=\"img/Microsemi/Presentations/Quantization/Results.png\"><p>Results</p>",
@@ -56,7 +64,7 @@ var albums = {
                 "<img src=\"img/Microsemi/Presentations/Quantization/NumSamples.png\"><p>Varying # Samples</p>"
             ],
             "PCB": [
-                "<img src=\"img/Microsemi/PCB/Fanout_Board.jpg\"><p>10 MHz Fanout Board</p>",
+                "<img src=\"img/Microsemi/PCB/Fanout_Board.jpg\"><p>Frequency Distribution Board</p>",
                 "<img src=\"img/Microsemi/PCB/PI_Board.jpg\"><p>PI Filter Board</p>",
                 "<img src=\"img/Microsemi/PCB/PI_Layout.png\"><p>PI Filter Layout</p>",
                 "<img src=\"img/Microsemi/PCB/10MHzOCXO_Board.jpg\"><p>OCXO Eval Board</p>",
@@ -65,6 +73,13 @@ var albums = {
             "BBB": [
                 "<img src=\"img/Microsemi/BBB/BBB.png\"><p>Beaglebone Black</p>",
                 "<img src=\"img/Microsemi/BBB/DDS.jpg\"><p>AD9912 DDS</p>"
+            ],
+            "SPI": [
+                "<img src=\"img/Microsemi/BBB/SPI/DDS_High_Level.jpg\"><p>High Level DDS</p>",
+                "<img src=\"img/Microsemi/BBB/SPI/FTW_POW.jpg\"><p>Tuning Words</p>",
+                "<img src=\"img/Microsemi/BBB/SPI/SPI_DDS.jpg\"><p>SPI Protocol</p>",
+                "<img src=\"img/Microsemi/BBB/SPI/Timing.jpg\"><p>Timing Requirements</p>",
+                "<img src=\"img/Microsemi/BBB/SPI/WriteCycle.jpg\"><p>Write Cycle</p>"
             ],
             "TempDivider": [
                 "<img src=\"img/Microsemi/Misc/DividerBox.jpg\"><p>Divider Box</p>"
@@ -196,7 +211,8 @@ function PCBSlides(n) {
 
 function Boards() {
     PCBSlideIndex = 1;
-	var description = "Designed some miscellaneous PCBs including a low power synthesizer, a generic PI Filter, and some misc eval boards<br><br>\
+	var description = "Some associated board spins including a simple generic (configurable) PI Filter, some eval\
+	boards for the OCXO\'s, and a frequency distribution board (active power splitter).<br><br>\
     <div class=\"slideshow-container\">\
       <div id=\"PCBSlider\" class=\"myslides\">\
         <img src=\"img/Microsemi/PCB/LowPowSynth_Board.jpg\"><p>Low Power Synthesizer</p>\
@@ -204,7 +220,7 @@ function Boards() {
       <a class=\"prev\" onclick=\"PCBSlides(PCBSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"PCBSlides(PCBSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-    var subtitle = "<h6 style=\"color:#000000\">Misc PCBs</h6>";
+    var subtitle = "<h6 style=\"color:#000000\">Associated Board Spins</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -292,7 +308,7 @@ function Aging() {
 	how long this process will take. This script attempted to ascertain the aging rate of our products.<br><br>\
 	<div class=\"slideshow-container\">\
       <div id=\"AgingSlider\" class=\"myslides\">\
-        <img src=\"img/Microsemi/AtomicClock/Aging.jpg\"><p>Aging Output Across Files</p>\
+        <img src=\"img/Microsemi/AtomicClock/Aging/Aging.png\"><p>Aging Output Across Files</p>\
       </div>\
       <a class=\"prev\" onclick=\"AgingSlides(AgingSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"AgingSlides(AgingSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
@@ -319,7 +335,7 @@ function ADev() {
 	variances into one.<br><br>\
 	<div class=\"slideshow-container\">\
       <div id=\"ADevSlider\" class=\"myslides\">\
-        <img src=\"img/Microsemi/AtomicClock/Adev_Single.jpg\"><p>Adev on one File</p>\
+        <img src=\"img/Microsemi/AtomicClock/ADev/Adev_Single.jpg\"><p>Adev on one File</p>\
       </div>\
       <a class=\"prev\" onclick=\"ADevSlides(ADevSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"ADevSlides(ADevSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
@@ -348,7 +364,7 @@ function Tempco() {
 	profile.<br><br>\
 	<div class=\"slideshow-container\">\
       <div id=\"TempcoSlider\" class=\"myslides\">\
-        <img src=\"img/Microsemi/AtomicClock/Tempco_Stepped.jpg\"><p>User Interface</p>\
+        <img src=\"img/Microsemi/AtomicClock/Tempco/Stepped_Regions.png\"><p>User Interface</p>\
       </div>\
       <a class=\"prev\" onclick=\"TempcoSlides(TempcoSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"TempcoSlides(TempcoSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
@@ -364,13 +380,30 @@ function Tempco() {
 //    document.getElementById("details-subtitle").innerHTML = subtitle;
 //    document.getElementById("details-description").innerHTML = description;
 //};
-//
-//function DataAnalysis() {
-//	var description = ""
-//	var subtitle = "<h6 style=\"color:#000000\">Data Analysis</h6>";
-//    document.getElementById("details-subtitle").innerHTML = subtitle;
-//    document.getElementById("details-description").innerHTML = description;
-//};
+
+var DataSlideIndex= 1;
+DataSlides(DataSlideIndex);
+function DataSlides(n) {
+  var i;
+  if (n > albums["Data"].length) {DataSlideIndex = 1}
+  if (n < 1) {DataSlideIndex = albums["Data"].length}
+  document.getElementById("DataSlider").innerHTML = albums["Data"][DataSlideIndex-1];
+}
+
+function DataAnalysis() {
+    DataSlideIndex = 1;
+	var description = "Some description here<br><br>\
+	<div class=\"slideshow-container\">\
+      <div id=\"DataSlider\" class=\"myslides\">\
+        <img src=\"img/Microsemi/AtomicClock/DataAnalysis/FreqJumps_Temp.png\"><p>Frequency Jumps</p>\
+      </div>\
+      <a class=\"prev\" onclick=\"DataSlides(DataSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"DataSlides(DataSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+    </div>"
+	var subtitle = "<h6 style=\"color:#000000\">Data Analysis</h6>";
+    document.getElementById("details-subtitle").innerHTML = subtitle;
+    document.getElementById("details-description").innerHTML = description;
+};
 
 function StepResponse() { // Step Response Analysis Script
 	var description = "Wrote a script that, given a stepped input (such as a step and hold temperature ramp), the outputs (transient responses) at the 'hold' regions\
@@ -416,6 +449,33 @@ function Embedded() {
         document.getElementById("details-subtitle").innerHTML = "";
         document.getElementById("details-description").innerHTML = description;
     }
+};
+
+var SPISlideIndex = 1;
+SPISlides(SPISlideIndex);
+function SPISlides(n) {
+  var i;
+  if (n > albums["SPI"].length) {SPISlideIndex = 1}
+  if (n < 1) {SPISlideIndex = albums["SPI"].length}
+  document.getElementById("SPISlider").innerHTML = albums["SPI"][SPISlideIndex-1];
+}
+
+function SPI() {
+    SPISlideIndex = 1;
+	var description = "Created low-level (assembly), generic SPI communication protocol to interface with the\
+	AD9912 DDS and the XXXXXS DAC. Abstracted the assembly code into macros to avoid redundant code and encourage\
+	configurability. The SPI communication protocol was a critical part of this real-time embedded system and\
+	provided the basis for all the additional tools created with the beaglebone black.<br><br>\
+	<div class=\"slideshow-container\">\
+      <div id=\"SPISlider\" class=\"myslides\">\
+        <img src=\"img/Microsemi/BBB/SPI/DDS_High_Level.jpg\"><p>High Level DDS</p>\
+      </div>\
+      <a class=\"prev\" onclick=\"SPISlides(SPISlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"SPISlides(SPISlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+    </div>"
+    var subtitle = "<h6 style=\"color:#000000\">Generic SPI Communication Protocol</h6>";
+    document.getElementById("details-subtitle").innerHTML = subtitle;
+    document.getElementById("details-description").innerHTML = description;
 };
 
 function AltPhaseNoise() {
