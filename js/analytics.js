@@ -1,7 +1,7 @@
 var albums = {
 		"MakeModel": [
-			"<img src=\"img/Analytics/Cars/MakeModelComparison.jpg\"><p>Model Comparison</p>",
-			"<img src=\"img/Analytics/Cars/Results.jpg\"><p>Best New Car Models</p>"
+			"<img src=\"img/Analytics/Cars/MakeModelComparison.png\"><p>Model Comparison</p>",
+			"<img src=\"img/Analytics/Cars/Results.png\"><p>Best New Car Models</p>"
 		],
 		"PriceBot": [
 			"<img src=\"img/Analytics/PriceBot/Cars_Output.svg\"><p>Merged Honda Civic Results</p>",

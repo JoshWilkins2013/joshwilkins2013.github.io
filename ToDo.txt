@@ -6,14 +6,16 @@ Should do:
 - Go through things completed doc (And browse through associated fogbugz cases)
 - Make transitions work on sidebar and header arrow
 - Prev/Next arrow resets scroll sometimes?
+- Move title (of page) into header
 
 Microsemi Page:
+- Clicking top level item doesnt reset block (remove if statement)
 - Fix Freq Synth Block (So not the same as prototype block)
 - Update phase noise injection block
-- Fix temp dependency block
+- Update temp dependency block
 - Update Atomic Clock GUI images
 - Fix commented blocks
-- Go through images to make sure nothing is missed
+- Go through images (listed and actual) to make sure nothing is missed
 
 Do Anytime:
 - Add pictures to Education courses (& sliders where necessary & final reports?)

@@ -81,6 +81,11 @@ var albums = {
                 "<img src=\"img/Microsemi/BBB/SPI/Timing.jpg\"><p>Timing Requirements</p>",
                 "<img src=\"img/Microsemi/BBB/SPI/WriteCycle.jpg\"><p>Write Cycle</p>"
             ],
+            "Inject": [
+                "<img src=\"img/Microsemi/BBB/Inject/PseudoCode.png\"><p>High Level Design</p>",
+                "<img src=\"img/Microsemi/BBB/Inject/TestPOW.png\"><p>Test POW Tone Injection</p>",
+                "<img src=\"img/Microsemi/BBB/Inject/TestPOW_Results.jpg\"><p>Test POW Injection Result</p>"
+            ],
             "TempDivider": [
                 "<img src=\"img/Microsemi/Misc/DividerBox.jpg\"><p>Divider Box</p>"
             ],
@@ -236,16 +241,10 @@ function TempDividerSlides(n) {
 
 function TempDependence() {
     TempDividerSlideIndex = 1;
-	var description = "Characterizing the temperature dependency of the synthesizer. Approximated by characterizing\
-	its largest contributor, a bandpass filter.<br>\
-	<a href=\"#/\">Analysis</a><br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"TempDividerSlider\" class=\"myslides\">\
-        <img src=\"img/Microsemi/Misc/DividerBox.jpg\"><p>Divider Box</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"TempDividerSlides(TempDividerSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"TempDividerSlides(TempDividerSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
+	var description = "Characterized the temperature dependency of the synthesizer, first approximated through testing\
+	the largest contributor, a high-Q bandpass filter. Removed the dependency through an external add-on device by\
+	dividing down the cleanest source in the synthesizer.<br><br>\
+	<img src=\"img/Microsemi/Misc/DividerBox.jpg\" width=100%><p>Divider Box</p>"
     var subtitle = "<h6 style=\"color:#000000\">Temperature Dependency Testing</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -275,13 +274,7 @@ function AtomicClock() {
     attributes of these clocks, such as allan deviation, aging rates, and lock time capabilities, were more accurately described across\
     units, with each unit containing several files of data. Additionally this GUI enabled further enhancement and testing of our\
     temperature compensation algorithm and allowed easy access to plotting specific data such as board temp or frequency.<br><br>\
-    <div class=\"slideshow-container\">\
-      <div id=\"AtomicClockSlider\" class=\"myslides\">\
-        <img src=\"img/Microsemi/AtomicClock/GUI.jpg\"><p>User Interface</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"AtomicClockSlides(AtomicClockSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"AtomicClockSlides(AtomicClockSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
+    <img src=\"img/Microsemi/AtomicClock/GUI.jpg\" width=75%><p>User Interface</p>"
     var title = "<h4 style=\"color:#cc5200\">Atomic Clock GUI</h4>";
     if (document.getElementById("details-title").innerHTML != title) {
         document.getElementById("details-title").innerHTML = title;
@@ -306,13 +299,7 @@ function Aging() {
 	frequency world, aging refers to the change in frequency over time. Typically, atomic clocks are set on racks\
 	and 'aged' until this effect settles down. It is critical, at least in a production setting, to understand\
 	how long this process will take. This script attempted to ascertain the aging rate of our products.<br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"AgingSlider\" class=\"myslides\">\
-        <img src=\"img/Microsemi/AtomicClock/Aging/Aging.png\"><p>Aging Output Across Files</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"AgingSlides(AgingSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"AgingSlides(AgingSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
+    <img src=\"img/Microsemi/AtomicClock/Aging/Aging.png\" width=75%><p>Aging Output Across Files</p>"
 	var subtitle = "<h6 style=\"color:#000000\">Long Term Aging Rates</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -490,12 +477,29 @@ function AltPhaseNoise() {
     document.getElementById("details-description").innerHTML = description;
 };
 
+var InjectSlideIndex = 1;
+InjectSlides(InjectSlideIndex);
+function InjectSlides(n) {
+  var i;
+  if (n > albums["Inject"].length) {InjectSlideIndex = 1}
+  if (n < 1) {InjectSlideIndex = albums["Inject"].length}
+  document.getElementById("InjectSlider").innerHTML = albums["Inject"][InjectSlideIndex-1];
+}
+
 function AddPhase() {
+    InjectSlideIndex = 1;
 	var description = "Converted the Matlab script found\
 	<a href=\"https://www.mathworks.com/matlabcentral/fileexchange/8844-phase-noise?focused=5065243&tab=function&requestedDomain=www.mathworks.com\" target=\"_blank\">here</a> \
 	into python to inject phase noise into any model. Useful for phase noise degradation testing and helps define its effect on allan deviation.<br>\
-	<a href=\"https://github.com/JoshWilkins2013/Tools/tree/master/AddPhaseNoise\" target=\"_blank\">Repository</a>"
-    var subtitle = "<h6 style=\"color:#000000\">Phase Noise Injection</h6>";
+	<a href=\"https://github.com/JoshWilkins2013/Tools/tree/master/AddPhaseNoise\" target=\"_blank\">Repository</a><br><br>\
+	<div class=\"slideshow-container\">\
+      <div id=\"InjectSlider\" class=\"myslides\">\
+        <img src=\"img/Microsemi/BBB/Inject/PseudoCode.png\"><p>High Level Design</p>\
+      </div>\
+      <a class=\"prev\" onclick=\"InjectSlides(InjectSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"InjectSlides(InjectSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+    </div>"
+    var subtitle = "<h6 style=\"color:#000000\">Phase Noise Profile Generator</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -620,7 +624,7 @@ function AgileSync() {
 function Translate() {
 	var description = "10 MHz translation device; a tool utilized to minutely and precisely shift the output\
 	frequency of a device without greatly affecting its phase noise performance<br><br>\
-	<img src=\"img/Microsemi/Misc/TranslationDevice.png\" width=100%>"
+	<img src=\"img/Microsemi/Misc/TranslationDevice.png\" width=75%>"
     var subtitle = "<h6 style=\"color:#000000\">10 MHz Translation Device</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
