@@ -1,19 +1,11 @@
-function LifeAtRIT() {
-	var description = "I transferred from MCC to RIT in the Fall of 2015. After MCC, I expected a lot out of RIT,\
-	  especially given the inexplicable price difference. I was poorly mistaken. In my first semester at RIT many of\
-	  the students I interacted with commented on how much better MCC had prepared students. RIT did not just fail on\
-	  that front; Because I enjoyed the robotics competitions held at MCC, I attempted to find similar program at RIT.\
-      To my amazement, none existed. I then looked for an engineering club... again nothing. I doubled up on classes and\
-      started working at Carestream while attending RIT and finished the degree in half the time it would've taken normally.\
-      I graduated in December (2016) with a Bachelor's degree in Electrical Engineering.<br><br>\
-      This is not to say that RIT was a poor school. I still believe its on par with many of the more well known schools\
-      throughout the country. What I am saying, is that education in general is in some serious need of reform. Anyone\
-      who believes having a degree makes you an engineer is outright wrong. Experience is what truly makes someone better\
-      at something. If you are looking to hire someone, please look at their project work and work experience. This will\
-      at least give you a sense of the person's dedication and commitment to self-improvement."
-	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Life at RIT</h5>";
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
+document.getElementById("header-text").innerHTML = "<a href=\"rit\"><img src=\"img/Banners/RIT_Banner.png\"></a>";
+
+function RIT_Transcript() {
+	var description = "<iframe src=\"Storage\\RIT\\Transcript.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+	var title = "<h5 style=\"color:#cc5200\">Transcript</h5>";
+	document.getElementById("course-title").innerHTML = title;
+    document.getElementById("course-description").innerHTML = description;
+    document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE220() {

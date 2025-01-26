@@ -44,6 +44,12 @@ nav.navbar a {
   color: inherit;
 }
 
+.navbar-brand {
+  width: 280px;
+  border-right: 1px solid #000;
+  margin: 0;
+}
+
 nav.navbar .brand-text {
   display: none;
   font-weight: 700;
@@ -89,6 +95,28 @@ nav.navbar a.nav-link {
   position: relative;
   top: 50%;
   transform: translateY(-50%); /* Not quite center without this line */
+}
+
+/* ========================================================== */
+/*     NavBar Title Bar
+/* ========================================================== */
+
+.header-title {
+  display: flex;
+  height: 70px;
+  background-color: #000000;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.header-title h4 {
+  margin:0;
+}
+
+.header-title img{
+  height: 75%;
 }
 
 /* ========================================================== */

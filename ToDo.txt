@@ -1,36 +1,41 @@
-Should do:
-- Add other education things including NIST / IEEE
-- Update DSU description
-- Fix block heights in projects so that image loading doesnt jump (min block height to largest image?)
-- Skill proficiencies
-- Go through things completed doc (And browse through associated fogbugz cases)
+Microchip:
+- Add filter designs? Microhawk? Add instrument control tools? Section about atomic clocks in general?
+
+General:
+- Fix commented blocks
+- Fix Header-title to expand when sidebar is collapsed
+- Go through images (listed and actual) to make sure nothing is missed
+- Add a travel section that updates with any new images that get added (low-maintenance)
+- Fix any hyperlinks and stuff
+- Figure out git, push any changes, verify website updates
+- Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
+- Go through / remove things completed doc (list.docx)
 - Make transitions work on sidebar and header arrow
 - Prev/Next arrow resets scroll sometimes?
-- Move title (of page) into header
+- Go through pictures, add any 'projects' I think I should add
+- Ensure all pictures are fixed (add backgrounds back in)
 
-Microsemi Page:
-- Clicking top level item doesnt reset block (remove if statement)
-- Fix Freq Synth Block (So not the same as prototype block)
-- Update phase noise injection block
-- Update temp dependency block
-- Update Atomic Clock GUI images
-- Fix commented blocks
-- Go through images (listed and actual) to make sure nothing is missed
-
-Do Anytime:
-- Add pictures to Education courses (& sliders where necessary & final reports?)
+Education:
 - Fix course descriptions
-- Add Awards/Nominations/Clubs/Other to 'Life at XXX' on Education Pages
+- Add pictures to Education courses (& sliders where necessary)
+- Add final reports
+- Update 'Life at XXX' on Education Pages (Add Awards/Nominations/Clubs/Other?)
 - Add email check to email contact field
 - Fix Search button
 - Improve thanks page
 - Improve 404 page
-- Fix pictures (remove backgrounds)
-- Where to put binder link?
+- Add binder links for jupyter notebooks?
+
+Maybe do:
+- Add other education things including NIST / IEEE
+- Add skill proficiencies?
+- Add gpa to education tables?
 
 Explore / Investigate:
 - Add modal or pages for additional project info
-- Expanding Experience or Educational blocks
-- Footer options (Social icons to footer, Contact button, site map, other? Easter Egg?)
-- Interactive codeblocks
+    - Sub-Projects for larger projects such as the kitchen?
+- Expanding Experience or Educational blocks?
+- Improve Footer (Social icons to footer, Contact button, site map, other? Easter Egg?)
+- Interactive codeblocks?
 - Verify seo jekyll tag
+- Left menu should re-collapse?

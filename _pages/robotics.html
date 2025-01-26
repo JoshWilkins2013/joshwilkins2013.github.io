@@ -1,7 +1,7 @@
 ---
 title: Robotics
 category: Projects
-order: 3
+order: 2
 icon: layers
 ---
 <html>
@@ -12,11 +12,7 @@ icon: layers
       {% include sidebar.html %}
 	  
       <div class="page-content">
-        <div class="page-header">
-            <h4> Robotics Projects </h4>
-        </div>
-        
-		<section>
+        <section>
           <div class="container-fluid">
             <div class="row">
 
@@ -25,14 +21,19 @@ icon: layers
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> ASEE Competition 2014 </h3>
 				  <h5 style="color:#cc5200;"> Indie 500 </h5>
-                  <p> A national robotics competition that was held in Indianapolis, Indiana.
-                      The objective was to autonomously navigate a, much smaller, model of the Indianapolis 500 track.
-                      This model contained obstacles to increase the difficulty of the challenge. </p>
 
-                  <div class="slideshow-container">
-                    <div id="IndieSlider" class="mySlides"></div>
-                    <a class="prev" onclick="IndieSlides(indieSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                    <a class="next" onclick="IndieSlides(indieSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                  <p> A national robotics competition held in Indianapolis, Indiana, where the objective was to
+                    autonomously navigate a scaled-down version of the Indianapolis 500 track. The model included
+                    various obstacles to enhance the difficulty of the challenge.<br>
+                  </p>
+
+                  <div id="asee_2014_description">
+                    <a onclick="ASEE_2014_Report()" target="_blank"><button type="submit">Final Report</button></a><br><br>
+                    <div class="slideshow-container">
+                      <div id="IndieSlider" class="mySlides"></div>
+                      <a class="prev" onclick="IndieSlides(IndieSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                      <a class="next" onclick="IndieSlides(IndieSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                    </div>
                   </div>
                 </div>
 
@@ -40,8 +41,10 @@ icon: layers
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header">Quadcopter </h3>
 
-				  <p> My quadcopter build. Went through two design iterations before deciding to pass the project along.
-                      Just needs a central processor to handle orientation and motor control. </p>
+				  <p> A quadcopter I built in college. It went through two design iterations before I decided to pass
+                      it along. It never fully worked, but I had fun designing and figuring out the electronics. It
+                      also led to the creation of the drone club at MCC.
+                  </p>
 
                   <div class="slideshow-container">
   				    <div id="QuadcopterSlider" class="mySlides"></div>
@@ -58,35 +61,39 @@ icon: layers
                   <h3 class="block-header"> ASEE Competition 2015</h3>
 				  <h5 style="color:#cc5200;"> Fish Derby </h5>
 
-                  <p> A national robotics competition that was held in Seattle, Washington. The objective was to autonomously
-				    collect the wooden fish cut-outs placed along two circles on an 8x8 foot track. Once collected, the robot had
-				    to deposit these wooden fish cut-outs into the corresponding colored bins located on the corners of the track.<br>
-                    <a href="Storage\Projects\ASEE_2015_Rules.pdf" target="_blank">
-                      <button type="submit">Rules</button>
-                    </a>
-				  </p>
+                  <p> A national robotics competition held in Seattle, Washington, where the objective was
+                      to autonomously collect wooden fish cut-outs placed along two concentric circles on an 8x8
+                      foot track. After collecting the fish, the robot had to deposit them into the corresponding
+                      colored bins located at the track's corners.<br>
+                  </p>
 
-				  <div class="slideshow-container">
-  				    <div id="DerbySlider" class="mySlides"></div>
-					<a class="prev" onclick="DerbySlides(derbySlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="DerbySlides(derbySlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
+                  <div id="asee_2015_description">
+                    <a onclick=ASEE_2015_Rules() target="_blank"><button type="submit">Rules</button></a><br><br>
+                    <div class="slideshow-container">
+  				      <div id="DerbySlider" class="mySlides"></div>
+					  <a class="prev" onclick="DerbySlides(DerbySlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+				      <a class="next" onclick="DerbySlides(DerbySlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+				    </div>
+                  </div>
 
                 </div>
+
                 <div class="project block">
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header">McLaren F1 </h3>
 
-                  <p> A first-year, in-class robotics competition. Multiple objectives including track navigation
-                      and tractor pull. Design entirely up to students; I chose to model it after a McLaren F1.
+                  <p> A first-year, in-class robotics competition with multiple objectives, including track
+                      navigation and a tractor pull. The design (aesthetics and function) was left completely up
+                      to the students; I chose to loosely model mine after a McLaren F1.<br>
                   </p>
-
-				  <div class="slideshow-container">
-  				    <div id="ENR153Slider" class="mySlides"></div>
-				    <a class="prev" onclick="ENR153Slides(ENR153SlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="ENR153Slides(ENR153SlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
+                  <div id="enr_153_description">
+                    <a onclick="ENR153_Report()" target="_blank"><button type="submit">Final Report</button></a><br><br>
+                    <div class="slideshow-container">
+                      <div id="ENR153Slider" class="mySlides"></div>
+                      <a class="prev" onclick="ENR153Slides(ENR153SlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                      <a class="next" onclick="ENR153Slides(ENR153SlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -95,11 +102,9 @@ icon: layers
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> ATtiny Swarm </h3>
 
-                  <p> A programmable and rechargeable set of robots whose functionality could be changed through the addition of an attachment 'shield'.
-				  With the abstraction of functionality into modular shields, design costs plummeted and new design possibilities emerged.
-				  By attaching the shield to one of the two base designs (line follow or obstacle avoidance), the base designs electronics were overriden and the shield's functionality took over.
-				  For example, if a Bluetooth control shield were attached to the line following base design,
-				  the robot would then be controlled via BT instead of its normal behavior of following a line.
+                  <p> A set of programmable, rechargeable robots whose functionality could be altered by adding
+                      a modular attachment called a "shield." By default, these robots would either line-follow or
+                      avoid obstacles. When a shield was attached, the base design's electronics were overridden.
 				  </p>
 
 				  <div class="slideshow-container">

@@ -1,7 +1,9 @@
 var albums = {
 		"MakeModel": [
-			"<img src=\"img/Analytics/Cars/MakeModelComparison.png\"><p>Model Comparison</p>",
-			"<img src=\"img/Analytics/Cars/Results.png\"><p>Best New Car Models</p>"
+			"<img src=\"img/Analytics/Cars/Model_Comparison_Age.png\"><p>Car Model Comparison - Age</p>",
+			"<img src=\"img/Analytics/Cars/Model_Comparison_Mileage.png\"><p>Car Model Comparison - Mileage</p>",
+			"<img src=\"img/Analytics/Cars/Best_Choice_Age.png\"><p>Best Choice - Age</p>",
+			"<img src=\"img/Analytics/Cars/Best_Choice_Mileage.png\"><p>Best Choice - Mileage</p>"
 		],
 		"PriceBot": [
 			"<img src=\"img/Analytics/PriceBot/Cars_Output.svg\"><p>Merged Honda Civic Results</p>",
@@ -16,10 +18,11 @@ var albums = {
 		]
 }
 
+document.getElementById("header-text").innerHTML = "Analytical Projects";
+
 var PriceBotSlideIndex= 1;
 PriceBotSlides(PriceBotSlideIndex);
 function PriceBotSlides(n) {
-  var i;
   if (n > albums["PriceBot"].length) {PriceBotSlideIndex = 1}
   if (n < 1) {PriceBotSlideIndex = albums["PriceBot"].length}
   document.getElementById("PriceBotSlider").innerHTML = albums["PriceBot"][PriceBotSlideIndex-1];
@@ -28,7 +31,6 @@ function PriceBotSlides(n) {
 var MakeModelSlideIndex= 1;
 MakeModelSlides(MakeModelSlideIndex);
 function MakeModelSlides(n) {
-  var i;
   if (n > albums["MakeModel"].length) {MakeModelSlideIndex = 1}
   if (n < 1) {MakeModelSlideIndex = albums["MakeModel"].length}
   document.getElementById("MakeModelSlider").innerHTML = albums["MakeModel"][MakeModelSlideIndex-1];
@@ -43,7 +45,6 @@ function MakeModelAnalysis() {
 var HouseSlideIndex= 1;
 HouseSlides(HouseSlideIndex);
 function HouseSlides(n) {
-  var i;
   if (n > albums["House"].length) {HouseSlideIndex = 1}
   if (n < 1) {HouseSlideIndex = albums["House"].length}
   document.getElementById("HouseSlider").innerHTML = albums["House"][HouseSlideIndex-1];

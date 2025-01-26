@@ -41,28 +41,42 @@ var albums = {
 		]
 }
 
-var derbySlideIndex = 1;
-DerbySlides(derbySlideIndex);
+document.getElementById("header-text").innerHTML = "Robotics Projects";
+
+var DerbySlideIndex = 1;
+DerbySlides(DerbySlideIndex);
 function DerbySlides(n) {
-  var i;
-  if (n > albums["Derby"].length) {derbySlideIndex = 1} 
-  if (n < 1) {derbySlideIndex = albums["Derby"].length}
-  document.getElementById("DerbySlider").innerHTML = albums["Derby"][derbySlideIndex-1];
+  if (n > albums["Derby"].length) {DerbySlideIndex = 1}
+  if (n < 1) {DerbySlideIndex = albums["Derby"].length}
+  document.getElementById("DerbySlider").innerHTML = albums["Derby"][DerbySlideIndex-1];
 }
 
-var indieSlideIndex = 1;
-IndieSlides(indieSlideIndex);
+function ASEE_2014_Report() {
+    var description = "<iframe src=\"Storage\\Projects\\ASEE_2014_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("asee_2014_description").innerHTML = description;
+}
+
+function ASEE_2015_Rules() {
+    var description = "<iframe src=\"Storage\\Projects\\ASEE_2015_Rules.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("asee_2015_description").innerHTML = description;
+}
+
+function ENR153_Report() {
+    var description = "<iframe src=\"Storage\\Education\\ENR153_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("enr_153_description").innerHTML = description;
+}
+
+var IndieSlideIndex = 1;
+IndieSlides(IndieSlideIndex);
 function IndieSlides(n) {
-  var i;
-  if (n > albums["Indie"].length) {indieSlideIndex = 1} 
-  if (n < 1) {indieSlideIndex = albums["Indie"].length}
-  document.getElementById("IndieSlider").innerHTML = albums["Indie"][indieSlideIndex-1];
+  if (n > albums["Indie"].length) {IndieSlideIndex = 1}
+  if (n < 1) {IndieSlideIndex = albums["Indie"].length}
+  document.getElementById("IndieSlider").innerHTML = albums["Indie"][IndieSlideIndex-1];
 }
 
 var ATtinySlideIndex = 1;
 ATtinySlides(ATtinySlideIndex);
 function ATtinySlides(n) {
-  var i;
   if (n > albums["ATtiny"].length) {ATtinySlideIndex = 1} 
   if (n < 1) {ATtinySlideIndex = albums["ATtiny"].length}
   document.getElementById("ATtinySlider").innerHTML = albums["ATtiny"][ATtinySlideIndex-1];
@@ -71,7 +85,6 @@ function ATtinySlides(n) {
 var QuadcopterSlideIndex = 1;
 QuadcopterSlides(QuadcopterSlideIndex);
 function QuadcopterSlides(n) {
-  var i;
   if (n > albums["Quadcopter"].length) {QuadcopterSlideIndex = 1}
   if (n < 1) {QuadcopterSlideIndex = albums["Quadcopter"].length}
   document.getElementById("QuadcopterSlider").innerHTML = albums["Quadcopter"][QuadcopterSlideIndex-1];
@@ -80,7 +93,6 @@ function QuadcopterSlides(n) {
 var ENR153SlideIndex = 1;
 ENR153Slides(ENR153SlideIndex);
 function ENR153Slides(n) {
-  var i;
   if (n > albums["ENR153"].length) {ENR153SlideIndex = 1}
   if (n < 1) {ENR153SlideIndex = albums["ENR153"].length}
   document.getElementById("ENR153Slider").innerHTML = albums["ENR153"][ENR153SlideIndex-1];

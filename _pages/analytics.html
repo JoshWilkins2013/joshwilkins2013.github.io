@@ -11,12 +11,6 @@ icon: layers
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
       <div class="page-content">
-        <div class="page-header">
-          <div class="container-fluid">
-            <h4> Analytical Projects </h4>
-          </div>
-        </div>
-
         <section>
           <div class="container-fluid">
 			<div class="row">
@@ -24,9 +18,11 @@ icon: layers
                 <div class="project block">
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> Price Abstracter </h3>
-				  <p> A handy little price abstraction tool for common websites such as Craigslist and Ebay. Useful to
-                      analyze car prices or apt rentals and helps find the best option. Soon to include apt rental or housing
-                      websites such as Zillow and Trulia. Output results in scatter plot, with each point linked to original ad.
+				  <p> A convenient price comparison tool for popular websites like Craigslist and eBay, designed to
+                      help analyze car prices or apartment rentals and identify the best deals. This tool could
+                      potentially be enhanced and abstracted to include additional housing sites such as Zillow
+                      and Trulia. Comparison results are displayed in a scatter plot, with each data point linked
+                      to the original listing.
                       <br> <a href="https://github.com/JoshWilkins2013/PriceBot" target="_blank"> Repository </a>
                   </p>
 
@@ -43,11 +39,13 @@ icon: layers
                 <div class="project block">
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> Make/Model Comparison </h3>
-                  <p> A direct result of the Price Abstracter, I analyzed which car model was best within each make. From that information,
-                      I determined the best model across all makes (Nissan Versa). The results indicate that cars with higher initial values depreciate faster.
-                      So the cheapest car is the best car to buy if you are going to buy new. If the prices were to be normalized by their intial price,
-                      a more even distribution of depreciation rates would probably be seen, just indicating that all cars depreciate at the same weighted rate.
-                      <br><a href="https://github.com/JoshWilkins2013/PriceBot/tree/master/docs/Analysis" target="_blank"> Repository </a><br>
+                  <p> An alternative benefit of my price abstractor tool is having access to real-world car and rental
+                      data! From this data, I have analyzed which car model was best within each make and which model
+                      was best overall. The results are intuitive; the more you spend on a car, the faster it will
+                      depreciate! Perhaps if the prices were normalized by their initial price, a more even
+                      distribution of depreciation rates would be seen, indicating all cars depreciate at the same
+                      weighted rate.<br>
+                      <a href="https://github.com/JoshWilkins2013/PriceBot/tree/master/docs/Analysis" target="_blank"> Repository </a><br>
                   </p>
                   <div id="details-description">
                     <button onclick="MakeModelAnalysis()" type="submit">The Analysis</button><br><br>
@@ -65,13 +63,11 @@ icon: layers
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header">Buying a House</h3>
 
-                  <p>If you're anything like me, then I'm sure you're sick of paying rent, wondering why you are paying
-                    someone else when this money could go into owning a house. At first, it seems like a no-brainer!
-                    Trade your rent in for a mortgage payment and then at least some of your money is being saved.
-                    But there are a bunch of things you don't consider when this thought first crosses your mind.
-                    Here's to shedding some light on purchasing your first house.<br>
-                    <a href="https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/House" target=\"_blank\">Repository</a> \
-                    <a href="https://hub.mybinder.org/user/joshwilkins2013-jupyternotebooks-3n08z26a/notebooks/House/House.ipynb" target=\"_blank\">Binder</a>
+                  <p> I was curious to see the benefits of owning a home over renting. At what point would you
+                      recouperate the down-payment? How much money do you save over renting, long-term? How much do
+                      banks really make on the interest of your mortgage? So I created a tool with adjustable sliders
+                      to compare and assess different financial situations.<br>
+                      <a href="https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/House" target=\"_blank\">Repository</a>
                   </p>
 
 				  <div class="slideshow-container">

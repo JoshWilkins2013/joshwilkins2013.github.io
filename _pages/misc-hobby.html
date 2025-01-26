@@ -1,7 +1,7 @@
 ---
 title: Misc Hobby
 category: Projects
-order: 2
+order: 5
 icon: layers
 ---
 <html>
@@ -12,10 +12,6 @@ icon: layers
       {% include sidebar.html %}
 	  
       <div class="page-content">
-        <div class="page-header">
-            <h4> Other Projects </h4>
-        </div>
-        
 		<section>
           <div class="container-fluid">
             <div class="row">
@@ -26,27 +22,48 @@ icon: layers
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> V-Arm </h3>
 
-				  <p> A partial body immersion device for VR which allows the user to physically interact with virtual objects.
-                      By manipulating the user's arm in response to virtual interactions with objects, a form of kinesthetic feedback is provided.
-                      The initial design was constructed with what are known as air muscles.
+				  <p> A partial body immersion device for VR that enables users to physically engage with virtual
+                      objects. It provides kinesthetic feedback by adjusting the user's arm in response to
+                      interactions with virtual elements. This is accomplished through the use of air muscles;
+                      inflatable bladders with mesh wrapping that can contract using pressurized air.<br>
                   </p>
 
-                  <div class="slideshow-container">
-  				    <div id="VArmSlider" class="mySlides"></div>
-				    <a class="prev" onclick="VArmSlides(VArmSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="VArmSlides(VArmSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
+                  <div id="varm_description">
+                    <a onclick="VArm_Description()" target="_blank"><button type="submit">Final Report</button></a><br><br>
+                    <div class="slideshow-container">
+                      <div id="VArmSlider" class="mySlides"></div>
+  		  		      <a class="prev" onclick="VArmSlides(VArmSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+  				      <a class="next" onclick="VArmSlides(VArmSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="project block">
+                  <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
+                  <h3 class="block-header"> Cat Tree </h3>
+
+				  <p> I Made this cat tree for my brother and his cat Jimmy. </p>
+
+                  <div class="slideshow-container">
+  				    <div id="CatTreeSlider" class="mySlides"></div>
+				    <a class="prev" onclick="CatTreeSlides(CatTreeSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+				    <a class="next" onclick="CatTreeSlides(CatTreeSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+				  </div>
+                </div>
+
+              </div>
+
+			  <div class="col-lg-4">
 
                 <div class="project block">
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> Wilmake </h3>
 
-				  <p> Unsatisfied with the 3D printer I had bought on Kickstarter, I decided to create an all encompassing 3D printer, scanner,
-                      laser engraver, and CNC milling machine. Built during my freshman year in college, I was just short of launching my own Kickstarter campaign before
-                      one of the very first all encompassing printers launced: Meet <a href="https://www.kickstarter.com/projects/2117384013/flux-all-in-one-3d-printer-unlimited-elegant-simpl/updates" target="_blank">Flux</a>,
-                      making just over $1.6 million!
+				  <p> Back when 3D printers were just coming out, I wanted to make one that would be more useful.
+                      I attempted to create an interchangeable head so that it could also draw, laser engrave, mill,
+                      and scan 3D objects. Not long after working on this project,
+                      <a href="https://www.kickstarter.com/projects/2117384013/flux-all-in-one-3d-printer-unlimited-elegant-simpl/description" target="_blank">this kickstarter</a>
+                      came along with a very similar concept, making just over $1.6 million!
                   </p>
 
                   <div class="slideshow-container">
@@ -56,14 +73,11 @@ icon: layers
 				  </div>
                 </div>
 
-              </div>
-
-			  <div class="col-lg-4">
                 <div class="project block">
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> Misc </h3>
 
-                  <p> Some other miscellaneous projects such as my computer build, a power supply, and my old 3D printer. </p>
+                  <p> Some other miscellaneous projects such as my computer, a power supply, and my old 3D printer. </p>
 
 				  <div class="slideshow-container">
   				    <div id="MiscSlider" class="mySlides"></div>
@@ -78,10 +92,9 @@ icon: layers
                   <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
                   <h3 class="block-header"> Ambilight </h3>
 
-                  <p> Utilizing a Raspberry Pi (RPI), a dynamic lighting effect corresponding to the TV's video content was created.
-                        In this build, I used Rasplex to stream video from the RPI and Hyperion to implement the lighting backrop.
-                        It is capable of producing the color spectrum at different shades, brightness, and intensities based upon frame content.
-
+                  <p> An ambient lighting system that creates background lighting based on TV content. It is capable
+                      of producing different shades, brightness, and intensities of color based upon frame content. I
+                      used Rasplex to stream video from a raspberry pi and Hyperion to implement the lighting backdrop.
                   </p>
 
 				  <div class="slideshow-container">

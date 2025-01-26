@@ -1,0 +1,132 @@
+---
+title: House
+category: Projects
+order: 3
+icon: layers
+---
+<html>
+  {% include head.html %}
+  <body>
+	{% include header.html %}
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+	  
+      <div class="page-content">
+		<section>
+          <div class="container-fluid">
+            <div class="row">
+
+              <div class="col-lg-4">
+
+                <div class="project block">
+                  <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
+                  <h3 class="block-header"> Roof </h3>
+
+                  <p> I purchased this house in 2021, fully aware that the roof above the front door was likely
+                    leaking. A few months later, I took on the task of re-shingling the roof. It was a lot of
+                    work, but the outcome was definitely worth it.
+                  </p>
+
+                  <div class="slideshow-container">
+                    <div id="RoofSlider" class="mySlides"></div>
+                    <a class="prev" onclick="RoofSlides(RoofSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="RoofSlides(RoofSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                  </div>
+                </div>
+
+                <div class="project block">
+                  <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
+                  <h3 class="block-header"> Kitchen </h3>
+                  <p> Another significant upgrade I made to the house was a complete kitchen renovation. It was clear
+                    the previous owners just slapped on some paint and called it a day. Some of the more notable
+                    improvements I made include tiling the floor, making custom cabinets, and removing a window.
+                  </p>
+
+                  <div class="slideshow-container">
+                    <div id="KitchenSlider" class="mySlides"></div>
+                    <a class="prev" onclick="KitchenSlides(KitchenSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="KitchenSlides(KitchenSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                  </div>
+                </div>
+
+              </div>
+
+			  <div class="col-lg-4">
+
+                <div class="project block">
+                  <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
+                  <h3 class="block-header"> Linen Closet </h3>
+
+                  <p> The previous owners seemed to have renovated the bathroom, but they left the original shower
+                    in place. I replaced it with a linen closet, simply adding shelves in its place.
+                  </p>
+
+                  <div class="slideshow-container">
+                    <div id="LinenClosetSlider" class="mySlides"></div>
+                    <a class="prev" onclick="LinenClosetSlides(LinenClosetSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="LinenClosetSlides(LinenClosetSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                  </div>
+                </div>
+
+                <div class="project block">
+                  <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
+                  <h3 class="block-header"> Misc </h3>
+
+                  <p> I've done lots of smaller projects that don't necessarily warrant their own dedicated posts
+                    including things like painting the rooms, building saw accessories, and adding stepping stones
+                    out the back of the house.
+                  </p>
+
+                  <div class="slideshow-container">
+                    <div id="MiscSlider" class="mySlides"></div>
+                    <a class="prev" onclick="MiscSlides(MiscSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="MiscSlides(MiscSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                  </div>
+                </div>
+
+              </div>
+
+			  <div class="col-lg-4">
+
+                <div class="project block">
+                  <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
+                  <h3 class="block-header"> Entryway </h3>
+
+                  <p> I wasn't a huge fan of the massive entryway closet. I decided to open it up a little and add a
+                    hall tree in place of the closet.
+                  </p>
+
+                  <div class="slideshow-container">
+                    <div id="EntryWaySlider" class="mySlides"></div>
+                    <a class="prev" onclick="EntryWaySlides(EntryWaySlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="EntryWaySlides(EntryWaySlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                  </div>
+                </div>
+
+                <div class="project block">
+                  <div class="expander"><a href="#/"><i class="fas fa-plus-square"></i></a></div>
+                  <h3 class="block-header"> Siding </h3>
+
+                  <p> I knew replacing the shake style siding was something I wanted to do, but it took a lot longer
+                    to get to this point than anticipated. A lot of work went into this as it also involved replacing
+                    the soffit, gutters, and fascia trim.
+                  </p>
+
+                  <div class="slideshow-container">
+                    <div id="SidingSlider" class="mySlides"></div>
+                    <a class="prev" onclick="SidingSlides(SidingSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="SidingSlides(SidingSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+        {% include footer.html %}
+      </div>
+    </div>
+    <script src="../js/house.js"></script>
+  </body>
+</html>
