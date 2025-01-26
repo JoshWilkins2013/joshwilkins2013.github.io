@@ -1,13 +1,13 @@
 var albums = {
 		"Me": [
-		    "<img src=\"img/ME/Winter.jpg\" style=\"width:25%\">",
-		    "<img src=\"img/ME/Main.jpg\" style=\"width:50%\">",
-		    "<img src=\"img/ME/Mirror.jpg\" style=\"width:25%\">",
-		    "<img src=\"img/ME/BookShelf.jpg\" style=\"width:25%\">",
-		    "<img src=\"img/ME/SkiLift.jpg\" style=\"width:25%\">",
-		    "<img src=\"img/ME/Colorado.jpg\" style=\"width:50%\">",
-		    "<img src=\"img/ME/Rockies.jpg\" style=\"width:50%\">",
-		    "<img src=\"img/ME/WhiteMountains.jpg\" style=\"width:25%\">"
+		    "<img src=\"img/Me/Winter.jpg\" style=\"width:25%\">",
+		    "<img src=\"img/Me/Main.jpg\" style=\"width:50%\">",
+		    "<img src=\"img/Me/Mirror.jpg\" style=\"width:25%\">",
+		    "<img src=\"img/Me/BookShelf.jpg\" style=\"width:25%\">",
+		    "<img src=\"img/Me/SkiLift.jpg\" style=\"width:25%\">",
+		    "<img src=\"img/Me/Colorado.jpg\" style=\"width:50%\">",
+		    "<img src=\"img/Me/Rockies.jpg\" style=\"width:50%\">",
+		    "<img src=\"img/Me/WhiteMountains.jpg\" style=\"width:25%\">"
 		]
 }
 
