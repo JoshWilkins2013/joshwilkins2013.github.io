@@ -1,8 +1,8 @@
 var albums = {
-		"EntryWay": [
-			"<img src=\"img/House/EntryWay/Before.jpg\"><p>Before Picture</p>",
-			"<img src=\"img/House/EntryWay/Closet_Removed.jpg\"><p>Closet Removed</p>",
-			"<img src=\"img/House/EntryWay/Leaky_Ceiling.jpg\"><p>Ceiling Drywall Replaced</p>"
+		"Entryway": [
+			"<img src=\"img/House/Entryway/Before.jpg\"><p>Before Picture</p>",
+			"<img src=\"img/House/Entryway/Closet_Removed.jpg\"><p>Closet Removed</p>",
+			"<img src=\"img/House/Entryway/Leaky_Ceiling.jpg\"><p>Ceiling Drywall Replaced</p>"
 		],
 		"Roof": [
 			"<img src=\"img/House/Roof/Before.jpg\"><p>Before Picture</p>",
@@ -55,12 +55,12 @@ var albums = {
 
 document.getElementById("header-text").innerHTML = "House Projects";
 
-var EntryWaySlideIndex = 1;
-EntryWaySlides(EntryWaySlideIndex);
-function EntryWaySlides(n) {
-  if (n > albums["EntryWay"].length) {EntryWaySlideIndex = 1}
-  if (n < 1) {EntryWaySlideIndex = albums["EntryWay"].length}
-  document.getElementById("EntryWaySlider").innerHTML = albums["EntryWay"][EntryWaySlideIndex-1];
+var EntrywaySlideIndex = 1;
+EntrywaySlides(EntrywaySlideIndex);
+function EntrywaySlides(n) {
+  if (n > albums["Entryway"].length) {EntrywaySlideIndex = 1}
+  if (n < 1) {EntrywaySlideIndex = albums["Entryway"].length}
+  document.getElementById("EntrywaySlider").innerHTML = albums["Entryway"][EntrywaySlideIndex-1];
 }
 
 var RoofSlideIndex = 1;
