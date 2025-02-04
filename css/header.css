@@ -2,7 +2,7 @@
 /*     NavBar Main
 /* ========================================================== */
 nav.navbar {
-  background: #2d3035;
+  background: #000000;
   color: #8a8d93;
   padding: 0;
   border-bottom: 1px solid #000;
@@ -19,8 +19,7 @@ nav.navbar .sidebar-toggle {
   background: #282b2f;
   color: #8a8d93;
   font-size: 1.1rem;
-  border: 2px solid #3d4148;
-  outline: none;
+  border: 3px solid #000000;
   vertical-align: middle;
   -webkit-transform: rotateY(360deg); /* Not sure why this is needed */
 }
@@ -45,9 +44,8 @@ nav.navbar a {
 }
 
 .navbar-brand {
-  width: 280px;
-  border-right: 1px solid #000;
-  margin: 0;
+  position: absolute;
+  left: 0px;
 }
 
 nav.navbar .brand-text {
@@ -87,7 +85,7 @@ nav.navbar a.nav-link {
   height: 60px;
   border-radius: 50%;
   padding: 4px;
-  border: 3px solid #282b2f;
+
   vertical-align: middle;
 }
 
@@ -111,7 +109,9 @@ nav.navbar a.nav-link {
   color: #FFFFFF;
 }
 
-.header-title h4 {
+.header-title-text {
+  position: relative;
+  left: 140px;
   margin:0;
 }
 

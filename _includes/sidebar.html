@@ -19,7 +19,7 @@
 
       <!-- Figuring out categories icon -->
       {% if cat.name == 'Projects' %}
-        {% assign icon = 'layers' %}
+        {% assign icon = 'light-bulb' %}
       {% elsif cat.name == 'Education' %}
         {% assign icon = 'flask' %}
       {% else %}
@@ -27,11 +27,11 @@
       {% endif %}
 
       {% if cat.name == active_cat %}
-    <li class="open highlight special"><a href="#{{ cat.name }}"><i class="icon-{{ icon }}"></i><p class="highlight">{{ cat.name }}</p><i class="fas fa-angle-down"></i></a>
+    <li class="sidebar-category highlight"><a href="javascript: void(0)"><i class="icon-{{ icon }}"></i><p class="highlight">{{ cat.name }}</p><i class="fas fa-angle-down"></i></a>
       {% else %}
-    <li class="closed"><a href="#{{ cat.name }}"><i class="icon-{{ icon }}"></i><p>{{ cat.name }}</p><i class="fas fa-angle-left"></i></a>
+    <li class="sidebar-category"><a href="javascript: void(0)"><i class="icon-{{ icon }}"></i><p>{{ cat.name }}</p><i class="fas fa-angle-left"></i></a>
       {% endif %}
-          <ul id="{{ cat.name }}" class="collapse list-unstyled {% if cat.name == active_cat %} show {% endif %}">
+          <ul id="{{ cat.name }}" class="list-unstyled" style="{% if cat.name != active_cat %} display: none;{% endif %}">
             {% assign items = cat.items | sort: 'order' %}
               {% for item in items %}
                 {% if item.url == page.url %}

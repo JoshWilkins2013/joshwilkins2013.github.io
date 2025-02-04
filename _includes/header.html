@@ -15,7 +15,7 @@
     </div>
 
     <div class="navbar-brand">
-      <a href="index.html">
+      <a class="avatar-link" href="index.html">
         <div class="avatar"><img src="img/avatar.jpg" alt="..." class="img-fluid rounded-circle avatar-image"></div>
       </a>
 
@@ -28,12 +28,12 @@
     </div>
 
     <div class="header-title">
-      <h4 id="header-text"></h4>
+      <h4 class="header-title-text" id="header-text"></h4>
     </div>
 
     <div class="navbar-navigation">
       <span><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></span>
-      <span class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link">Navigate <i class="fa fa-ellipsis-v"></i></a>
+      <span class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link">Navigate <i style="margin-left: 5;" class="fa fa-bars"></i></a>
         <ul class="dropdown-menu">
           <li class="single"><a href="index"><h6>HOME</h6></a></li>
           {% assign categories = site.pages | group_by: 'category' | sort: 'name' | reverse %}

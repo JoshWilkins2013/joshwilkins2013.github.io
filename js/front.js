@@ -22,65 +22,42 @@ $(function () {
     });
 
     // ------------------------------------------------------- //
-    // Sidebar <-- Functionality
+    // Sidebar Toggle Display
     // ------------------------------------------------------ //
     $('.sidebar-toggle').on('click', function () {
-        $(this).toggleClass('active');
-
-        $('#sidebar').toggleClass('shrinked');
         $('.page-content').toggleClass('active');
 
-        if ($('.sidebar-toggle').hasClass('active')) {
-            $('.navbar-brand .brand-sm').addClass('visible');
-            $('.navbar-brand .brand-big').removeClass('visible');
+        $('.navbar-brand .brand-sm').toggle();
+        $('.navbar-brand .brand-big').toggle();
+        $('.navbar-brand .avatar-link').toggle();
+        $('#sidebar').toggle();
+
+        if($(this).find('i').attr('class') == 'fa fa-long-arrow-left arrow') {
             $(this).find('i').attr('class', 'fa fa-long-arrow-right arrow');
+            $('.header-title-text').css('left', '0px');
         } else {
-            $('.navbar-brand .brand-sm').removeClass('visible');
-            $('.navbar-brand .brand-big').addClass('visible');
             $(this).find('i').attr('class', 'fa fa-long-arrow-left arrow');
+            $('.header-title-text').css('left', '140px');
         }
     });
 
     // ------------------------------------------------------- //
     // Sidebar Collapsing Non-Active Items
     // ------------------------------------------------------ //
-    $('.closed').on('click', function () {
-        $('.open').find('ul').removeClass('show');
-        $('.open').addClass('closed');
-        $('.open').removeClass('open');
+    $('.sidebar-category').on('click', function () {
+        var current_state = $(this).find('ul').css('display');
+        $('.sidebar-category').each(function(){
+            $(this).find('ul').hide();
+            $(this).find('i').next().next().attr('class', 'fas fa-angle-left')
+        })
 
-        /* Arrows */
-        $('.fa-angle-down').addClass('fa-angle-left')
-        $('.fa-angle-down').removeClass('fa-angle-down')
-
-        $(this).addClass('open');
-        $(this).removeClass('closed');
-        $(this).removeClass('collapsed');
-        $(this).find('ul').addClass('show');
-
-        /* Arrows */
-        $(this).find('i').next().next().removeClass('fa-angle-left')
-        $(this).find('i').next().next().addClass('fa-angle-down')
-    });
-
-    // Not sure why this part is needed, the above code should work fine but doesn't
-    // Has to do with sidebar item starting open
-    $('.special').on('click', function () {
-        $('.open').toggleClass('closed');
-        $('.open').find('ul').toggleClass('show');
-        $('.open').toggleClass('open');
-
-        /* Arrows */
-        $('.fa-angle-down').addClass('fa-angle-left')
-        $('.fa-angle-down').removeClass('fa-angle-down')
-
-        $(this).toggleClass('open');
-        $(this).toggleClass('closed');
-        $(this).find('ul').toggleClass('show');
-
-        /* Arrows */
-        $(this).find('i').next().next().removeClass('fa-angle-left')
-        $(this).find('i').next().next().addClass('fa-angle-down')
+        if(current_state == "none") {
+            $(this).find('ul').show();
+            $(this).find('i').next().next().attr('class', 'fas fa-angle-down')
+        } else {
+            $(this).find('ul').hide();
+            $(this).find('i').next().next().attr('class', 'fas fa-angle-left')
+        }
     });
 
     // ------------------------------------------------------- //

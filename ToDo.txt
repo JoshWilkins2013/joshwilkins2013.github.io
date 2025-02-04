@@ -3,11 +3,9 @@ Microchip:
 
 General:
 - Fix commented blocks
-- Fix Header-title to expand when sidebar is collapsed
 - Go through images (listed and actual) to make sure nothing is missed
 - Add a travel section that updates with any new images that get added (low-maintenance)
-- Fix any hyperlinks and stuff
-- Figure out git, push any changes, verify website updates
+ - Fix any hyperlinks and stuff
 - Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
 - Go through / remove things completed doc (list.docx)
 - Make transitions work on sidebar and header arrow
