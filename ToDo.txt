@@ -17,7 +17,6 @@ Education:
 - Fix course descriptions
 - Add pictures to Education courses (& sliders where necessary)
 - Add final reports
-- Update 'Life at XXX' on Education Pages (Add Awards/Nominations/Clubs/Other?)
 - Add email check to email contact field
 - Fix Search button
 - Improve thanks page
@@ -27,7 +26,6 @@ Education:
 Maybe do:
 - Add other education things including NIST / IEEE
 - Add skill proficiencies?
-- Add gpa to education tables?
 
 Explore / Investigate:
 - Add modal or pages for additional project info

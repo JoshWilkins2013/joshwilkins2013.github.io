@@ -13,7 +13,7 @@ var albums = {
 			]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"rit\"><img src=\"img/Banners/Safran_Banner.png\"></a>";
+document.getElementById("header-text").innerHTML = "<a href=\"safran\"><img src=\"img/Banners/Safran_Banner.png\"></a>";
 
 var SafranSlideIndex = 1;
 SafranSlides(SafranSlideIndex);
@@ -222,23 +222,21 @@ function Calibration_Procedures() {
 //    document.getElementById("details-description").innerHTML = description;
 //}
 
-var PentekSlideIndex = 1;
-PentekSlides(PentekSlideIndex);
 function PentekSlides(n) {
-  if (n > albums["Pentek"].length) {PentekSlideIndex = 1}
-  if (n < 1) {PentekSlideIndex = albums["Pentek"].length}
-  document.getElementById("PentekSlider").innerHTML = albums["Pentek"][PentekSlideIndex-1];
+  if (n > albums["Pentek"].length) {SafranSlideIndex = 1}
+  if (n < 1) {SafranSlideIndex = albums["Pentek"].length}
+  document.getElementById("SafranSlider").innerHTML = albums["Pentek"][SafranSlideIndex-1];
 }
 
 function Pentek() {
-    PentekSlideIndex = 1;
+    SafranSlideIndex = 1;
 	var description = "The latest SDRs from Pentek were very interesting as they have. Essentially what this \
 	means is the large cabinet-scale Wavefront systems can be miniaturized into a much smaller form-factor such as \
 	a computer.<br><br> \
 	<div class=\"slideshow-container\">\
-      <div id=\"PentekSlider\" class=\"myslides\"><img src=\"img/Safran/Pentek/Radio.png\"><p>Pentek Radio</p></div>\
-      <a class=\"prev\" onclick=\"PentekSlides(PentekSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"PentekSlides(PentekSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <div id=\"SafranSlider\" class=\"myslides\"><img src=\"img/Safran/Pentek/Radio.png\"><p>Pentek Radio</p></div>\
+      <a class=\"prev\" onclick=\"PentekSlides(SafranSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"PentekSlides(SafranSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
 	var title = "<h4 style=\"color:#cc5200\">Research and Development</h4>";
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Small Form-Factor SDRs</h6>";

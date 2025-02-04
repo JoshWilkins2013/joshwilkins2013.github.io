@@ -48,22 +48,15 @@ nav.navbar a {
   left: 0px;
 }
 
-nav.navbar .brand-text {
-  display: none;
-  font-weight: 700;
-}
-
-nav.navbar .brand-text.visible {
+.brand-text {
   display: inline-block;
+  font-weight: 700;
+  vertical-align: middle;
+  text-align: center;
 }
 
 nav.navbar a.nav-link {
   padding: 0;
-}
-
-.navbar .brand-text {
-  vertical-align: middle;
-  text-align: center;
 }
 
 .navbar-brand strong{

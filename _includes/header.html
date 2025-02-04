@@ -19,7 +19,7 @@
         <div class="avatar"><img src="img/avatar.jpg" alt="..." class="img-fluid rounded-circle avatar-image"></div>
       </a>
 
-      <div class="brand-text brand-big visible">
+      <div class="brand-text">
         <strong class="text-primary">Josh</strong> <strong class="text-primary">Wilkins</strong><br>
         <strong class="small">Sr.</strong> <strong class="small">Engineer</strong>
       </div>
@@ -32,8 +32,8 @@
     </div>
 
     <div class="navbar-navigation">
-      <span><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></span>
-      <span class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link">Navigate <i style="margin-left: 5;" class="fa fa-bars"></i></a>
+<!--      <span><a href="javascript:;" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></span>-->
+      <span class="dropdown"><a href="javascript:;" data-toggle="dropdown" class="nav-link"><p id="nav-link-text">Navigate </p><i style="margin-left: 5;" class="fa fa-bars"></i></a>
         <ul class="dropdown-menu">
           <li class="single"><a href="index"><h6>HOME</h6></a></li>
           {% assign categories = site.pages | group_by: 'category' | sort: 'name' | reverse %}

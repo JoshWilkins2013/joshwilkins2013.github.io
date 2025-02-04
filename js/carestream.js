@@ -11,7 +11,7 @@ var albums = {
         ]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"rit\"><img src=\"img/Banners/Carestream_Banner.png\"></a>";
+document.getElementById("header-text").innerHTML = "<a href=\"carestream\"><img src=\"img/Banners/Carestream_Banner.png\"></a>";
 
 var CarestreamSlideIndex = 1;
 CarestreamSlides(CarestreamSlideIndex);
@@ -21,12 +21,10 @@ function CarestreamSlides(n) {
   document.getElementById("CarestreamSlider").innerHTML = albums["Carestream"][CarestreamSlideIndex-1];
 }
 
-var BuckySlideIndex = 1;
-BuckySlides(BuckySlideIndex);
 function BuckySlides(n) {
-  if (n > albums["Bucky"].length) {BuckySlideIndex = 1}
-  if (n < 1) {BuckySlideIndex = albums["Bucky"].length}
-  document.getElementById("BuckySlider").innerHTML = albums["Bucky"][BuckySlideIndex-1];
+  if (n > albums["Bucky"].length) {CarestreamSlideIndex = 1}
+  if (n < 1) {CarestreamSlideIndex = albums["Bucky"].length}
+  document.getElementById("CarestreamSlider").innerHTML = albums["Bucky"][CarestreamSlideIndex-1];
 }
 
 function Battery() {
@@ -75,7 +73,7 @@ function task11() {
 };
 
 function task13() {
-    BuckySlideIndex = 1;
+    CarestreamSlideIndex = 1;
 	var description = "A digital x-ray cassette is a flat panel used in digital radiography (DR) systems to \
 	capture X-ray images. Unlike traditional film-based cassettes that use photographic film to capture the image, \
 	digital cassettes use electronic sensors that convert X-ray energy into electrical signals. The signals are \
@@ -83,9 +81,9 @@ function task13() {
 	better image quality than traditional cassettes at a reduced exposure to radiation. Part of my job at Carestream \
 	was to diagnose failures on the PCB\'s within these cassettes and propose possible improvements.<br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"BuckySlider\" class=\"myslides\"><img src=\"img\\Carestream\\Bucky.png\"><p>Digital X-Ray Cassettes</p></div>\
-      <a class=\"prev\" onclick=\"BuckySlides(BuckySlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"BuckySlides(BuckySlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <div id=\"CarestreamSlider\" class=\"myslides\"><img src=\"img\\Carestream\\Bucky.png\"><p>Digital X-Ray Cassettes</p></div>\
+      <a class=\"prev\" onclick=\"BuckySlides(CarestreamSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"BuckySlides(CarestreamSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
     document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;

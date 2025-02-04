@@ -332,6 +332,11 @@ tbody tr:hover {
     background-color: #000 !important;
 }
 
+.row-unstyled:hover {
+  background-color: inherit !important;
+  cursor: default;
+}
+
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #282b2f;
 }

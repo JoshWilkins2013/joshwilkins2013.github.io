@@ -100,7 +100,7 @@ var albums = {
             ]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"rit\"><img src=\"img/Banners/Microchip_Banner.png\"></a>";
+document.getElementById("header-text").innerHTML = "<a href=\"microchip\"><img src=\"img/Banners/Microchip_Banner.png\"></a>";
 
 var MicrochipSlideIndex = 1;
 MicrochipSlides(MicrochipSlideIndex);
@@ -113,12 +113,10 @@ function MicrochipSlides(n) {
 /******************************************/
 /*************** Synthesizer **************/
 /******************************************/
-var SynthSlideIndex = 1;
-SynthSlides(SynthSlideIndex);
 function SynthSlides(n) {
-  if (n > albums["Synth"].length) {SynthSlideIndex = 1}
-  if (n < 1) {SynthSlideIndex = albums["Synth"].length}
-  document.getElementById("SynthSlider").innerHTML = albums["Synth"][SynthSlideIndex-1];
+  if (n > albums["Synth"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Synth"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Synth"][MicrochipSlideIndex-1];
 }
 
 //function AtomicClocks(){
@@ -137,7 +135,7 @@ function SynthSlides(n) {
 //}
 
 function Synthesizer() {
-    SynthSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "A synthesizer is an electronic device that produces a range of frequencies from a single \
 	reference frequency. In simple terms for this application, the synthesizer took a stable low-frequency oscillator \
 	and scaled its frequency to that of the natural oscillation frequency of the atoms in an atomic clock. When used \
@@ -145,11 +143,11 @@ function Synthesizer() {
 	this synthesizer with two cascaded Phase-Locked Loops (PLLs), effectively reducing phase noise and \
 	ensuring high precision.<br><br>\
     <div class=\"slideshow-container\">\
-      <div id=\"SynthSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/Synth/Iso.png\"><p>Isometric View</p>\
       </div>\
-      <a class=\"prev\" onclick=\"SynthSlides(SynthSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"SynthSlides(SynthSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"SynthSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"SynthSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
     var title = "<h4 style=\"color:#cc5200\">12 GHz Synthesizer</h4>";
     document.getElementById("details-title").innerHTML = title;
@@ -157,40 +155,35 @@ function Synthesizer() {
     document.getElementById("details-description").innerHTML = description;
 }
 
-
-var ProtoSlideIndex = 1;
-ProtoSlides(ProtoSlideIndex);
 function ProtoSlides(n) {
-  if (n > albums["Proto"].length) {ProtoSlideIndex = 1}
-  if (n < 1) {ProtoSlideIndex = albums["Proto"].length}
-  document.getElementById("ProtoSlider").innerHTML = albums["Proto"][ProtoSlideIndex-1];
+  if (n > albums["Proto"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Proto"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Proto"][MicrochipSlideIndex-1];
 }
 
 function Prototype() {
-    ProtoSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "\
 	<div class=\"slideshow-container\">\
-      <div id=\"SynthSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/Synth/Iso.png\"><p>Isometric View</p>\
       </div>\
-      <a class=\"prev\" onclick=\"SynthSlides(SynthSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"SynthSlides(SynthSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"SynthSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"SynthSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Prototype</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
 
-var PowerSlideIndex = 1;
-PowerSlides(PowerSlideIndex);
 function PowerSlides(n) {
-  if (n > albums["Power"].length) {PowerSlideIndex = 1}
-  if (n < 1) {PowerSlideIndex = albums["Power"].length}
-  document.getElementById("PowerSlider").innerHTML = albums["Power"][PowerSlideIndex-1];
+  if (n > albums["Power"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Power"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Power"][MicrochipSlideIndex-1];
 }
 
 function OutputPower() {
-    PowerSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "This synthesizer required a substantial output power (nearly 1W) to effectively radiate \
 	the output frequency across the atoms of an atomic clock. It also needed to be both adjustable and stable. \
 	To address these requirements, I developed an analog Automatic Gain Controller (AGC), combining an envelope \
@@ -198,11 +191,11 @@ function OutputPower() {
 	while maximizing the potential output power.<br><br>\
 	<button type=\"submit\" class=\"submit\"><a onclick=\"OutputPowerAnalysis()\" href=\"#/\">Analysis</a></button><br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"PowerSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/Synth/Power/Design.png\"><p>Controller Design</p>\
       </div>\
-      <a class=\"prev\" onclick=\"PowerSlides(PowerSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"PowerSlides(PowerSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"PowerSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"PowerSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Output Power Controller</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -216,42 +209,38 @@ function OutputPowerAnalysis() {
     document.getElementById("details-description").innerHTML = description;
 }
 
-var PCBSlideIndex = 1;
-PCBSlides(PCBSlideIndex);
 function PCBSlides(n) {
-  if (n > albums["PCB"].length) {PCBSlideIndex = 1}
-  if (n < 1) {PCBSlideIndex = albums["PCB"].length}
-  document.getElementById("PCBSlider").innerHTML = albums["PCB"][PCBSlideIndex-1];
+  if (n > albums["PCB"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["PCB"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["PCB"][MicrochipSlideIndex-1];
 }
 
 function Boards() {
-    PCBSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "While working on the synthesizer, I had to develop quite a few prototype boards to test the \
 	performance of the sub-circuits and components. This included a generic PI Filter board for the PLLs and AGC \
 	and an active power splitter board to distribute the reference oscillator to other parts of the system. \
     I also developed boards to simplify the interchangeability of components such as the reference oscillator.<br><br>\
     <div class=\"slideshow-container\">\
-      <div id=\"PCBSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/PCB/Fanout_Board.png\"><p>Frequency Distribution Board</p>\
       </div>\
-      <a class=\"prev\" onclick=\"PCBSlides(PCBSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"PCBSlides(PCBSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"PCBSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"PCBSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
     var subtitle = "<h6 style=\"color:#FFFFFF\">Associated Board Spins</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
 
-var TempDividerSlideIndex = 1;
-TempDividerSlides(TempDividerSlideIndex);
 function TempDividerSlides(n) {
-  if (n > albums["TempDivider"].length) {TempDividerSlideIndex = 1}
-  if (n < 1) {TempDividerSlideIndex = albums["TempDivider"].length}
-  document.getElementById("TempDividerSlider").innerHTML = albums["TempDivider"][TempDividerSlideIndex-1];
+  if (n > albums["TempDivider"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["TempDivider"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["TempDivider"][MicrochipSlideIndex-1];
 }
 
 function TempDependence() {
-    TempDividerSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "Given the extreme precision required for atomic clocks, environmental factors significantly \
 	affect their performance. With this in mind, I first characterized the temperature dependency of the synthesizer \
 	by approximating the impact of the suspected primary contributor: a high-Q bandpass filter. Once the synthesizer \
@@ -269,16 +258,14 @@ function TempDependence() {
 /******************************************/
 /************ Atomic Clock GUI ************/
 /******************************************/
-var AtomicClockSlideIndex = 1;
-AtomicClockSlides(AtomicClockSlideIndex);
 function AtomicClockSlides(n) {
-  if (n > albums["AtomicClock"].length) {AtomicClockSlideIndex = 1}
-  if (n < 1) {AtomicClockSlideIndex = albums["AtomicClock"].length}
-  document.getElementById("AtomicClockSlider").innerHTML = albums["AtomicClock"][AtomicClockSlideIndex-1];
+  if (n > albums["AtomicClock"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["AtomicClock"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["AtomicClock"][MicrochipSlideIndex-1];
 }
 
 function AtomicClock() {
-    AtomicClockSlideIndex = 1;
+    MicrochipSlideIndex = 1;
     var description = "The atomic clocks developed at Microchip produced vast amounts of data, often at rates of \
     several hundred times per second. This data included parameters such as output frequency, environmental factors, \
     and internal calculations. To effectively manage and utilize this information, I designed a user interface that \
@@ -294,16 +281,14 @@ function AtomicClock() {
     document.getElementById("details-description").innerHTML = description;
 }
 
-var AgingSlideIndex = 1;
-AgingSlides(AgingSlideIndex);
 function AgingSlides(n) {
-  if (n > albums["Aging"].length) {AgingSlideIndex = 1}
-  if (n < 1) {AgingSlideIndex = albums["Aging"].length}
-  document.getElementById("AgingSlider").innerHTML = albums["Aging"][AgingSlideIndex-1];
+  if (n > albums["Aging"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Aging"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Aging"][MicrochipSlideIndex-1];
 }
 
 function Aging() {
-    AgingSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "Certain components, such as oscillators or the vapor cell/gas mixtures in an atomic clock, \
 	undergo behavioral changes over time, a phenomenon known as aging. In the context of timing and frequency, \
 	aging specifically refers to the gradual change in frequency over time. Typically, atomic clocks are placed on \
@@ -316,16 +301,14 @@ function Aging() {
     document.getElementById("details-description").innerHTML = description;
 };
 
-var ADevSlideIndex = 1;
-ADevSlides(ADevSlideIndex);
 function ADevSlides(n) {
-  if (n > albums["ADev"].length) {ADevSlideIndex = 1}
-  if (n < 1) {ADevSlideIndex = albums["ADev"].length}
-  document.getElementById("ADevSlider").innerHTML = albums["ADev"][ADevSlideIndex-1];
+  if (n > albums["ADev"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["ADev"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["ADev"][MicrochipSlideIndex-1];
 }
 
 function ADev() {
-    ADevSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "The atomic clocks at Microchip continuously generated vast amounts of data, leading to a \
 	backlog of unused data from units already deployed in the field. Given the time required to obtain an accurate \
 	Allan deviation measurement from a device, it became necessary to develop an alternative approach for \
@@ -333,27 +316,25 @@ function ADev() {
 	which helped reduce variance and improve the accuracy of the results. While this approach was more complex \
 	than simply averaging a few numbers or vectors, it proved to be effective and worked as expected.<br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"ADevSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/AtomicClock/ADev/Adev_Single.png\"><p>Adev on one File</p>\
       </div>\
-      <a class=\"prev\" onclick=\"ADevSlides(ADevSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"ADevSlides(ADevSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"ADevSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"ADevSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Long Term ADev Rates</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
 
-var TempcoSlideIndex = 1;
-TempcoSlides(TempcoSlideIndex);
 function TempcoSlides(n) {
-  if (n > albums["Tempco"].length) {TempcoSlideIndex = 1}
-  if (n < 1) {TempcoSlideIndex = albums["Tempco"].length}
-  document.getElementById("TempcoSlider").innerHTML = albums["Tempco"][TempcoSlideIndex-1];
+  if (n > albums["Tempco"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Tempco"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Tempco"][MicrochipSlideIndex-1];
 }
 
 function Tempco() {
-    TempcoSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "Many electronic components are sensitive to temperature deviations. In some devices, this\
 	sensitivity is negligible and may not alter the capabilities of the device. However, atomic clocks are very\
 	precise devices and this sensitivity is a major concern. In an attempt to reduce this sensitivity, a temperature\
@@ -361,11 +342,11 @@ function Tempco() {
 	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
 	profile.<br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"TempcoSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/AtomicClock/Tempco/Stepped_Regions.png\"><p>User Interface</p>\
       </div>\
-      <a class=\"prev\" onclick=\"TempcoSlides(TempcoSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"TempcoSlides(TempcoSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"TempcoSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"TempcoSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Temperature Compensation</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -379,16 +360,14 @@ function Tempco() {
 //    document.getElementById("details-description").innerHTML = description;
 //};
 
-var DataSlideIndex= 1;
-DataSlides(DataSlideIndex);
 function DataSlides(n) {
-  if (n > albums["Data"].length) {DataSlideIndex = 1}
-  if (n < 1) {DataSlideIndex = albums["Data"].length}
-  document.getElementById("DataSlider").innerHTML = albums["Data"][DataSlideIndex-1];
+  if (n > albums["Data"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Data"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Data"][MicrochipSlideIndex-1];
 }
 
 function DataAnalysis() {
-    DataSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "During the development of one of the atomic clocks at Microchip, there were several points \
 	where production could have been halted. However, my tool identified these issues early on. The key \
 	requirement for these atomic clocks is a precisely generated frequency, and my tool continuously monitored \
@@ -396,11 +375,11 @@ function DataAnalysis() {
 	root causes. For example, one issue was traced back to a change in the manufacturing process of the on-board \
 	TCXO, while another was linked to an internal tracking algorithm within the atomic clock.<br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"DataSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Temp.png\"><p>Frequency Jumps</p>\
       </div>\
-      <a class=\"prev\" onclick=\"DataSlides(DataSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"DataSlides(DataSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"DataSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"DataSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Data Analysis</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -423,16 +402,14 @@ function DataAnalysis() {
 /******************************************/
 /************** Embedded Prog *************/
 /******************************************/
-var BBBSlideIndex = 1;
-BBBSlides(BBBSlideIndex);
 function BBBSlides(n) {
-  if (n > albums["BBB"].length) {BBBSlideIndex = 1}
-  if (n < 1) {BBBSlideIndex = albums["BBB"].length}
-  document.getElementById("BBBSlider").innerHTML = albums["BBB"][BBBSlideIndex-1];
+  if (n > albums["BBB"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["BBB"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["BBB"][MicrochipSlideIndex-1];
 }
 
 function Embedded() {
-    BBBSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "The BeagleBone Black is a microprocessor equipped with Programmable Real-Time Units (PRUs), \
 	which are dedicated controllers with deterministic latency. These PRUs are unaffected by other processes on the \
 	board, ensuring uninterrupted execution of commands. They are typically programmed in low-level C or assembly. \
@@ -441,9 +418,9 @@ function Embedded() {
 	low-bandwidth, programmable digital PI filter.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/BBB\" target=\"_blank\">Repository</a><br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"BBBSlider\" class=\"myslides\"><img src=\"img/Microchip/BBB/BBB.png\"><p>Beaglebone Black</p></div>\
-      <a class=\"prev\" onclick=\"BBBSlides(BBBSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"BBBSlides(BBBSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <div id=\"MicrochipSlider\" class=\"myslides\"><img src=\"img/Microchip/BBB/BBB.png\"><p>Beaglebone Black</p></div>\
+      <a class=\"prev\" onclick=\"BBBSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"BBBSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
     var title = "<h4 style=\"color:#cc5200\">Real Time Embedded System</h4>";
     document.getElementById("details-title").innerHTML = title;
@@ -451,27 +428,25 @@ function Embedded() {
     document.getElementById("details-description").innerHTML = description;
 };
 
-var SPISlideIndex = 1;
-SPISlides(SPISlideIndex);
 function SPISlides(n) {
-  if (n > albums["SPI"].length) {SPISlideIndex = 1}
-  if (n < 1) {SPISlideIndex = albums["SPI"].length}
-  document.getElementById("SPISlider").innerHTML = albums["SPI"][SPISlideIndex-1];
+  if (n > albums["SPI"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["SPI"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["SPI"][MicrochipSlideIndex-1];
 }
 
 function SPI() {
-    SPISlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "Using the PRUs on the Beaglebone Black, I created a generic SPI communication protocol \
 	interface in low-level assembly code to communicate to the AD9912 DDS and the LTC2601 DAC. I abstracted the \
 	assembly code into macros to avoid redundancy within the code and to encourage configurability. The SPI \
 	communication protocol was a critical part of this real-time embedded system and provided the basis for \
 	all of the other tools I created on the Beaglebone Black PRUs.<br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"SPISlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/BBB/SPI/DDS_High_Level.png\"><p>High Level DDS</p>\
       </div>\
-      <a class=\"prev\" onclick=\"SPISlides(SPISlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"SPISlides(SPISlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"SPISlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"SPISlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
     var subtitle = "<h6 style=\"color:#FFFFFF\">Generic SPI Communication Protocol</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -490,26 +465,24 @@ function AltPhaseNoise() {
     document.getElementById("details-description").innerHTML = description;
 };
 
-var InjectSlideIndex = 1;
-InjectSlides(InjectSlideIndex);
 function InjectSlides(n) {
-  if (n > albums["Inject"].length) {InjectSlideIndex = 1}
-  if (n < 1) {InjectSlideIndex = albums["Inject"].length}
-  document.getElementById("InjectSlider").innerHTML = albums["Inject"][InjectSlideIndex-1];
+  if (n > albums["Inject"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Inject"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Inject"][MicrochipSlideIndex-1];
 }
 
 function AddPhase() {
-    InjectSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "I created a phase noise generator tool that could create any model of noise and inject it \
 	into any system. This generator helped simulate, quantify, and understand the effects of phase noise and allowed \
 	more robust systems to be created. It also helped define the underlying effect phase noise has on allan deviation.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/Tools/tree/master/AddPhaseNoise\" target=\"_blank\">Repository</a><br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"InjectSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/BBB/Inject/PseudoCode.png\"><p>High Level Design</p>\
       </div>\
-      <a class=\"prev\" onclick=\"InjectSlides(InjectSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"InjectSlides(InjectSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"InjectSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"InjectSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
     var subtitle = "<h6 style=\"color:#FFFFFF\">Phase Noise Profile Generator</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -521,16 +494,14 @@ function AddPhase() {
 /************** Presentations *************/
 /******************************************/
 
-var QuantizationSlideIndex = 1;
-QuantizationSlides(QuantizationSlideIndex);
 function QuantizationSlides(n) {
-  if (n > albums["Quantization"].length) {QuantizationSlideIndex = 1}
-  if (n < 1) {QuantizationSlideIndex = albums["Quantization"].length}
-  document.getElementById("QuantizationSlider").innerHTML = albums["Quantization"][QuantizationSlideIndex-1];
+  if (n > albums["Quantization"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Quantization"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Quantization"][MicrochipSlideIndex-1];
 }
 
 function Quantization() {
-    QuantizationSlideIndex = 1;
+    MicrochipSlideIndex = 1;
 	var description = "Sampling a signal introduces rounding errors, which arise from the difference between the \
 	actual signal value and the measurable value. The magnitude of this error is directly proportional to both the \
 	resolution, or number of bits, used to measure the signal as well as the number of sampling points.	I created \
@@ -539,11 +510,11 @@ function Quantization() {
 	can be reduced to improve the SNR to about 10 dB per bit!<br><br>\
 	<a onclick=\"QuantizationAnalysis()\" href=\"#/\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>\
     <div class=\"slideshow-container\">\
-      <div id=\"QuantizationSlider\" class=\"myslides\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/Presentations/Quantization/Results.png\"><p>Results</p>\
       </div>\
-      <a class=\"prev\" onclick=\"QuantizationSlides(QuantizationSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"QuantizationSlides(QuantizationSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"QuantizationSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"QuantizationSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div><br><br>"
     var title = "<h4 style=\"color:#cc5200\">Informative Presentations</h4>";
     var subtitle = "<h6 style=\"color:#FFFFFF\">Minimizing Quantization Error</h6>";

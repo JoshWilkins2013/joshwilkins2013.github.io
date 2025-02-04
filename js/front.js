@@ -27,8 +27,7 @@ $(function () {
     $('.sidebar-toggle').on('click', function () {
         $('.page-content').toggleClass('active');
 
-        $('.navbar-brand .brand-sm').toggle();
-        $('.navbar-brand .brand-big').toggle();
+        $('.navbar-brand .brand-text').toggle();
         $('.navbar-brand .avatar-link').toggle();
         $('#sidebar').toggle();
 

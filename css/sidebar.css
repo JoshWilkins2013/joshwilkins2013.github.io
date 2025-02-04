@@ -101,6 +101,10 @@ nav#sidebar p{
   display: inline;
 }
 
+#nav-link-text{
+  display: contents;
+}
+
 /* ========================================================== */
 /*     Shrinked Screen
 /* ========================================================== */
@@ -113,11 +117,20 @@ nav#sidebar p{
   .sidebar {
     display: none;
   }
-  .navbar-brand {
+  .brand-text {
+    display: none;
+  }
+  .sidebar-toggle {
     display: none;
   }
   .header-title-text {
     left: 0px !important;
+  }
+  #nav-link-text{
+    display: none;
+  }
+  .search-open {
+    display: none;
   }
 }
 
