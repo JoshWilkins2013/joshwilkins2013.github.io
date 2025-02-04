@@ -77,7 +77,7 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "Wood Working Projects";
+document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"wood-working\">Wood Working Projects</a>";
 
 var BarStoolSlideIndex = 1;
 BarStoolSlides(BarStoolSlideIndex);

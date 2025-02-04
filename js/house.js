@@ -53,7 +53,7 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "House Projects";
+document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"house\">House Projects</a>";
 
 var EntrywaySlideIndex = 1;
 EntrywaySlides(EntrywaySlideIndex);

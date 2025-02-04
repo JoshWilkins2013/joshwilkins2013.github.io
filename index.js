@@ -11,7 +11,7 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "About Me";
+document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"index\">About Me</a>";
 
 var MeSlideIndex = 1;
 MeSlides(MeSlideIndex);

@@ -1,1 +1,1 @@
-document.getElementById("header-text").innerHTML = "Contact Me";
+document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"thanks\">Thanks!</a>";

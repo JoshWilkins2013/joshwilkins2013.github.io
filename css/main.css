@@ -265,10 +265,6 @@ input {
   top: 71px;
 }
 
-.page-content.active {
-  width: 100%;
-}
-
 i[class*='icon-'] {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);

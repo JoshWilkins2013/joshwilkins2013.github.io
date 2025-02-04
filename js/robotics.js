@@ -41,7 +41,7 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "Robotics Projects";
+document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"robotics\">Robotics Projects</a>";
 
 var DerbySlideIndex = 1;
 DerbySlides(DerbySlideIndex);

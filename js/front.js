@@ -25,18 +25,17 @@ $(function () {
     // Sidebar Toggle Display
     // ------------------------------------------------------ //
     $('.sidebar-toggle').on('click', function () {
-        $('.page-content').toggleClass('active');
-
-        $('.navbar-brand .brand-text').toggle();
-        $('.navbar-brand .avatar-link').toggle();
-        $('#sidebar').toggle();
+        $('.brand-text').toggle();
+        $('.avatar-link').toggle();
 
         if($(this).find('i').attr('class') == 'fa fa-long-arrow-left arrow') {
             $(this).find('i').attr('class', 'fa fa-long-arrow-right arrow');
             $('.header-title-text').css('left', '0px');
+            $(".page-content").animate({"width": '+=280'});
         } else {
             $(this).find('i').attr('class', 'fa fa-long-arrow-left arrow');
             $('.header-title-text').css('left', '140px');
+            $(".page-content").animate({"width": '-=280'});
         }
     });
 

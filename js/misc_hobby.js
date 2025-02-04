@@ -30,7 +30,7 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "Other Projects";
+document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"misc-hobby\">Other Projects</a>";
 
 var WilmakeSlideIndex = 1;
 WilmakeSlides(WilmakeSlideIndex);

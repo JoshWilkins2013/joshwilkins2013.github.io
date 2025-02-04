@@ -18,7 +18,7 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "Analytical Projects";
+document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"analytics\">Analytical Projects</a>";
 
 var PriceBotSlideIndex= 1;
 PriceBotSlides(PriceBotSlideIndex);
