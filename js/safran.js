@@ -50,7 +50,7 @@ function MetricDefinition() {
 	products in the market. Key performance metrics were often overlooked or poorly defined. To address this, I \
 	developed and submitted a paper to IEEE to help clarify these metrics, raise awareness of the issue, and \
 	demonstrate how some of these tests could be conducted without relying on expensive equipment.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"IEEE_Report()\" href=\"#/\">Intra-Signal Metrics</a></button>"
+	<button type=\"submit\" class=\"submit\"><a onclick=\"IEEE_Report()\" href=\"javascript:;\">Intra-Signal Metrics</a></button>"
 	var title = "<h4 style=\"color:#cc5200\">Broadsim Automated Test Suite</h4>";
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Metric Definition</h6>";
 	document.getElementById("details-title").innerHTML = title;
@@ -78,7 +78,7 @@ function ReportGeneration() {
 	tests more efficient, detailed, and consistent. This also enabled us to quickly validate products before \
 	shipment and provided a more accurate representation of each unit\'s performance, as opposed to relying \
 	on a generic spec sheet. Below is an example of one of these reports, with the PDF organized by metric.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"WF_Report()\" href=\"#/\">Example Report</a></button>"
+	<button type=\"submit\" class=\"submit\"><a onclick=\"WF_Report()\" href=\"javascript:;\">Example Report</a></button>"
 	var title = "<h4 style=\"color:#cc5200\">Broadsim Automated Test Suite</h4>";
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Report Generation</h6>";
 	document.getElementById("details-title").innerHTML = title;
@@ -199,8 +199,8 @@ function Calibration_Procedures() {
 //};
 //
 //function ZIF() {
-//	var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"#/\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"#/\">ZIF Advantages</a></button>"
+//	var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
+//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
 //	var title = "<h4 style=\"color:#cc5200\">Research and Development</h4>";
 //	var subtitle = "<h6 style=\"color:#FFFFFF\">Zero-IF</h6>";
 //	document.getElementById("details-title").innerHTML = title;
@@ -209,15 +209,15 @@ function Calibration_Procedures() {
 //};
 //
 //function ZIF_Architecture() {
-//    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"#/\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"#/\">ZIF Advantages</a></button>\
+//    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
+//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>\
 //	<iframe src=\"Storage\\Safran\\Research\\ZIF_Architecture.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
 //    document.getElementById("details-description").innerHTML = description;
 //}
 //
 //function ZIF_Advantages() {
-//    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"#/\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"#/\">ZIF Advantages</a></button>\
+//    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
+//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>\
 //	<iframe src=\"Storage\\Safran\\Research\\ZIF_Advantages.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
 //    document.getElementById("details-description").innerHTML = description;
 //}

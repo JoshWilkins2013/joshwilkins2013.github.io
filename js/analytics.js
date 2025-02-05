@@ -38,7 +38,7 @@ function MakeModelSlides(n) {
 
 function MakeModelAnalysis() {
     var description = "\
-    <iframe src=\"Storage/Analysis/MakeModelComparison.html\" width=\"100%\"></iframe>"
+    <iframe src=\"Storage/Analysis/MakeModelComparison.html\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
 }
 

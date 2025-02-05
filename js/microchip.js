@@ -7,33 +7,36 @@ var albums = {
                 "<img src=\"img/Microchip/Hydrogen_Maser.png\"><p>Hydrogen Maser</p>"
 			],
             "Proto": [
-                "<img src=\"img/Microchip/Synth/Iso.png\"><p>Isometric View</p>",
-                "<img src=\"img/Microchip/Synth/Front.png\"><p>Front View</p>",
-                "<img src=\"img/Microchip/Synth/Layer.png\"><p>Example Layer</p>",
-                "<img src=\"img/Microchip/Synth/Model.png\"><p>SolidWorks Model</p>",
-                "<img src=\"img/Microchip/Synth/IAASR.png\"><p>My Model</p>",
+                "<img src=\"img/Microchip/Prototype/Iso.png\"><p>Isometric View</p>",
+                "<img src=\"img/Microchip/Prototype/Front.png\"><p>Front View</p>",
+                "<img src=\"img/Microchip/Prototype/Layer.png\"><p>Example Layer</p>",
+                "<img src=\"img/Microchip/Prototype/Model.png\"><p>SolidWorks Model</p>",
+                "<img src=\"img/Microchip/Prototype/IAASR.png\"><p>My Model</p>",
 		    ],
 		    "Synth": [
-                "<img src=\"img/Microchip/Synth/Iso.png\"><p>Isometric View</p>",
-                "<img src=\"img/Microchip/Synth/Front.png\"><p>Front View</p>",
-                "<img src=\"img/Microchip/Synth/Layer.png\"><p>Example Layer</p>",
-                "<img src=\"img/Microchip/Synth/IAASR.png\"><p>Initial Concept</p>",
-                "<img src=\"img/Microchip/Synth/Model.png\"><p>Final Model</p>"
+                "<img src=\"img/Microchip/Synth/MicroHawkSynth.png\"><p>Final Product</p>",
+                "<img src=\"img/Microchip/Synth/Model.png\"><p>Final Model</p>",
+                "<img src=\"img/Microchip/Synth/Full_Model.png\"><p>Cross-sectional Model View</p>",
+                "<img src=\"img/Microchip/Synth/Enclosed_PCB.png\"><p>Modular Component</p>",
+                "<img src=\"img/Microchip/Synth/Partially_Enclosed_PCB.png\"><p>Partially Opened</p>",
+                "<img src=\"img/Microchip/Synth/PLL.png\"><p>Modular PCB</p>",
+                "<img src=\"img/Microchip/Synth/DebuggingPCBA.png\"><p>Debugging PCB</p>"
 		    ],
 		    "Power": [
-		        "<img src=\"img/Microchip/Synth/Power/Design.png\"><p>Controller Design</p>",
-                "<img src=\"img/Microchip/Synth/Power/Results.png\"><p>Controller Results</p>",
-                "<img src=\"img/Microchip/Synth/Power/ADL6010.png\"><p>ADL6010 Envelope Detector</p>",
-                "<img src=\"img/Microchip/Synth/Power/ADL6010_Response.png\"><p>ADL6010 Response Time</p>",
-                "<img src=\"img/Microchip/Synth/Power/ADL6010_Bode.png\"><p>ADL6010 Bode Plot</p>",
-                "<img src=\"img/Microchip/Synth/Power/LTC5564.png\"><p>LTC5564 Envelope Detector</p>",
-                "<img src=\"img/Microchip/Synth/Power/LTC5564_Response.png\"><p>LTC5564 Response Time</p>",
-                "<img src=\"img/Microchip/Synth/Power/LTC5564_Bode.png\"><p>LTC5564 Bode Plot</p>"
+		        "<img src=\"img/Microchip/Power/Design.png\"><p>Controller Design</p>",
+                "<img src=\"img/Microchip/Power/Results.png\"><p>Controller Results</p>",
+                "<img src=\"img/Microchip/Power/ADL6010.png\"><p>ADL6010 Envelope Detector</p>",
+                "<img src=\"img/Microchip/Power/ADL6010_Response.png\"><p>ADL6010 Response Time</p>",
+                "<img src=\"img/Microchip/Power/ADL6010_Bode.png\"><p>ADL6010 Bode Plot</p>",
+                "<img src=\"img/Microchip/Power/LTC5564.png\"><p>LTC5564 Envelope Detector</p>",
+                "<img src=\"img/Microchip/Power/LTC5564_Response.png\"><p>LTC5564 Response Time</p>",
+                "<img src=\"img/Microchip/Power/LTC5564_Bode.png\"><p>LTC5564 Bode Plot</p>"
 		    ],
 		    "AtomicClock": [
                 "<img src=\"img/Microchip/AtomicClock/GUI.png\"><p>User Interface</p>"
             ],
             "Aging": [
+                "<img src=\"img/Microchip/AtomicClock/Aging/Aging_Predictions.png\"><p>Predicting Aging</p>",
                 "<img src=\"img/Microchip/AtomicClock/Aging/Aging.png\"><p>Aging Output Across Files</p>"
             ],
             "ADev": [
@@ -50,7 +53,7 @@ var albums = {
                 "<img src=\"img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Temp.png\"><p>Frequency Jumps vs Temperature</p>",
                 "<img src=\"img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Time.png\"><p>Frequency Jumps vs Time</p>",
                 "<img src=\"img/Microchip/AtomicClock/DataAnalysis/TCXO_Freq.png\"><p>TCXO Root Cause</p>",
-                "<img src=\"img/Microchip/AtomicClock/DataAnalysis/Heartbeat.png\"><p>Frequency Noisy Region</p>",
+                "<img src=\"img/Microchip/AtomicClock/DataAnalysis/Heartbeat.png\"><p>Frequency Noisy Region</p>"
             ],
             "Quantization": [
                 "<img src=\"img/Microchip/Presentations/Quantization/Results.png\"><p>Results</p>",
@@ -74,6 +77,7 @@ var albums = {
                 "<img src=\"img/Microchip/PCB/VCO_Layout.png\"><p>VCO Eval Layout</p>"
             ],
             "BBB": [
+                "<img src=\"img/Microchip/BBB/Program.png\"><p>High Level Program</p>",
                 "<img src=\"img/Microchip/BBB/BBB.png\"><p>Beaglebone Black</p>",
                 "<img src=\"img/Microchip/BBB/DDS.png\"><p>AD9912 DDS</p>"
             ],
@@ -113,12 +117,6 @@ function MicrochipSlides(n) {
 /******************************************/
 /*************** Synthesizer **************/
 /******************************************/
-function SynthSlides(n) {
-  if (n > albums["Synth"].length) {MicrochipSlideIndex = 1}
-  if (n < 1) {MicrochipSlideIndex = albums["Synth"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Synth"][MicrochipSlideIndex-1];
-}
-
 //function AtomicClocks(){
 //	var description = "Atomic clocks are incredibly complex components; here is a simplified explanation of how they work:\
 //    <ul>\
@@ -134,17 +132,23 @@ function SynthSlides(n) {
 //    document.getElementById("details-description").innerHTML = description;
 //}
 
+function SynthSlides(n) {
+  if (n > albums["Synth"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Synth"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Synth"][MicrochipSlideIndex-1];
+}
+
 function Synthesizer() {
     MicrochipSlideIndex = 1;
 	var description = "A synthesizer is an electronic device that produces a range of frequencies from a single \
-	reference frequency. In simple terms for this application, the synthesizer took a stable low-frequency oscillator \
+	reference frequency. In simple terms for this application, the synthesizer took a stable low-frequency os cillator \
 	and scaled its frequency to that of the natural oscillation frequency of the atoms in an atomic clock. When used \
 	this way, it is crucial to minimize sources of noise introduced into the system. To achieve this, I designed \
 	this synthesizer with two cascaded Phase-Locked Loops (PLLs), effectively reducing phase noise and \
 	ensuring high precision.<br><br>\
     <div class=\"slideshow-container\">\
       <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Synth/Iso.png\"><p>Isometric View</p>\
+        <img src=\"img/Microchip/Synth/MicroHawkSynth.png\"><p>Final Product</p>\
       </div>\
       <a class=\"prev\" onclick=\"SynthSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"SynthSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
@@ -163,15 +167,19 @@ function ProtoSlides(n) {
 
 function Prototype() {
     MicrochipSlideIndex = 1;
-	var description = "\
-	<div class=\"slideshow-container\">\
+	var description = "To verify the device's functionality, a prototype was assembled using evaluation boards from\
+	various vendors. These boards were placed on interchangeable EMI-shielded shelves and linked via RF cables.\
+	The required I/O was managed by a Beaglebone Black. After confirming the device\'s performance, the design was\
+	updated to include modular EMI-shielded PCBs, allowing for future replacement of specific components to\
+	facilitate potential performance enhancements.<br><br>\
+    <div class=\"slideshow-container\">\
       <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Synth/Iso.png\"><p>Isometric View</p>\
+        <img src=\"img/Microchip/Prototype/Iso.png\"><p>Isometric View</p>\
       </div>\
-      <a class=\"prev\" onclick=\"SynthSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"SynthSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+      <a class=\"prev\" onclick=\"ProtoSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"ProtoSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var subtitle = "<h6 style=\"color:#FFFFFF\">Prototype</h6>";
+    var subtitle = "<h6 style=\"color:#FFFFFF\">Full Scale Prototype</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -189,10 +197,10 @@ function OutputPower() {
 	To address these requirements, I developed an analog Automatic Gain Controller (AGC), combining an envelope \
 	detector with an adjustable feedback controller. This design ensured precise regulation and stabilization \
 	while maximizing the potential output power.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"OutputPowerAnalysis()\" href=\"#/\">Analysis</a></button><br><br>\
+	<button type=\"submit\" class=\"submit\"><a onclick=\"OutputPowerAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>\
 	<div class=\"slideshow-container\">\
       <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Synth/Power/Design.png\"><p>Controller Design</p>\
+        <img src=\"img/Microchip/Power/Design.png\"><p>Controller Design</p>\
       </div>\
       <a class=\"prev\" onclick=\"PowerSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"PowerSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
@@ -203,9 +211,12 @@ function OutputPower() {
 };
 
 function OutputPowerAnalysis() {
-    var description = "Created an adjustable output power stabalizer cirucit by utilizing an envelope detector.\
-	Additionally maximized the output power level through the selection of components<br><br>\
-	<iframe src=\"Storage/Analysis/OutputPowerController.html\" width=\"100%\"></iframe>"
+    var description = "This synthesizer required a substantial output power (nearly 1W) to effectively radiate \
+	the output frequency across the atoms of an atomic clock. It also needed to be both adjustable and stable. \
+	To address these requirements, I developed an analog Automatic Gain Controller (AGC), combining an envelope \
+	detector with an adjustable feedback controller. This design ensured precise regulation and stabilization \
+	while maximizing the potential output power.<br><br>\
+	<iframe src=\"Storage\\Microchip\\OutputPowerController.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
 }
 
@@ -248,11 +259,24 @@ function TempDependence() {
 	temperature chamber. The temperature dependency was largely mitigated and corrected through a custom-designed \
 	add-on device, which extracted the cleanest signal from the synthesizer and digitally tuned the temperature \
 	dependency out.<br><br>\
+	<button type=\"submit\" class=\"submit\"><a onclick=\"TempDependenceAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>\
 	<img src=\"img/Microchip/Misc/DividerBox.png\" width=100%><p>Divider Box</p>"
     var subtitle = "<h6 style=\"color:#FFFFFF\">Temperature Dependency Testing</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
+
+function TempDependenceAnalysis() {
+    var description = "Given the extreme precision required for atomic clocks, environmental factors significantly \
+	affect their performance. With this in mind, I first characterized the temperature dependency of the synthesizer \
+	by approximating the impact of the suspected primary contributor: a high-Q bandpass filter. Once the synthesizer \
+	was completed, this approximation was replaced with more accurate measurements of the entire system using a \
+	temperature chamber. The temperature dependency was largely mitigated and corrected through a custom-designed \
+	add-on device, which extracted the cleanest signal from the synthesizer and digitally tuned the temperature \
+	dependency out.<br><br>\
+	<iframe src=\"Storage\\Microchip\\TemperatureDependence.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("details-description").innerHTML = description;
+}
 
 
 /******************************************/
@@ -295,8 +319,14 @@ function Aging() {
 	racks and allowed to \"age\" until this effect stabilizes. In production environments, it is crucial to \
 	understand how long this process will take. This script was developed to estimate the aging rate of our \
 	products.<br><br> \
-    <img src=\"img/Microchip/AtomicClock/Aging/Aging.png\" width=75%><p>Aging Output Across Files</p>"
-	var subtitle = "<h6 style=\"color:#FFFFFF\">Long Term Aging Rates</h6>";
+    <div class=\"slideshow-container\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
+        <img src=\"img/Microchip/AtomicClock/Aging/Aging_Predictions.png\"><p>Predicting Aging</p>\
+      </div>\
+      <a class=\"prev\" onclick=\"AgingSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"AgingSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+    </div>"
+	var subtitle = "<h6 style=\"color:#FFFFFF\">Predicting Long Term Aging Rates</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -341,6 +371,7 @@ function Tempco() {
 	compensation (tempco) algorithm had been implemented. To tune this algorithm, I wrote a script that takes in\
 	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
 	profile.<br><br>\
+	<a onclick=\"TempcoAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>\
 	<div class=\"slideshow-container\">\
       <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/AtomicClock/Tempco/Stepped_Regions.png\"><p>User Interface</p>\
@@ -352,6 +383,17 @@ function Tempco() {
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
+
+function TempcoAnalysis() {
+    var description = "Many electronic components are sensitive to temperature deviations. In some devices, this\
+	sensitivity is negligible and may not alter the capabilities of the device. However, atomic clocks are very\
+	precise devices and this sensitivity is a major concern. In an attempt to reduce this sensitivity, a temperature\
+	compensation (tempco) algorithm had been implemented. To tune this algorithm, I wrote a script that takes in\
+	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
+	profile.<br><br>\
+	<iframe src=\"Storage\\Microchip\\SteppedInputResponse.html\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("details-description").innerHTML = description;
+}
 
 //function LockTime() {
 //	var description = ""
@@ -418,7 +460,9 @@ function Embedded() {
 	low-bandwidth, programmable digital PI filter.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/BBB\" target=\"_blank\">Repository</a><br><br>\
 	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\"><img src=\"img/Microchip/BBB/BBB.png\"><p>Beaglebone Black</p></div>\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
+        <img src=\"img/Microchip/BBB/Program.png\"><p>High Level Program</p>\
+      </div>\
       <a class=\"prev\" onclick=\"BBBSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"BBBSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
@@ -459,7 +503,7 @@ function AltPhaseNoise() {
 	the performance of two different comb generator technologies: a non-linear transmission line and a standard \
 	step recovery diode.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>\
-	<iframe src=\"Storage/Analysis/AltPhaseNoiseMeasSys.html\" width=\"100%\"></iframe>"
+	<iframe src=\"Storage/Analysis/AltPhaseNoiseMeasSys.html\" style=\"width: 100%;border: none;\"></iframe>"
     var subtitle = "<h6 style=\"color:#FFFFFF\">Phase Noise Measurement System</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -508,7 +552,7 @@ function Quantization() {
 	this presentation in an attempt to illustrate that quantization noise can be reduced within a system. In fact, \
 	the typical SNR due to quantization error is about 6 dB per bit, but by preconditioning the signal, this error \
 	can be reduced to improve the SNR to about 10 dB per bit!<br><br>\
-	<a onclick=\"QuantizationAnalysis()\" href=\"#/\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>\
+	<a onclick=\"QuantizationAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>\
     <div class=\"slideshow-container\">\
       <div id=\"MicrochipSlider\" class=\"myslides\">\
         <img src=\"img/Microchip/Presentations/Quantization/Results.png\"><p>Results</p>\
@@ -530,7 +574,7 @@ function QuantizationAnalysis() {
 	this presentation in an attempt to illustrate that quantization noise can be reduced within a system. In fact, \
 	the typical SNR due to quantization error is about 6 dB per bit, but by preconditioning the signal, this error \
 	can be reduced to improve the SNR to about 10 dB per bit!<br><br>\
-	<iframe src=\"Storage/Analysis/QuantizationError.html\" width=\"100%\"></iframe>"
+	<iframe src=\"Storage/Analysis/QuantizationError.html\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
 };
 
@@ -540,7 +584,7 @@ function Structures() {
 	programming language. I go through each data type including lists, dictionaries, and strings as well as the most \
 	useful methods associated with each data type. I also introduce more complex topics such as the concept of \
 	control flow, lambda functions, generators,	and exception handling.<br><br>\
-	<iframe src=\"Storage/Analysis/Structures.html\" width=\"100%\"></iframe>"
+	<iframe src=\"Storage/Analysis/Structures.html\" style=\"width: 100%;border: none;\"></iframe>"
     var title = "<h4 style=\"color:#cc5200\">Informative Presentations</h4>";
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Python Data Structures</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -554,7 +598,7 @@ function Jupyter() {
 	a notebook to cover its basics, including installation and usage. Co-written with a colleague, this notebook \
 	introduces Python, Jupyter, and Anaconda, offering useful references, installation guidance, and examples of \
 	Markdown, Python, and Magic commands..<br><br>\
-	<iframe src=\"Storage/Analysis/Jupyter.html\" width=\"100%\"></iframe>"
+	<iframe src=\"Storage/Analysis/Jupyter.html\" style=\"width: 100%;border: none;\"></iframe>"
 	var title = "<h4 style=\"color:#cc5200\">Informative Presentations</h4>";
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Jupyter</h6>";
     document.getElementById("details-title").innerHTML = title;
