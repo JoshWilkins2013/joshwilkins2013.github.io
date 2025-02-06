@@ -11,17 +11,6 @@ $(function () {
     });
 
     // ------------------------------------------------------- //
-    // Search Popup
-    // ------------------------------------------------------ //
-    $('.search-open').on('click', function (e) {
-        e.preventDefault();
-        $('.search-panel').fadeIn(100);
-    })
-    $('.search-panel .close-btn').on('click', function () {
-        $('.search-panel').fadeOut(100);
-    });
-
-    // ------------------------------------------------------- //
     // Sidebar Toggle Display
     // ------------------------------------------------------ //
     $('.sidebar-toggle').on('click', function () {
@@ -77,10 +66,12 @@ $(function () {
     // Expanding Blocks
     // ------------------------------------------------------ //
     $('.fa-plus-square').on('click', function () {
-        $('.block').toggleClass('nodisp');
-        var block = $(this).closest("div").parent();
-        block.removeClass('nodisp');
-        block.parent().toggleClass('col-lg-4 col-lg-12');
+        var current_block = $(this).closest("div").parent();  // Find block associated with clicked +
+
+        $(".block").not(current_block).toggle().promise().then(function() {
+            current_block.parent().toggleClass('col-lg-12');  // Then enlarge it
+        });
+
         $(this).toggleClass('fa-plus-square fa-minus-square')
     });
 });

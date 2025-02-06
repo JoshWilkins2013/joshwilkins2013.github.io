@@ -1,27 +1,20 @@
 General:
-- Fix Footer (span entire bottom?) footer animation broken
-- Fix commented blocks
-- Add a travel section that updates with any new images that get added (low-maintenance)
+- Fix Footer to span entire bottom?
+    - Footer animation broken, add contact button, site map, etc.
 - Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
+    - Resize images for efficiency
 - Go through pictures, add any 'projects' I think I should add
 - Update Safran more
-
-Education:
-- Add email check to email contact field
-- Fix Search button
+    - Fix commented blocks
 - Improve thanks page
 - Improve 404 page
 
-Maybe do:
-- Add skill proficiencies?
-- Animate image sliders?
-- Resize images for efficiency
-
-Explore / Investigate:
+Possible Enhancements:
+- Add a travel section that updates with any new images that get added (low-maintenance)
 - Add modal or pages for additional project info
     - Sub-Projects for larger projects such as the kitchen?
-- Animate expansion of blocks
-- Expanding Experience or Educational blocks?
-- Improve Footer (Social icons to footer, Contact button, site map, other? Easter Egg?)
-- Interactive codeblocks?
+- Add email check to email contact field
+- Codeblock styling?
 - Verify seo jekyll tag
+- Add skill proficiencies?
+- Animate image sliders?

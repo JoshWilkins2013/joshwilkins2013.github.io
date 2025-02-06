@@ -47,10 +47,16 @@ a {
 }
 
 .expander i {
-  position: relative;
+  cursor: pointer;
+  position: absolute;
+  right: -20;
   font-size: 25px;
-  right: -20px;
   padding: 5px;
+  color: #cc5200;
+}
+
+.expander i:hover {
+  color: #000000;
 }
 
 .nodisp{
@@ -269,6 +275,10 @@ input {
 i[class*='icon-'] {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
+}
+
+.col-lg-4 {
+  transition: all 1s;
 }
 
 .block {
