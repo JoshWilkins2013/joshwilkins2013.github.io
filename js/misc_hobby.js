@@ -1,7 +1,4 @@
 var albums = {
-		"Wilmake": [
-			"<img src=\"img/Misc_Hobby/Wilmake/Wilmake.png\"><p>SolidWorks Model</p>"
-		],
 		"VArm": [
 			"<img src=\"img/Misc_Hobby/VArm/VArm1.jpg\"><p>Finished Build</p>",
 			"<img src=\"img/Misc_Hobby/VArm/Test.jpg\"><p>Test Subject</p>",
@@ -31,14 +28,6 @@ var albums = {
 }
 
 document.getElementById("header-text").innerHTML = "<a style=\"text-decoration: none\" href=\"misc-hobby\">Other Projects</a>";
-
-var WilmakeSlideIndex = 1;
-WilmakeSlides(WilmakeSlideIndex);
-function WilmakeSlides(n) {
-  if (n > albums["Wilmake"].length) {WilmakeSlideIndex = 1}
-  if (n < 1) {WilmakeSlideIndex = albums["Wilmake"].length}
-  document.getElementById("WilmakeSlider").innerHTML = albums["Wilmake"][WilmakeSlideIndex-1];
-}
 
 var VArmSlideIndex = 1;
 VArmSlides(VArmSlideIndex);

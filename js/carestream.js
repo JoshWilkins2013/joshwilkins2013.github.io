@@ -3,6 +3,7 @@ var albums = {
 		    "<img src=\"img/Carestream/X-Ray_Reconstruction.png\"><p>CBCT: 3d X-Rays</p>",
 			"<img src=\"img/Carestream/CBCT.png\"><p>CBCT: 3d X-Rays</p>",
 			"<img src=\"img/Carestream/Revo.png\"><p>Revo: Mobile X-Ray Machine</p>",
+			"<img src=\"img/Carestream/Box.png\"><p>Custom Enclosures</p>",
 			"<img src=\"img/Carestream/Desk.png\"><p>My Desk</p>"
 		],
 		"Bucky": [

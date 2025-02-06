@@ -32,6 +32,12 @@ var albums = {
                 "<img src=\"img/Microchip/Power/LTC5564_Response.png\"><p>LTC5564 Response Time</p>",
                 "<img src=\"img/Microchip/Power/LTC5564_Bode.png\"><p>LTC5564 Bode Plot</p>"
 		    ],
+		    "Filters": [
+		        "<img src=\"img/Microchip/Filters/Boards.png\"><p>Filter Boards</p>",
+		        "<img src=\"img/Microchip/Filters/Simulation.png\"><p>Simulation</p>",
+		        "<img src=\"img/Microchip/Filters/Order_Comparison.png\"><p>5th vs 7th Order</p>",
+		        "<img src=\"img/Microchip/Filters/Results.png\"><p>Results Compared to Sim</p>"
+		    ],
 		    "AtomicClock": [
                 "<img src=\"img/Microchip/AtomicClock/GUI.png\"><p>User Interface</p>"
             ],
@@ -56,19 +62,20 @@ var albums = {
                 "<img src=\"img/Microchip/AtomicClock/DataAnalysis/Heartbeat.png\"><p>Frequency Noisy Region</p>"
             ],
             "Quantization": [
-                "<img src=\"img/Microchip/Presentations/Quantization/Results.png\"><p>Results</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/Overview.png\"><p>Overview</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/Sample.png\"><p>Varying Individually</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/Offset.png\"><p>Determining Offset</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/Phase.png\"><p>Determining Phase</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/Amplitude.png\"><p>Determining Amplitude</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/PhaseAmplitude.png\"><p>Phase & Amplitude</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/SimpleCase.png\"><p># Bits & # Samples</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/NumBits.png\"><p>Varying # Bits</p>",
-                "<img src=\"img/Microchip/Presentations/Quantization/NumSamples.png\"><p>Varying # Samples</p>"
+                "<img src=\"img/Microchip/Quantization/Results.png\"><p>Results</p>",
+                "<img src=\"img/Microchip/Quantization/Overview.png\"><p>Overview</p>",
+                "<img src=\"img/Microchip/Quantization/Sample.png\"><p>Varying Individually</p>",
+                "<img src=\"img/Microchip/Quantization/Offset.png\"><p>Determining Offset</p>",
+                "<img src=\"img/Microchip/Quantization/Phase.png\"><p>Determining Phase</p>",
+                "<img src=\"img/Microchip/Quantization/Amplitude.png\"><p>Determining Amplitude</p>",
+                "<img src=\"img/Microchip/Quantization/PhaseAmplitude.png\"><p>Phase & Amplitude</p>",
+                "<img src=\"img/Microchip/Quantization/SimpleCase.png\"><p># Bits & # Samples</p>",
+                "<img src=\"img/Microchip/Quantization/NumBits.png\"><p>Varying # Bits</p>",
+                "<img src=\"img/Microchip/Quantization/NumSamples.png\"><p>Varying # Samples</p>"
             ],
             "PCB": [
                 "<img src=\"img/Microchip/PCB/Fanout_Board.png\"><p>Frequency Distribution Board</p>",
+                "<img src=\"img/Microchip/PCB/LowPowSynth_Board.png\"><p>Low Power Synthesizer</p>",
                 "<img src=\"img/Microchip/PCB/PI_Board.png\"><p>PI Filter Board</p>",
                 "<img src=\"img/Microchip/PCB/PI_Layout.png\"><p>PI Filter Layout</p>",
                 "<img src=\"img/Microchip/PCB/10MHzOCXO_Board.png\"><p>OCXO Eval Board</p>",
@@ -117,21 +124,6 @@ function MicrochipSlides(n) {
 /******************************************/
 /*************** Synthesizer **************/
 /******************************************/
-//function AtomicClocks(){
-//	var description = "Atomic clocks are incredibly complex components; here is a simplified explanation of how they work:\
-//    <ul>\
-//    <li>\t\tA high-frequency beam is directed through a small sample of atoms, typically cesium or rubidium.</li>\
-//    <li>\t\tWhen the frequency of the beam matches the atoms' natural oscillation frequency, the atoms transition between energy states.</li>\
-//    <li>\t\tA detector measures how many atoms have successfully transitioned and sends this data to a controller.</li>\
-//    <li>\t\tThe controller tunes the frequency of the beam to maximize the number of atoms undergoing the transition</li>\
-//    <li>\t\tThis creates an extremely precise frequency reference and the inverse of frequency is time.</li>\
-//    </ul>"
-//    var title = "<h4 style=\"color:#cc5200\">12 GHz Synthesizer</h4>";
-//    document.getElementById("details-title").innerHTML = title;
-//    document.getElementById("details-subtitle").innerHTML = "";
-//    document.getElementById("details-description").innerHTML = description;
-//}
-
 function SynthSlides(n) {
   if (n > albums["Synth"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Synth"].length}
@@ -278,6 +270,31 @@ function TempDependenceAnalysis() {
     document.getElementById("details-description").innerHTML = description;
 }
 
+function FilterSlides(n) {
+  if (n > albums["Filters"].length) {MicrochipSlideIndex = 1}
+  if (n < 1) {MicrochipSlideIndex = albums["Filters"].length}
+  document.getElementById("MicrochipSlider").innerHTML = albums["Filters"][MicrochipSlideIndex-1];
+}
+
+function Filters() {
+    MicrochipSlideIndex = 1;
+	var description = "Many electronic components are sensitive to temperature deviations. In some devices, this\
+	sensitivity is negligible and may not alter the capabilities of the device. However, atomic clocks are very\
+	precise devices and this sensitivity is a major concern. In an attempt to reduce this sensitivity, a temperature\
+	compensation (tempco) algorithm had been implemented. To tune this algorithm, I wrote a script that takes in\
+	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
+	profile.<br><br>\
+	<div class=\"slideshow-container\">\
+      <div id=\"MicrochipSlider\" class=\"myslides\">\
+        <img src=\"img/Microchip/Filters/Boards.png\"><p>Filter Boards</p>\
+      </div>\
+      <a class=\"prev\" onclick=\"FilterSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+      <a class=\"next\" onclick=\"FilterSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+    </div>"
+	var subtitle = "<h6 style=\"color:#FFFFFF\">Microstrip Filter Designs</h6>";
+    document.getElementById("details-subtitle").innerHTML = subtitle;
+    document.getElementById("details-description").innerHTML = description;
+};
 
 /******************************************/
 /************ Atomic Clock GUI ************/
@@ -395,13 +412,6 @@ function TempcoAnalysis() {
     document.getElementById("details-description").innerHTML = description;
 }
 
-//function LockTime() {
-//	var description = ""
-//	var subtitle = "<h6 style=\"color:#FFFFFF\">Power Cycling Analysis</h6>";
-//    document.getElementById("details-subtitle").innerHTML = subtitle;
-//    document.getElementById("details-description").innerHTML = description;
-//};
-
 function DataSlides(n) {
   if (n > albums["Data"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Data"].length}
@@ -427,18 +437,6 @@ function DataAnalysis() {
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
-
-//function StepResponse() { // Step Response Analysis Script
-//	var description = "Wrote a script that, given a stepped input (such as a step and hold temperature ramp), the outputs (transient responses) at the 'hold' regions\
-//	were captured. Additionally, the transient responses are averaged and captured for the instances where you might need it, like a temperature compensation algorithm.\
-//	Made generic for any type of input; temperature, voltage, current, etc.<br>\
-//	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/SteppedInputResponse\" target=\"_blank\">Repository</a>\
-//	 / <a href=\"https://hub.mybinder.org/user/joshwilkins2013-jupyternotebooks-3n08z26a/notebooks/Work/SteppedInputResponse/SteppedInputResponse.ipynb\" target=\"_blank\">Binder</a><br><br>\
-//	<a href=\"Storage\\Analysis\\SteppedInputResponse.html\" target=\"_blank\"><button type=\"submit\">The Analysis</button></a>"
-//    var subtitle = "<h6 style=\"color:#FFFFFF\">Step Response Analysis</h6>";
-//    document.getElementById("details-subtitle").innerHTML = subtitle;
-//    document.getElementById("details-description").innerHTML = description;
-//};
 
 
 /******************************************/
@@ -503,7 +501,7 @@ function AltPhaseNoise() {
 	the performance of two different comb generator technologies: a non-linear transmission line and a standard \
 	step recovery diode.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>\
-	<iframe src=\"Storage/Analysis/AltPhaseNoiseMeasSys.html\" style=\"width: 100%;border: none;\"></iframe>"
+	<iframe src=\"Storage/Microchip/AltPhaseNoiseMeasSys.html\" style=\"width: 100%;border: none;\"></iframe>"
     var subtitle = "<h6 style=\"color:#FFFFFF\">Phase Noise Measurement System</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -537,7 +535,6 @@ function AddPhase() {
 /******************************************/
 /************** Presentations *************/
 /******************************************/
-
 function QuantizationSlides(n) {
   if (n > albums["Quantization"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Quantization"].length}
@@ -555,7 +552,7 @@ function Quantization() {
 	<a onclick=\"QuantizationAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>\
     <div class=\"slideshow-container\">\
       <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Presentations/Quantization/Results.png\"><p>Results</p>\
+        <img src=\"img/Microchip/Quantization/Results.png\"><p>Results</p>\
       </div>\
       <a class=\"prev\" onclick=\"QuantizationSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"QuantizationSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
@@ -574,7 +571,7 @@ function QuantizationAnalysis() {
 	this presentation in an attempt to illustrate that quantization noise can be reduced within a system. In fact, \
 	the typical SNR due to quantization error is about 6 dB per bit, but by preconditioning the signal, this error \
 	can be reduced to improve the SNR to about 10 dB per bit!<br><br>\
-	<iframe src=\"Storage/Analysis/QuantizationError.html\" style=\"width: 100%;border: none;\"></iframe>"
+	<iframe src=\"Storage/Microchip/QuantizationError.html\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
 };
 
@@ -584,7 +581,7 @@ function Structures() {
 	programming language. I go through each data type including lists, dictionaries, and strings as well as the most \
 	useful methods associated with each data type. I also introduce more complex topics such as the concept of \
 	control flow, lambda functions, generators,	and exception handling.<br><br>\
-	<iframe src=\"Storage/Analysis/Structures.html\" style=\"width: 100%;border: none;\"></iframe>"
+	<iframe src=\"Storage/Microchip/Structures.html\" style=\"width: 100%;border: none;\"></iframe>"
     var title = "<h4 style=\"color:#cc5200\">Informative Presentations</h4>";
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Python Data Structures</h6>";
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -598,7 +595,7 @@ function Jupyter() {
 	a notebook to cover its basics, including installation and usage. Co-written with a colleague, this notebook \
 	introduces Python, Jupyter, and Anaconda, offering useful references, installation guidance, and examples of \
 	Markdown, Python, and Magic commands..<br><br>\
-	<iframe src=\"Storage/Analysis/Jupyter.html\" style=\"width: 100%;border: none;\"></iframe>"
+	<iframe src=\"Storage/Microchip/Jupyter.html\" style=\"width: 100%;border: none;\"></iframe>"
 	var title = "<h4 style=\"color:#cc5200\">Informative Presentations</h4>";
 	var subtitle = "<h6 style=\"color:#FFFFFF\">Jupyter</h6>";
     document.getElementById("details-title").innerHTML = title;
@@ -611,12 +608,13 @@ function Jupyter() {
 /************** Misc / Other **************/
 /******************************************/
 function AgileSync() {
-	var description = "Created a tool that was able to sync our official Agile Product Lifecycle Management (PLM) database with our Mentor Graphic's parts library.\
-	This parts library was the backend of all of our schematic designs, containing all of the part numbers and corresponding item information of all our parts.\
-	This was often outdated due to a lack of process control since we didnt have a component engineer for awhile.\
-	So I wrote a script to update all of our schematics and parts database to keep in sync with our official documentation of it.\
-	This is a $500K <a href=\"https://www.xplm.com/our-solutions/plm-integrations/oracle-agile-plm/eda/oracle-agile-plm-integration-for-mentor-graphics-pads/\">tool</a>\
-	offered by Agile, probably with more bells and whistles of course, but my semi-manual script got the job done."
+	var description = "I developed a tool to synchronize our official Agile Product Lifecycle Management (PLM)\
+	database with the Mentor Graphics parts library, which served as the backend for all our schematic designs.\
+	These libraries contained part numbers and component details, but they were frequently outdated due to a lack\
+	of process control, particularly in the absence of a component engineer for some time. To address this, I wrote\
+	a script using python and SQL that automatically updated both our schematics and parts database to ensure they\
+	remained aligned with the official documentation. While Agile offers a more feature-rich $500K solution, my\
+	script efficiently handled the task and kept everything in sync."
     var title = "<h4 style=\"color:#cc5200\">Noteworthy Mentions</h4>";
     var subtitle = "<h6 style=\"color:#FFFFFF\">Agile Database Sync Tool</h6>";
     document.getElementById("details-title").innerHTML = title;
@@ -624,12 +622,16 @@ function AgileSync() {
     document.getElementById("details-description").innerHTML = description;
 };
 
-function Translate() {
-	var description = "10 MHz translation device; a tool utilized to minutely and precisely shift the output\
-	frequency of a device without greatly affecting its phase noise performance<br><br>\
-	<img src=\"img/Microchip/Misc/TranslationDevice.png\" width=75%>"
+function Other() {
+	var description = "I contributed to multiple areas of product development and testing, including refreshing\
+	outdated products and supporting the transition from ROHS2 to ROHS3 using Silicon Expert. I also assisted in\
+	the research and development of g-compensated and low-noise atomic clocks. In addition, I developed Python\
+	tools to control various instruments and performed testing across multiple facilities, including proton\
+	radiation testing at UC Davis and EMI radiation testing at Chomerics. I also designed a low-power synthesizer\
+	that prioritized energy efficiency over performance and integrated real instrument data into simulations for\
+	accuracy using Python and Jupyter Notebook.<br><br>"
     var title = "<h4 style=\"color:#cc5200\">Noteworthy Mentions</h4>";
-    var subtitle = "<h6 style=\"color:#FFFFFF\">10 MHz Translation Device</h6>";
+    var subtitle = "<h6 style=\"color:#FFFFFF\">Secondary Job Functions</h6>";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;

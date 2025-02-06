@@ -9,9 +9,13 @@ function LifeAtDSU() {
 };
 
 function INFS762() {
-	var description = "The main concepts, components, and various architectures of Data Warehouse. Advanced data\
-	analysis and optimization of Data Warehouse Design. Data Warehousing and OLAP tools. Applying data mining\
-	algorithms to retrieve highly specialized information or knowledge about the data stored in the Data Warehouse."
+	var description = "This course focuses on the concepts, techniques, and tools used to manage and analyze \
+	large datasets. Topics include the design and architecture of data warehouses, data modeling, ETL \
+	(Extract, Transform, Load) processes, and OLAP (Online Analytical Processing). The course also covers data \
+	mining techniques such as clustering, classification, association analysis, and anomaly detection. Students \
+	will learn how to apply these methods to uncover patterns, trends, and insights from large datasets, using \
+	tools like SQL, Python, and specialized data mining software. The course emphasizes practical applications \
+	in business, healthcare, and other industries."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Data Warehousing and Data Mining</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
@@ -32,34 +36,38 @@ function INFS772() {
 };
 
 function INFS774() {
-	var description = "This course provides a broad understanding of the principles underlying Big Data analytics and\
-	its applications in different domains using a hands-on approach with a state-of-the-art Big Data platform.\
-	It provides a combination of essential business and technical skills related to Big Data analytics.  It provides a\
-	combination of essential business and technical skills related to Big Data analytics.\
-	<br> Business aspects of the course emphasized included\
-	<li> Understanding the scope and role of Big Data in today’s organizations</li>\
-	<li> Representative example scenarios and case studies of industry specific applications highlighting Big Data issues - volume, variety, velocity, and veracity</li>\
-	<li> When to consider a Big Data Solution</li>\
-	<li> The integration of Big Data initiatives as part of the overall business strategy to achieve “return to data” and competitive differentiation, and information governance issues.</li>\
-	<br>Technical aspects of the course emphasized include\
-	<li> Life cycle of a Big Data analytics solution with multiple entry points</li>\
-	<li> Essential components of a Big Data	solution and technology platform</li>\
-	<li> Key features of Hadoop and related technologies (e.g., MapReduce, HDFS, NoSQL)</li>\
-	<li> Performing analytics with predictive models, text analytics, and streaming data</li>\
-	<li> Data visualization and communication of analytical findings.</li>\
-	State-of-the-art tools are integrated throughout the course to provide hands-on exercises with relevant techniques."
+	var description = "This course provides a comprehensive understanding of Big Data analytics principles and \
+	their applications across various industries. It covers both business and technical aspects, including the \
+	role of Big Data in organizations, industry-specific case studies, and how to integrate Big Data solutions \
+	into business strategies. On the technical side, it focuses on the Big Data solution lifecycle, key technologies \
+	like Hadoop, MapReduce, HDFS, and NoSQL, as well as analytics methods such as predictive models, text analysis, \
+	and streaming data. Students will gain hands-on experience with state-of-the-art tools for data visualization \
+	and communication of analytical results."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Big Data Analytics</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
 
 function STAT700() {
-	var description = "Fundamentals of statistical programming languages including descriptive and visual analytics\
-	in R and SAS, and programming fundamentals of SAS and R including logic, loops, macros and functions."
+	var description = "This course focuses on the application of programming techniques to analyze and interpret \
+	data using statistical methods. Topics include data manipulation, statistical modeling, hypothesis testing, \
+	and visualization using programming languages such as R, Python, and SAS. The course emphasizes practical \
+	skills for working with real-world datasets, performing exploratory data analysis, and implementing \
+	statistical algorithms. Students will develop proficiency in writing efficient, reproducible code to solve \
+	complex statistical problems and gain hands-on experience in using statistical programming to \
+	support data-driven decision-making.<br><br>\
+    <div id=\"STAT700_description\">\
+      <a onclick=\"STAT700_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
+    </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Statistical Programming</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
+
+function STAT700_Report() {
+    var description = "<iframe src=\"Storage\\DSU\\STAT700_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("STAT700_description").innerHTML = description;
+}
 
 function STAT701() {
 	var description = "Builds upon knowledge of SLR, MLR, ANOVA, and basics of statistical inference. The class will\
@@ -122,9 +130,13 @@ function ECON730() {
 }
 
 function BADM712() {
-    var description = "This course emphasizes the application of financial theory and concepts to the development of effective \
-    financial strategies for maximization of the firm value and shareholder wealth. Topics include capital budgeting, cash flow analysis, \
-    capital structure, cost of capital, working capital management, and security valuation, as well as effective spreadsheet analyses."
+    var description = "This course focuses on the application of financial theories and quantitative methods \
+    to benefit business decision-making. Topics include capital budgeting, cash flow analysis, capital \
+    structure, cost of capital, working capital management, and security valuation, as well as effective \
+    spreadsheet analyses. The course emphasizes the use of data analytics tools and techniques, such as \
+    statistical analysis, financial forecasting, and optimization, to analyze financial markets, investments, \
+    and corporate financial strategies. Students will develop the skills to interpret financial data, assess \
+    investment opportunities, and make informed financial decisions in a rapidly changing business environment."
     document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Advanced Business Finance</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";

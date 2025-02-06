@@ -31,11 +31,13 @@ $(function () {
         if($(this).find('i').attr('class') == 'fa fa-long-arrow-left arrow') {
             $(this).find('i').attr('class', 'fa fa-long-arrow-right arrow');
             $('.header-title-text').css('left', '0px');
-            $(".page-content").animate({"width": '+=280'});
+            $(".page-content").animate({"width": '100%'});
         } else {
             $(this).find('i').attr('class', 'fa fa-long-arrow-left arrow');
             $('.header-title-text').css('left', '140px');
-            $(".page-content").animate({"width": '-=280'});
+
+            var newWidth = ($(".page-content").width() - 280);
+            $(".page-content").animate({width:newWidth}, {duration:500, complete:function(){ $(".page-content").width("calc(100% - 280px)"); } });
         }
     });
 

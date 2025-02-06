@@ -1,37 +1,27 @@
-Microchip:
-- Add filter designs? Microhawk? Add instrument control tools? Section about atomic clocks in general?
-
 General:
+- Fix Footer (span entire bottom?) footer animation broken
 - Fix commented blocks
-- Go through images (listed and actual) to make sure nothing is missed
 - Add a travel section that updates with any new images that get added (low-maintenance)
- - Fix any hyperlinks and stuff
 - Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
-- Go through / remove things completed doc (list.docx)
-- Prev/Next arrow resets scroll sometimes?
 - Go through pictures, add any 'projects' I think I should add
-- Ensure all pictures are fixed (add backgrounds back in)
+- Update Safran more
 
 Education:
-- Fix course descriptions
-- Add pictures to Education courses (& sliders where necessary)
-- Add final reports
 - Add email check to email contact field
 - Fix Search button
 - Improve thanks page
 - Improve 404 page
-- Add binder links for jupyter notebooks?
 
 Maybe do:
-- Add other education things including NIST / IEEE
 - Add skill proficiencies?
 - Animate image sliders?
+- Resize images for efficiency
 
 Explore / Investigate:
 - Add modal or pages for additional project info
     - Sub-Projects for larger projects such as the kitchen?
+- Animate expansion of blocks
 - Expanding Experience or Educational blocks?
 - Improve Footer (Social icons to footer, Contact button, site map, other? Easter Egg?)
 - Interactive codeblocks?
 - Verify seo jekyll tag
-- Left menu should re-collapse?

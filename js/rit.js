@@ -86,20 +86,26 @@ function EEEE374() {
 };
 
 function EEEE381() {
-	var description = "This is the first course in a two-course sequence in analog electronic circuit design. The course\
-	covers the following topics: (1) Basic MOSFET current-voltage characteristics; (2) DC and\
-	small-signal analysis and design of Metal-oxide-semiconductor (MOS) devices and circuits,\
-	including single-stage MOS amplifier configurations; (3) DC biasing circuits, such as basic\
-	current sources and current mirrors; (4) Two-transistor amplifier stages, such as differential\
-	amplifiers, cascode amplifiers, and output stages; (5) Analysis and design of multistage\
-	amplifiers; (6) Frequency response of single and multistage amplifiers; (7) Semiconductor\
-	diodes and diode circuits, including rectifying and clamping circuits, as well as Zener diodebased\
-	voltage regulation; (8) Ideal operational amplifier (op amp) circuits in non-inverting\
-	and inverting configurations."
+	var description = "This course is the first in a two-part sequence on analog electronic circuit design, \
+	covering fundamental concepts and techniques. Topics include the current-voltage characteristics of MOSFETs, \
+	DC and small-signal analysis of MOS devices and circuits, and the design of single-stage MOS amplifiers. The \
+	course also explores DC biasing circuits, such as current sources and mirrors, two-transistor amplifier \
+	stages (including differential and cascode amplifiers), and the design of multistage amplifiers. Additional \
+	topics include the frequency response of amplifiers, semiconductor diodes and diode circuits (including \
+	rectifiers and clamping circuits), and the use of Zener diodes for voltage regulation. Students will also \
+	learn to design ideal op-amp circuits in both non-inverting and inverting configurations.<br><br>\
+	<div id=\"EEEE381_description\">\
+      <a onclick=\"EEEE381_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
+    </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Electronics I</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
+
+function EEEE381_Report() {
+    var description = "<iframe src=\"Storage\\RIT\\EEEE381_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("EEEE381_description").innerHTML = description;
+}
 
 function EEEE414() {
 	var description = "This course introduces students to the study of linear continuous-time classical control systems,\
@@ -111,36 +117,40 @@ function EEEE414() {
 	control properties; relationships between stability margins and transient behavior; lead, lag, and\
 	PID control; root-locus analysis and design; frequency-response design and Nyquist stability. A\
 	laboratory will provide students with hands-on analysis and design-build-test experience, and\
-	includes the use of computer-aided design software such as MATLAB."
+	includes the use of computer-aided design software such as MATLAB.<br><br>\
+    <div id=\"EEEE414_description\">\
+      <a onclick=\"EEEE414_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
+    </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Classical Control</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
 
+function EEEE414_Report() {
+    var description = "<iframe src=\"Storage\\RIT\\EEEE414_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("EEEE414_description").innerHTML = description;
+}
+
 function EEEE482() {
-	var description = "This is the second course in a two-course sequence in analog and digital electronic circuit analysis\
-	and design. The analog portion of the course covers the following topics: (1) DC and small\
-	signal analysis and design of bipolar junction transistor (BJT) circuits; (2) BJT DC biasing circuits;\
-	(3) Simple and compound BJT amplifier stages; (4) Analysis and design of BJT multi-stage\
-	amplifiers and op-amps; (5) Frequency response of BJT-based single and multi-stage amplifiers;\
-	(6) Feedback and stability in BJT and MOSFET amplifiers. The digital portion of the course\
-	covers the essential concepts and applications of digital electronic circuits implemented ins\
-	NMOS and CMOS technologies. Topics include the following: (7) static and dynamic behavior\
-	of NMOS and CMOS inverters; (8) combinational and sequential CMOS logic networks;\
-	(9) dynamic CMOS logic networks, including precharge-evaluate, domino and transmission\
-	gate techniques; (10) special topics, including static and dynamic MOS memory and lowpower logic."
+	var description = "This course is the second in a two-course sequence focused on analog and digital \
+	electronic circuit analysis and design. The analog portion includes DC and small-signal analysis of bipolar \
+	junction transistor (BJT) circuits, BJT DC biasing, and the design of simple and compound BJT amplifier \
+	stages. It also covers multi-stage BJT amplifiers, op-amps, frequency response, and feedback and stability \
+	in both BJT and MOSFET amplifiers. The digital portion introduces the principles of digital circuits using \
+	NMOS and CMOS technologies, including the behavior of NMOS and CMOS inverters, combinational and sequential \
+	CMOS logic networks, and advanced topics such as dynamic CMOS logic, memory, and low-power logic techniques."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Electronics II</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE483() {
-	var description = "Fundamental principles of electric machines are covered. Sensors and actuators are studied.\
-	The primary actuators discussed are high-performance electromechanical motion devices such\
-	as permanent-magnet DC, synchronous and stepper motors. Topics in power electronics and\
-	control of electromechanical systems are studied. High-performance MATLAB environment\
-	is used to simulate, analyze and control mechatronic systems. Application of digital signal\
-	processors and microcontrollers in mechatronics are introduced. Case studies are covered."
+	var description = "This course covers the fundamental principles of electric machines, focusing on sensors and \
+	actuators, particularly high-performance electromechanical motion devices such as permanent-magnet DC motors, \
+	synchronous motors, and stepper motors. It explores power electronics and control systems for electromechanical \
+	systems, utilizing the MATLAB environment for simulation, analysis, and control of mechatronic systems. \
+	The course also introduces the application of digital signal processors and microcontrollers in mechatronics, \
+	with practical case studies to reinforce learning."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Mechatronics</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
@@ -153,11 +163,19 @@ function EEEE484() {
 	methods (e.g. AM and FM) for continuous signals. Carrier detection and synchronization.\
 	Phase-locked loop and its application. Introduction to digital communication. Binary ASK, FSK\
 	and PSK. Noise effects. Optimum detection: matched filters, maximum-likelihood reception.\
-	Computer simulation."
+	Computer simulation.<br><br>\
+    <div id=\"EEEE484_description\">\
+      <a onclick=\"EEEE484_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
+    </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Communication Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
+
+function EEEE484_Report() {
+    var description = "<iframe src=\"Storage\\RIT\\EEEE484_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("EEEE484_description").innerHTML = description;
+}
 
 function EEEE485() {
 	var description = "This course will cover basic electrical and mechanical engineering topics related to Robotics,\
@@ -167,11 +185,19 @@ function EEEE485() {
 	drives, bearing) and concepts (motion, dynamics equations, and force and torque analysis). In\
 	addition, robotics system modeling, control, and applications will be explored. Students will\
 	design electronic interfaces and controllers for mechanical devices. Finally, sensor and actuator\
-	selection, installation, and application strategies will be explored."
+	selection, installation, and application strategies will be explored.<br><br>\
+    <div id=\"EEEE485_description\">\
+      <a onclick=\"EEEE485_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
+    </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Robotic Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
+
+function EEEE485_Report() {
+    var description = "<iframe src=\"Storage\\RIT\\EEEE485_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("EEEE485_description").innerHTML = description;
+}
 
 function EEEE497() {
 	var description = "MSD-I is the first half of a two-semester design course oriented to the solution of engineering\
@@ -180,7 +206,10 @@ function EEEE497() {
 	environment. Working in multidisciplinary teams and following an engineering design process,\
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
-	which is fully tested and documented."
+	which is fully tested and documented.<br><br>\
+    <div id=\"EEEE498_description\">\
+      <a onclick=\"EEEE498_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
+    </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Senior Design Project I</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
@@ -193,11 +222,19 @@ function EEEE498() {
 	environment. Working in multidisciplinary teams and following an engineering design process,\
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
-	which is fully tested and documented"
+	which is fully tested and documented.<br><br>\
+    <div id=\"EEEE498_description\">\
+      <a onclick=\"EEEE498_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
+    </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Senior Design Project II</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
+
+function EEEE498_Report() {
+    var description = "<iframe src=\"Storage\\RIT\\VArm_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    document.getElementById("EEEE498_description").innerHTML = description;
+}
 
 function EEEE579() {
 	var description = "A study of the various techniques for the design of filters to meet the given specifications. The\
@@ -213,11 +250,11 @@ function EEEE579() {
 };
 
 function EEEE593() {
-	var description = "Principles and practices of modern digital data communication systems. Topics include pulse\
-	code transmission and error probabilities, M-ary signaling and performance, AWGN channels,\
-	band-limited and distorting channels, filter design, equalizers, optimal detection for channels\
-	with memory, synchonization methods, non-linear modulation, and introduction to multipath\
-	fading channels, spread spectrum and OFDM."
+	var description = "This course covers the principles and practices of modern digital data communication \
+	systems. Topics include pulse code modulation, error probabilities, M-ary signaling, AWGN channels, \
+	band-limited and distorting channels, filter design, equalizers, and optimal detection for channels \
+	with memory. It also explores synchronization methods, non-linear modulation, and introduces advanced \
+	concepts such as multipath fading channels, spread spectrum, and OFDM."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Digital Data Communication</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
@@ -254,27 +291,39 @@ function EEEE663() {
 };
 
 function MATH326() {
-	var description = "This course provides an introduction to boundary value problems. Topics include Fourier\
-	series, separation of variables, Laplace's equation, the heat equation, and the wave equation\
-	in Cartesian and polar coordinate systems."
+	var description = "A course that focuses on the mathematical methods used to solve differential equations \
+	with specified values (boundary conditions) at the boundaries of the domain. The course covers a range of \
+	topics including the theory and solution techniques for ordinary and partial differential equations, the \
+	method of separation of variables, eigenvalue problems, and Fourier series. Students will also study \
+	Sturm-Liouville theory, Green\'s functions, and the use of transform methods in solving boundary value \
+	problems. Emphasis is placed on both analytical techniques and computational methods, with applications \
+	in physics, engineering, and other scientific fields where boundary conditions play a \
+	critical role in problem-solving."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Boundary Value Problems</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MATH381() {
-	var description = "This course covers the algebra of complex numbers, analytic functions, Cauchy-Riemann\
-	equations, complex integration, Cauchy's integral theorem and integral formulas, Taylor\
-	and Laurent series, residues, real integrals by complex methods, and conformal mappings."
+	var description = "This course explores the theory and applications of functions of complex variables. Topics \
+	include the complex plane, analytic functions, Cauchy-Riemann equations, contour integration, and the Cauchy \
+	Integral Theorem. Students will study techniques such as Taylor and Laurent series, residue calculus, and \
+	conformal mapping. The course also covers applications of complex analysis in solving real-world problems \
+	in physics and engineering, particularly in fluid dynamics, electromagnetism, and signal processing. \
+	Emphasis is placed on both theoretical understanding and practical problem-solving using complex function theory."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Complex Variables</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MATH441() {
-	var description = "This course covers basic set theory, number theory, groups, subgroups, cyclic and permutation\
-	groups, Lagrange and Sylow theorems, quotient groups, and isomorphism theorems.\
-	Group Theory finds applications in other scientific disciplines like physics and chemistry."
+	var description = "A course that introduces students to the study of algebraic structures and their \
+	properties. Topics include groups, subgroups, group homomorphisms, rings, fields, and vector spaces, \
+	along with related concepts such as group actions, quotient structures, and polynomial rings. The course \
+	emphasizes the development of formal mathematical proof techniques and provides a deep understanding of how \
+	these algebraic structures underpin many areas of mathematics and its applications. Students will explore \
+	the theoretical foundations of algebra, with applications in areas such as cryptography, coding \
+	theory, and symmetry."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Abstract Algebra</h5>";
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-extra").innerHTML = "";
