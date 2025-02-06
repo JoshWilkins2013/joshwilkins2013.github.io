@@ -438,3 +438,16 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 a.text-primary:focus, a.text-primary:hover {
   color: #ff0c0c !important;
 }
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20;
+  right: 20;
+  bottom: 20;
+  top: 20;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+}

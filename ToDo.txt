@@ -6,8 +6,6 @@ General:
 - Go through pictures, add any 'projects' I think I should add
 - Update Safran more
     - Fix commented blocks
-- Improve thanks page
-- Improve 404 page
 
 Possible Enhancements:
 - Add a travel section that updates with any new images that get added (low-maintenance)
@@ -17,4 +15,4 @@ Possible Enhancements:
 - Codeblock styling?
 - Verify seo jekyll tag
 - Add skill proficiencies?
-- Animate image sliders?
+- Animate things - image sliders, experience & education block refreshes, etc.

@@ -26,7 +26,9 @@ $(function () {
             $('.header-title-text').css('left', '140px');
 
             var newWidth = ($(".page-content").width() - 280);
-            $(".page-content").animate({width:newWidth}, {duration:500, complete:function(){ $(".page-content").width("calc(100% - 280px)"); } });
+            $(".page-content").animate({width:newWidth}, {duration:500, complete:function(){
+                $(".page-content").width("calc(100% - 280px)"); }
+            });
         }
     });
 

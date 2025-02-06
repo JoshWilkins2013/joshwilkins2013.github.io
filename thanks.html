@@ -8,56 +8,12 @@ title: Thanks
 
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
-	  
+
 	  <div class="page-content">
-        <section>
-          <form id="formaction" method="POST">
-
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="contact-block">
-                    <input id="Name" type="text" name="Name" required class="input-material"><br>
-                    <label for="Name">Name</label><br>
-
-                    <input id="Email" type="text" name="Email" required class="input-material"><br>
-                    <label for="Email">Email</label><br>
-
-                    <input id="PhoneNumber" type="text" name="PhoneNumber" required class="input-material"><br>
-                    <label for="PhoneNumber">Phone #</label>
-                  </div>
-                </div>
-
-                <div class="col-sm-8">
-                  <div class="contact-block">
-                    <textarea rows="8" class="form-control" name="Message" placeholder="Message" id="Message" required data-validation-required-message="Please enter a message."></textarea>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-sm-12 contact-button">
-                  <button type="submit" value="Send">Send</button>
-                </div>
-              </div>
-
-            <input type="text" name="_gotcha" style="display:none" />
-            <input type="hidden" name="_next" value="thanks" />
-          </form>
-          <script>
-            var contactform =  document.getElementById('formaction');
-            contactform.setAttribute('action', '//formspree.io/' + 'joshwilkins2013' + '@' + 'gmail' + '.' + 'com');
-          </script>
-
-          <br>
-
-          <div class="page-header">
-            Thanks for the input! I'll be sure to respond as soon as I can.
-          </div>
-
-        </section>
-
+        <div style="background-color:#202124" class="not-found block">
+            <img src="img/Thanks.png" style="max-width: 100%; max-height: 100%" />
+        </div>
         {% include footer.html %}
-
       </div>
     </div>
   <script src="js/thanks.js"></script>
