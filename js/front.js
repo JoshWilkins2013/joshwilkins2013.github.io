@@ -35,18 +35,13 @@ $(function () {
     // ------------------------------------------------------ //
     $('.sidebar-category').on('click', function () {
         var current_state = $(this).find('ul').css('display');
-        $('.sidebar-category').each(function(){
-            $(this).find('ul').hide();
-            $(this).find('i').next().next().attr('class', 'fas fa-angle-left')
-        })
+        $(this).find('ul').animate({height: 'toggle'});  // Animate opening/closing of selected sidebar category
+        $(this).find('i').next().next().toggleClass('fa-angle-down fa-angle-left')
 
-        if(current_state == "none") {
-            $(this).find('ul').show();
-            $(this).find('i').next().next().attr('class', 'fas fa-angle-down')
-        } else {
-            $(this).find('ul').hide();
-            $(this).find('i').next().next().attr('class', 'fas fa-angle-left')
-        }
+        $('.sidebar-category').not(this).each(function() {
+          $(this).find('ul').hide();  // Hide all other sidebar categories
+          $(this).find('i').next().next().attr('class', 'fas fa-angle-left')
+        });
     });
 
     // ------------------------------------------------------- //
