@@ -1,9 +1,9 @@
 General:
-- Auto sort travel by date?
+- Add more travel images, auto sort by date?
 - Fix Footer to span entire bottom?
     - Footer animation broken, add contact button, site map, etc.
 - Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
-    - Resize images for efficiency
+    - Resize images for efficiency, consider using Git Large File Storage (LFS)?
 - Go through pictures, add any 'projects' I think I should add
 - Update Safran more
     - Fix commented blocks
@@ -12,7 +12,6 @@ Possible Enhancements:
 - Add modal or pages for additional project info
     - Sub-Projects for larger projects such as the kitchen?
 - Add email check to email contact field
-- Codeblock styling?
 - Verify seo jekyll tag
 - Add skill proficiencies?
 - Animate things - image sliders, experience & education block refreshes, etc.

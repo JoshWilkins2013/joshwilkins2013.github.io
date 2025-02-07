@@ -46,7 +46,6 @@ title: Travel
               </div>  <!-- end col -->
 
               <div class="col-lg-4">
-                <h4 style="color:white">{{ end_of_second }}</h4>
                 {% assign second_places = places_unique | slice: num_in_first, num_in_second %}
                 {% for place in second_places %}
                   {% include travel_block.html %}

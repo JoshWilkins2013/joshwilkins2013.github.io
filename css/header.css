@@ -116,7 +116,7 @@ nav.navbar a.nav-link {
 /*     NavBar Drop-Down Menu (Navigation Menu)
 /* ========================================================== */
 .dropdown-menu {
-  color: #8a8d93;
+  color: #cc5200;
   background: #2d3035;
   left: auto;
   border: 2px solid #393c43;
@@ -141,7 +141,7 @@ nav.navbar a.nav-link {
 
 .dropdown-menu ul a {
   text-decoration: none;
-  color: #555;
+  color: white;
   font-size: 0.9em !important;
 }
 
@@ -162,7 +162,7 @@ nav.navbar .dropdown .dropdown-menu.active {
 
 .single a:hover {
   background: none;
-  color: #cc5200 !important;
+  color: white !important;
 }
 
 /* ========================================================== */

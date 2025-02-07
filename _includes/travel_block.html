@@ -4,7 +4,7 @@
   {% assign year = place | split: "_" | last %}
   {% assign place_header = place | replace: "_", " " %}
 
-  <div style="color: #cc5200; display: flex; align-items:center; justify-content:center; position:relative;">
+  <div style="color: #cc5200; display: flex; align-items:center; justify-content:center; position:relative; border-bottom: solid black 4px;">
     <h4> {{place_header | remove: year}} </h4>
     <h4 style="position:absolute; right:0; bottom: 4px; margin-bottom: 0px" class="block-subheader">{{year}}</h4>
   </div>
@@ -23,7 +23,7 @@
 
   <div class="slideshow-container">
     <div class="mySlides">
-      <img id="{{place | append: '_Image'}}" class="travel-image" src="{{ first_path }}" alt="image" />
+      <img id="{{place | append: '_Image'}}" style="padding: 20 0 0 0;" src="{{ first_path }}" alt="image" />
     </div>
 
     <a class="prev" onclick="Slides(SlideIndex -= 1, '{{image_paths}}', '{{place}}')"><p class="arrow">&#10094;</p></a>
