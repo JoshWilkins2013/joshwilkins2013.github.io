@@ -1,4 +1,5 @@
 General:
+- Auto sort travel by date?
 - Fix Footer to span entire bottom?
     - Footer animation broken, add contact button, site map, etc.
 - Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
@@ -8,7 +9,6 @@ General:
     - Fix commented blocks
 
 Possible Enhancements:
-- Add a travel section that updates with any new images that get added (low-maintenance)
 - Add modal or pages for additional project info
     - Sub-Projects for larger projects such as the kitchen?
 - Add email check to email contact field
