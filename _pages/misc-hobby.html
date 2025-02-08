@@ -17,88 +17,49 @@ icon: light-bulb
             <div class="row">
 
 			  <div class="col-lg-4">
+                {% assign project_path = "img/Misc_Hobby/V-Arm" %}
+                {% capture project_description %}
+                  A partial body immersion device for VR that enables users to physically engage with virtual
+                  objects. It provides kinesthetic feedback by adjusting the user's arm in response to
+                  interactions with virtual elements. This is accomplished through the use of air muscles;
+                  inflatable bladders with mesh wrapping that can contract using pressurized air.<br>
+                  <button onclick="load_pdf('V-Arm', 'Storage/RIT/VArm_Report.pdf')" type="submit">Final Report</button>
+                {% endcapture %}
+                {% include block.html %}
 
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> V-Arm </h3>
-
-				  <p> A partial body immersion device for VR that enables users to physically engage with virtual
-                      objects. It provides kinesthetic feedback by adjusting the user's arm in response to
-                      interactions with virtual elements. This is accomplished through the use of air muscles;
-                      inflatable bladders with mesh wrapping that can contract using pressurized air.<br>
-                  </p>
-
-                  <div id="varm_description">
-                    <a onclick="VArm_Description()" target="_blank"><button type="submit">Final Report</button></a><br><br>
-                    <div class="slideshow-container">
-                      <div id="VArmSlider" class="mySlides"></div>
-  		  		      <a class="prev" onclick="VArmSlides(VArmSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-  				      <a class="next" onclick="VArmSlides(VArmSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> Cat Tree </h3>
-
-				  <p> I Made this cat tree for my brother and his cat Jimmy. </p>
-
-                  <div class="slideshow-container">
-  				    <div id="CatTreeSlider" class="mySlides"></div>
-				    <a class="prev" onclick="CatTreeSlides(CatTreeSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="CatTreeSlides(CatTreeSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-                </div>
-
+                {% assign project_path = "img/Misc_Hobby/Cat_Tree" %}
+                {% capture project_description %}
+                  I Made this cat tree for my brother and his cat Jimmy.
+                {% endcapture %}
+                {% include block.html %}
               </div>
 
 			  <div class="col-lg-4">
+                {% assign project_path = "img/Misc_Hobby/Wilmake" %}
+                {% capture project_description %}
+                  Back when 3D printers were just coming out, I wanted to make one that would be more useful.
+                  I attempted to create an interchangeable head so that it could also draw, laser engrave, mill,
+                  and scan 3D objects. Not long after working on this project,
+                  <a href="https://www.kickstarter.com/projects/2117384013/flux-all-in-one-3d-printer-unlimited-elegant-simpl/description" target="_blank">this kickstarter</a>
+                  came along with a very similar concept, making just over $1.6 million!
+                {% endcapture %}
+                {% include block.html %}
 
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> Wilmake </h3>
-
-				  <p> Back when 3D printers were just coming out, I wanted to make one that would be more useful.
-                      I attempted to create an interchangeable head so that it could also draw, laser engrave, mill,
-                      and scan 3D objects. Not long after working on this project,
-                      <a href="https://www.kickstarter.com/projects/2117384013/flux-all-in-one-3d-printer-unlimited-elegant-simpl/description" target="_blank">this kickstarter</a>
-                      came along with a very similar concept, making just over $1.6 million!
-                  </p>
-                  <img style="width: 100%" src="img/Misc_Hobby/Wilmake/Wilmake.png"><p>SolidWorks Model</p>
-                </div>
-
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> Misc </h3>
-
-                  <p> Some other miscellaneous projects such as my computer, a power supply, and my old 3D printer. </p>
-
-				  <div class="slideshow-container">
-  				    <div id="MiscSlider" class="mySlides"></div>
-				    <a class="prev" onclick="MiscSlides(MiscSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="MiscSlides(MiscSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-                </div>
+                {% assign project_path = "img/Misc_Hobby/Misc" %}
+                {% capture project_description %}
+                  Some other miscellaneous projects such as my computer, a power supply, and my old 3D printer.
+                {% endcapture %}
+                {% include block.html %}
               </div>
 			  
 			  <div class="col-lg-4">
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> Ambilight </h3>
-
-                  <p> An ambient lighting system that creates background lighting based on TV content. It is capable
-                      of producing different shades, brightness, and intensities of color based upon frame content. I
-                      used Rasplex to stream video from a raspberry pi and Hyperion to implement the lighting backdrop.
-                  </p>
-
-				  <div class="slideshow-container">
-  				    <div id="AmbilightSlider" class="mySlides"></div>
-				    <a class="prev" onclick="AmbilightSlides(AmbilightSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="AmbilightSlides(AmbilightSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
-                </div>
+                {% assign project_path = "img/Misc_Hobby/Ambilight" %}
+                {% capture project_description %}
+                  An ambient lighting system that creates background lighting based on TV content. It is capable
+                  of producing different shades, brightness, and intensities of color based upon frame content. I
+                  used Rasplex to stream video from a raspberry pi and Hyperion to implement the lighting backdrop.
+                {% endcapture %}
+                {% include block.html %}
               </div>
 
             </div>
@@ -107,6 +68,7 @@ icon: light-bulb
 		{% include footer.html %}
       </div>
     </div>
-    <script src="js/misc_hobby.js"></script>
+    <script>document.getElementById("header-text").innerHTML = "<a style='text-decoration: none' href='misc-hobby'>Other Projects</a>";</script>
+    <script src="js/block.js"></script>
   </body>
 </html>

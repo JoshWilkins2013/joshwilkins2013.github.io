@@ -17,110 +17,64 @@ icon: light-bulb
             <div class="row">
 
               <div class="col-lg-4">
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> ASEE Competition 2014 </h3>
-				  <h5 style="color:#cc5200;"> Indie 500 </h5>
+                <!--Add subheaders somehow?-->
+                {% assign project_path = "img/Robotics/ASEE_Competition_2014" %}
+                {% capture project_description %}
+                  A national robotics competition held in Indianapolis, Indiana, where the objective was to
+                  autonomously navigate a scaled-down version of the Indianapolis 500 track. The model included
+                  various obstacles to enhance the difficulty of the challenge.<br>
+                  <button onclick="load_pdf('ASEE_Competition_2014', 'Storage/Projects/ASEE_2014_Report.pdf')" type="submit">Final Report</button>
+                {% endcapture %}
+                {% include block.html %}
 
-                  <p> A national robotics competition held in Indianapolis, Indiana, where the objective was to
-                    autonomously navigate a scaled-down version of the Indianapolis 500 track. The model included
-                    various obstacles to enhance the difficulty of the challenge.<br>
-                  </p>
-
-                  <div id="asee_2014_description">
-                    <a onclick="ASEE_2014_Report()" target="_blank"><button type="submit">Final Report</button></a><br><br>
-                    <div class="slideshow-container">
-                      <div id="IndieSlider" class="mySlides"></div>
-                      <a class="prev" onclick="IndieSlides(IndieSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                      <a class="next" onclick="IndieSlides(IndieSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header">Quadcopter </h3>
-
-				  <p> A quadcopter I built in college. It went through two design iterations before I decided to pass
-                      it along. It never fully worked, but I had fun designing and figuring out the electronics. It
-                      also led to the creation of the drone club at MCC.
-                  </p>
-
-                  <div class="slideshow-container">
-  				    <div id="QuadcopterSlider" class="mySlides"></div>
-				    <a class="prev" onclick="QuadcopterSlides(QuadcopterSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="QuadcopterSlides(QuadcopterSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
-                </div>
+                {% assign project_path = "img/Robotics/Quadcopter" %}
+                {% capture project_description %}
+                  A quadcopter I built in college. It went through two design iterations before I decided to pass
+                  it along. It never fully worked, but I had fun designing and figuring out the electronics. It
+                  also led to the creation of the drone club at MCC.
+                {% endcapture %}
+                {% include block.html %}
               </div>
 
 			  <div class="col-lg-4">
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> ASEE Competition 2015</h3>
-				  <h5 style="color:#cc5200;"> Fish Derby </h5>
+                {% assign project_path = "img/Robotics/ASEE_Competition_2015" %}
+                {% capture project_description %}
+                  A national robotics competition held in Seattle, Washington, where the objective was
+                  to autonomously collect wooden fish cut-outs placed along two concentric circles on an 8x8
+                  foot track. After collecting the fish, the robot had to deposit them into the corresponding
+                  colored bins located at the track's corners.<br>
+                  <button onclick="load_pdf('ASEE_Competition_2015', 'Storage/Projects/ASEE_2015_Rules.pdf')" type="submit">Rules</button>
+                {% endcapture %}
+                {% include block.html %}
 
-                  <p> A national robotics competition held in Seattle, Washington, where the objective was
-                      to autonomously collect wooden fish cut-outs placed along two concentric circles on an 8x8
-                      foot track. After collecting the fish, the robot had to deposit them into the corresponding
-                      colored bins located at the track's corners.<br>
-                  </p>
+                {% assign project_path = "img/Robotics/McLaren_F1" %}
+                {% capture project_description %}
+                  A first-year, in-class robotics competition with multiple objectives, including track
+                  navigation and a tractor pull. The design (aesthetics and function) was left completely up
+                  to the students; I chose to loosely model mine after a McLaren F1.<br>
+                  <button onclick="load_pdf('McLaren_F1', 'Storage/MCC/ENR153_Report.pdf')" type="submit">Final Report</button>
+                {% endcapture %}
+                {% include block.html %}
 
-                  <div id="asee_2015_description">
-                    <a onclick=ASEE_2015_Rules() target="_blank"><button type="submit">Rules</button></a><br><br>
-                    <div class="slideshow-container">
-  				      <div id="DerbySlider" class="mySlides"></div>
-					  <a class="prev" onclick="DerbySlides(DerbySlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				      <a class="next" onclick="DerbySlides(DerbySlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				    </div>
-                  </div>
-
-                </div>
-
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header">McLaren F1 </h3>
-
-                  <p> A first-year, in-class robotics competition with multiple objectives, including track
-                      navigation and a tractor pull. The design (aesthetics and function) was left completely up
-                      to the students; I chose to loosely model mine after a McLaren F1.<br>
-                  </p>
-                  <div id="enr_153_description">
-                    <a onclick="ENR153_Report()" target="_blank"><button type="submit">Final Report</button></a><br><br>
-                    <div class="slideshow-container">
-                      <div id="ENR153Slider" class="mySlides"></div>
-                      <a class="prev" onclick="ENR153Slides(ENR153SlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                      <a class="next" onclick="ENR153Slides(ENR153SlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-                    </div>
-                  </div>
-                </div>
               </div>
 
 			  <div class="col-lg-4">
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> ATtiny Swarm </h3>
-
-                  <p> A set of programmable, rechargeable robots whose functionality could be altered by adding
-                      a modular attachment called a "shield." By default, these robots would either line-follow or
-                      avoid obstacles. When a shield was attached, the base design's electronics were overridden.
-				  </p>
-
-				  <div class="slideshow-container">
-  				    <div id="ATtinySlider" class="mySlides"></div>
-				    <a class="prev" onclick="ATtinySlides(ATtinySlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="ATtinySlides(ATtinySlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
-                </div>
+                {% assign project_path = "img/Robotics/ATtiny_Swarm" %}
+                {% capture project_description %}
+                  A set of programmable, rechargeable robots whose functionality could be altered by adding
+                  a modular attachment called a "shield." By default, these robots would either line-follow or
+                  avoid obstacles. When a shield was attached, the base design's electronics were overridden.
+                {% endcapture %}
+                {% include block.html %}
               </div>
+
             </div>
           </div>
         </section>
         {% include footer.html %}
       </div>
     </div>
-    <script src="../js/robotics.js"></script>
+    <script>document.getElementById("header-text").innerHTML = "<a style='text-decoration: none' href='robotics'>Robotics Projects</a>";</script>
+    <script src="../js/block.js"></script>
   </body>
 </html>

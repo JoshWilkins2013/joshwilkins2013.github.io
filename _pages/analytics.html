@@ -15,68 +15,42 @@ icon: light-bulb
           <div class="container-fluid">
 			<div class="row">
               <div class="col-lg-4">
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> Price Abstracter </h3>
-				  <p> A convenient price comparison tool for popular websites like Craigslist and eBay, designed to
-                      help analyze car prices or apartment rentals and identify the best deals. This tool could
-                      potentially be enhanced and abstracted to include additional housing sites such as Zillow
-                      and Trulia. Comparison results are displayed in a scatter plot, with each data point linked
-                      to the original listing.
-                      <br> <a href="https://github.com/JoshWilkins2013/PriceBot" target="_blank"> Repository </a>
-                  </p>
-
-                  <div class="slideshow-container">
-  				    <div id="PriceBotSlider" class="mySlides"></div>
-				    <a class="prev" onclick="PriceBotSlides(PriceBotSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="PriceBotSlides(PriceBotSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
-                </div>
+                {% assign project_path = "img/Analytics/Price_Abstractor" %}
+                {% capture project_description %}
+                  A convenient price comparison tool for popular websites like Craigslist and eBay, designed to
+                  help analyze car prices or apartment rentals and identify the best deals. This tool could
+                  potentially be enhanced and abstracted to include additional housing sites such as Zillow
+                  and Trulia. Comparison results are displayed in a scatter plot, with each data point linked
+                  to the original listing.
+                  <br> <a href="https://github.com/JoshWilkins2013/PriceBot" target="_blank"> Repository </a>
+                {% endcapture %}
+                {% include block.html %}
               </div>
 
               <div class="col-lg-4">
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header"> Make/Model Comparison </h3>
-                  <p> An alternative benefit of my price abstractor tool is having access to real-world car and rental
-                      data! From this data, I have analyzed which car model was best within each make and which model
-                      was best overall. The results are intuitive; the more you spend on a car, the faster it will
-                      depreciate! Perhaps if the prices were normalized by their initial price, a more even
-                      distribution of depreciation rates would be seen, indicating all cars depreciate at the same
-                      weighted rate.<br>
-                      <a href="https://github.com/JoshWilkins2013/PriceBot/tree/master/docs/Analysis" target="_blank"> Repository </a><br>
-                  </p>
-                  <div id="details-description">
-                    <button onclick="MakeModelAnalysis()" type="submit">The Analysis</button><br><br>
-                    <div class="slideshow-container">
-  				      <div id="MakeModelSlider" class="mySlides"></div>
-				        <a class="prev" onclick="MakeModelSlides(MakeModelSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				        <a class="next" onclick="MakeModelSlides(MakeModelSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-                    </div>
-                  </div>
-                </div>
+                  {% assign project_path = "img/Analytics/Car_Analysis" %}
+                  {% capture project_description %}
+                    An alternative benefit of my price abstractor tool is having access to real-world car and rental
+                    data! From this data, I have analyzed which car model was best within each make and which model
+                    was best overall. The results are intuitive; the more you spend on a car, the faster it will
+                    depreciate! Perhaps if the prices were normalized by their initial price, a more even
+                    distribution of depreciation rates would be seen, indicating all cars depreciate at the same
+                    weighted rate.<br>
+                    <button onclick="load_html('Car_Analysis', 'Storage/Projects/MakeModelComparison.html')" type="submit">The Analysis</button>
+                  {% endcapture %}
+                  {% include block.html %}
               </div>
 
               <div class="col-lg-4">
-                <div class="project block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <h3 class="block-header">Buying a House</h3>
-
-                  <p> I was curious to see the benefits of owning a home over renting. At what point would you
-                      recouperate the down-payment? How much money do you save over renting, long-term? How much do
-                      banks really make on the interest of your mortgage? So I created a tool with adjustable sliders
-                      to compare and assess different financial situations.<br>
-                      <a href="https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/House" target=\"_blank\">Repository</a>
-                  </p>
-
-				  <div class="slideshow-container">
-  				    <div id="HouseSlider" class="mySlides"></div>
-				    <a class="prev" onclick="HouseSlides(HouseSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-				    <a class="next" onclick="HouseSlides(HouseSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-				  </div>
-
-                </div>
+                {% assign project_path = "img/Analytics/House_Analysis" %}
+                {% capture project_description %}
+                  I was curious to see the benefits of owning a home over renting. At what point would you
+                  recouperate the down-payment? How much money do you save over renting, long-term? How much do
+                  banks really make on the interest of your mortgage? So I created a tool with adjustable sliders
+                  to compare and assess different financial situations.<br>
+                  <a href="https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/House" target=\"_blank\">Repository</a>
+                {% endcapture %}
+                {% include block.html %}
               </div>
 
             </div>
@@ -85,6 +59,7 @@ icon: light-bulb
 		{% include footer.html %}
       </div>
     </div>
-  <script src="../js/analytics.js"></script>
+  <script>document.getElementById("header-text").innerHTML = "<a style='text-decoration: none' href='analytics'>Analytics Projects</a>";</script>
+  <script src="../js/block.js"></script>
   </body>
 </html>

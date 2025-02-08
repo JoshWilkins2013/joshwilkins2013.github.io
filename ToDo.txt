@@ -1,4 +1,7 @@
 General:
+- Fix image names for captions
+- Move include for block.js into head?
+- Combine Travel_Block and Block?
 - Add more travel images, auto sort by date?
 - Fix Footer to span entire bottom?
     - Footer animation broken, add contact button, site map, etc.

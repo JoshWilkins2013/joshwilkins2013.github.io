@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="css/travel_block.css" id="theme-stylesheet">
+
+<div class="project block">
+  <div class="expander"><i class="fas fa-plus-square"></i></div>
+  {% assign project_name = project_path | split: "/" | last %}
+
+  <div style="color: #cc5200; display: flex; align-items:center; justify-content:center; position:relative; border-bottom: solid black 4px; margin-bottom:10px;">
+    <h4> {{ project_name | replace: "_", " "}} </h4>
+  </div>
+
+  <div id="{{project_name | append: '_Content'}}">
+    <p id="{{project_name | append: '_Description'}}" style="margin-bottom: 10px;">{{project_description}}</p>
+
+    {% capture image_paths %}
+      {% for file in site.static_files %}
+        {% if file.path contains project_path %}
+          {{file.path | strip_newlines | append: ","}}
+        {%endif%}
+      {%endfor%}
+    {%endcapture%}
+
+    {% assign image_paths = image_paths | strip_newlines | strip | url_decode %}
+    {% assign first_path = image_paths | split: "," | first %}
+    {% assign first_caption = first_path | split: "/" | last | split: "." | first | replace: "_", " " %}
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img id="{{project_name | append: '_Image'}}" src="{{ first_path }}" alt="image" /><p id="{{project_name | append: '_Caption'}}">{{first_caption}}</p>
+      </div>
+
+      <a class="prev" onclick="Slides(SlideIndex -= 1, '{{image_paths}}', '{{project_name}}')" style="margin-bottom: 0;"><p class="arrow">&#10094;</p></a>
+      <a class="next" onclick="Slides(SlideIndex += 1, '{{image_paths}}', '{{project_name}}')" style="margin-bottom: 0;"><p class="arrow">&#10095;</p></a>
+    </div>
+  </div>
+</div>
