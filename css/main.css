@@ -253,13 +253,6 @@ input {
   margin-bottom: 0 !important;
 }
 
-.contact-block {
-  padding: 0;
-  background: #2d3035;
-  color: #8a8d93;
-  margin: 0;
-}
-
 .page-content {
   background: #22252a;
   min-height: calc(100vh - 71px - 67px);
@@ -386,10 +379,6 @@ input.input-material {
   border-bottom: 1px solid #444951;
   background: none;
   color: #8a8d93;
-}
-
-.contact-button {
-  margin-top: 20px
 }
 
 input.input-material:focus {

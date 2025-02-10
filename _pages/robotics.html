@@ -18,8 +18,8 @@ icon: light-bulb
 
               <div class="col-lg-4">
                 <!--Add subheaders somehow?-->
-                {% assign project_path = "img/Robotics/ASEE_Competition_2014" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Robotics/ASEE_Competition_2014" %}
+                {% capture block_description %}
                   A national robotics competition held in Indianapolis, Indiana, where the objective was to
                   autonomously navigate a scaled-down version of the Indianapolis 500 track. The model included
                   various obstacles to enhance the difficulty of the challenge.<br>
@@ -27,8 +27,8 @@ icon: light-bulb
                 {% endcapture %}
                 {% include block.html %}
 
-                {% assign project_path = "img/Robotics/Quadcopter" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Robotics/Quadcopter" %}
+                {% capture block_description %}
                   A quadcopter I built in college. It went through two design iterations before I decided to pass
                   it along. It never fully worked, but I had fun designing and figuring out the electronics. It
                   also led to the creation of the drone club at MCC.
@@ -37,8 +37,8 @@ icon: light-bulb
               </div>
 
 			  <div class="col-lg-4">
-                {% assign project_path = "img/Robotics/ASEE_Competition_2015" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Robotics/ASEE_Competition_2015" %}
+                {% capture block_description %}
                   A national robotics competition held in Seattle, Washington, where the objective was
                   to autonomously collect wooden fish cut-outs placed along two concentric circles on an 8x8
                   foot track. After collecting the fish, the robot had to deposit them into the corresponding
@@ -47,8 +47,8 @@ icon: light-bulb
                 {% endcapture %}
                 {% include block.html %}
 
-                {% assign project_path = "img/Robotics/McLaren_F1" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Robotics/McLaren_F1" %}
+                {% capture block_description %}
                   A first-year, in-class robotics competition with multiple objectives, including track
                   navigation and a tractor pull. The design (aesthetics and function) was left completely up
                   to the students; I chose to loosely model mine after a McLaren F1.<br>
@@ -59,8 +59,8 @@ icon: light-bulb
               </div>
 
 			  <div class="col-lg-4">
-                {% assign project_path = "img/Robotics/ATtiny_Swarm" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Robotics/ATtiny_Swarm" %}
+                {% capture block_description %}
                   A set of programmable, rechargeable robots whose functionality could be altered by adding
                   a modular attachment called a "shield." By default, these robots would either line-follow or
                   avoid obstacles. When a shield was attached, the base design's electronics were overridden.

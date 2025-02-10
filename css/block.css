@@ -53,6 +53,10 @@
   position: relative;
 }
 
+.mySlides {
+  display: grid;
+}
+
 .mySlides img {
   position: relative;
   max-height: 600px;
@@ -103,6 +107,7 @@
 
 /* Caption text */
 .mySlides p {
+  display: contents;
   position: absolute;
   color: #f2f2f2;
   width: 100%;
@@ -117,7 +122,6 @@
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-  padding-bottom: 20;
 }
 
 @-webkit-keyframes fade {

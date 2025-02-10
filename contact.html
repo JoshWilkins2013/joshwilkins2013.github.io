@@ -8,37 +8,34 @@ title: Contact
 
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
-	  
+
 	  <div class="page-content">
         <section>
           <form id="formaction" method="POST">
 
               <div class="row">
                 <div class="col-sm-4">
-                  <div class="contact-block">
-                    <input id="Name" type="text" name="Name" required class="input-material"><br>
-                    <label for="Name">Name</label><br>
-
-                    <input id="Email" type="text" name="Email" required class="input-material"><br>
-                    <label for="Email">Email</label><br>
-
-                    <input id="PhoneNumber" type="text" name="PhoneNumber" required class="input-material"><br>
-                    <label for="PhoneNumber">Phone #</label>
+                  <div style="padding-top: 15px !important" class="project block">
+                    <div style="color: #cc5200; display: flex; align-items:center; justify-content:center; position:relative; border-bottom: solid black 4px; margin-bottom:10px;">
+                      <h4> User Info </h4>
+                    </div>
+                    <div style="display: flex; flex-direction:column;">
+                      <div><label style="width: 20%" for="Name">Name</label><input style="width: 80%" id="Name" type="text" name="Name" required class="input-material"><br></div>
+                      <div><label style="width: 20%" for="Email">Email</label><input style="width: 80%" id="Email" type="text" name="Email" required class="input-material"><br></div>
+                      <div><label style="width: 20%" for="PhoneNumber">Phone</label><input style="width: 80%" id="PhoneNumber" type="text" name="PhoneNumber" required class="input-material"><br></div>
+                    </div>
                   </div>
                 </div>
 
                 <div class="col-sm-8">
-                  <div class="contact-block">
+                  <div style="padding-top: 20px !important" class="project block">
                     <textarea rows="8" class="form-control" name="Message" placeholder="Message" id="Message" required data-validation-required-message="Please enter a message."></textarea>
+                    <br><button type="submit" value="Send">Send Message</button>
                   </div>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-sm-12 contact-button">
-                  <button type="submit" value="Send">Send</button>
-                </div>
-              </div>
+
 
             <input type="text" name="_gotcha" style="display:none" />
             <input type="hidden" name="_next" value="thanks" />
@@ -51,6 +48,6 @@ title: Contact
         {% include footer.html %}
       </div>
     </div>
-  <script src="js/contact.js"></script>
+  <script>document.getElementById("header-text").innerHTML = "<a style='text-decoration: none' href='contact'>Contact Page</a>";</script>
   </body>
 </html>

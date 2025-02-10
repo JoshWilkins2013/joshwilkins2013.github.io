@@ -1,12 +1,17 @@
 var albums = {
+		"Campus": [
+			"<img src=\"img/MCC/MCC_Campus/Main_Campus.png\"><p>Main Campus</p>",
+			"<img src=\"img/MCC/MCC_Campus/Campus_Center.png\"><p>Campus Center</p>",
+			"<img src=\"img/MCC/MCC_Campus/Campus_Map.png\"><p>Campus Map</p>"
+		],
 		"ENR153": [
-			"<img src=\"img/Robotics/ENR153/Front.jpg\"><p>Front View</p>",
-			"<img src=\"img/Robotics/ENR153/Back.jpg\"><p>Rear View</p>",
-			"<img src=\"img/Robotics/ENR153/Inside.jpg\"><p>Inside View</p>",
-			"<img src=\"img/Robotics/ENR153/Gears.jpg\"><p>Gear Assembly</p>",
-			"<img src=\"img/Robotics/ENR153/Top.jpg\"><p>3D Printed Shell</p>",
-			"<img src=\"img/Robotics/ENR153/McLarenF1_Front.jpg\"><p>Model Front</p>",
-			"<img src=\"img/Robotics/ENR153/McLarenF1_Back.jpg\"><p>Model Rear</p>"
+			"<img src=\"img/Robotics/McLaren_F1/Front.jpg\"><p>Front View</p>",
+			"<img src=\"img/Robotics/McLaren_F1/Back.jpg\"><p>Rear View</p>",
+			"<img src=\"img/Robotics/McLaren_F1/Inside.jpg\"><p>Inside View</p>",
+			"<img src=\"img/Robotics/McLaren_F1/Gears.jpg\"><p>Gear Assembly</p>",
+			"<img src=\"img/Robotics/McLaren_F1/Top.jpg\"><p>3D Printed Shell</p>",
+			"<img src=\"img/Robotics/McLaren_F1/McLarenF1_Front.jpg\"><p>Model Front</p>",
+			"<img src=\"img/Robotics/McLaren_F1/McLarenF1_Back.jpg\"><p>Model Rear</p>"
 		],
 		"ENR157": [
 			"<img src=\"img/MCC/ENR157/UserInterface.png\"><p>User Interface</p>",
@@ -60,6 +65,13 @@ function ENR153() {
 	document.getElementById("course-extra").innerHTML = "";
 	ENR153Slides(ENR153SlideIndex);
 };
+
+var CampusSlideIndex = 1;
+function CampusSlides(n) {
+  if (n > albums["Campus"].length) {CampusSlideIndex = 1}
+  if (n < 1) {CampusSlideIndex = albums["Campus"].length}
+  document.getElementById("Slider").innerHTML = albums["Campus"][CampusSlideIndex-1];
+}
 
 var ENR153SlideIndex = 1;
 function ENR153Slides(n) {

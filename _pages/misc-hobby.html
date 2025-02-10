@@ -17,8 +17,8 @@ icon: light-bulb
             <div class="row">
 
 			  <div class="col-lg-4">
-                {% assign project_path = "img/Misc_Hobby/V-Arm" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Misc_Hobby/V-Arm" %}
+                {% capture block_description %}
                   A partial body immersion device for VR that enables users to physically engage with virtual
                   objects. It provides kinesthetic feedback by adjusting the user's arm in response to
                   interactions with virtual elements. This is accomplished through the use of air muscles;
@@ -27,16 +27,16 @@ icon: light-bulb
                 {% endcapture %}
                 {% include block.html %}
 
-                {% assign project_path = "img/Misc_Hobby/Cat_Tree" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Misc_Hobby/Cat_Tree" %}
+                {% capture block_description %}
                   I Made this cat tree for my brother and his cat Jimmy.
                 {% endcapture %}
                 {% include block.html %}
               </div>
 
 			  <div class="col-lg-4">
-                {% assign project_path = "img/Misc_Hobby/Wilmake" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Misc_Hobby/Wilmake" %}
+                {% capture block_description %}
                   Back when 3D printers were just coming out, I wanted to make one that would be more useful.
                   I attempted to create an interchangeable head so that it could also draw, laser engrave, mill,
                   and scan 3D objects. Not long after working on this project,
@@ -45,16 +45,16 @@ icon: light-bulb
                 {% endcapture %}
                 {% include block.html %}
 
-                {% assign project_path = "img/Misc_Hobby/Misc" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Misc_Hobby/Misc" %}
+                {% capture block_description %}
                   Some other miscellaneous projects such as my computer, a power supply, and my old 3D printer.
                 {% endcapture %}
                 {% include block.html %}
               </div>
 			  
 			  <div class="col-lg-4">
-                {% assign project_path = "img/Misc_Hobby/Ambilight" %}
-                {% capture project_description %}
+                {% assign images_dir = "img/Misc_Hobby/Ambilight" %}
+                {% capture block_description %}
                   An ambient lighting system that creates background lighting based on TV content. It is capable
                   of producing different shades, brightness, and intensities of color based upon frame content. I
                   used Rasplex to stream video from a raspberry pi and Hyperion to implement the lighting backdrop.

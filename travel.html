@@ -41,14 +41,16 @@ title: Travel
               <div class="col-lg-4">
                 {% assign first_places = places_unique | slice: 0, num_in_first %}
                 {% for place in first_places %}
-                  {% include travel_block.html %}
+                  {% assign images_dir = "img/Travel/" | append: place %}
+                  {% include block.html %}
                 {% endfor %}
               </div>  <!-- end col -->
 
               <div class="col-lg-4">
                 {% assign second_places = places_unique | slice: num_in_first, num_in_second %}
                 {% for place in second_places %}
-                  {% include travel_block.html %}
+                  {% assign images_dir = "img/Travel/" | append: place %}
+                  {% include block.html %}
                 {% endfor %}
               </div>  <!-- end col -->
 
@@ -56,7 +58,8 @@ title: Travel
                 {% assign end_of_second = num_in_first | plus: num_in_second %}
                 {% assign third_places = places_unique | slice: end_of_second, num_in_third %}
                 {% for place in third_places %}
-                  {% include travel_block.html %}
+                  {% assign images_dir = "img/Travel/" | append: place %}
+                  {% include block.html %}
                 {% endfor %}
               </div>  <!-- end col -->
 
@@ -66,6 +69,7 @@ title: Travel
 		{% include footer.html %}
       </div>
     </div>
-  <script src="../js/travel.js"></script>
+  <script>document.getElementById("header-text").innerHTML = "<a style='text-decoration: none' href='travel'>Travel</a>";</script>
+  <script src="../js/block.js"></script>
   </body>
 </html>
