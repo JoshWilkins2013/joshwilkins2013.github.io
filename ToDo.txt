@@ -20,3 +20,4 @@ Possible Enhancements:
 - Add skill proficiencies?
 - Animate things - image sliders, experience & education block refreshes, etc.
 - Formspree thanks redirect no longer exists on free plan
+- Add rounded edges to things

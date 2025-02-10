@@ -11,36 +11,34 @@ title: Contact
       {% include sidebar.html %}
 
 	  <div class="page-content">
-        <section>
-          <div class="container-fluid">
-            <form action="https://formspree.io/f/xbldajdn" method="POST">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div style="padding-top: 15px !important" class="block">
-                      <div style="color: #cc5200; display: flex; align-items:center; justify-content:center; position:relative; border-bottom: solid black 4px; margin-bottom:10px;">
-                        <h4> User Info </h4>
-                      </div>
-                      <div style="display: flex; flex-direction:column;">
-                        <div><label style="width: 20%" for="Name">Name</label><input style="width: 80%" id="Name" type="text" name="Name" required class="input-material"><br></div>
-                        <div><label style="width: 20%" for="Email">Email</label><input style="width: 80%" id="Email" type="text" name="Email" required class="input-material"><br></div>
-                        <div><label style="width: 20%" for="PhoneNumber">Phone</label><input style="width: 80%" id="PhoneNumber" type="text" name="PhoneNumber" required class="input-material"><br></div>
-                      </div>
+        <div class="container-fluid">
+          <form action="https://formspree.io/f/xbldajdn" method="POST">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div style="padding-top: 15px !important" class="block">
+                    <div style="color: #cc5200; display: flex; align-items:center; justify-content:center; position:relative; border-bottom: solid black 4px; margin-bottom:10px;">
+                      <h4> User Info </h4>
                     </div>
-                  </div>
-
-                  <div class="col-sm-8">
-                    <div style="padding-top: 20px !important" class="block">
-                      <textarea rows="8" class="form-control" name="Message" placeholder="Message" id="Message" required data-validation-required-message="Please enter a message."></textarea>
-                      <br><button type="submit" value="Send">Send Message</button>
+                    <div style="display: flex; flex-direction:column;">
+                      <div><label style="width: 20%" for="Name">Name</label><input style="width: 80%" id="Name" type="text" name="Name" required class="input-material"><br></div>
+                      <div><label style="width: 20%" for="Email">Email</label><input style="width: 80%" id="Email" type="text" name="Email" required class="input-material"><br></div>
+                      <div><label style="width: 20%" for="PhoneNumber">Phone</label><input style="width: 80%" id="PhoneNumber" type="text" name="PhoneNumber" required class="input-material"><br></div>
                     </div>
                   </div>
                 </div>
 
-              <input type="text" name="_gotcha" style="display:none" />
-              <input type="hidden" name="_next" value="thanks" />
-            </form>
-          </div>
-        </section>
+                <div class="col-sm-8">
+                  <div style="padding-top: 20px !important" class="block">
+                    <textarea rows="8" class="form-control" name="Message" placeholder="Message" id="Message" required data-validation-required-message="Please enter a message."></textarea>
+                    <br><button type="submit" value="Send">Send Message</button>
+                  </div>
+                </div>
+              </div>
+
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_next" value="thanks" />
+          </form>
+        </div>
         {% include footer.html %}
       </div>
     </div>

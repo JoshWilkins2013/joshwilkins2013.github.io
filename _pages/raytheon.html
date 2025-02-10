@@ -12,77 +12,72 @@ icon: dashboard
       {% include sidebar.html %}
 
       <div class="page-content">
-        <section>
-          <div class="container-fluid">
-			<div class="row">
-			  <div class="col-lg-5">
-                <div class="block">
-                  <h4 style="color:#8a8d93" class="block-header">
-                    <span style="float:left"> Sr RF Engineer I </span>
-                    <span>&nbsp;</span>
-                    <span class="block-subheader" style="float:right"> 03/21/20 - 03/24/23 </span>
-                  </h4>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="block">
+                <h4 style="color:#8a8d93" class="block-header">
+                  <span style="float:left"> Sr RF Engineer I </span>
+                  <span>&nbsp;</span>
+                  <span class="block-subheader" style="float:right"> 03/21/20 - 03/24/23 </span>
+                </h4>
 
-                  <table class="table table-striped table-sm">
-                    <tbody>
-                      <tr onclick="CSM()">
-                        <th style="color:#cc5200">Synthesizer Module</th>
-                      </tr>
-                      <tr onclick="LBR()">
-                        <th style="color:#cc5200">L-Band Receiver</th>
-                      </tr>
-                      <tr onclick="XLC()">
-                        <th style="color:#cc5200" class="t_closed">X-L Band Converter</th>
-                      </tr>
+                <table class="table table-striped table-sm">
+                  <tbody>
+                    <tr onclick="CSM()">
+                      <th style="color:#cc5200">Synthesizer Module</th>
+                    </tr>
+                    <tr onclick="LBR()">
+                      <th style="color:#cc5200">L-Band Receiver</th>
+                    </tr>
+                    <tr onclick="XLC()">
+                      <th style="color:#cc5200" class="t_closed">X-L Band Converter</th>
+                    </tr>
 <!--					  <tr onclick="ADS()">-->
 <!--                        <th style="color:#cc5200">Keysight ADS</th>-->
 <!--                      </tr>-->
 <!--                      <tr onclick="Filters()">-->
 <!--                        <th style="color:#cc5200">Filter Design</th>-->
 <!--                      </tr>-->
-					</tbody>
-                  </table>
-                </div>
+                  </tbody>
+                </table>
               </div>
-			  <div class="col-lg-7">
-			    <div class="block">
-                  <div class="expander"><i class="fas fa-plus-square"></i></div>
-                  <div id="details-title" class=""><h4 style="color:#cc5200">Intelligence & Space</h4></div>
-                  <div id="details-subtitle"><h6 style="color:#FFFFFF"></h6></div>
-                  <div id="details-description">
+            </div>
+            <div class="col-lg-7">
+              <div class="block">
+                <div class="expander"><i class="fas fa-plus-square"></i></div>
+                <div id="details-title" class=""><h4 style="color:#cc5200">Intelligence & Space</h4></div>
+                <div id="details-subtitle"><h6 style="color:#FFFFFF"></h6></div>
+                <div id="details-description">
 
-                    <p>
-                      A few years after my time at Microchip, I was presented with an interesting opportunity.
-                      The Director of Engineering, who had recently decided to leave the company, personally reached
-                      out to me about joining him at Raytheon. The offer included a salary increase of over 30%,
-                      and the work would be more RF-focused, which piqued my interest at the time. Having not
-                      received a raise since starting at Microchip, the offer was an easy decision.<br><br>
+                  <p>
+                    A few years after my time at Microchip, I was presented with an interesting opportunity.
+                    The Director of Engineering, who had recently decided to leave the company, personally reached
+                    out to me about joining him at Raytheon. The offer included a salary increase of over 30%,
+                    and the work would be more RF-focused, which piqued my interest at the time. Having not
+                    received a raise since starting at Microchip, the offer was an easy decision.<br><br>
 
-                      This specific branch of Raytheon was in Marlborough, MA, which was about an hour away from
-                      my home at the time. To make the commute easier, I decided to relocate to Framingham, MA.
-                      Coincidentally, this was around the time COVID-19 had begun to emerge, and after receiving
-                      my laptop on my first day, I ended up working remotely almost exclusively,
-                      never needing to go into the office.<br>
-                    </p>
+                    This specific branch of Raytheon was in Marlborough, MA, which was about an hour away from
+                    my home at the time. To make the commute easier, I decided to relocate to Framingham, MA.
+                    Coincidentally, this was around the time COVID-19 had begun to emerge, and after receiving
+                    my laptop on my first day, I ended up working remotely almost exclusively,
+                    never needing to go into the office.<br>
+                  </p>
 
-  				    <div class="slideshow-container">
-                      <div id="RaytheonSlider" class="mySlides"></div>
-                      <a class="prev" onclick="RaytheonSlides(RaytheonSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                      <a class="next" onclick="RaytheonSlides(RaytheonSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-                    </div>
-
+                  <div class="slideshow-container">
+                    <div id="RaytheonSlider" class="mySlides"></div>
+                    <a class="prev" onclick="RaytheonSlides(RaytheonSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="RaytheonSlides(RaytheonSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
                   </div>
+
                 </div>
               </div>
             </div>
           </div>
-        </section>
-
+        </div>
         {% include footer.html %}
-
       </div>
     </div>
   <script src="js/raytheon.js"></script>
-
   </body>
 </html>

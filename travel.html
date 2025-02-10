@@ -8,64 +8,62 @@ title: Travel
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
       <div class="page-content">
-        <section id="travel_blocks">
-          <div class="container-fluid">
-            <!-- Get all folder names in img/travel folder -->
-            {% capture folder_names %}
-              {% for file in site.static_files %}
-                {% if file.path contains 'img/Travel' %}
-                  {{file.path | split: "/" | slice: -2 }}
-                {%endif%}
-              {%endfor%}
-            {%endcapture%}
+        <div class="container-fluid">
+          <!-- Get all folder names in img/travel folder -->
+          {% capture folder_names %}
+            {% for file in site.static_files %}
+              {% if file.path contains 'img/Travel' %}
+                {{file.path | split: "/" | slice: -2 }}
+              {%endif%}
+            {%endfor%}
+          {%endcapture%}
 
-            <!-- Determine number of unique places and how many places per column -->
-            {% assign places_array = folder_names | split: " " %}
-            {% assign places_unique = places_array | uniq %}
-            {% assign num_places = places_unique | size %}
-            {% assign num_per_col = num_places | divided_by: 3 %}
-            {% assign remainder = num_places | modulo: 3 %}
+          <!-- Determine number of unique places and how many places per column -->
+          {% assign places_array = folder_names | split: " " %}
+          {% assign places_unique = places_array | uniq %}
+          {% assign num_places = places_unique | size %}
+          {% assign num_per_col = num_places | divided_by: 3 %}
+          {% assign remainder = num_places | modulo: 3 %}
 
-            <!-- Division rounds down, need to add remainders to first/second columns -->
-            {% assign num_in_first = num_per_col%}
-            {% assign num_in_second = num_per_col%}
-            {% assign num_in_third = num_per_col%}  <!-- This is always num_places / 3 -->
-            {% if remainder == 1 %}
-              {% assign num_in_first = num_per_col | plus: 1%}
-            {% elsif remainder == 2 %}
-              {% assign num_in_first = num_per_col | plus: 1 %}
-              {% assign num_in_second = num_per_col | plus: 1 %}
-            {% endif %}
+          <!-- Division rounds down, need to add remainders to first/second columns -->
+          {% assign num_in_first = num_per_col%}
+          {% assign num_in_second = num_per_col%}
+          {% assign num_in_third = num_per_col%}  <!-- This is always num_places / 3 -->
+          {% if remainder == 1 %}
+            {% assign num_in_first = num_per_col | plus: 1%}
+          {% elsif remainder == 2 %}
+            {% assign num_in_first = num_per_col | plus: 1 %}
+            {% assign num_in_second = num_per_col | plus: 1 %}
+          {% endif %}
 
-            <div class="row">
-              <div class="col-lg-4">
-                {% assign first_places = places_unique | slice: 0, num_in_first %}
-                {% for place in first_places %}
-                  {% assign images_dir = "img/Travel/" | append: place %}
-                  {% include block.html %}
-                {% endfor %}
-              </div>  <!-- end col -->
+          <div class="row">
+            <div class="col-lg-4">
+              {% assign first_places = places_unique | slice: 0, num_in_first %}
+              {% for place in first_places %}
+                {% assign images_dir = "img/Travel/" | append: place %}
+                {% include block.html %}
+              {% endfor %}
+            </div>  <!-- end col -->
 
-              <div class="col-lg-4">
-                {% assign second_places = places_unique | slice: num_in_first, num_in_second %}
-                {% for place in second_places %}
-                  {% assign images_dir = "img/Travel/" | append: place %}
-                  {% include block.html %}
-                {% endfor %}
-              </div>  <!-- end col -->
+            <div class="col-lg-4">
+              {% assign second_places = places_unique | slice: num_in_first, num_in_second %}
+              {% for place in second_places %}
+                {% assign images_dir = "img/Travel/" | append: place %}
+                {% include block.html %}
+              {% endfor %}
+            </div>  <!-- end col -->
 
-              <div class="col-lg-4">
-                {% assign end_of_second = num_in_first | plus: num_in_second %}
-                {% assign third_places = places_unique | slice: end_of_second, num_in_third %}
-                {% for place in third_places %}
-                  {% assign images_dir = "img/Travel/" | append: place %}
-                  {% include block.html %}
-                {% endfor %}
-              </div>  <!-- end col -->
+            <div class="col-lg-4">
+              {% assign end_of_second = num_in_first | plus: num_in_second %}
+              {% assign third_places = places_unique | slice: end_of_second, num_in_third %}
+              {% for place in third_places %}
+                {% assign images_dir = "img/Travel/" | append: place %}
+                {% include block.html %}
+              {% endfor %}
+            </div>  <!-- end col -->
 
-            </div>  <!-- end row -->
-          </div>
-        </section>
+          </div>  <!-- end row -->
+        </div>
 		{% include footer.html %}
       </div>
     </div>

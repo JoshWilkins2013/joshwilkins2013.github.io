@@ -12,11 +12,6 @@ body {
   caret-color: red;
 }
 
-section {
-  padding: 0 15px;
-  margin-top: 20px;
-}
-
 a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -60,8 +55,17 @@ i[class*='icon-'] {
   transform: translateY(2px);
 }
 
-.col-lg-4 {
+[class^='col-lg'] {
+  padding: 0 10 0 10;
   transition: all 1s;
+}
+
+.container-fluid {
+  padding: 20 10 0 10;
+}
+
+.row {
+  margin: 0;
 }
 
 iframe {
@@ -107,21 +111,6 @@ a.text-primary:focus, a.text-primary:hover {
 ::-webkit-resizer { background-color: #666;}
 
 /* ========================================================== */
-/*     Autofill
-/* ========================================================== */
-@-webkit-keyframes autofill {
-    to {
-        color: #666;
-        background: transparent;
-    }
-}
-
-input:-webkit-autofill {
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
-}
-
-/* ========================================================== */
 /*     FOOTER
 /* ========================================================== */
 .footer {
@@ -165,4 +154,20 @@ button:hover {
 button:focus {
   outline: none;
   color: #000000;
+}
+
+/* ========================================================== */
+/*     404 Page
+/* ========================================================== */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20;
+  right: 20;
+  bottom: 20;
+  top: 20;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
 }
