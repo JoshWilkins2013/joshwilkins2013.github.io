@@ -1,5 +1,5 @@
 .block {
-  padding: 20 20 20 20;
+  padding: 15 20 15 20;
   background: #2d3035;
   color: #8a8d93;
   margin-bottom: 30px;
@@ -20,7 +20,6 @@
   font-size: 0.95rem;
 }
 
-
 .block-header {
   color: #cc5200;
   padding-bottom: .2em;
@@ -33,16 +32,13 @@
   font-size: .65em;
 }
 
-.project {
-    padding: 0 20 20 20 !important;
+.details-title {
+  margin-bottom: 0;
 }
 
 @media (max-width: 991px) {
   .expander {
     display: none;
-  }
-  .project {
-    padding: 20 20 20 20 !important;
   }
 }
 
@@ -140,13 +136,14 @@
 .expander {
   position: relative;
   text-align: right;
-  height: 15px;
+  height: 0px;
 }
 
 .expander i {
   cursor: pointer;
   position: absolute;
-  right: -20;
+  right: -15;
+  top: -10;
   font-size: 25px;
   padding: 5px;
   color: #cc5200;

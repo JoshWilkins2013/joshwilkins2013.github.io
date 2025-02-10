@@ -1,0 +1,20 @@
+textarea {
+  background: #E5E4E2 !important;
+  color: black !important;
+}
+
+textarea:focus {
+  border: 3px solid #cc5200 !important;
+}
+
+input.input-material {
+  width:80%;
+  background: #E5E4E2;
+  color: black;
+  padding: 2 2 0 5;
+  margin-bottom: 10;
+}
+
+input.input-material:focus {
+  border: 3px solid #cc5200;
+}

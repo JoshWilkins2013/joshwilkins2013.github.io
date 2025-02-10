@@ -5,7 +5,6 @@ function LifeAtDSU() {
     classes at Dakota State University (DSU)."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Life at DSU</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function INFS762() {
@@ -32,7 +31,6 @@ function INFS772() {
 	and implementing analytics algorithms using Python."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Programming for Data Analytics</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function INFS774() {
@@ -45,7 +43,6 @@ function INFS774() {
 	and communication of analytical results."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Big Data Analytics</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function STAT700() {
@@ -61,7 +58,6 @@ function STAT700() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Statistical Programming</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function STAT700_Report() {
@@ -78,7 +74,6 @@ function STAT701() {
 	and large-scale inference."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Applied Statistics I</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function STAT702() {
@@ -88,7 +83,6 @@ function STAT702() {
 	with an overview of statistical prediction analysis relevant to business intelligence and analytics."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Applied Statistics II</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function INFS768() {
@@ -101,7 +95,6 @@ function INFS768() {
 	emphasized. Utilization of predictive analytics software is incorporated."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Predictive Analytics for Decision Making</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function INFS770() {
@@ -113,7 +106,6 @@ function INFS770() {
 	delivering the findings to an audience in an effective manner. Utilization of predictive analysis software is incorporated."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Advanced Data Mining Applications</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function ECON730() {
@@ -126,7 +118,6 @@ function ECON730() {
     and the introduction of software tools that enhance the summary and presentation of economic information in a professional setting."
     document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Economics For Decision Making</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 }
 
 function BADM712() {
@@ -139,5 +130,4 @@ function BADM712() {
     investment opportunities, and make informed financial decisions in a rapidly changing business environment."
     document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Advanced Business Finance</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 }

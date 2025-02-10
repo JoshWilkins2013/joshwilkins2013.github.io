@@ -62,7 +62,6 @@ function ENR153() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Graphing & Machining</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 	ENR153Slides(ENR153SlideIndex);
 };
 
@@ -102,7 +101,6 @@ function ENR157() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\"><h5 style=\"color:#cc5200\">Digital Electronics & Microcontrollers</h5></h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 	ENR157Slides(ENR157SlideIndex);
 };
 
@@ -134,7 +132,6 @@ function ENR161() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Engineering Computing I</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 	ENR161Slides(ENR161SlideIndex);
 };
 
@@ -169,7 +166,6 @@ function ENR251() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Statics</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 	ENR251Slides(ENR251SlideIndex);
 };
 
@@ -195,7 +191,6 @@ function ENR253() {
 	electrical engineering, electronics, and related fields."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Circuit Analysis I</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function ENR254() {
@@ -217,7 +212,6 @@ function ENR254() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Circuit Analysis II</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 	ENR254Slides(ENR254SlideIndex);
 };
 
@@ -243,7 +237,6 @@ function ENR256() {
 	in using analytical tools and computational methods for material analysis."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Mechanics of Materials</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function ENR259() {
@@ -252,7 +245,6 @@ function ENR259() {
 	keep an engineering notebook, submit a weekly time sheets, create a final design report, and make a final oral presentation."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Engineering Design Lab</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function ENR261() {
@@ -263,7 +255,6 @@ function ENR261() {
 	to handle the program inputs, solution options and outputs."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Engineering Computing II</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MTH211() {
@@ -276,7 +267,6 @@ function MTH211() {
 	physics, engineering, and other technical fields."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Calculus II</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MTH212() {
@@ -289,7 +279,6 @@ function MTH212() {
 	technical disciplines, providing the mathematical foundation for analyzing complex systems in multiple dimensions."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Calculus III</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MTH220() {
@@ -301,7 +290,6 @@ function MTH220() {
 	science. This course is essential for students pursuing careers in mathematics, computer science, and engineering."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Discrete Mathematics</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MTH225() {
@@ -312,7 +300,6 @@ function MTH225() {
 	phase lines, phase planes, and slope fields."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Differential Equations</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MTH230() {
@@ -325,7 +312,6 @@ function MTH230() {
 	skills needed to apply linear algebra concepts to real-world scenarios."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Linear Algebra</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function CHE151() {
@@ -335,7 +321,6 @@ function CHE151() {
 	an in-depth treatment of atomic structure, periodicity, and chemical bonding; phase relationships."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">General College Chemistry I</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function PHY161() {
@@ -348,7 +333,6 @@ function PHY161() {
 	physical sciences, and related fields."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">University Physics I</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function PHY261() {
@@ -361,7 +345,6 @@ function PHY261() {
 	and other technical fields."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">University Physics II</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function PHY262() {
@@ -374,7 +357,6 @@ function PHY262() {
 	providing a foundation for understanding the modern technological world."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Physics</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function CSC202() {
@@ -384,5 +366,4 @@ function CSC202() {
 	to be completed outside of class and in lab. A final project and student presentation are required."
 	document.getElementById("course-description").innerHTML = description;
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Embedded C & Assembly</h5>";
-	document.getElementById("course-extra").innerHTML = "";
 };

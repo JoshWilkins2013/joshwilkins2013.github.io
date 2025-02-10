@@ -5,7 +5,6 @@ function RIT_Transcript() {
 	var title = "<h5 style=\"color:#cc5200\">Transcript</h5>";
 	document.getElementById("course-title").innerHTML = title;
     document.getElementById("course-description").innerHTML = description;
-    document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE220() {
@@ -20,7 +19,6 @@ function EEEE220() {
 	a background in C programming."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Digital Systems II</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE260() {
@@ -31,7 +29,6 @@ function EEEE260() {
 	metal-oxide-semiconductor (MOS) capacitors and MOS field-effect transistors."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Intro to Semiconductor Devices</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE346() {
@@ -41,7 +38,6 @@ function EEEE346() {
 	have the working knowledge of C++. Projects will be assigned to build your C++ programming skills."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Advanced Programming</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE353() {
@@ -62,7 +58,6 @@ function EEEE353() {
 	Response (IIR) filters is introduced."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Linear Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE374() {
@@ -82,7 +77,6 @@ function EEEE374() {
 	projects with state-of-art EM modeling tools."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">EM Fields & Transmission Lines</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE381() {
@@ -99,7 +93,6 @@ function EEEE381() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Electronics I</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE381_Report() {
@@ -123,7 +116,6 @@ function EEEE414() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Classical Control</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE414_Report() {
@@ -141,7 +133,6 @@ function EEEE482() {
 	CMOS logic networks, and advanced topics such as dynamic CMOS logic, memory, and low-power logic techniques."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Electronics II</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE483() {
@@ -153,7 +144,6 @@ function EEEE483() {
 	with practical case studies to reinforce learning."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Mechatronics</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE484() {
@@ -169,7 +159,6 @@ function EEEE484() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Communication Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE484_Report() {
@@ -191,7 +180,6 @@ function EEEE485() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Robotic Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE485_Report() {
@@ -212,7 +200,6 @@ function EEEE497() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Senior Design Project I</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE498() {
@@ -228,7 +215,6 @@ function EEEE498() {
     </div>"
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Senior Design Project II</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE498_Report() {
@@ -246,7 +232,6 @@ function EEEE579() {
 	filter network design; frequency dependent negative resistance networks; switched capacitor filters."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Analog Filter Design</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE593() {
@@ -257,7 +242,6 @@ function EEEE593() {
 	concepts such as multipath fading channels, spread spectrum, and OFDM."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Digital Data Communication</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE661() {
@@ -270,7 +254,6 @@ function EEEE661() {
 	observers and their realizations."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Modern Control Theory</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function EEEE663() {
@@ -287,7 +270,6 @@ function EEEE663() {
 	priority inversion, and hardware-software co-design."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">RTOS & Embedded Systems</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MATH326() {
@@ -301,7 +283,6 @@ function MATH326() {
 	critical role in problem-solving."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Boundary Value Problems</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MATH381() {
@@ -313,7 +294,6 @@ function MATH381() {
 	Emphasis is placed on both theoretical understanding and practical problem-solving using complex function theory."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Complex Variables</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
 
 function MATH441() {
@@ -326,5 +306,4 @@ function MATH441() {
 	theory, and symmetry."
 	document.getElementById("course-title").innerHTML = "<h5 style=\"color:#cc5200\">Abstract Algebra</h5>";
 	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-extra").innerHTML = "";
 };
