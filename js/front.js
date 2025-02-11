@@ -60,7 +60,7 @@ $(function () {
     // ------------------------------------------------------- //
     // Expanding Blocks
     // ------------------------------------------------------ //
-    $('i').on('click', function () {
+    $('.fa-plus-square').on('click', function () {
         var current_block = $(this).closest(".block");  // Find block associated with clicked +
 
         $(".block").not(current_block).toggle().promise().then(function() {

@@ -1,7 +1,7 @@
 General:
 - Move descriptions into json files?
 - Sidebar collapses before next page loads sometimes
-- Fix image names for captions
+- Add sort order to block images?
 - Use Block for education and experience somehow - this should fix layout issues
 - Fix Footer to span entire bottom?
     - Footer animation broken, add contact button, site map, etc.
