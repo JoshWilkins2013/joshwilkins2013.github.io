@@ -23,7 +23,7 @@ function MeSlides(n) {
 
 function Resume() {
 	var description = "<iframe src=\"Storage\\Home\\Resume.pdf#toolbar=0&view=FitH\" style=\"width: 75%;border: none;\"></iframe>"
-	var title = "<h3 class=\"block-header\">R&eacutesum&eacute</h3>";
+	var title = "R&eacutesum&eacute";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-description").innerHTML = description;
 };

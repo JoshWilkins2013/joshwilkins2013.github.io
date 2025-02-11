@@ -5,11 +5,15 @@
 .table td,
 .table th {
   color: #8a8d93;
-  border-color: #494d53;
+  border-color: black;
 }
 
 .table thead th {
-  border: none;
+  border-bottom: 1px solid  #8a8d93;
+}
+
+.first-row th {
+  border-top: none;
 }
 
 .table-striped tbody tr {
@@ -17,9 +21,18 @@
   transition: all 0.3s;
 }
 
-tbody tr:hover {
-    cursor: pointer;
-    background-color: #000 !important;
+tr div {
+  padding: 0 0 2 4;
+}
+
+tr div:hover {
+  cursor: pointer;
+  background-color: #000 !important;
+}
+
+.normal-table tr:hover {
+  cursor: pointer;
+  background-color: #000 !important;
 }
 
 .row-unstyled:hover {
@@ -29,12 +42,4 @@ tbody tr:hover {
 
 .table-striped tbody tr:nth-of-type(odd) {
   background-color: #282b2f;
-}
-
-th div:hover {
-  background-color: #000;
-}
-
-tbody .t_open:hover {
-  background-color: #282b2f !important;
 }
