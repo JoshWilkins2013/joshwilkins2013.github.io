@@ -22,9 +22,9 @@ icon: dashboard
                 </h4>
                 <table class="table table-striped table-sm">
                   <tbody>
-                    <tr class="t_closed">
-                      <th style="color:#cc5200" class="t_closed">
-                        <div onclick="TestSuite()">Broadsim Automated Test Suite ⬎</div>
+                    <tr>
+                      <th style="color:#cc5200">
+                        <div class="expandable-row" onclick="TestSuite()">Broadsim Automated Test Suite ⬎</div>
                         <ul class="collapse" style="margin-bottom:0">
                           <li style="color:#8a8d93" onclick="ReportGeneration()"><div>Report Generation</div></li>
                           <li style="color:#8a8d93" onclick="MetricDefinition()"><div>Metric Definition</div></li>
@@ -33,19 +33,19 @@ icon: dashboard
                       </th>
                     </tr>
 
-                    <tr class="t_closed">
-                      <th style="color:#cc5200" class="t_closed">
-                        <div onclick="Wavefront_Enhancement()">Broadsim Wavefront Enhancements ⬎</div>
-                        <ul class="collapse" style="margin-bottom:0">
+                    <tr>
+                      <th style="color:#cc5200">
+                        <div class="expandable-row" onclick="Wavefront_Enhancement()">Broadsim Wavefront Enhancements ⬎</div>
+                        <ul class="collapse" style="margin-bottom: 0px;">
                           <li style="color:#8a8d93" onclick="Shared_LO()"><div>Shared LO Architecture</div></li>
                           <li style="color:#8a8d93" onclick="Environmental_Compensation()"><div>Environmental Compensation</div></li>
                           <li style="color:#8a8d93" onclick="Calibration_Procedures()"><div>Calibration Enhancements</div></li>
                         </ul>
                       </th>
                     </tr>
-<!--                      <tr class="t_closed">-->
-<!--                        <th style="color:#cc5200" class="t_closed">-->
-<!--                          <div onclick="Research()">Research and Development ⬎</div>-->
+<!--                      <tr>-->
+<!--                        <th style="color:#cc5200">-->
+<!--                          <div class="expandable-row" onclick="Research()">Research and Development ⬎</div>-->
 <!--                          <ul class="collapse" style="margin-bottom:0">-->
 <!--                            <li style="color:#8a8d93" onclick="ZIF()"><div>Zero IF</div></li>-->
 <!--                            <li style="color:#8a8d93" onclick="Pentek()"><div>Small Form-Factor SDRs</div></li>-->
@@ -58,9 +58,8 @@ icon: dashboard
             </div>
             <div class="col-lg-7">
               <div class="block">
-                <div class="expander"><i class="fas fa-plus-square"></i></div>
-                <div id="details-title"><h4 class="block-header">Federal Systems</h4></div>
-                <div id="details-subtitle"><h6 style="margin-top: 8px; color:#FFFFFF"></h6></div>
+                <div class="block-header"><h4 id="details-title">Federal Systems</h4><i class="fas fa-plus-square"></i></div>
+                <div><h6 id="details-subtitle" style="margin-top: 8px; color:#FFFFFF"></h6></div>
                 <div id="details-description">
 
                   <p>

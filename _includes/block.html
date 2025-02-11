@@ -1,10 +1,9 @@
 <link rel="stylesheet" href="css/block.css" id="theme-stylesheet">
 
 <div class="block">
-  <div class="expander"><i class="fas fa-plus-square"></i></div>
   {% assign block_title = images_dir | split: "/" | last %}
 
-  <h4 class="block-header" id="Block_Title"> {{ block_title | replace: "_", " "}}</h4>
+  <h4 class="block-header" id="Block_Title"> {{ block_title | replace: "_", " "}}<i class="fas fa-plus-square"></i></h4>
 
   <div id="{{block_title | append: '_Content'}}">
     <p id="{{block_title | append: '_Description'}}" style="margin: 4 0 10 0;">{{block_description}}</p>

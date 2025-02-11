@@ -24,7 +24,7 @@ function SafranSlides(n) {
 }
 
 function TestSuite() {
-	var description = "	I developed and fully automated a comprehensive suite of test procedures to validate the \
+    var description = "	I developed and fully automated a comprehensive suite of test procedures to validate the \
 	RF performance of the entire Broadsim product line. The system was designed to support the testing of all \
 	existing products as well as any new radios that could potentially be installed or used in future designs. \
 	It also generated extremely detailed reports with consistent formatting and it highlighted key performance \
@@ -33,7 +33,7 @@ function TestSuite() {
 	of an accurate and competitive specification sheet, making it easier for consumers to compare our \
 	product with others. This initiative had a significant financial impact, influencing multi-million \
 	dollar sales.<br><br>"
-	var title = "<h4 class=\"block-header\">Broadsim Automated Test Suite</h4>";
+	var title = "Broadsim Automated Test Suite";
 	var subtitle = "";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -51,8 +51,8 @@ function MetricDefinition() {
 	developed and submitted a paper to IEEE to help clarify these metrics, raise awareness of the issue, and \
 	demonstrate how some of these tests could be conducted without relying on expensive equipment.<br><br>\
 	<button type=\"submit\" class=\"submit\"><a onclick=\"IEEE_Report()\" href=\"javascript:;\">Intra-Signal Metrics</a></button>"
-	var title = "<h4 class=\"block-header\">Broadsim Automated Test Suite</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Metric Definition</h6>";
+	var title = "Broadsim Automated Test Suite";
+	var subtitle = "Metric Definition";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -79,8 +79,8 @@ function ReportGeneration() {
 	shipment and provided a more accurate representation of each unit\'s performance, as opposed to relying \
 	on a generic spec sheet. Below is an example of one of these reports, with the PDF organized by metric.<br><br>\
 	<button type=\"submit\" class=\"submit\"><a onclick=\"WF_Report()\" href=\"javascript:;\">Example Report</a></button>"
-	var title = "<h4 class=\"block-header\">Broadsim Automated Test Suite</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Report Generation</h6>";
+	var title = "Broadsim Automated Test Suite";
+	var subtitle = "Report Generation";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -102,8 +102,8 @@ function InstrumentAutomation() {
 	well and there is a loose instrument control standard using PyVISA and SCPI commands. I leveraged these \
 	foundations to develop generic product and instrument libraries capable of interacting with and control most \
 	of our products and test equipment.<br><br>"
-	var title = "<h4 class=\"block-header\">Broadsim Automated Test Suite</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Automating Hardware</h6>";
+	var title = "Broadsim Automated Test Suite";
+	var subtitle = "Automating Hardware";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -120,7 +120,7 @@ function Wavefront_Enhancement() {
 	I updated the real-time phase calibration process to compensate for inter-element phase drift and temperature \
 	variations. After all improvements were made, the Broadsim Wavefront could be fully aligned to within 0.25 degrees \
 	over time, temperature, power, and frequency with a phase stability of 0.1 degrees!<br><br>"
-	var title = "<h4 class=\"block-header\">Broadsim Wavefront Enhancements</h4>";
+	var title = "Broadsim Wavefront Enhancements";
 	var subtitle = "";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -137,8 +137,8 @@ function Shared_LO() {
     phase alignment improved by a factor of three, and phase stability improved by a factor of ten. As a result, \
 	the Broadsim Wavefront was able to align the output of eight different radios to within 0.5 degrees, with \
 	inter-element phase stability of less than 0.1 degrees.<br><br>"
-	var title = "<h4 class=\"block-header\">Broadsim Wavefront Enhancements</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Shared LO Architecture</h6>";
+	var title = "Broadsim Wavefront Enhancements";
+	var subtitle = "Shared LO Architecture";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -164,8 +164,8 @@ function Environmental_Compensation() {
 	changes to the Wavefront, enabling a more refined compensation algorithm. As a result, the system was able \
 	to phase-align all radio outputs to within ±0.25 degrees over both temperature and time, even during runs \
 	lasting several days.<br><br>"
-	var title = "<h4 class=\"block-header\">Broadsim Wavefront Enhancements</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Environmental Compensation</h6>";
+	var title = "Broadsim Wavefront Enhancements";
+	var subtitle = "Environmental Compensation";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -179,8 +179,8 @@ function Calibration_Procedures() {
 	calibration, the Wavefront’s phase alignment was about ±8 degrees across frequency and power. After \
 	implementing the calibration process, this was improved to around ±0.25 degrees, representing a more \
 	than 32-fold improvement.<br><br>"
-	var title = "<h4 class=\"block-header\">Broadsim Wavefront Enhancements</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Calibration Enhancements</h6>";
+	var title = "Broadsim Wavefront Enhancements";
+	var subtitle = "Calibration Enhancements";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -191,7 +191,7 @@ function Calibration_Procedures() {
 //	and greatest Software Defined Radios (SDRs) currently available on the market or soon to be released. Some of \
 //	these included the (ADI one), the VProtean board from Vanteon in an M.2 form factor, and the 8-channel version \
 //	from Pentek."
-//	var title = "<h4 class=\"block-header\">Research and Development</h4>";
+//	var title = "Research and Development";
 //	var subtitle = "";
 //	document.getElementById("details-title").innerHTML = title;
 //    document.getElementById("details-subtitle").innerHTML = subtitle;
@@ -201,8 +201,8 @@ function Calibration_Procedures() {
 //function ZIF() {
 //	var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
 //	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
-//	var title = "<h4 class=\"block-header\">Research and Development</h4>";
-//	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Zero-IF</h6>";
+//	var title = "Research and Development";
+//	var subtitle = "Zero-IF";
 //	document.getElementById("details-title").innerHTML = title;
 //    document.getElementById("details-subtitle").innerHTML = subtitle;
 //    document.getElementById("details-description").innerHTML = description;
@@ -238,8 +238,8 @@ function Pentek() {
       <a class=\"prev\" onclick=\"PentekSlides(SafranSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"PentekSlides(SafranSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var title = "<h4 class=\"block-header\">Research and Development</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Small Form-Factor SDRs</h6>";
+	var title = "Research and Development";
+	var subtitle = "Small Form-Factor SDRs";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -247,7 +247,7 @@ function Pentek() {
 
 function PhaseCal() {
 	var description = ""
-	var title = "<h4 class=\"block-header\">Phase Calibration</h4>";
+	var title = "Phase Calibration";
 	var subtitle = "";
 	document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;

@@ -145,7 +145,7 @@ function Synthesizer() {
       <a class=\"prev\" onclick=\"SynthSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"SynthSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">12 GHz Synthesizer</h4>";
+    var title = "12 GHz Synthesizer";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
@@ -171,7 +171,7 @@ function Prototype() {
       <a class=\"prev\" onclick=\"ProtoSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"ProtoSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Full Scale Prototype</h6>";
+    var subtitle = "Full Scale Prototype";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -197,7 +197,7 @@ function OutputPower() {
       <a class=\"prev\" onclick=\"PowerSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"PowerSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Output Power Controller</h6>";
+	var subtitle = "Output Power Controller";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -231,7 +231,7 @@ function Boards() {
       <a class=\"prev\" onclick=\"PCBSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"PCBSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Associated Board Spins</h6>";
+    var subtitle = "Associated Board Spins";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -253,7 +253,7 @@ function TempDependence() {
 	dependency out.<br><br>\
 	<button type=\"submit\" class=\"submit\"><a onclick=\"TempDependenceAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>\
 	<img src=\"img/Microchip/Misc/DividerBox.png\" width=100%><p>Divider Box</p>"
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Temperature Dependency Testing</h6>";
+    var subtitle = "Temperature Dependency Testing";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -291,7 +291,7 @@ function Filters() {
       <a class=\"prev\" onclick=\"FilterSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"FilterSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Microstrip Filter Designs</h6>";
+	var subtitle = "Microstrip Filter Designs";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -316,7 +316,7 @@ function AtomicClock() {
     facilitated the enhancement and testing of temperature compensation algorithms and offered easy access \
     to plot specific datasets, such as board temperature and frequency.<br><br>\
     <img src=\"img/Microchip/AtomicClock/GUI.png\" width=75%><p>User Interface</p>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Atomic Clock GUI</h4>";
+    var title = "Atomic Clock GUI";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
@@ -343,7 +343,7 @@ function Aging() {
       <a class=\"prev\" onclick=\"AgingSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"AgingSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Predicting Long Term Aging Rates</h6>";
+	var subtitle = "Predicting Long Term Aging Rates";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -369,7 +369,7 @@ function ADev() {
       <a class=\"prev\" onclick=\"ADevSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"ADevSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Long Term ADev Rates</h6>";
+	var subtitle = "Long Term ADev Rates";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -396,7 +396,7 @@ function Tempco() {
       <a class=\"prev\" onclick=\"TempcoSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"TempcoSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Temperature Compensation</h6>";
+	var subtitle = "Temperature Compensation";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -433,7 +433,7 @@ function DataAnalysis() {
       <a class=\"prev\" onclick=\"DataSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"DataSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Data Analysis</h6>";
+	var subtitle = "Data Analysis";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -464,7 +464,7 @@ function Embedded() {
       <a class=\"prev\" onclick=\"BBBSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"BBBSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Real Time Embedded System</h4>";
+    var title = "Real Time Embedded System";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
@@ -490,7 +490,7 @@ function SPI() {
       <a class=\"prev\" onclick=\"SPISlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"SPISlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Generic SPI Communication Protocol</h6>";
+    var subtitle = "Generic SPI Communication Protocol";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -502,7 +502,7 @@ function AltPhaseNoise() {
 	step recovery diode.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>\
 	<iframe src=\"Storage/Microchip/AltPhaseNoiseMeasSys.html\" style=\"width: 100%;border: none;\"></iframe>"
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Phase Noise Measurement System</h6>";
+    var subtitle = "Phase Noise Measurement System";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -526,7 +526,7 @@ function AddPhase() {
       <a class=\"prev\" onclick=\"InjectSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"InjectSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div>"
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Phase Noise Profile Generator</h6>";
+    var subtitle = "Phase Noise Profile Generator";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
 };
@@ -557,8 +557,8 @@ function Quantization() {
       <a class=\"prev\" onclick=\"QuantizationSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
       <a class=\"next\" onclick=\"QuantizationSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
     </div><br><br>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Informative Presentations</h4>";
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Minimizing Quantization Error</h6>";
+    var title = "Informative Presentations";
+    var subtitle = "Minimizing Quantization Error";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -582,8 +582,8 @@ function Structures() {
 	useful methods associated with each data type. I also introduce more complex topics such as the concept of \
 	control flow, lambda functions, generators,	and exception handling.<br><br>\
 	<iframe src=\"Storage/Microchip/Structures.html\" style=\"width: 100%;border: none;\"></iframe>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Informative Presentations</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Python Data Structures</h6>";
+    var title = "Informative Presentations";
+	var subtitle = "Python Data Structures";
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-description").innerHTML = description;
@@ -596,8 +596,8 @@ function Jupyter() {
 	introduces Python, Jupyter, and Anaconda, offering useful references, installation guidance, and examples of \
 	Markdown, Python, and Magic commands..<br><br>\
 	<iframe src=\"Storage/Microchip/Jupyter.html\" style=\"width: 100%;border: none;\"></iframe>"
-	var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Informative Presentations</h4>";
-	var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Introduction to Jupyter</h6>";
+	var title = "Informative Presentations";
+	var subtitle = "Introduction to Jupyter";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -615,8 +615,8 @@ function AgileSync() {
 	a script using python and SQL that automatically updated both our schematics and parts database to ensure they\
 	remained aligned with the official documentation. While Agile offers a more feature-rich $500K solution, my\
 	script efficiently handled the task and kept everything in sync."
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Noteworthy Mentions</h4>";
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Agile Database Sync Tool</h6>";
+    var title = "Noteworthy Mentions";
+    var subtitle = "Agile Database Sync Tool";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -630,8 +630,8 @@ function Other() {
 	radiation testing at UC Davis and EMI radiation testing at Chomerics. I also designed a low-power synthesizer\
 	that prioritized energy efficiency over performance and integrated real instrument data into simulations for\
 	accuracy using Python and Jupyter Notebook.<br><br>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Noteworthy Mentions</h4>";
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">Secondary Job Functions</h6>";
+    var title = "Noteworthy Mentions";
+    var subtitle = "Secondary Job Functions";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;

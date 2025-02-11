@@ -49,21 +49,19 @@ $(function () {
     // ------------------------------------------------------- //
     // Table Collapsing Non-Active Items
     // ------------------------------------------------------ //
-    $('.t_closed').on('click', function () {
-        $('.t_open').find('ul').removeClass('show');
-        $('.t_open').addClass('t_closed');
-        $('.t_open').removeClass('t_open');
-
-        $(this).addClass('t_open');
-        $(this).removeClass('t_closed');
-        $(this).find('ul').addClass('show');
+    $('.expandable-row').on('click', function () {
+        var current_row = $(this).parent().find('ul');
+        if(current_row.css('display') == 'none'){
+            current_row.toggle();
+        }
+        $('.expandable-row').not(this).parent().find('ul').hide();
     });
 
     // ------------------------------------------------------- //
     // Expanding Blocks
     // ------------------------------------------------------ //
-    $('.fa-plus-square').on('click', function () {
-        var current_block = $(this).closest("div").parent();  // Find block associated with clicked +
+    $('i').on('click', function () {
+        var current_block = $(this).closest(".block");  // Find block associated with clicked +
 
         $(".block").not(current_block).toggle().promise().then(function() {
             current_block.parent().toggleClass('col-lg-12');  // Then enlarge it

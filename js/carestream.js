@@ -42,7 +42,7 @@ function Battery() {
 	<div id=\"battery_description\">\
 	  <img src=\"img\\Carestream\\SwitchedCaps.png\" width=50%>\
 	</div>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Battery Life Enhancement</h4>";
+    var title = "Battery Life Enhancement";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
@@ -66,8 +66,8 @@ function task11() {
 	the rate of discharge in each one of the batteries, plotted the results, and evaluated their performance. It was \
 	vital to understand existing behavior before any improvements to the system could be made.<br><br>\
 	<img src=\"img\\Carestream\\AGM.png\" width=50%>"
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Battery Life Enhancement</h4>";
-    var subtitle = "<h6 style=\"margin-top: 8px; color:#FFFFFF\">AGM Lead-Acid Battery Test Fixture</h6>";
+    var title = "Battery Life Enhancement";
+    var subtitle = "AGM Lead-Acid Battery Test Fixture";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = subtitle;
     document.getElementById("details-description").innerHTML = description;
@@ -88,7 +88,7 @@ function task13() {
     </div>"
     document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<h4 class=\"block-header\" style=\"color:#cc5200\">Digital X-Ray Cassettes</h4>";
+	document.getElementById("details-title").innerHTML = "Digital X-Ray Cassettes";
 };
 
 function task21() {
@@ -103,7 +103,7 @@ function task21() {
 	<img src=\"img\\Carestream\\Framework.png\" width=50%>"
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<h4 class=\"block-header\" style=\"color:#cc5200\">Automation Framework</h4>";
+	document.getElementById("details-title").innerHTML = "Automation Framework";
 };
 
 function task22() {
@@ -116,7 +116,7 @@ function task22() {
 	<img src=\"img\\Carestream\\Automation.png\" width=50%>"
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<h4 class=\"block-header\" style=\"color:#cc5200\">Communication</h4>";
+	document.getElementById("details-title").innerHTML = "Communication";
 };
 
 function task23() {
@@ -128,7 +128,7 @@ function task23() {
 	<img src=\"img\\Carestream\\TDD.png\" width=50%>"
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<h4 class=\"block-header\" style=\"color:#cc5200\">Agile</h4>";
+	document.getElementById("details-title").innerHTML = "Agile";
 };
 
 function task24() {
@@ -139,5 +139,5 @@ function task24() {
 	Test Lead shortly before my departure from Carestream."
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "<h4 class=\"block-header\" style=\"color:#cc5200\">Leadership / Management</strong>";
+	document.getElementById("details-title").innerHTML = "Leadership / Management";
 };

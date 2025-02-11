@@ -34,7 +34,7 @@ function CSM() {
     Choosing the right synthesizer architecture depends on factors such as required frequency range, signal \
     purity, cost constraints, and system complexity. My work on this synthesizer module involved evaluating these \
     factors and selecting the best approach to ensure reliable performance across multiple product applications."
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Synthesizer Module</h4>";
+    var title = "Synthesizer Module";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
@@ -50,7 +50,7 @@ function LBR() {
 	to the precise frequency of the incoming signal using specially designed filters. Since these signals are often \
 	encoded, the receiver also needs to demodulate them. The signals are then converted into usable data through \
 	Digital-to-Analog Converters (DACs), and the processed data is further interpreted or utilized on an FPGA."
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">L-Band Receiver</h4>";
+    var title = "L-Band Receiver";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
@@ -67,7 +67,7 @@ function XLC() {
 	the ground stations or receivers may be set up to work in the L-band. By converting the signal, you ensure \
 	smoother processing and compatibility between different systems. In some cases, the transmitted signals are \
 	out of your control, and in others, processing is simply more efficient at a particular frequency."
-    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">X-L Band Converter</h4>";
+    var title = "X-L Band Converter";
     document.getElementById("details-title").innerHTML = title;
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
@@ -75,7 +75,7 @@ function XLC() {
 
 //function ADS() {
 //	var description = ""
-//    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Keysight ADS</h4>";
+//    var title = "Keysight ADS";
 //    document.getElementById("details-title").innerHTML = title;
 //    document.getElementById("details-subtitle").innerHTML = "";
 //    document.getElementById("details-description").innerHTML = description;
@@ -83,7 +83,7 @@ function XLC() {
 //
 //function Filters() {
 //	var description = ""
-//    var title = "<h4 class=\"block-header\" style=\"color:#cc5200\">Filter Design</h4>";
+//    var title = "Filter Design";
 //    document.getElementById("details-title").innerHTML = title;
 //    document.getElementById("details-subtitle").innerHTML = "";
 //    document.getElementById("details-description").innerHTML = description;
