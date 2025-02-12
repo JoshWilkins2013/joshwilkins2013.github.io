@@ -69,6 +69,7 @@ i[class*='icon-'] {
 }
 
 iframe {
+  margin-top: 8px;
   min-height: 600px;
   border: 2px black solid;
 }

@@ -35,8 +35,6 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"mcc\"><img src=\"img/Banners/MCC_Banner.png\"></a>";
-
 function MCC_Transcript() {
 	var description = "<iframe src=\"Storage\\MCC\\Transcript.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
 	var title = "Transcript"

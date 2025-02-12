@@ -13,8 +13,6 @@ var albums = {
 			]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"safran\"><img src=\"img/Banners/Safran_Banner.png\"></a>";
-
 var SafranSlideIndex = 1;
 SafranSlides(SafranSlideIndex);
 function SafranSlides(n) {

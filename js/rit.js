@@ -1,5 +1,3 @@
-document.getElementById("header-text").innerHTML = "<a href=\"rit\"><img src=\"img/Banners/RIT_Banner.png\"></a>";
-
 function RIT_Transcript() {
 	var description = "<iframe src=\"Storage\\RIT\\Transcript.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
 	var title = "Transcript";

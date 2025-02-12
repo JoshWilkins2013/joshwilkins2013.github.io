@@ -7,7 +7,7 @@ function Slides(n, image_paths, name) {
   current_image_path = image_array[SlideIndex-1];
   current_image_name = current_image_path.split("/").at(-1).split(".")[0].replaceAll("_", " ");
   document.getElementById(name + "_Image").src = current_image_path;
-  if (!current_image_path.includes("img/Travel/")) {
+  if (!current_image_path.includes("img/Travel/") && !current_image_path.includes("img/About_Me/") ) {
     document.getElementById(name + "_Caption").innerHTML = current_image_name;  // Don't caption travel images
   }
 }

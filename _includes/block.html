@@ -3,7 +3,11 @@
 <div class="block">
   {% assign block_title = images_dir | split: "/" | last %}
 
-  <h4 class="block-header" id="Block_Title"> {{ block_title | replace: "_", " "}}<i class="fas fa-plus-square"></i></h4>
+  {% if images_dir contains "img/About_Me" %}
+    <h4 class="block-header" id="Block_Title"> {{ block_title | replace: "_", " "}}</h4>
+  {% else %}
+    <h4 class="block-header" id="Block_Title"> {{ block_title | replace: "_", " "}}<i class="fas fa-plus-square"></i></h4>
+  {% endif %}
 
   <div id="{{block_title | append: '_Content'}}">
     <p id="{{block_title | append: '_Description'}}" style="margin: 4 0 10 0;">{{block_description}}</p>
@@ -21,6 +25,8 @@
 
     {% if images_dir contains "img/Travel" %}
       {% assign first_caption = "" %}   <!-- Don't want to caption travel images -->
+    {% elsif images_dir contains "img/About_Me" %}
+      {% assign first_caption = "" %}   <!-- Don't want to caption pictures of me -->
     {% else %}
       {% assign first_caption = first_path | split: "/" | last | split: "." | first | replace: "_", " " %}
     {% endif %}

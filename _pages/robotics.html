@@ -7,10 +7,10 @@ icon: light-bulb
 <html>
   {% include head.html %}
   <body>
+    {% assign header-title = "Robotics Projects" %}
 	{% include header.html %}
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
-	  
       <div class="page-content">
         <div class="container-fluid">
           <div class="row">
@@ -72,6 +72,5 @@ icon: light-bulb
         {% include footer.html %}
       </div>
     </div>
-    <script>document.getElementById("header-text").innerHTML = "<a style='text-decoration: none' href='robotics'>Robotics Projects</a>";</script>
   </body>
 </html>

@@ -4,18 +4,14 @@ title: Thanks
 <html>
   {% include head.html %}
   <body>
+    {% assign header-title = "Thanks!" %}
 	{% include header.html %}
-
-	<div class="d-flex align-items-stretch">
-      {% include sidebar.html %}
-
-	  <div class="page-content">
-        <div style="background-color:#202124" class="not-found block">
-            <img src="img/Thanks.png" style="max-width: 100%; max-height: 100%" />
-        </div>
-        {% include footer.html %}
+    {% include sidebar.html %}
+    <div class="page-content">
+      <div style="background-color:#202124" class="not-found block">
+          <img src="img/Thanks.png" style="max-width: 100%; max-height: 100%" />
       </div>
+      {% include footer.html %}
     </div>
-  <script src="js/thanks.js"></script>
   </body>
 </html>

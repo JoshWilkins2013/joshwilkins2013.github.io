@@ -35,9 +35,9 @@
             {% assign items = cat.items | sort: 'order' %}
               {% for item in items %}
                 {% if item.url == page.url %}
-                  <li class="active"><a href="{{ item.title | slugify }}">{{ item.title }}</a></li>
+                  <li class="active"><a href="{{ item.title | slugify }}">{{ item.title | replace: "-", " "}}</a></li>
                 {% else %}
-                  <li><a href="{{ item.title | slugify }}">{{ item.title }}</a></li>
+                  <li><a href="{{ item.title | slugify }}">{{ item.title | replace: "-", " "}}</a></li>
                 {% endif %}
               {% endfor %}
           </ul>

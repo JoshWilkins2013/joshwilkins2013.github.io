@@ -1,9 +1,10 @@
 ---
-title: Josh Wilkins
+title: index
 ---
 <html>
   {% include head.html %}
   <body>
+    {% assign header-title = "Home Page" %}
     {% include header.html %}
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
@@ -11,68 +12,50 @@ title: Josh Wilkins
       <div class="page-content">
         <div class="container-fluid">
           <div class="col-lg-12">
-            <div class="block">
-              <div class="slideshow-container">
-                <div id="MeSlider" class="mySlides"></div>
-                <a class="prev" onclick="MeSlides(MeSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                <a class="next" onclick="MeSlides(MeSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-              </div>
-            </div>
-          </div>
+            {% assign images_dir = "img/About_Me" %}
+            {% capture block_description %}
+              I grew up in the small town of Avon, NY, and graduated from high school in the spring of 2013,
+              ranking 4th in my class. From there I attended school at Monroe Community College (MCC), earning an
+              associate degree in Engineering Science. I transferred to the Rochester Institute of Technology
+              (RIT), where I completed a Bachelor's degree in Electrical Engineering. I completed the five-year
+              program in just 3.5 years, graduating in the top 1% of my class.<br><br>
 
-          <div class="col-lg-12">
-            <div class="block">
-              <h4 id="details-title" class="block-header">About Me</h4>
-              <div id="details-description" style="margin-top: 8px;">
-                <p> I grew up in the small town of Avon, NY, and graduated from high school in the spring of 2013,
-                  ranking 4th in my class. From there I attended school at Monroe Community College (MCC), earning an
-                  associate degree in Engineering Science. I transferred to the Rochester Institute of Technology
-                  (RIT), where I completed a Bachelor's degree in Electrical Engineering. I completed the five-year
-                  program in just 3.5 years, graduating in the top 1% of my class.
+              While pursuing my education, I gained valuable experience at Carestream Health, beginning as an
+              electrical test technician and later advancing to lead software automation tester. After graduating
+              from RIT, I moved from Rochester to Beverly, MA, to join the Frequency and Timing Division at
+              Microsemi (now Microchip). During my time there, I gained critical experience in the Position,
+              Navigation, and Timing (PNT) domain, along with exposure to RF concepts, applied statistical
+              analysis, and hardware automation.<br><br>
 
-                  <br><br>
-                  While pursuing my education, I gained valuable experience at Carestream Health, beginning as an
-                  electrical test technician and later advancing to lead software automation tester. After graduating
-                  from RIT, I moved from Rochester to Beverly, MA, to join the Frequency and Timing Division at
-                  Microsemi (now Microchip). During my time there, I gained critical experience in the Position,
-                  Navigation, and Timing (PNT) domain, along with exposure to RF concepts, applied statistical
-                  analysis, and hardware automation.
+              Despite my contributions at Microsemi, career growth opportunities were limited, largely due to
+              the company's acquisition. When the Director of Engineering left to join Raytheon, he offered me
+              a position with a significant pay increase (over 30%). Transitioning to Raytheon was an easy
+              decision. However, my tenure there began just as the COVID-19 pandemic emerged, leading to a
+              fully remote work arrangement from day one. This flexibility allowed me to relocate back to
+              Rochester, where I was able to purchase a home.<br><br>
 
-                  <br><br>
-                  Despite my contributions at Microsemi, career growth opportunities were limited, largely due to
-                  the company's acquisition. When the Director of Engineering left to join Raytheon, he offered me
-                  a position with a significant pay increase (over 30%). Transitioning to Raytheon was an easy
-                  decision. However, my tenure there began just as the COVID-19 pandemic emerged, leading to a
-                  fully remote work arrangement from day one. This flexibility allowed me to relocate back to
-                  Rochester, where I was able to purchase a home.
+              About a year after moving back to Rochester, I was given the ultimatum to either return to MA or
+              to resign. I chose to seek new opportunities, which led me to Orolia Defense (now Safran
+              Federal Systems). At Safran, I gained extensive knowledge about GNSS technology. However,
+              challenges such as frequent managerial changes and the lack of technical leadership prompted me
+              to leave after about a year.<br><br>
 
-                  <br><br>
-                  About a year after moving back to Rochester, I was given the ultimatum to either return to MA or
-                  to resign. I chose to seek new opportunities, which led me to Orolia Defense (now Safran
-                  Federal Systems). At Safran, I gained extensive knowledge about GNSS technology. However,
-                  challenges such as frequent managerial changes and the lack of technical leadership prompted me
-                  to leave after about a year.
+              I am deeply passionate about learning and am eager to transition into a data-driven field.
+              Throughout my career, I have focused on projects that harness the power of data in innovative ways.
+              Some highlights include developing training models to calibrate hardware, creating tools to
+              standardize and synchronize disparate databases, and building real-time interfaces to
+              interact with and analyze the frequency data from multiple atomic clocks simultaneously.
 
-                  <br><br>
-                  I am deeply passionate about learning and am eager to transition into a data-driven field.
-                  Throughout my career, I have focused on projects that harness the power of data in innovative ways.
-                  Some highlights include developing training models to calibrate hardware, creating tools to
-                  standardize and synchronize disparate databases, and building real-time interfaces to
-                  interact with and analyze the frequency data from multiple atomic clocks simultaneously.
-
-                  <br><br>
-                  I encourage you to reach out to me <a href="./contact">here</a>. Whether you'd like to introduce
-                  yourself, propose project ideas, or discuss job opportunities, I’d love to connect! I’m also
-                  excited about the prospect of collaborating on new and innovative projects with people!
-                </p>
-                <a href="javascript:;" onclick="Resume()"><button type="submit">R&eacutesum&eacute</button></a>
-              </div>
-            </div>
+              I encourage you to reach out to me <a href="./contact">here</a>. Whether you'd like to introduce
+              yourself, propose project ideas, or discuss job opportunities, I’d love to connect! I’m also
+              excited about the prospect of collaborating on new and innovative projects with people!<br><br>
+              <button onclick="load_pdf('About_Me', 'Storage/About_Me/Resume.pdf')" type="submit">R&eacutesum&eacute</button><br><br>
+            {% endcapture %}
+            {% include block.html %}
           </div>
         </div>
 		{% include footer.html %}
       </div>
     </div>
-  <script src="index.js"></script>
   </body>
 </html>

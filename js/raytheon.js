@@ -8,8 +8,6 @@ var albums = {
 		]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"raytheon\"><img src=\"img/Banners/Raytheon_Banner.png\"></a>";
-
 var RaytheonSlideIndex = 1;
 RaytheonSlides(RaytheonSlideIndex);
 function RaytheonSlides(n) {

@@ -111,8 +111,6 @@ var albums = {
             ]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"microchip\"><img src=\"img/Banners/Microchip_Banner.png\"></a>";
-
 var MicrochipSlideIndex = 1;
 MicrochipSlides(MicrochipSlideIndex);
 function MicrochipSlides(n) {

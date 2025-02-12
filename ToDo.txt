@@ -6,7 +6,7 @@ General:
 - Fix Footer to span entire bottom?
     - Footer animation broken, add contact button, site map, etc.
 - Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
-    - Resize images for efficiency, consider using Git Large File Storage (LFS)?
+    - Resize images for efficiency, consider using CDN or other storage for images?
     - Add more travel images, auto sort by date?
 - Go through pictures, add any 'projects' I think I should add
 - Update Safran more

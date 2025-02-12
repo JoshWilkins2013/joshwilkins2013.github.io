@@ -1,5 +1,3 @@
-document.getElementById("header-text").innerHTML = "<a href=\"dsu\"><img src=\"img/Banners/DSU_Banner.png\"></a>";
-
 function LifeAtDSU() {
 	var description = "After a year working full-time as an electrical engineer at Microsemi, I started attending\
     classes at Dakota State University (DSU)."

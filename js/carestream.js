@@ -12,8 +12,6 @@ var albums = {
         ]
 }
 
-document.getElementById("header-text").innerHTML = "<a href=\"carestream\"><img src=\"img/Banners/Carestream_Banner.png\"></a>";
-
 var CarestreamSlideIndex = 1;
 CarestreamSlides(CarestreamSlideIndex);
 function CarestreamSlides(n) {

@@ -5,13 +5,13 @@ title: Contact
   <link rel="stylesheet" href="css/form.css">
   {% include head.html %}
   <body>
+    {% assign header-title = "Contact Page" %}
 	{% include header.html %}
-
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
-
 	  <div class="page-content">
         <div class="container-fluid">
+
           <form action="https://formspree.io/f/xbldajdn" method="POST">
               <div class="row">
                 <div class="col-lg-4">
@@ -42,6 +42,5 @@ title: Contact
         {% include footer.html %}
       </div>
     </div>
-  <script>document.getElementById("header-text").innerHTML = "<a style='text-decoration: none' href='contact'>Contact Page</a>";</script>
   </body>
 </html>
