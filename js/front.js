@@ -1,5 +1,16 @@
-$(function () {
+// Configure AWS parameters
+AWS.config.region = "us-east-2"; // Region
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+  IdentityPoolId: "us-east-2:7959eafc-fa96-478e-8ba9-e1cbcff426cd"
+});
 
+// Create a new service object
+var s3 = new AWS.S3({
+  apiVersion: "2006-03-01",
+  params: { Bucket: "joshwilkins2013" }
+});
+
+$(function () {
     // ------------------------------------------------------- //
     // Adding fade effect to dropdowns
     // ------------------------------------------------------ //

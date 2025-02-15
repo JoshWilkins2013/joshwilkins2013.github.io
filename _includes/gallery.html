@@ -1,0 +1,17 @@
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+	<div class="d-flex align-items-stretch">
+      {% include sidebar.html %}
+      <div class="page-content">
+        <div class="container-fluid">
+          <div id="row_content" class="row">
+            <script>fill_page("img/{{page.title}}/")</script>
+          </div>
+        </div>
+		{% include footer.html %}
+      </div>
+    </div>
+  </body>
+</html>

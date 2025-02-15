@@ -1,23 +1,5 @@
 ---
 title: Travel
+header: Travel Page
 ---
-<html>
-  {% include head.html %}
-  <body>
-    {% assign header-title = "Travel Page" %}
-    {% include header.html %}
-	<div class="d-flex align-items-stretch">
-      {% include sidebar.html %}
-      <div class="page-content">
-        <div class="container-fluid">
-          <div id="travel_content" class="row">
-
-          </div>  <!-- end row -->
-        </div>
-		{% include footer.html %}
-      </div>
-    </div>
-  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1692.0.min.js"></script>
-  <script src="js/travel.js"></script>
-  </body>
-</html>
+{% include gallery.html %}

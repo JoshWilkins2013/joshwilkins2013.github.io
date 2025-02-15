@@ -1,62 +1,8 @@
 ---
 title: Analytics
+header: Analytics Projects
 category: Projects
 order: 1
 icon: light-bulb
 ---
-<html>
-  {% include head.html %}
-  <body>
-    {% assign header-title = "Analytics Projects" %}
-    {% include header.html %}
-	<div class="d-flex align-items-stretch">
-      {% include sidebar.html %}
-      <div class="page-content">
-          <div class="container-fluid">
-			<div class="row">
-              <div class="col-lg-4">
-                {% assign images_dir = "img/Analytics/Price_Abstractor" %}
-                {% capture block_description %}
-                  A convenient price comparison tool for popular websites like Craigslist and eBay, designed to
-                  help analyze car prices or apartment rentals and identify the best deals. This tool could
-                  potentially be enhanced and abstracted to include additional housing sites such as Zillow
-                  and Trulia. Comparison results are displayed in a scatter plot, with each data point linked
-                  to the original listing.
-                  <br> <a href="https://github.com/JoshWilkins2013/PriceBot" target="_blank"> Repository </a>
-                {% endcapture %}
-                {% include block.html %}
-              </div>
-
-              <div class="col-lg-4">
-                  {% assign images_dir = "img/Analytics/Car_Analysis" %}
-                  {% capture block_description %}
-                    An alternative benefit of my price abstractor tool is having access to real-world car and rental
-                    data! From this data, I have analyzed which car model was best within each make and which model
-                    was best overall. The results are intuitive; the more you spend on a car, the faster it will
-                    depreciate! Perhaps if the prices were normalized by their initial price, a more even
-                    distribution of depreciation rates would be seen, indicating all cars depreciate at the same
-                    weighted rate.<br>
-                    <button onclick="load_html('Car_Analysis', 'Storage/Projects/MakeModelComparison.html')" type="submit">The Analysis</button>
-                  {% endcapture %}
-                  {% include block.html %}
-              </div>
-
-              <div class="col-lg-4">
-                {% assign images_dir = "img/Analytics/House_Analysis" %}
-                {% capture block_description %}
-                  I was curious to see the benefits of owning a home over renting. At what point would you
-                  recouperate the down-payment? How much money do you save over renting, long-term? How much do
-                  banks really make on the interest of your mortgage? So I created a tool with adjustable sliders
-                  to compare and assess different financial situations.<br>
-                  <a href="https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/House" target=\"_blank\">Repository</a>
-                {% endcapture %}
-                {% include block.html %}
-              </div>
-
-            </div>
-          </div>
-		{% include footer.html %}
-      </div>
-    </div>
-  </body>
-</html>
+{% include gallery.html %}
