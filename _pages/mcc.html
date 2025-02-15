@@ -7,7 +7,7 @@ icon: flask
 <html>
   {% include head.html %}
   <body>
-    {% assign header-title = "<img src='img/Banners/MCC_Banner.png'>" %}
+    {% assign header-title = "<img src='https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Banners/MCC_Banner.png'>" %}
 	{% include header.html %}
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
@@ -157,8 +157,8 @@ icon: flask
             </div>
             <div class="col-lg-7">
               <div class="block">
-                <div class="block-header"><h4 id="course-title">Life at MCC</h4><i class="fas fa-plus-square"></i></div>
-                <div id="course-description" style="margin-top: 8px">
+                <div class="block-header"><h4 id="details-title">Life at MCC</h4><i class="fas fa-plus-square"></i></div>
+                <div id="details-description" style="margin-top: 8px">
                   After graduating from high school, I enrolled at MCC in the fall of 2013. It wasn't long before
                   I discovered their robotics competition, which I eagerly joined. That spring, our team secured
                   2nd place in the 2014 ASEE National Robotics Competition in Indianapolis, IN. The following year,
@@ -167,11 +167,15 @@ icon: flask
                   engineering program. I participated in the 2015 robotics competition, and we achieved 2nd place
                   again. I graduated in the spring of 2015 with an associate's degree in Engineering Science.<br><br>
                   <a href="javascript:;" onclick="MCC_Transcript()"><button type="submit">Transcript</button></a><br><br>
+
                   <div class="slideshow-container">
-                    <div id="Slider" class="mySlides"><img src= "img/MCC/MCC_Campus/Main_Campus.png"><p>Main Campus</p></div>
-                    <a class="prev" onclick="CampusSlides(CampusSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                    <a class="next" onclick="CampusSlides(CampusSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
+                    <div class="mySlides">
+                      <img id="slider_image" src="" /><p id="slider_caption"></p>
+                    </div>
+                    <a class="prev" onclick="MCCSlides(MCCSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
+                    <a class="next" onclick="MCCSlides(MCCSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
                   </div>
+
                 </div>
               </div>
             </div>

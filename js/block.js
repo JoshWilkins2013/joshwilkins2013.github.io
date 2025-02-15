@@ -1,3 +1,4 @@
+var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
 var SlideIndex= 1;
 
 function Slides(n, image_paths, name) {
@@ -6,7 +7,7 @@ function Slides(n, image_paths, name) {
   if (n < 1) {SlideIndex = image_array.length - 1}
   current_image_path = image_array[SlideIndex-1];
   current_image_name = current_image_path.split("/").at(-1).split(".")[0].replaceAll("_", " ");
-  document.getElementById(name + "_Image").src = current_image_path;
+  document.getElementById(name + "_Image").src = s3bucket_path + current_image_path.trim();
   if (!current_image_path.includes("img/Travel/") && !current_image_path.includes("img/About_Me/") ) {
     document.getElementById(name + "_Caption").innerHTML = current_image_name;  // Don't caption travel images
   }

@@ -1,80 +1,83 @@
+var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
+
+var slider_div ="\
+<div class=\"slideshow-container\">\
+  <div class=\"mySlides\">\
+    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
+  </div>\
+  <a class=\"prev\" onclick=\"MCCSlides(MCCSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+  <a class=\"next\" onclick=\"MCCSlides(MCCSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+</div>"
+
 var albums = {
 		"Campus": [
-			"<img src=\"img/MCC/MCC_Campus/Main_Campus.png\"><p>Main Campus</p>",
-			"<img src=\"img/MCC/MCC_Campus/Campus_Center.png\"><p>Campus Center</p>",
-			"<img src=\"img/MCC/MCC_Campus/Campus_Map.png\"><p>Campus Map</p>"
+			"/img/MCC/MCC_Campus/Main_Campus.png",
+			"/img/MCC/MCC_Campus/Campus_Center.png",
+			"/img/MCC/MCC_Campus/Campus_Map.png"
 		],
 		"ENR153": [
-			"<img src=\"img/Robotics/McLaren_F1/Front.jpg\"><p>Front View</p>",
-			"<img src=\"img/Robotics/McLaren_F1/Back.jpg\"><p>Rear View</p>",
-			"<img src=\"img/Robotics/McLaren_F1/Inside.jpg\"><p>Inside View</p>",
-			"<img src=\"img/Robotics/McLaren_F1/Gears.jpg\"><p>Gear Assembly</p>",
-			"<img src=\"img/Robotics/McLaren_F1/Top.jpg\"><p>3D Printed Shell</p>",
-			"<img src=\"img/Robotics/McLaren_F1/McLarenF1_Front.jpg\"><p>Model Front</p>",
-			"<img src=\"img/Robotics/McLaren_F1/McLarenF1_Back.jpg\"><p>Model Rear</p>"
+			"/img/Robotics/McLaren_F1/Front.jpg",
+			"/img/Robotics/McLaren_F1/Back.jpg",
+			"/img/Robotics/McLaren_F1/Inside.jpg",
+			"/img/Robotics/McLaren_F1/Gears.jpg",
+			"/img/Robotics/McLaren_F1/Top.jpg",
+			"/img/Robotics/McLaren_F1/McLarenF1_Front.jpg",
+			"/img/Robotics/McLaren_F1/McLarenF1_Back.jpg"
 		],
 		"ENR157": [
-			"<img src=\"img/MCC/ENR157/UserInterface.png\"><p>User Interface</p>",
-			"<img src=\"img/MCC/ENR157/Subsystems.png\"><p>Subsystems</p>",
-			"<img src=\"img/MCC/ENR157/BlockDiagram.png\"><p>Block Diagram</p>",
-			"<img src=\"img/MCC/ENR157/Flowchart.png\"><p>Flowchart</p>"
+			"/img/MCC/ENR157/UserInterface.png",
+			"/img/MCC/ENR157/Subsystems.png",
+			"/img/MCC/ENR157/BlockDiagram.png",
+			"/img/MCC/ENR157/Flowchart.png"
 		],
 		"ENR161": [
-			"<img src=\"img/MCC/ENR161/LabViewCode.png\"><p>Labview Code</p>",
-			"<img src=\"img/MCC/ENR161/CompetitionResults.png\"><p>Competition Results</p>"
+			"/img/MCC/ENR161/LabViewCode.png",
+			"/img/MCC/ENR161/CompetitionResults.png"
 		],
 		"ENR251": [
-			"<img src=\"img/MCC/ENR251/ENR251.png\"><p>Scale Model</p>",
-			"<img src=\"img/MCC/ENR251/MathModel.png\"><p>Mathematical Model</p>",
-			"<img src=\"img/MCC/ENR251/500gForce.png\"><p>500g Equivalent Force</p>"
+			"/img/MCC/ENR251/ENR251.png",
+			"/img/MCC/ENR251/MathModel.png",
+			"/img/MCC/ENR251/500gForce.png"
 		],
 		"ENR254": [
-			"<img src=\"img/MCC/ENR254/ButterworthHPF.png\"><p>Butterworth HPF</p>",
-			"<img src=\"img/MCC/ENR254/ActiveLPF.png\"><p>Active LPF</p>",
-			"<img src=\"img/MCC/ENR254/PassiveLPF.png\"><p>Passive LPF</p>"
+			"/img/MCC/ENR254/ButterworthHPF.png",
+			"/img/MCC/ENR254/ActiveLPF.png",
+			"/img/MCC/ENR254/PassiveLPF.png"
 		]
+}
+
+var MCCSlideIndex = 1;
+
+MCCSlides(1);
+function MCCSlides(n) {
+  if (n > albums["Campus"].length) {MCCSlideIndex = 1}
+  if (n < 1) {MCCSlideIndex = albums["Campus"].length}
+  document.getElementById("slider_image").src = s3bucket_path + albums["Campus"][MCCSlideIndex-1];
 }
 
 function MCC_Transcript() {
 	var description = "<iframe src=\"Storage\\MCC\\Transcript.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-	var title = "Transcript"
-	document.getElementById("course-title").innerHTML = title;
-    document.getElementById("course-description").innerHTML = description;
-    document.getElementById("course-extra").innerHTML = "";
+	document.getElementById("details-title").innerHTML = "Transcript";
+    document.getElementById("details-description").innerHTML = description;
 };
 
 function ENR153() {
-    ENR153SlideIndex = 1;
+    MCCSlideIndex = 1;
 	var description = "An introduction to solid modeling, computer aided manufacturing, the engineering design process, and machine shop operations. \
 	SolidWorks will be used to design parts and assemblies. CamWorks will be used to create tool paths for common 2.5 axis milling operations. \
 	Prototyping will be done using CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
 	geometric relations, external references, equations, and design tables will be emphasized. A design-build project will require students to build a working prototype \
 	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports.<br><br>\
-    <div id=\"enr153_description\">\
-    <a onclick=\"ENR153_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>\
-      <div class=\"slideshow-container\">\
-        <div id=\"Slider\" class=\"mySlides\"></div>\
-        <a class=\"prev\" onclick=\"ENR153Slides(ENR153SlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-        <a class=\"next\" onclick=\"ENR153Slides(ENR153SlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-      </div>\
-    </div>"
-	document.getElementById("course-title").innerHTML = "Graphing & Machining"
-	document.getElementById("course-description").innerHTML = description;
-	ENR153Slides(ENR153SlideIndex);
+    <a onclick=\"ENR153_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+	document.getElementById("details-title").innerHTML = "Graphing & Machining"
+	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR153Slides");
+	ENR153Slides(1);
 };
 
-var CampusSlideIndex = 1;
-function CampusSlides(n) {
-  if (n > albums["Campus"].length) {CampusSlideIndex = 1}
-  if (n < 1) {CampusSlideIndex = albums["Campus"].length}
-  document.getElementById("Slider").innerHTML = albums["Campus"][CampusSlideIndex-1];
-}
-
-var ENR153SlideIndex = 1;
 function ENR153Slides(n) {
-  if (n > albums["ENR153"].length) {ENR153SlideIndex = 1}
-  if (n < 1) {ENR153SlideIndex = albums["ENR153"].length}
-  document.getElementById("Slider").innerHTML = albums["ENR153"][ENR153SlideIndex-1];
+  if (n > albums["ENR153"].length) {MCCSlideIndex = 1}
+  if (n < 1) {MCCSlideIndex = albums["ENR153"].length}
+  document.getElementById("slider_image").src = s3bucket_path + albums["ENR153"][MCCSlideIndex-1];
 }
 
 function ENR153_Report() {
@@ -83,30 +86,21 @@ function ENR153_Report() {
 }
 
 function ENR157() {
-    ENR157SlideIndex = 1;
+    MCCSlideIndex = 1;
 	var description = "This course introduces the basic logic functions, components and methodologies used in the design of digital systems. \
 	This course covers basic logic gates, boolean algebra, number systems, digital arithmetic, combinational logic circuits, multiplexers, \
 	decoders, flip-flops and registers. Digital system applications will include counters, magnitude comparators, ADCs, DACs, \
 	feedback control, sensor interfacing, and signal conditioning. Schematic capture and VHDL programming will be implemented in a digital system on an FPGA.\
-	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation.<br><br>\
-    <div id=\"enr157_description\">\
-      <a onclick=\"ENR157_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>\
-      <div class=\"slideshow-container\">\
-        <div id=\"Slider\" class=\"mySlides\"></div>\
-        <a class=\"prev\" onclick=\"ENR157Slides(ENR157SlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-        <a class=\"next\" onclick=\"ENR157Slides(ENR157SlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-      </div>\
-    </div>"
-	document.getElementById("course-title").innerHTML = "Digital Electronics & Microcontrollers"
-	document.getElementById("course-description").innerHTML = description;
-	ENR157Slides(ENR157SlideIndex);
+	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation.<br><br>"
+	document.getElementById("details-title").innerHTML = "Digital Electronics & Microcontrollers"
+	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR157Slides");
+	ENR157Slides(1);
 };
 
-var ENR157SlideIndex = 1;
 function ENR157Slides(n) {
-  if (n > albums["ENR157"].length) {ENR157SlideIndex = 1}
-  if (n < 1) {ENR157SlideIndex = albums["ENR157"].length}
-  document.getElementById("Slider").innerHTML = albums["ENR157"][ENR157SlideIndex-1];
+  if (n > albums["ENR157"].length) {MCCSlideIndex = 1}
+  if (n < 1) {MCCSlideIndex = albums["ENR157"].length}
+  document.getElementById("slider_image").src = s3bucket_path + albums["ENR157"][MCCSlideIndex-1];
 }
 
 function ENR157_Report() {
@@ -115,29 +109,20 @@ function ENR157_Report() {
 }
 
 function ENR161() {
-    ENR161SlideIndex = 1;
+    MCCSlideIndex = 1;
 	var description = "An introduction to solving a variety of engineering related problems using Microsoft Excel and LabVIEW.\
 	Excel topics include functions, graphing, matrices, linear regression, statistics, and root finding. LabVIEW topics \
 	include a variety of data types, functions, loops, case structures, and graphical user interfaces. LabVIEW programs will \
-	include linear algebra, graphing, and data analysis. A final design project will be implemented using LabVIEW and LEGO Mindstorms robotics.<br><br>\
-    <div id=\"ENR161_description\">\
-    <a onclick=\"ENR161_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>\
-      <div class=\"slideshow-container\">\
-        <div id=\"Slider\" class=\"mySlides\"></div>\
-        <a class=\"prev\" onclick=\"ENR161Slides(ENR161SlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-        <a class=\"next\" onclick=\"ENR161Slides(ENR161SlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-      </div>\
-    </div>"
-	document.getElementById("course-title").innerHTML = "Engineering Computing I"
-	document.getElementById("course-description").innerHTML = description;
-	ENR161Slides(ENR161SlideIndex);
+	include linear algebra, graphing, and data analysis. A final design project will be implemented using LabVIEW and LEGO Mindstorms robotics.<br><br>"
+	document.getElementById("details-title").innerHTML = "Engineering Computing I"
+	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR161Slides");
+	ENR161Slides(1);
 };
 
-var ENR161SlideIndex = 1;
 function ENR161Slides(n) {
-  if (n > albums["ENR161"].length) {ENR161SlideIndex = 1}
-  if (n < 1) {ENR161SlideIndex = albums["ENR161"].length}
-  document.getElementById("Slider").innerHTML = albums["ENR161"][ENR161SlideIndex-1];
+  if (n > albums["ENR161"].length) {MCCSlideIndex = 1}
+  if (n < 1) {MCCSlideIndex = albums["ENR161"].length}
+  document.getElementById("slider_image").src = s3bucket_path + albums["ENR161"][MCCSlideIndex-1];
 }
 
 function ENR161_Report() {
@@ -146,32 +131,23 @@ function ENR161_Report() {
 }
 
 function ENR251() {
-    ENR251SlideIndex = 1;
+    MCCSlideIndex = 1;
 	var description = "A foundational course that focuses on the study of forces and their effects on objects \
 	at rest. Students will learn to analyze static equilibrium, including how forces and moments interact within \
 	structures such as beams, trusses, and frames. Topics include force systems, free-body diagrams, equilibrium \
 	equations, centroids, and moments of inertia. The course emphasizes problem-solving techniques for analyzing \
 	structures under various loading conditions, using both analytical and graphical methods. Through this course, \
 	students will develop the skills to assess and design stable structures, which are essential for careers in \
-	civil, mechanical, and aerospace engineering.<br><br>\
-    <div id=\"ENR251_description\">\
-    <a onclick=\"ENR251_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>\
-      <div class=\"slideshow-container\">\
-        <div id=\"Slider\" class=\"mySlides\"></div>\
-        <a class=\"prev\" onclick=\"ENR251Slides(ENR251SlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-        <a class=\"next\" onclick=\"ENR251Slides(ENR251SlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-      </div>\
-    </div>"
-	document.getElementById("course-title").innerHTML = "Statics"
-	document.getElementById("course-description").innerHTML = description;
-	ENR251Slides(ENR251SlideIndex);
+	civil, mechanical, and aerospace engineering.<br><br>"
+	document.getElementById("details-title").innerHTML = "Statics"
+	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR251Slides");
+	ENR251Slides(1);
 };
 
-var ENR251SlideIndex = 1;
 function ENR251Slides(n) {
-  if (n > albums["ENR251"].length) {ENR251SlideIndex = 1}
-  if (n < 1) {ENR251SlideIndex = albums["ENR251"].length}
-  document.getElementById("Slider").innerHTML = albums["ENR251"][ENR251SlideIndex-1];
+  if (n > albums["ENR251"].length) {MCCSlideIndex = 1}
+  if (n < 1) {MCCSlideIndex = albums["ENR251"].length}
+  document.getElementById("slider_image").src = s3bucket_path + albums["ENR251"][MCCSlideIndex-1];
 }
 
 function ENR251_Report() {
@@ -187,37 +163,28 @@ function ENR253() {
 	emphasizes hands-on learning with practical applications, helping students develop the skills needed to \
 	analyze and design basic electrical circuits. This course is essential for students pursuing careers in \
 	electrical engineering, electronics, and related fields."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Circuit Analysis I"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Circuit Analysis I"
 };
 
 function ENR254() {
-    ENR254SlideIndex = 1;
+    MCCSlideIndex = 1;
 	var description = "Builds on the concepts learned in Circuit Analysis I, with a focus on more advanced \
 	techniques and AC circuit analysis. Topics include complex impedance, phasor analysis, reactive components \
 	(inductors and capacitors), resonance, and transient response in RLC circuits. Students will also explore \
 	the analysis of filters, coupled circuits, and two-port networks. The course emphasizes the application of \
 	these concepts to real-world electrical systems, using both analytical methods and computational tools. \
 	This course is crucial for students pursuing careers in electrical engineering, electronics, and \
-	communications, providing the knowledge needed to analyze and design more complex circuits.<br><br>\
-    <div id=\"ENR254_description\">\
-    <a onclick=\"ENR254_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>\
-      <div class=\"slideshow-container\">\
-        <div id=\"Slider\" class=\"mySlides\"></div>\
-        <a class=\"prev\" onclick=\"ENR254Slides(ENR254SlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-        <a class=\"next\" onclick=\"ENR254Slides(ENR254SlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-      </div>\
-    </div>"
-	document.getElementById("course-title").innerHTML = "Circuit Analysis II"
-	document.getElementById("course-description").innerHTML = description;
-	ENR254Slides(ENR254SlideIndex);
+	communications, providing the knowledge needed to analyze and design more complex circuits.<br><br>"
+	document.getElementById("details-title").innerHTML = "Circuit Analysis II"
+	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR254Slides");
+	ENR254Slides(1);
 };
 
-var ENR254SlideIndex = 1;
 function ENR254Slides(n) {
-  if (n > albums["ENR254"].length) {ENR254SlideIndex = 1}
-  if (n < 1) {ENR254SlideIndex = albums["ENR254"].length}
-  document.getElementById("Slider").innerHTML = albums["ENR254"][ENR254SlideIndex-1];
+  if (n > albums["ENR254"].length) {MCCSlideIndex = 1}
+  if (n < 1) {MCCSlideIndex = albums["ENR254"].length}
+  document.getElementById("slider_image").src = s3bucket_path + albums["ENR254"][MCCSlideIndex-1];
 }
 
 function ENR254_Report() {
@@ -233,16 +200,16 @@ function ENR256() {
 	will include solving real-world engineering problems, designing structural elements, and assessing material \
 	failure using concepts like stress-strain relationships and failure theories. Students will also gain proficiency \
 	in using analytical tools and computational methods for material analysis."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Mechanics of Materials"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Mechanics of Materials"
 };
 
 function ENR259() {
 	var description = "Students will work in teams to solve an engineering design problem of their choice subject to approval from the instructor. \
 	Students will be encouraged to choose a project from an intercollegiate engineering design competition. Teams will design and build a working prototype, \
 	keep an engineering notebook, submit a weekly time sheets, create a final design report, and make a final oral presentation."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Engineering Design Lab"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Engineering Design Lab"
 };
 
 function ENR261() {
@@ -251,8 +218,8 @@ function ENR261() {
 	solutions. Pseudo-code, and flowcharts are used to develop a structured approach to the problem solution which will often require the development of user-defined \
 	functions and decision making programming constructs utilized in short script files. Some larger projects may include the development of a graphical user interface (GUI)\
 	to handle the program inputs, solution options and outputs."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Engineering Computing II"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Engineering Computing II"
 };
 
 function MTH211() {
@@ -263,8 +230,8 @@ function MTH211() {
 	including calculating areas, volumes, and work. The course emphasizes both theoretical understanding and \
 	practical problem-solving skills, providing the foundation for more advanced study in mathematics, \
 	physics, engineering, and other technical fields."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Calculus II"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Calculus II"
 };
 
 function MTH212() {
@@ -275,8 +242,8 @@ function MTH212() {
 	fundamental theorems of calculus in higher dimensions, such as Stokes\' Theorem and the Divergence Theorem. \
 	This course is essential for students pursuing careers in engineering, physics, computer science, and other \
 	technical disciplines, providing the mathematical foundation for analyzing complex systems in multiple dimensions."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Calculus III"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Calculus III"
 };
 
 function MTH220() {
@@ -286,8 +253,8 @@ function MTH220() {
 	and sequences, and how to apply these concepts to solve problems in computer science, cryptography, and other \
 	fields. The course emphasizes problem-solving, proof techniques, and the foundations of theoretical computer \
 	science. This course is essential for students pursuing careers in mathematics, computer science, and engineering."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Discrete Mathematics"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Discrete Mathematics"
 };
 
 function MTH225() {
@@ -296,8 +263,8 @@ function MTH225() {
 	undetermined coefficients, variation of parameters, autonomous systems of two first order equations, series solutions about ordinary points, \
 	and the Laplace Transform. In addition to analytical methods, quantitative and qualitative analysis will be employed through the use of Euler’s Method, \
 	phase lines, phase planes, and slope fields."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Differential Equations"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Differential Equations"
 };
 
 function MTH230() {
@@ -308,8 +275,8 @@ function MTH230() {
 	vector spaces. Students will also explore how linear algebra is used in fields like engineering, computer \
 	science, economics, and physics. Through problem-solving and computational tools, students will develop the \
 	skills needed to apply linear algebra concepts to real-world scenarios."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Linear Algebra"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Linear Algebra"
 };
 
 function CHE151() {
@@ -317,8 +284,8 @@ function CHE151() {
 	in science or engineering. It is a mathematical approach to the principles of chemistry and assumes that students have had an above average preparation in chemistry. \
 	Topics include a brief review of problem solving using dimensional analysis, graphing, and significant figures; chemical stoichiometry; gas laws; thermochemistry; \
 	an in-depth treatment of atomic structure, periodicity, and chemical bonding; phase relationships."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "General College Chemistry I"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "General College Chemistry I"
 };
 
 function PHY161() {
@@ -329,8 +296,8 @@ function PHY161() {
 	also gain experience with lab experiments to reinforce theoretical concepts and enhance their ability to apply \
 	physics to everyday phenomena. This course is essential for students pursuing careers in engineering, \
 	physical sciences, and related fields."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "University Physics I"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "University Physics I"
 };
 
 function PHY261() {
@@ -341,8 +308,8 @@ function PHY261() {
 	methods. Students will also engage in laboratory work to deepen their comprehension of concepts and demonstrate \
 	practical applications. This course is crucial for students pursuing careers in engineering, physical sciences, \
 	and other technical fields."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "University Physics II"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "University Physics II"
 };
 
 function PHY262() {
@@ -353,8 +320,8 @@ function PHY262() {
 	course emphasizes both the mathematical foundations and the experimental evidence behind these theories. It is \
 	designed for students pursuing advanced studies in physics, engineering, and other scientific disciplines, \
 	providing a foundation for understanding the modern technological world."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Modern Physics"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Modern Physics"
 };
 
 function CSC202() {
@@ -362,6 +329,6 @@ function CSC202() {
 	Microcontroller architecture will be stressed. Topics include Synchronous and Asynchronous Input/Output, Analog to Digital Conversion, Pulse Width Modulation, Timer/Counters, \
 	Interrupts and Parallel Port Programming. Laboratory work will focus on program development, implementation and debugging techniques. Several programming projects will be assigned \
 	to be completed outside of class and in lab. A final project and student presentation are required."
-	document.getElementById("course-description").innerHTML = description;
-	document.getElementById("course-title").innerHTML = "Embedded C & Assembly"
+	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-title").innerHTML = "Embedded C & Assembly"
 };

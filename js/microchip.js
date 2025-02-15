@@ -1,113 +1,124 @@
+var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
+
+var slider_div ="\
+<div class=\"slideshow-container\">\
+  <div class=\"mySlides\">\
+    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
+  </div>\
+  <a class=\"prev\" onclick=\"MicrochipSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+  <a class=\"next\" onclick=\"MicrochipSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+</div>"
+
 var albums = {
             "Microchip": [
-                "<img src=\"img/Microchip/CSAC.png\"><p>CSAC</p>",
-                "<img src=\"img/Microchip/MAC.png\"><p>MAC</p>",
-                "<img src=\"img/Microchip/5071A.png\"><p>5071A Cs Atomic Clock</p>",
-                "<img src=\"img/Microchip/5125A.png\"><p>Phase Noise Test Set</p>",
-                "<img src=\"img/Microchip/Hydrogen_Maser.png\"><p>Hydrogen Maser</p>"
+                "/img/Microchip/CSAC.png",
+                "/img/Microchip/MAC.png",
+                "/img/Microchip/5071A.png",
+                "/img/Microchip/5125A.png",
+                "/img/Microchip/Hydrogen_Maser.png"
 			],
             "Proto": [
-                "<img src=\"img/Microchip/Prototype/Iso.png\"><p>Isometric View</p>",
-                "<img src=\"img/Microchip/Prototype/Front.png\"><p>Front View</p>",
-                "<img src=\"img/Microchip/Prototype/Layer.png\"><p>Example Layer</p>",
-                "<img src=\"img/Microchip/Prototype/Model.png\"><p>SolidWorks Model</p>",
-                "<img src=\"img/Microchip/Prototype/IAASR.png\"><p>My Model</p>",
+                "/img/Microchip/Prototype/Iso.png",
+                "/img/Microchip/Prototype/Front.png",
+                "/img/Microchip/Prototype/Layer.png",
+                "/img/Microchip/Prototype/Model.png",
+                "/img/Microchip/Prototype/IAASR.png",
 		    ],
 		    "Synth": [
-                "<img src=\"img/Microchip/Synth/MicroHawkSynth.png\"><p>Final Product</p>",
-                "<img src=\"img/Microchip/Synth/Model.png\"><p>Final Model</p>",
-                "<img src=\"img/Microchip/Synth/Full_Model.png\"><p>Cross-sectional Model View</p>",
-                "<img src=\"img/Microchip/Synth/Enclosed_PCB.png\"><p>Modular Component</p>",
-                "<img src=\"img/Microchip/Synth/Partially_Enclosed_PCB.png\"><p>Partially Opened</p>",
-                "<img src=\"img/Microchip/Synth/PLL.png\"><p>Modular PCB</p>",
-                "<img src=\"img/Microchip/Synth/DebuggingPCBA.png\"><p>Debugging PCB</p>"
+                "/img/Microchip/Synth/MicroHawkSynth.png",
+                "/img/Microchip/Synth/Model.png",
+                "/img/Microchip/Synth/Full_Model.png",
+                "/img/Microchip/Synth/Enclosed_PCB.png",
+                "/img/Microchip/Synth/Partially_Enclosed_PCB.png",
+                "/img/Microchip/Synth/PLL.png",
+                "/img/Microchip/Synth/DebuggingPCBA.png"
 		    ],
 		    "Power": [
-		        "<img src=\"img/Microchip/Power/Design.png\"><p>Controller Design</p>",
-                "<img src=\"img/Microchip/Power/Results.png\"><p>Controller Results</p>",
-                "<img src=\"img/Microchip/Power/ADL6010.png\"><p>ADL6010 Envelope Detector</p>",
-                "<img src=\"img/Microchip/Power/ADL6010_Response.png\"><p>ADL6010 Response Time</p>",
-                "<img src=\"img/Microchip/Power/ADL6010_Bode.png\"><p>ADL6010 Bode Plot</p>",
-                "<img src=\"img/Microchip/Power/LTC5564.png\"><p>LTC5564 Envelope Detector</p>",
-                "<img src=\"img/Microchip/Power/LTC5564_Response.png\"><p>LTC5564 Response Time</p>",
-                "<img src=\"img/Microchip/Power/LTC5564_Bode.png\"><p>LTC5564 Bode Plot</p>"
+		        "/img/Microchip/Power/Design.png",
+                "/img/Microchip/Power/Results.png",
+                "/img/Microchip/Power/ADL6010.png",
+                "/img/Microchip/Power/ADL6010_Response.png",
+                "/img/Microchip/Power/ADL6010_Bode.png",
+                "/img/Microchip/Power/LTC5564.png",
+                "/img/Microchip/Power/LTC5564_Response.png",
+                "/img/Microchip/Power/LTC5564_Bode.png"
 		    ],
 		    "Filters": [
-		        "<img src=\"img/Microchip/Filters/Boards.png\"><p>Filter Boards</p>",
-		        "<img src=\"img/Microchip/Filters/Simulation.png\"><p>Simulation</p>",
-		        "<img src=\"img/Microchip/Filters/Order_Comparison.png\"><p>5th vs 7th Order</p>",
-		        "<img src=\"img/Microchip/Filters/Results.png\"><p>Results Compared to Sim</p>"
+		        "/img/Microchip/Filters/Boards.png",
+		        "/img/Microchip/Filters/Simulation.png",
+		        "/img/Microchip/Filters/Order_Comparison.png",
+		        "/img/Microchip/Filters/Results.png"
 		    ],
 		    "AtomicClock": [
-                "<img src=\"img/Microchip/AtomicClock/GUI.png\"><p>User Interface</p>"
+                "/img/Microchip/AtomicClock/GUI.png"
             ],
             "Aging": [
-                "<img src=\"img/Microchip/AtomicClock/Aging/Aging_Predictions.png\"><p>Predicting Aging</p>",
-                "<img src=\"img/Microchip/AtomicClock/Aging/Aging.png\"><p>Aging Output Across Files</p>"
+                "/img/Microchip/AtomicClock/Aging/Aging_Predictions.png",
+                "/img/Microchip/AtomicClock/Aging/Aging.png"
             ],
             "ADev": [
-                "<img src=\"img/Microchip/AtomicClock/ADev/Adev_Single.png\"><p>Adev on one File</p>",
-                "<img src=\"img/Microchip/AtomicClock/ADev/Adev_Multi.png\"><p>Adev Averaged Across Files</p>"
+                "/img/Microchip/AtomicClock/ADev/Adev_Single.png",
+                "/img/Microchip/AtomicClock/ADev/Adev_Multi.png"
             ],
             "Tempco": [
-                "<img src=\"img/Microchip/AtomicClock/Tempco/Stepped_Regions.png\"><p>Stepped Regions of Interest</p>",
-                "<img src=\"img/Microchip/AtomicClock/Tempco/Hysteresis.png\"><p>Hysteresis Effect</p>",
-                "<img src=\"img/Microchip/AtomicClock/Tempco/Tempco_Continuous.png\"><p>Continuous Tempco Run</p>",
-                "<img src=\"img/Microchip/AtomicClock/Tempco/Tempco_PolyFit.png\"><p>Polynomial Fit of Tempco Runs</p>"
+                "/img/Microchip/AtomicClock/Tempco/Stepped_Regions.png",
+                "/img/Microchip/AtomicClock/Tempco/Hysteresis.png",
+                "/img/Microchip/AtomicClock/Tempco/Tempco_Continuous.png",
+                "/img/Microchip/AtomicClock/Tempco/Tempco_PolyFit.png"
             ],
             "Data": [
-                "<img src=\"img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Temp.png\"><p>Frequency Jumps vs Temperature</p>",
-                "<img src=\"img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Time.png\"><p>Frequency Jumps vs Time</p>",
-                "<img src=\"img/Microchip/AtomicClock/DataAnalysis/TCXO_Freq.png\"><p>TCXO Root Cause</p>",
-                "<img src=\"img/Microchip/AtomicClock/DataAnalysis/Heartbeat.png\"><p>Frequency Noisy Region</p>"
+                "/img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Temp.png",
+                "/img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Time.png",
+                "/img/Microchip/AtomicClock/DataAnalysis/TCXO_Freq.png",
+                "/img/Microchip/AtomicClock/DataAnalysis/Heartbeat.png"
             ],
             "Quantization": [
-                "<img src=\"img/Microchip/Quantization/Results.png\"><p>Results</p>",
-                "<img src=\"img/Microchip/Quantization/Overview.png\"><p>Overview</p>",
-                "<img src=\"img/Microchip/Quantization/Sample.png\"><p>Varying Individually</p>",
-                "<img src=\"img/Microchip/Quantization/Offset.png\"><p>Determining Offset</p>",
-                "<img src=\"img/Microchip/Quantization/Phase.png\"><p>Determining Phase</p>",
-                "<img src=\"img/Microchip/Quantization/Amplitude.png\"><p>Determining Amplitude</p>",
-                "<img src=\"img/Microchip/Quantization/PhaseAmplitude.png\"><p>Phase & Amplitude</p>",
-                "<img src=\"img/Microchip/Quantization/SimpleCase.png\"><p># Bits & # Samples</p>",
-                "<img src=\"img/Microchip/Quantization/NumBits.png\"><p>Varying # Bits</p>",
-                "<img src=\"img/Microchip/Quantization/NumSamples.png\"><p>Varying # Samples</p>"
+                "/img/Microchip/Quantization/Results.png",
+                "/img/Microchip/Quantization/Overview.png",
+                "/img/Microchip/Quantization/Sample.png",
+                "/img/Microchip/Quantization/Offset.png",
+                "/img/Microchip/Quantization/Phase.png",
+                "/img/Microchip/Quantization/Amplitude.png",
+                "/img/Microchip/Quantization/PhaseAmplitude.png",
+                "/img/Microchip/Quantization/SimpleCase.png",
+                "/img/Microchip/Quantization/NumBits.png",
+                "/img/Microchip/Quantization/NumSamples.png"
             ],
             "PCB": [
-                "<img src=\"img/Microchip/PCB/Fanout_Board.png\"><p>Frequency Distribution Board</p>",
-                "<img src=\"img/Microchip/PCB/LowPowSynth_Board.png\"><p>Low Power Synthesizer</p>",
-                "<img src=\"img/Microchip/PCB/PI_Board.png\"><p>PI Filter Board</p>",
-                "<img src=\"img/Microchip/PCB/PI_Layout.png\"><p>PI Filter Layout</p>",
-                "<img src=\"img/Microchip/PCB/10MHzOCXO_Board.png\"><p>OCXO Eval Board</p>",
-                "<img src=\"img/Microchip/PCB/100MHzOCXO_Board.png\"><p>Another OCXO Eval Board</p>",
-                "<img src=\"img/Microchip/PCB/VCO_Board.png\"><p>VCO Eval Board</p>",
-                "<img src=\"img/Microchip/PCB/VCO_Layout.png\"><p>VCO Eval Layout</p>"
+                "/img/Microchip/PCB/Fanout_Board.png",
+                "/img/Microchip/PCB/LowPowSynth_Board.png",
+                "/img/Microchip/PCB/PI_Board.png",
+                "/img/Microchip/PCB/PI_Layout.png",
+                "/img/Microchip/PCB/10MHzOCXO_Board.png",
+                "/img/Microchip/PCB/100MHzOCXO_Board.png",
+                "/img/Microchip/PCB/VCO_Board.png",
+                "/img/Microchip/PCB/VCO_Layout.png"
             ],
             "BBB": [
-                "<img src=\"img/Microchip/BBB/Program.png\"><p>High Level Program</p>",
-                "<img src=\"img/Microchip/BBB/BBB.png\"><p>Beaglebone Black</p>",
-                "<img src=\"img/Microchip/BBB/DDS.png\"><p>AD9912 DDS</p>"
+                "/img/Microchip/BBB/Program.png",
+                "/img/Microchip/BBB/BBB.png",
+                "/img/Microchip/BBB/DDS.png"
             ],
             "SPI": [
-                "<img src=\"img/Microchip/BBB/SPI/DDS_High_Level.png\"><p>High Level DDS</p>",
-                "<img src=\"img/Microchip/BBB/SPI/FTW_POW.png\"><p>Tuning Words</p>",
-                "<img src=\"img/Microchip/BBB/SPI/SPI_DDS.png\"><p>SPI Protocol</p>",
-                "<img src=\"img/Microchip/BBB/SPI/Timing.png\"><p>Timing Requirements</p>",
-                "<img src=\"img/Microchip/BBB/SPI/WriteCycle.png\"><p>Write Cycle</p>"
+                "/img/Microchip/BBB/SPI/DDS_High_Level.png",
+                "/img/Microchip/BBB/SPI/FTW_POW.png",
+                "/img/Microchip/BBB/SPI/SPI_DDS.png",
+                "/img/Microchip/BBB/SPI/Timing.png",
+                "/img/Microchip/BBB/SPI/WriteCycle.png"
             ],
             "Inject": [
-                "<img src=\"img/Microchip/BBB/Inject/PseudoCode.png\"><p>High Level Design</p>",
-                "<img src=\"img/Microchip/BBB/Inject/TestPOW.png\"><p>Test POW Tone Injection</p>",
-                "<img src=\"img/Microchip/BBB/Inject/TestPOW_Results.png\"><p>Test POW Injection Result</p>"
+                "/img/Microchip/BBB/Inject/PseudoCode.png",
+                "/img/Microchip/BBB/Inject/TestPOW.png",
+                "/img/Microchip/BBB/Inject/TestPOW_Results.png"
             ],
             "TempDivider": [
-                "<img src=\"img/Microchip/Misc/DividerBox.png\"><p>Divider Box</p>"
+                "/img/Microchip/Misc/DividerBox.png"
             ],
             "Other": [
-                "<img src=\"img/Microchip/Misc/TranslationDevice.png\"><p>Frequency Translation Device</p>",
-                "<img src=\"img/Microchip/Misc/Box1.png\"><p>Interface Box</p>",
-                "<img src=\"img/Microchip/Misc/Box2.png\"><p>Inside Box</p>",
-                "<img src=\"img/Microchip/PCB/LowPowSynth_Board.png\"><p>Low Power Synthesizer</p>"
+                "/img/Microchip/Misc/TranslationDevice.png",
+                "/img/Microchip/Misc/Box1.png",
+                "/img/Microchip/Misc/Box2.png",
+                "/img/Microchip/PCB/LowPowSynth_Board.png"
             ]
 }
 
@@ -116,7 +127,7 @@ MicrochipSlides(MicrochipSlideIndex);
 function MicrochipSlides(n) {
   if (n > albums["Microchip"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Microchip"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Microchip"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Microchip"][MicrochipSlideIndex-1];
 }
 
 /******************************************/
@@ -125,7 +136,7 @@ function MicrochipSlides(n) {
 function SynthSlides(n) {
   if (n > albums["Synth"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Synth"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Synth"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Synth"][MicrochipSlideIndex-1];
 }
 
 function Synthesizer() {
@@ -135,24 +146,17 @@ function Synthesizer() {
 	and scaled its frequency to that of the natural oscillation frequency of the atoms in an atomic clock. When used \
 	this way, it is crucial to minimize sources of noise introduced into the system. To achieve this, I designed \
 	this synthesizer with two cascaded Phase-Locked Loops (PLLs), effectively reducing phase noise and \
-	ensuring high precision.<br><br>\
-    <div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Synth/MicroHawkSynth.png\"><p>Final Product</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"SynthSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"SynthSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-    var title = "12 GHz Synthesizer";
-    document.getElementById("details-title").innerHTML = title;
+	ensuring high precision.<br><br>"
+    document.getElementById("details-title").innerHTML = "12 GHz Synthesizer";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "SynthSlides");
+    SynthSlides(1);
 }
 
 function ProtoSlides(n) {
   if (n > albums["Proto"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Proto"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Proto"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Proto"][MicrochipSlideIndex-1];
 }
 
 function Prototype() {
@@ -161,23 +165,16 @@ function Prototype() {
 	various vendors. These boards were placed on interchangeable EMI-shielded shelves and linked via RF cables.\
 	The required I/O was managed by a Beaglebone Black. After confirming the device\'s performance, the design was\
 	updated to include modular EMI-shielded PCBs, allowing for future replacement of specific components to\
-	facilitate potential performance enhancements.<br><br>\
-    <div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Prototype/Iso.png\"><p>Isometric View</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"ProtoSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"ProtoSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-    var subtitle = "Full Scale Prototype";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	facilitate potential performance enhancements.<br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Full Scale Prototype";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "ProtoSlides");
+    ProtoSlides(1);
 };
 
 function PowerSlides(n) {
   if (n > albums["Power"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Power"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Power"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Power"][MicrochipSlideIndex-1];
 }
 
 function OutputPower() {
@@ -187,17 +184,10 @@ function OutputPower() {
 	To address these requirements, I developed an analog Automatic Gain Controller (AGC), combining an envelope \
 	detector with an adjustable feedback controller. This design ensured precise regulation and stabilization \
 	while maximizing the potential output power.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"OutputPowerAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Power/Design.png\"><p>Controller Design</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"PowerSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"PowerSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-	var subtitle = "Output Power Controller";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	<button type=\"submit\" class=\"submit\"><a onclick=\"OutputPowerAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Output Power Controller";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "PowerSlides");
+    PowerSlides(1);
 };
 
 function OutputPowerAnalysis() {
@@ -213,7 +203,7 @@ function OutputPowerAnalysis() {
 function PCBSlides(n) {
   if (n > albums["PCB"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["PCB"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["PCB"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["PCB"][MicrochipSlideIndex-1];
 }
 
 function Boards() {
@@ -221,23 +211,16 @@ function Boards() {
 	var description = "While working on the synthesizer, I had to develop quite a few prototype boards to test the \
 	performance of the sub-circuits and components. This included a generic PI Filter board for the PLLs and AGC \
 	and an active power splitter board to distribute the reference oscillator to other parts of the system. \
-    I also developed boards to simplify the interchangeability of components such as the reference oscillator.<br><br>\
-    <div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/PCB/Fanout_Board.png\"><p>Frequency Distribution Board</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"PCBSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"PCBSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-    var subtitle = "Associated Board Spins";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+    I also developed boards to simplify the interchangeability of components such as the reference oscillator.<br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Associated Board Spins";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "PCBSlides");
+    PCBSlides(1);
 };
 
 function TempDividerSlides(n) {
   if (n > albums["TempDivider"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["TempDivider"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["TempDivider"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["TempDivider"][MicrochipSlideIndex-1];
 }
 
 function TempDependence() {
@@ -250,9 +233,8 @@ function TempDependence() {
 	add-on device, which extracted the cleanest signal from the synthesizer and digitally tuned the temperature \
 	dependency out.<br><br>\
 	<button type=\"submit\" class=\"submit\"><a onclick=\"TempDependenceAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>\
-	<img src=\"img/Microchip/Misc/DividerBox.png\" width=100%><p>Divider Box</p>"
-    var subtitle = "Temperature Dependency Testing";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
+	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Microchip/Misc/DividerBox.png\" width=100%><p>Divider Box</p>"
+    document.getElementById("details-subtitle").innerHTML = "Temperature Dependency Testing";
     document.getElementById("details-description").innerHTML = description;
 };
 
@@ -271,7 +253,7 @@ function TempDependenceAnalysis() {
 function FilterSlides(n) {
   if (n > albums["Filters"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Filters"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Filters"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Filters"][MicrochipSlideIndex-1];
 }
 
 function Filters() {
@@ -281,17 +263,10 @@ function Filters() {
 	precise devices and this sensitivity is a major concern. In an attempt to reduce this sensitivity, a temperature\
 	compensation (tempco) algorithm had been implemented. To tune this algorithm, I wrote a script that takes in\
 	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
-	profile.<br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Filters/Boards.png\"><p>Filter Boards</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"FilterSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"FilterSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-	var subtitle = "Microstrip Filter Designs";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	profile.<br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Microstrip Filter Designs";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "FilterSlides");
+    FilterSlides(1);
 };
 
 /******************************************/
@@ -300,7 +275,7 @@ function Filters() {
 function AtomicClockSlides(n) {
   if (n > albums["AtomicClock"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["AtomicClock"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["AtomicClock"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["AtomicClock"][MicrochipSlideIndex-1];
 }
 
 function AtomicClock() {
@@ -313,9 +288,8 @@ function AtomicClock() {
     more efficient and accurate way of determining clock performance on a larger scale. Additionally, the GUI \
     facilitated the enhancement and testing of temperature compensation algorithms and offered easy access \
     to plot specific datasets, such as board temperature and frequency.<br><br>\
-    <img src=\"img/Microchip/AtomicClock/GUI.png\" width=75%><p>User Interface</p>"
-    var title = "Atomic Clock GUI";
-    document.getElementById("details-title").innerHTML = title;
+    <img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Microchip/AtomicClock/GUI.png\" width=75%><p>User Interface</p>"
+    document.getElementById("details-title").innerHTML = "Atomic Clock GUI";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
 }
@@ -323,7 +297,7 @@ function AtomicClock() {
 function AgingSlides(n) {
   if (n > albums["Aging"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Aging"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Aging"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Aging"][MicrochipSlideIndex-1];
 }
 
 function Aging() {
@@ -333,23 +307,16 @@ function Aging() {
 	aging specifically refers to the gradual change in frequency over time. Typically, atomic clocks are placed on \
 	racks and allowed to \"age\" until this effect stabilizes. In production environments, it is crucial to \
 	understand how long this process will take. This script was developed to estimate the aging rate of our \
-	products.<br><br> \
-    <div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/AtomicClock/Aging/Aging_Predictions.png\"><p>Predicting Aging</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"AgingSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"AgingSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-	var subtitle = "Predicting Long Term Aging Rates";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	products.<br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Predicting Long Term Aging Rates";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "AgingSlides");
+    AgingSlides(1);
 };
 
 function ADevSlides(n) {
   if (n > albums["ADev"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["ADev"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["ADev"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["ADev"][MicrochipSlideIndex-1];
 }
 
 function ADev() {
@@ -359,23 +326,16 @@ function ADev() {
 	Allan deviation measurement from a device, it became necessary to develop an alternative approach for \
 	determining this metric. I addressed this by averaging the Allan deviation from several shorter measurements, \
 	which helped reduce variance and improve the accuracy of the results. While this approach was more complex \
-	than simply averaging a few numbers or vectors, it proved to be effective and worked as expected.<br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/AtomicClock/ADev/Adev_Single.png\"><p>Adev on one File</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"ADevSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"ADevSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-	var subtitle = "Long Term ADev Rates";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	than simply averaging a few numbers or vectors, it proved to be effective and worked as expected.<br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Long Term ADev Rates";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "ADevSlides");
+    ADevSlides(1);
 };
 
 function TempcoSlides(n) {
   if (n > albums["Tempco"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Tempco"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Tempco"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Tempco"][MicrochipSlideIndex-1];
 }
 
 function Tempco() {
@@ -386,17 +346,10 @@ function Tempco() {
 	compensation (tempco) algorithm had been implemented. To tune this algorithm, I wrote a script that takes in\
 	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
 	profile.<br><br>\
-	<a onclick=\"TempcoAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/AtomicClock/Tempco/Stepped_Regions.png\"><p>User Interface</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"TempcoSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"TempcoSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-	var subtitle = "Temperature Compensation";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	<a onclick=\"TempcoAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Temperature Compensation";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "TempcoSlides");
+    TempcoSlides(1);
 };
 
 function TempcoAnalysis() {
@@ -413,7 +366,7 @@ function TempcoAnalysis() {
 function DataSlides(n) {
   if (n > albums["Data"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Data"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Data"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Data"][MicrochipSlideIndex-1];
 }
 
 function DataAnalysis() {
@@ -423,17 +376,10 @@ function DataAnalysis() {
 	requirement for these atomic clocks is a precisely generated frequency, and my tool continuously monitored \
 	the data for any significant jumps or spikes. This allowed me to characterize the issues and identify their \
 	root causes. For example, one issue was traced back to a change in the manufacturing process of the on-board \
-	TCXO, while another was linked to an internal tracking algorithm within the atomic clock.<br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/AtomicClock/DataAnalysis/FreqJumps_Temp.png\"><p>Frequency Jumps</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"DataSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"DataSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-	var subtitle = "Data Analysis";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	TCXO, while another was linked to an internal tracking algorithm within the atomic clock.<br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Data Analysis";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "DataSlides");
+    DataSlides(1);
 };
 
 
@@ -443,7 +389,7 @@ function DataAnalysis() {
 function BBBSlides(n) {
   if (n > albums["BBB"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["BBB"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["BBB"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["BBB"][MicrochipSlideIndex-1];
 }
 
 function Embedded() {
@@ -454,24 +400,17 @@ function Embedded() {
 	I leveraged them to gain precise control over a Direct Digital Synthesizer (DDS) for a phase noise injection \
 	device and a Digital-to-Analog Converter (DAC) for a phase noise measurement system that was created using a \
 	low-bandwidth, programmable digital PI filter.<br><br>\
-	<a href=\"https://github.com/JoshWilkins2013/BBB\" target=\"_blank\">Repository</a><br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/BBB/Program.png\"><p>High Level Program</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"BBBSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"BBBSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-    var title = "Real Time Embedded System";
-    document.getElementById("details-title").innerHTML = title;
+	<a href=\"https://github.com/JoshWilkins2013/BBB\" target=\"_blank\">Repository</a><br><br>"
+    document.getElementById("details-title").innerHTML = "Real Time Embedded System";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "BBBSlides");
+    BBBSlides(1);
 };
 
 function SPISlides(n) {
   if (n > albums["SPI"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["SPI"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["SPI"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["SPI"][MicrochipSlideIndex-1];
 }
 
 function SPI() {
@@ -480,17 +419,10 @@ function SPI() {
 	interface in low-level assembly code to communicate to the AD9912 DDS and the LTC2601 DAC. I abstracted the \
 	assembly code into macros to avoid redundancy within the code and to encourage configurability. The SPI \
 	communication protocol was a critical part of this real-time embedded system and provided the basis for \
-	all of the other tools I created on the Beaglebone Black PRUs.<br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/BBB/SPI/DDS_High_Level.png\"><p>High Level DDS</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"SPISlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"SPISlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-    var subtitle = "Generic SPI Communication Protocol";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	all of the other tools I created on the Beaglebone Black PRUs.<br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Generic SPI Communication Protocol";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "SPISlides");
+    SPISlides(1);
 };
 
 function AltPhaseNoise() {
@@ -500,15 +432,14 @@ function AltPhaseNoise() {
 	step recovery diode.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>\
 	<iframe src=\"Storage/Microchip/AltPhaseNoiseMeasSys.html\" style=\"width: 100%;border: none;\"></iframe>"
-    var subtitle = "Phase Noise Measurement System";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
+    document.getElementById("details-subtitle").innerHTML = "Phase Noise Measurement System";
     document.getElementById("details-description").innerHTML = description;
 };
 
 function InjectSlides(n) {
   if (n > albums["Inject"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Inject"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Inject"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Inject"][MicrochipSlideIndex-1];
 }
 
 function AddPhase() {
@@ -516,17 +447,10 @@ function AddPhase() {
 	var description = "I created a phase noise generator tool that could create any model of noise and inject it \
 	into any system. This generator helped simulate, quantify, and understand the effects of phase noise and allowed \
 	more robust systems to be created. It also helped define the underlying effect phase noise has on allan deviation.<br><br>\
-	<a href=\"https://github.com/JoshWilkins2013/Tools/tree/master/AddPhaseNoise\" target=\"_blank\">Repository</a><br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/BBB/Inject/PseudoCode.png\"><p>High Level Design</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"InjectSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"InjectSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
-    var subtitle = "Phase Noise Profile Generator";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	<a href=\"https://github.com/JoshWilkins2013/Tools/tree/master/AddPhaseNoise\" target=\"_blank\">Repository</a><br><br>"
+    document.getElementById("details-subtitle").innerHTML = "Phase Noise Profile Generator";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "InjectSlides");
+    InjectSlides(1);
 };
 
 
@@ -536,7 +460,7 @@ function AddPhase() {
 function QuantizationSlides(n) {
   if (n > albums["Quantization"].length) {MicrochipSlideIndex = 1}
   if (n < 1) {MicrochipSlideIndex = albums["Quantization"].length}
-  document.getElementById("MicrochipSlider").innerHTML = albums["Quantization"][MicrochipSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Quantization"][MicrochipSlideIndex-1];
 }
 
 function Quantization() {
@@ -547,19 +471,11 @@ function Quantization() {
 	this presentation in an attempt to illustrate that quantization noise can be reduced within a system. In fact, \
 	the typical SNR due to quantization error is about 6 dB per bit, but by preconditioning the signal, this error \
 	can be reduced to improve the SNR to about 10 dB per bit!<br><br>\
-	<a onclick=\"QuantizationAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>\
-    <div class=\"slideshow-container\">\
-      <div id=\"MicrochipSlider\" class=\"myslides\">\
-        <img src=\"img/Microchip/Quantization/Results.png\"><p>Results</p>\
-      </div>\
-      <a class=\"prev\" onclick=\"QuantizationSlides(MicrochipSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"QuantizationSlides(MicrochipSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div><br><br>"
-    var title = "Informative Presentations";
-    var subtitle = "Minimizing Quantization Error";
-    document.getElementById("details-title").innerHTML = title;
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-description").innerHTML = description;
+	<a onclick=\"QuantizationAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>"
+    document.getElementById("details-title").innerHTML = "Informative Presentations";
+    document.getElementById("details-subtitle").innerHTML = "Minimizing Quantization Error";
+    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "QuantizationSlides");
+    QuantizationSlides(1);
 };
 
 function QuantizationAnalysis() {
@@ -580,10 +496,8 @@ function Structures() {
 	useful methods associated with each data type. I also introduce more complex topics such as the concept of \
 	control flow, lambda functions, generators,	and exception handling.<br><br>\
 	<iframe src=\"Storage/Microchip/Structures.html\" style=\"width: 100%;border: none;\"></iframe>"
-    var title = "Informative Presentations";
-	var subtitle = "Python Data Structures";
-    document.getElementById("details-subtitle").innerHTML = subtitle;
-    document.getElementById("details-title").innerHTML = title;
+    document.getElementById("details-title").innerHTML = "Informative Presentations";
+    document.getElementById("details-subtitle").innerHTML = "Python Data Structures";
     document.getElementById("details-description").innerHTML = description;
 };
 
@@ -594,10 +508,8 @@ function Jupyter() {
 	introduces Python, Jupyter, and Anaconda, offering useful references, installation guidance, and examples of \
 	Markdown, Python, and Magic commands..<br><br>\
 	<iframe src=\"Storage/Microchip/Jupyter.html\" style=\"width: 100%;border: none;\"></iframe>"
-	var title = "Informative Presentations";
-	var subtitle = "Introduction to Jupyter";
-    document.getElementById("details-title").innerHTML = title;
-    document.getElementById("details-subtitle").innerHTML = subtitle;
+    document.getElementById("details-title").innerHTML = "Informative Presentations";
+    document.getElementById("details-subtitle").innerHTML = "Introduction to Jupyter";
     document.getElementById("details-description").innerHTML = description;
 };
 
@@ -613,10 +525,8 @@ function AgileSync() {
 	a script using python and SQL that automatically updated both our schematics and parts database to ensure they\
 	remained aligned with the official documentation. While Agile offers a more feature-rich $500K solution, my\
 	script efficiently handled the task and kept everything in sync."
-    var title = "Noteworthy Mentions";
-    var subtitle = "Agile Database Sync Tool";
-    document.getElementById("details-title").innerHTML = title;
-    document.getElementById("details-subtitle").innerHTML = subtitle;
+    document.getElementById("details-title").innerHTML = "Noteworthy Mentions";
+    document.getElementById("details-subtitle").innerHTML = "Agile Database Sync Tool";
     document.getElementById("details-description").innerHTML = description;
 };
 
@@ -628,9 +538,7 @@ function Other() {
 	radiation testing at UC Davis and EMI radiation testing at Chomerics. I also designed a low-power synthesizer\
 	that prioritized energy efficiency over performance and integrated real instrument data into simulations for\
 	accuracy using Python and Jupyter Notebook.<br><br>"
-    var title = "Noteworthy Mentions";
-    var subtitle = "Secondary Job Functions";
-    document.getElementById("details-title").innerHTML = title;
-    document.getElementById("details-subtitle").innerHTML = subtitle;
+    document.getElementById("details-title").innerHTML = "Noteworthy Mentions";
+    document.getElementById("details-subtitle").innerHTML = "Secondary Job Functions";
     document.getElementById("details-description").innerHTML = description;
 };

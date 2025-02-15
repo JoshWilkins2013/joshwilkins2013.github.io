@@ -1,19 +1,31 @@
+var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
+
+var slider_div ="\
+<div class=\"slideshow-container\">\
+  <div class=\"mySlides\">\
+    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
+  </div>\
+  <a class=\"prev\" onclick=\"RaytheonSlides(RaytheonSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+  <a class=\"next\" onclick=\"RaytheonSlides(RaytheonSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+</div>"
+
 var albums = {
 		"Raytheon": [
-		    "<img src=\"img/Raytheon/Radar.png\"><p>Radar Communications</p>",
-		    "<img src=\"img/Raytheon/Space.png\"><p>Satellite Communications</p>",
-		    "<img src=\"img/Raytheon/Missile.png\"><p>Missile Development</p>",
-		    "<img src=\"img/Raytheon/Missile_Launch.png\"><p>Missile Testing</p>",
-		    "<img src=\"img/Raytheon/Aircraft.png\"><p>Aircraft Development</p>"
+		    "/img/Raytheon/Radar.png",
+		    "/img/Raytheon/Space.png",
+		    "/img/Raytheon/Missile.png",
+		    "/img/Raytheon/Missile_Launch.png",
+		    "/img/Raytheon/Aircraft.png"
 		]
 }
 
 var RaytheonSlideIndex = 1;
+
 RaytheonSlides(RaytheonSlideIndex);
 function RaytheonSlides(n) {
   if (n > albums["Raytheon"].length) {RaytheonSlideIndex = 1}
   if (n < 1) {RaytheonSlideIndex = albums["Raytheon"].length}
-  document.getElementById("RaytheonSlider").innerHTML = albums["Raytheon"][RaytheonSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Raytheon"][RaytheonSlideIndex-1];
 }
 
 function CSM() {
@@ -32,8 +44,7 @@ function CSM() {
     Choosing the right synthesizer architecture depends on factors such as required frequency range, signal \
     purity, cost constraints, and system complexity. My work on this synthesizer module involved evaluating these \
     factors and selecting the best approach to ensure reliable performance across multiple product applications."
-    var title = "Synthesizer Module";
-    document.getElementById("details-title").innerHTML = title;
+    document.getElementById("details-title").innerHTML = "Synthesizer Module";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
 }
@@ -48,8 +59,7 @@ function LBR() {
 	to the precise frequency of the incoming signal using specially designed filters. Since these signals are often \
 	encoded, the receiver also needs to demodulate them. The signals are then converted into usable data through \
 	Digital-to-Analog Converters (DACs), and the processed data is further interpreted or utilized on an FPGA."
-    var title = "L-Band Receiver";
-    document.getElementById("details-title").innerHTML = title;
+    document.getElementById("details-title").innerHTML = "L-Band Receiver";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
 }
@@ -65,24 +75,21 @@ function XLC() {
 	the ground stations or receivers may be set up to work in the L-band. By converting the signal, you ensure \
 	smoother processing and compatibility between different systems. In some cases, the transmitted signals are \
 	out of your control, and in others, processing is simply more efficient at a particular frequency."
-    var title = "X-L Band Converter";
-    document.getElementById("details-title").innerHTML = title;
+    document.getElementById("details-title").innerHTML = "X-L Band Converter";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
 }
 
 //function ADS() {
 //	var description = ""
-//    var title = "Keysight ADS";
-//    document.getElementById("details-title").innerHTML = title;
+//    document.getElementById("details-title").innerHTML = "Keysight ADS";
 //    document.getElementById("details-subtitle").innerHTML = "";
 //    document.getElementById("details-description").innerHTML = description;
 //}
 //
 //function Filters() {
 //	var description = ""
-//    var title = "Filter Design";
-//    document.getElementById("details-title").innerHTML = title;
+//    document.getElementById("details-title").innerHTML = "Filter Design";
 //    document.getElementById("details-subtitle").innerHTML = "";
 //    document.getElementById("details-description").innerHTML = description;
 //}

@@ -7,7 +7,7 @@ icon: dashboard
 <html>
   {% include head.html %}
   <body>
-    {% assign header-title = "<img src='img/Banners/Safran_Banner.png'>" %}
+    {% assign header-title = "<img src='https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Banners/Safran_Banner.png'>" %}
 	{% include header.html %}
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
@@ -79,11 +79,15 @@ icon: dashboard
                     particularly drawn to the opportunity to work on RF automation. Shortly after I joined, Orolia
                     was acquired by Safran and became Safran Federal Systems (SFS).<br>
                   </p>
+
                   <div class="slideshow-container">
-                    <div id="SafranSlider" class="myslides"></div>
+                    <div class="mySlides">
+                      <img id="slider_image" src="" /><p id="slider_caption"></p>
+                    </div>
                     <a class="prev" onclick="SafranSlides(SafranSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
                     <a class="next" onclick="SafranSlides(SafranSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
                   </div>
+
                 </div>
               </div>
             </div>

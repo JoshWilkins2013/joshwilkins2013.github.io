@@ -6,11 +6,16 @@ General:
 - Fix Footer to span entire bottom?
     - Footer animation broken, add contact button, site map, etc.
 - Fix block heights in projects so that image loading doesn't jump (min block height to the largest image?)
-    - Resize images for efficiency, consider using CDN or other storage for images?
+    - Make images more responsive (resize, offer up multiple sizes during rendering)
+    - Resize images for efficiency?
     - Add more travel images, auto sort by date?
+    - Fix Captions
 - Go through pictures, add any 'projects' I think I should add
 - Update Safran more
     - Fix commented blocks
+- slider buttons overlap text
+- Cleanup travel.js
+- Fix pdf load from s3 bucket (access denied error)
 
 Possible Enhancements:
 - Add modal or pages for additional project info

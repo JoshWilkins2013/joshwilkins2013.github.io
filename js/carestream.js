@@ -1,29 +1,42 @@
+var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
+
+var slider_div ="\
+<div class=\"slideshow-container\">\
+  <div class=\"mySlides\">\
+    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
+  </div>\
+  <a class=\"prev\" onclick=\"CarestreamSlides(CarestreamSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
+  <a class=\"next\" onclick=\"CarestreamSlides(CarestreamSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
+</div>"
+
 var albums = {
 		"Carestream": [
-		    "<img src=\"img/Carestream/X-Ray_Reconstruction.png\"><p>CBCT: 3d X-Rays</p>",
-			"<img src=\"img/Carestream/CBCT.png\"><p>CBCT: 3d X-Rays</p>",
-			"<img src=\"img/Carestream/Revo.png\"><p>Revo: Mobile X-Ray Machine</p>",
-			"<img src=\"img/Carestream/Box.png\"><p>Custom Enclosures</p>",
-			"<img src=\"img/Carestream/Desk.png\"><p>My Desk</p>"
+		    "/img/Carestream/X-Ray_Reconstruction.png",
+			"/img/Carestream/CBCT.png",
+			"/img/Carestream/Revo.png",
+			"/img/Carestream/Box.png",
+			"/img/Carestream/Desk.png"
 		],
 		"Bucky": [
-            "<img src=\"img/Carestream/Bucky.png\"><p>Digital X-Ray Cassette</p>",
-            "<img src=\"img/Carestream/Bucky2.png\"><p>Cassette Usage</p>"
+            "/img/Carestream/Bucky.png",
+            "/img/Carestream/Bucky2.png"
         ]
 }
 
 var CarestreamSlideIndex = 1;
+
 CarestreamSlides(CarestreamSlideIndex);
 function CarestreamSlides(n) {
   if (n > albums["Carestream"].length) {CarestreamSlideIndex = 1}
   if (n < 1) {CarestreamSlideIndex = albums["Carestream"].length}
-  document.getElementById("CarestreamSlider").innerHTML = albums["Carestream"][CarestreamSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Carestream"][CarestreamSlideIndex-1];
+//  document.getElementById("slider_caption").innerHTML = albums["Carestream"][CarestreamSlideIndex-1];
 }
 
 function BuckySlides(n) {
   if (n > albums["Bucky"].length) {CarestreamSlideIndex = 1}
   if (n < 1) {CarestreamSlideIndex = albums["Bucky"].length}
-  document.getElementById("CarestreamSlider").innerHTML = albums["Bucky"][CarestreamSlideIndex-1];
+  document.getElementById("slider_image").src = s3bucket_path + albums["Bucky"][CarestreamSlideIndex-1];
 }
 
 function Battery() {
@@ -38,21 +51,20 @@ function Battery() {
 	<a href=\"javascript:;\" onclick=\"Balancing2_Paper()\">Cell Balancing</a> \
 	were part of my proposal to accomplish this.<br><br> \
 	<div id=\"battery_description\">\
-	  <img src=\"img\\Carestream\\SwitchedCaps.png\" width=50%>\
+	  <img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/SwitchedCaps.png\" width=50%>\
 	</div>"
-    var title = "Battery Life Enhancement";
-    document.getElementById("details-title").innerHTML = title;
+    document.getElementById("details-title").innerHTML = "Battery Life Enhancement";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
 }
 
 function Balancing1_Paper() {
-    var description = "<iframe src=\"Storage\\Carestream\\Balancing1.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    var description = "<iframe src=\"Storage/Carestream/Balancing1.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("battery_description").innerHTML = description;
 }
 
 function Balancing2_Paper() {
-    var description = "<iframe src=\"Storage\\Carestream\\Balancing2.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    var description = "<iframe src=\"Storage/Carestream/Balancing2.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("battery_description").innerHTML = description;
 }
 
@@ -63,11 +75,9 @@ function task11() {
 	monitored and recorded during discharge for evaluation and analysis. I then wrote excel macros in VBA to determine \
 	the rate of discharge in each one of the batteries, plotted the results, and evaluated their performance. It was \
 	vital to understand existing behavior before any improvements to the system could be made.<br><br>\
-	<img src=\"img\\Carestream\\AGM.png\" width=50%>"
-    var title = "Battery Life Enhancement";
-    var subtitle = "AGM Lead-Acid Battery Test Fixture";
-    document.getElementById("details-title").innerHTML = title;
-    document.getElementById("details-subtitle").innerHTML = subtitle;
+	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/AGM.png\" width=50%>"
+    document.getElementById("details-title").innerHTML = "Battery Life Enhancement";
+    document.getElementById("details-subtitle").innerHTML = "AGM Lead-Acid Battery Test Fixture";
     document.getElementById("details-description").innerHTML = description;
 };
 
@@ -78,15 +88,11 @@ function task13() {
 	digital cassettes use electronic sensors that convert X-ray energy into electrical signals. The signals are \
 	processed and converted into images and promptly displayed on a computer. These cassettes can often offer \
 	better image quality than traditional cassettes at a reduced exposure to radiation. Part of my job at Carestream \
-	was to diagnose failures on the PCB\'s within these cassettes and propose possible improvements.<br><br>\
-	<div class=\"slideshow-container\">\
-      <div id=\"CarestreamSlider\" class=\"myslides\"><img src=\"img\\Carestream\\Bucky.png\"><p>Digital X-Ray Cassettes</p></div>\
-      <a class=\"prev\" onclick=\"BuckySlides(CarestreamSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-      <a class=\"next\" onclick=\"BuckySlides(CarestreamSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-    </div>"
+	was to diagnose failures on the PCB\'s within these cassettes and propose possible improvements.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "";
-	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("CarestreamSlides", "BuckySlides");
 	document.getElementById("details-title").innerHTML = "Digital X-Ray Cassettes";
+	BuckySlides(1);
 };
 
 function task21() {
@@ -98,7 +104,7 @@ function task21() {
 	scripts to fully automate the machine calibration processes, reducing manual intervention and increasing \
 	precision in all calibration tasks. This allowed for faster, more reliable testing cycles and helped maintain \
 	consistent performance across all systems resulting in a higher-quality product.<br><br>\
-	<img src=\"img\\Carestream\\Framework.png\" width=50%>"
+	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/Framework.png\" width=50%>"
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "Automation Framework";
@@ -111,7 +117,7 @@ function task22() {
 	They report any identified bugs to developers for resolution before they reach the QA team. Meanwhile, QA stays \
 	informed about both development and testing progress to ensure the software is thoroughly tested and meets \
 	quality standards. This seamless communication ensured a more efficient and effective testing process.<br><br>\
-	<img src=\"img\\Carestream\\Automation.png\" width=50%>"
+	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/Automation.png\" width=50%>"
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "Communication";
@@ -123,7 +129,7 @@ function task23() {
 	Development (TDD) practices to maintain high-quality software which allowed for early bug detection, better \
 	code structure, and improved overall stability. This resulted in a more efficient workflow and a smoother \
 	release process.<br><br>\
-	<img src=\"img\\Carestream\\TDD.png\" width=50%>"
+	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/TDD.png\" width=50%>"
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("details-title").innerHTML = "Agile";
