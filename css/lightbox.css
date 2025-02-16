@@ -1,0 +1,27 @@
+span img {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+/* Overlay entire screen */
+.lightbox {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  top: 71;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 2em;  /* A bit of padding around image */
+  background: rgba(0, 0, 0, 0.8);  /* Translucent background */
+}
+
+.lightbox img {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  object-fit: contain;
+}
