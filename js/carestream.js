@@ -6,24 +6,14 @@ function Battery() {
     surge when taking x-rays. To meet this demand, around twelve lead-acid batteries were connected in series. \
     Because they were linked together, the performance of all the batteries was limited by the weakest one. These \
     two papers on \
-    <a href=\"javascript:;\" onclick=\"Balancing1_Paper()\">Switched Capacitors</a> and \
-	<a href=\"javascript:;\" onclick=\"Balancing2_Paper()\">Cell Balancing</a> \
+    <a href=\"javascript:;\" onclick=\"load_pdf('Carestream', 'storage/Carestream/Balancing1.pdf')\">Switched Capacitors</a> and \
+	<a href=\"javascript:;\" onclick=\"load_pdf('Carestream', 'storage/Carestream/Balancing2.pdf')\">Cell Balancing</a> \
 	were part of my proposal to accomplish this.<br><br>"
 	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/SwitchedCaps.png\" width=50%>"
     document.getElementById("details-title").innerHTML = "Battery Life Enhancement";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
     document.getElementById("Carestream_Slider").innerHTML = image;
-}
-
-function Balancing1_Paper() {
-    var description = "<iframe src=\"Storage/Carestream/Balancing1.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("Carestream_Slider").innerHTML = description;
-}
-
-function Balancing2_Paper() {
-    var description = "<iframe src=\"Storage/Carestream/Balancing2.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("Carestream_Slider").innerHTML = description;
 }
 
 function task11() {

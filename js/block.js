@@ -17,12 +17,14 @@ function Slides(direction, image_paths, name) {
 }
 
 function load_html(project_name, html_path) {
-    var description = "<iframe src=" + html_path + " style=\"width: 100%;border: none;\"></iframe>"
+    var src = s3bucket_path + html_path + "#toolbar=0&view=FitH";
+    var description = "<iframe src=\"" + src + "\" style=\"width: 100%;border: none;\"></iframe>";
     document.getElementById(project_name + "_Slider").innerHTML = description;
 }
 
 function load_pdf(project_name, pdf_path) {
-    var description = "<iframe src=" + pdf_path + "#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+    var src = s3bucket_path + pdf_path + "#toolbar=0&view=FitH";
+    var description = "<iframe src=\"" + src + "\" style=\"width: 100%;border: none;\"></iframe>";
     document.getElementById(project_name + "_Slider").innerHTML = description;
 }
 

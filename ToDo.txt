@@ -1,4 +1,6 @@
 General:
+- Fix index page (remove block.html)
+- Rename block.js to gallery.js?
 - Remove button on pdf or html load
 - Move descriptions into json files?
 - Sidebar collapses before next page loads sometimes
@@ -14,7 +16,6 @@ General:
 - Go through pictures, add any 'projects' I think I should add
 - Update Safran more
     - Fix commented blocks
-- Fix pdf load from s3 bucket (access denied error)
 - Slider should overlay with lightbox
 
 Possible Enhancements:

@@ -24,27 +24,12 @@ function MetricDefinition() {
 	products in the market. Key performance metrics were often overlooked or poorly defined. To address this, I \
 	developed and submitted a paper to IEEE to help clarify these metrics, raise awareness of the issue, and \
 	demonstrate how some of these tests could be conducted without relying on expensive equipment.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"IEEE_Report()\" href=\"javascript:;\">Intra-Signal Metrics</a></button>"
+	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Safran', 'storage/Safran/IEEE_Report.pdf')\" href=\"javascript:;\">Intra-Signal Metrics</a></button>"
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Metric Definition";
     document.getElementById("details-description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
-
-function IEEE_Report() {
-    var description = "During my time at Safran, I observed a general lack of RF knowledge and an overall poor \
-	understanding of the products they sold. Many of the products had sparse datasheets, and the specifications \
-	were often inconsistent in both terminology and accuracy. I took the initiative to identify the relevant \
-	performance metrics, standardize the terminology, and establish consistent testing methods to create reliable \
-	and coherent specification sheets for the products.<br><br>\
-	In the process, it became clear that this issue extended beyond our company and was common across many similar \
-	products in the market. Key performance metrics were often overlooked or poorly defined. To address this, I \
-	developed and submitted a paper to IEEE to help clarify these metrics, raise awareness of the issue, and \
-	demonstrate how some of these tests could be conducted without relying on expensive equipment.<br><br>\
-    <iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\IEEE_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
-}
 
 function ReportGeneration() {
 	var description = "After identifying the appropriate test metrics for our products, I developed several test \
@@ -52,23 +37,12 @@ function ReportGeneration() {
 	tests more efficient, detailed, and consistent. This also enabled us to quickly validate products before \
 	shipment and provided a more accurate representation of each unit\'s performance, as opposed to relying \
 	on a generic spec sheet. Below is an example of one of these reports, with the PDF organized by metric.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"WF_Report()\" href=\"javascript:;\">Example Report</a></button>"
+	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Safran', 'storage/Safran/Wavefront_Report.pdf')\" href=\"javascript:;\">Example Report</a></button>"
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Report Generation";
     document.getElementById("details-description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
-
-function WF_Report() {
-    var description = "After identifying the appropriate test metrics for our products, I developed several test \
-	procedures to measure and validate their performance. These procedures were then automated making the \
-	tests more efficient, detailed, and consistent. This also enabled us to quickly validate products before \
-	shipment and provided a more accurate representation of each unit\'s performance, as opposed to relying \
-	on a generic spec sheet. Below is an example of one of these reports, with the PDF organized by metric.<br><br>\
-    <iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Wavefront_Report.pdf#view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
-}
 
 function InstrumentAutomation() {
 	var description = "Automating test procedures requires controlling both the hardware of the device under test \
@@ -105,7 +79,7 @@ function Shared_LO() {
 	instability into the system. One of my first achievements was redesigning the architecture to implement a \
 	shared LO distribution system. This eliminated uncorrelated noise by using a single reference source, \
 	resulting in significant improvements in inter-signal phase alignment and stability. See \
-    <a href=\"javascript:;\" onclick=\"LO_Leakage()\">this paper</a> for additional information. After the change, \
+    <a href=\"javascript:;\" onclick=\"load_pdf('Safran', 'storage/Safran/Research/LO_Leakage.pdf')\">this paper</a> for additional information. After the change, \
     phase alignment improved by a factor of three, and phase stability improved by a factor of ten. As a result, \
 	the Broadsim Wavefront was able to align the output of eight different radios to within 0.5 degrees, with \
 	inter-element phase stability of less than 0.1 degrees.<br><br>"
@@ -114,21 +88,6 @@ function Shared_LO() {
     document.getElementById("details-description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
-
-function LO_Leakage() {
-    var description = "When I first joined Safran, I noticed that the Broadsim Wavefront used multiple frequency \
-	references, one for each internal radio. This approach was problematic, introducing excess noise and \
-	instability into the system. One of my first achievements was redesigning the architecture to implement a \
-	shared LO distribution system. This eliminated uncorrelated noise by using a single reference source, \
-	resulting in significant improvements in inter-signal phase alignment and stability. See \
-    <a href=\"javascript:;\" onclick=\"LO_Leakage()\">this paper</a> for additional information. After the change, \
-    phase alignment improved by a factor of three, and phase stability improved by a factor of ten. As a result, \
-	the Broadsim Wavefront was able to align the output of eight different radios to within 0.5 degrees, with \
-	inter-element phase stability of less than 0.1 degrees.<br><br>\
-	<iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Research\\LO_Leakage.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
-}
 
 function Environmental_Compensation() {
 	var description = "I revised the existing real-time phase calibration routine to account for inter-channel \
@@ -178,18 +137,16 @@ function Calibration_Procedures() {
 //
 //function ZIF_Architecture() {
 //    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>\
-//	<iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Research\\ZIF_Architecture.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
 //    document.getElementById("details-description").innerHTML = description;
-//    document.getElementById("Safran_Slider").innerHTML = "";
+//    load_pdf('Safran', 'storage/Safran/ZIF_Architecture.pdf')
 //}
 //
 //function ZIF_Advantages() {
 //    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>\
-//	<iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Research\\ZIF_Advantages.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
+//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
 //    document.getElementById("details-description").innerHTML = description;
-//    document.getElementById("Safran_Slider").innerHTML = "";
+//    load_pdf('Safran', 'storage/Safran/ZIF_Advantages.pdf')
 //}
 
 function Pentek() {

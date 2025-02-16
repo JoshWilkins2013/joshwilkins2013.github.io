@@ -31,21 +31,11 @@ function OutputPower() {
 	To address these requirements, I developed an analog Automatic Gain Controller (AGC), combining an envelope \
 	detector with an adjustable feedback controller. This design ensured precise regulation and stabilization \
 	while maximizing the potential output power.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"OutputPowerAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>"
+	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Microchip', 'storage/Microchip/OutputPowerController.pdf')\" href=\"javascript:;\">Analysis</a></button><br><br>"
     document.getElementById("details-subtitle").innerHTML = "Output Power Controller";
     document.getElementById("details-description").innerHTML = description;
     add_slider("Microchip", "Power");
 };
-
-function OutputPowerAnalysis() {
-    var description = "This synthesizer required a substantial output power (nearly 1W) to effectively radiate \
-	the output frequency across the atoms of an atomic clock. It also needed to be both adjustable and stable. \
-	To address these requirements, I developed an analog Automatic Gain Controller (AGC), combining an envelope \
-	detector with an adjustable feedback controller. This design ensured precise regulation and stabilization \
-	while maximizing the potential output power.<br><br>\
-	<iframe src=\"Storage\\Microchip\\OutputPowerController.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-description").innerHTML = description;
-}
 
 function Boards() {
 	var description = "While working on the synthesizer, I had to develop quite a few prototype boards to test the \
@@ -65,25 +55,12 @@ function TempDependence() {
 	temperature chamber. The temperature dependency was largely mitigated and corrected through a custom-designed \
 	add-on device, which extracted the cleanest signal from the synthesizer and digitally tuned the temperature \
 	dependency out.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"TempDependenceAnalysis()\" href=\"javascript:;\">Analysis</a></button><br><br>"
+	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Microchip', 'storage/Microchip/TemperatureDependence.pdf')\" href=\"javascript:;\">Analysis</a></button><br><br>"
 	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Microchip/Misc/DividerBox.png\" width=100%><p>Divider Box</p>"
     document.getElementById("details-subtitle").innerHTML = "Temperature Dependency Testing";
     document.getElementById("details-description").innerHTML = description;
     document.getElementById("Microchip_Slider").innerHTML = image;
 };
-
-function TempDependenceAnalysis() {
-    var description = "Given the extreme precision required for atomic clocks, environmental factors significantly \
-	affect their performance. With this in mind, I first characterized the temperature dependency of the synthesizer \
-	by approximating the impact of the suspected primary contributor: a high-Q bandpass filter. Once the synthesizer \
-	was completed, this approximation was replaced with more accurate measurements of the entire system using a \
-	temperature chamber. The temperature dependency was largely mitigated and corrected through a custom-designed \
-	add-on device, which extracted the cleanest signal from the synthesizer and digitally tuned the temperature \
-	dependency out.<br><br>\
-	<iframe src=\"Storage\\Microchip\\TemperatureDependence.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Microchip_Slider").innerHTML = "";
-}
 
 function Filters() {
 	var description = "Many electronic components are sensitive to temperature deviations. In some devices, this\
@@ -147,23 +124,11 @@ function Tempco() {
 	compensation (tempco) algorithm had been implemented. To tune this algorithm, I wrote a script that takes in\
 	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
 	profile.<br><br>\
-	<a onclick=\"TempcoAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>"
+	<a onclick=\"load_html('Microchip', 'storage/Microchip/SteppedInputResponse.html')\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>"
     document.getElementById("details-subtitle").innerHTML = "Temperature Compensation";
     document.getElementById("details-description").innerHTML = description;
     add_slider("Microchip", "AtomicClock/Tempco");
 };
-
-function TempcoAnalysis() {
-    var description = "Many electronic components are sensitive to temperature deviations. In some devices, this\
-	sensitivity is negligible and may not alter the capabilities of the device. However, atomic clocks are very\
-	precise devices and this sensitivity is a major concern. In an attempt to reduce this sensitivity, a temperature\
-	compensation (tempco) algorithm had been implemented. To tune this algorithm, I wrote a script that takes in\
-	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
-	profile.<br><br>\
-	<iframe src=\"Storage\\Microchip\\SteppedInputResponse.html\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Microchip_Slider").innerHTML = "";
-}
 
 function DataAnalysis() {
 	var description = "During the development of one of the atomic clocks at Microchip, there were several points \
@@ -191,7 +156,7 @@ function Embedded() {
 	<a href=\"https://github.com/JoshWilkins2013/BBB\" target=\"_blank\">Repository</a><br><br>"
     document.getElementById("details-title").innerHTML = "Real Time Embedded System";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MicrochipSlides", "BBBSlides");
+    document.getElementById("details-description").innerHTML = description;
     add_slider("Microchip", "BBB");
 };
 
@@ -211,11 +176,10 @@ function AltPhaseNoise() {
 	the device I was testing exceeded the capabilities of our instruments. One such instance was when I compared \
 	the performance of two different comb generator technologies: a non-linear transmission line and a standard \
 	step recovery diode.<br><br>\
-	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>\
-	<iframe src=\"Storage/Microchip/AltPhaseNoiseMeasSys.html\" style=\"width: 100%;border: none;\"></iframe>"
+	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>"
     document.getElementById("details-subtitle").innerHTML = "Phase Noise Measurement System";
     document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Microchip_Slider").innerHTML = "";
+    load_html('Microchip', 'storage/Microchip/AltPhaseNoiseMeasSys.html');
 };
 
 function AddPhase() {
@@ -252,10 +216,9 @@ function QuantizationAnalysis() {
 	resolution, or number of bits, used to measure the signal as well as the number of sampling points.	I created \
 	this presentation in an attempt to illustrate that quantization noise can be reduced within a system. In fact, \
 	the typical SNR due to quantization error is about 6 dB per bit, but by preconditioning the signal, this error \
-	can be reduced to improve the SNR to about 10 dB per bit!<br><br>\
-	<iframe src=\"Storage/Microchip/QuantizationError.html\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Microchip_Slider").innerHTML = "";
+	can be reduced to improve the SNR to about 10 dB per bit!<br><br>"
+	document.getElementById("details-description").innerHTML = description;
+    load_html('Microchip', 'storage/Microchip/QuantizationError.html')
 };
 
 function Structures() {
@@ -263,12 +226,11 @@ function Structures() {
 	to breifly cover just about everything a beginner could find useful when starting to learn the Python \
 	programming language. I go through each data type including lists, dictionaries, and strings as well as the most \
 	useful methods associated with each data type. I also introduce more complex topics such as the concept of \
-	control flow, lambda functions, generators,	and exception handling.<br><br>\
-	<iframe src=\"Storage/Microchip/Structures.html\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("details-title").innerHTML = "Informative Presentations";
+	control flow, lambda functions, generators,	and exception handling.<br><br>"
+	document.getElementById("details-title").innerHTML = "Informative Presentations";
     document.getElementById("details-subtitle").innerHTML = "Python Data Structures";
     document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Microchip_Slider").innerHTML = "";
+    load_html('Microchip', 'storage/Microchip/Structures.html')
 };
 
 function Jupyter() {
@@ -276,12 +238,11 @@ function Jupyter() {
 	collaboration and idea generation. Jupyter Notebooks, in particular, is a valuable tool, and I’ve created \
 	a notebook to cover its basics, including installation and usage. Co-written with a colleague, this notebook \
 	introduces Python, Jupyter, and Anaconda, offering useful references, installation guidance, and examples of \
-	Markdown, Python, and Magic commands..<br><br>\
-	<iframe src=\"Storage/Microchip/Jupyter.html\" style=\"width: 100%;border: none;\"></iframe>"
+	Markdown, Python, and Magic commands..<br><br>"
     document.getElementById("details-title").innerHTML = "Informative Presentations";
     document.getElementById("details-subtitle").innerHTML = "Introduction to Jupyter";
     document.getElementById("details-description").innerHTML = description;
-    document.getElementById("Microchip_Slider").innerHTML = "";
+    load_html('Microchip', 'storage/Microchip/Jupyter.html')
 };
 
 

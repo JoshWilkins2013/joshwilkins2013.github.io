@@ -84,7 +84,7 @@ function EEEE381() {
 	topics include the frequency response of amplifiers, semiconductor diodes and diode circuits (including \
 	rectifiers and clamping circuits), and the use of Zener diodes for voltage regulation. Students will also \
 	learn to design ideal op-amp circuits in both non-inverting and inverting configurations.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE381_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE381_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Electronics I";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("RIT_Slider").innerHTML = "";
@@ -101,7 +101,7 @@ function EEEE414() {
 	PID control; root-locus analysis and design; frequency-response design and Nyquist stability. A\
 	laboratory will provide students with hands-on analysis and design-build-test experience, and\
 	includes the use of computer-aided design software such as MATLAB.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE414_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE414_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Classical Control";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("RIT_Slider").innerHTML = "";
@@ -140,7 +140,7 @@ function EEEE484() {
 	Phase-locked loop and its application. Introduction to digital communication. Binary ASK, FSK\
 	and PSK. Noise effects. Optimum detection: matched filters, maximum-likelihood reception.\
 	Computer simulation.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE484_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE484_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Communication Systems";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("RIT_Slider").innerHTML = "";
@@ -155,7 +155,7 @@ function EEEE485() {
 	addition, robotics system modeling, control, and applications will be explored. Students will\
 	design electronic interfaces and controllers for mechanical devices. Finally, sensor and actuator\
 	selection, installation, and application strategies will be explored.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE485_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE485_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Robotic Systems";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("RIT_Slider").innerHTML = "";
@@ -169,7 +169,7 @@ function EEEE497() {
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
 	which is fully tested and documented.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Senior Design Project I";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("RIT_Slider").innerHTML = "";
@@ -183,7 +183,7 @@ function EEEE498() {
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
 	which is fully tested and documented.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Senior Design Project II";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("RIT_Slider").innerHTML = "";

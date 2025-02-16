@@ -4,7 +4,7 @@ function ENR153() {
 	Prototyping will be done using CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
 	geometric relations, external references, equations, and design tables will be emphasized. A design-build project will require students to build a working prototype \
 	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports.<br><br>\
-    <a onclick=\"load_pdf(\'MCC\', \'Storage/MCC/ENR153_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR153_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Graphing & Machining"
 	document.getElementById("details-description").innerHTML = description
 	add_slider("MCC", "ENR153");
@@ -16,7 +16,7 @@ function ENR157() {
 	decoders, flip-flops and registers. Digital system applications will include counters, magnitude comparators, ADCs, DACs, \
 	feedback control, sensor interfacing, and signal conditioning. Schematic capture and VHDL programming will be implemented in a digital system on an FPGA.\
 	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', \'Storage/MCC/ENR157_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+	<a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR157_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Digital Electronics & Microcontrollers"
 	document.getElementById("details-description").innerHTML = description;
 	add_slider("MCC", "ENR157");
@@ -27,7 +27,7 @@ function ENR161() {
 	Excel topics include functions, graphing, matrices, linear regression, statistics, and root finding. LabVIEW topics \
 	include a variety of data types, functions, loops, case structures, and graphical user interfaces. LabVIEW programs will \
 	include linear algebra, graphing, and data analysis. A final design project will be implemented using LabVIEW and LEGO Mindstorms robotics.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', 'Storage/MCC/ENR161_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+	<a onclick=\"load_pdf(\'MCC\', 'storage/MCC/ENR161_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Engineering Computing I"
 	document.getElementById("details-description").innerHTML = description;
 	add_slider("MCC", "ENR161");
@@ -41,7 +41,7 @@ function ENR251() {
 	structures under various loading conditions, using both analytical and graphical methods. Through this course, \
 	students will develop the skills to assess and design stable structures, which are essential for careers in \
 	civil, mechanical, and aerospace engineering.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', \'Storage/MCC/ENR251_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+	<a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR251_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Statics"
 	document.getElementById("details-description").innerHTML = description;
 	add_slider("MCC", "ENR251");
@@ -68,7 +68,7 @@ function ENR254() {
 	these concepts to real-world electrical systems, using both analytical methods and computational tools. \
 	This course is crucial for students pursuing careers in electrical engineering, electronics, and \
 	communications, providing the knowledge needed to analyze and design more complex circuits.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', \'Storage/MCC/ENR254_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+	<a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR254_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Circuit Analysis II"
 	document.getElementById("details-description").innerHTML = description;
 	add_slider("MCC", "ENR254");

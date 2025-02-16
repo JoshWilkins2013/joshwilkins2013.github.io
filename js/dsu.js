@@ -46,7 +46,7 @@ function STAT700() {
 	statistical algorithms. Students will develop proficiency in writing efficient, reproducible code to solve \
 	complex statistical problems and gain hands-on experience in using statistical programming to \
 	support data-driven decision-making.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'Storage/DSU/STAT700.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
+    <a onclick=\"load_pdf(\'DSU\', \'storage/DSU/STAT700_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Statistical Programming";
 	document.getElementById("details-description").innerHTML = description;
 	document.getElementById("DSU_Slider").innerHTML = "";
