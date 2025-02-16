@@ -1,5 +1,6 @@
 ---
 title: Carestream
+header: <img src='https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Banners/Carestream_Banner.png'>
 category: Experience
 order: 1
 icon: dashboard
@@ -7,7 +8,6 @@ icon: dashboard
 <html>
   {% include head.html %}
   <body>
-    {% assign header-title = "<img src='https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Banners/Carestream_Banner.png'>" %}
     {% include header.html %}
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
@@ -64,29 +64,22 @@ icon: dashboard
               </div>
             </div>
             <div class="col-lg-7">
-              <div class="block">
+              <div id="Carestream_Content" class="block">
                 <div class="block-header"><h4 id="details-title">Medical Imaging Devices</h4><i class="fas fa-plus-square"></i></div>
                 <div><h6 id="details-subtitle" style="margin-top: 8px; color:#FFFFFF"></h6></div>
                 <div id="details-description">
-
-                  <p> I started working at Carestream in the summer of 2015 and continued there until shortly
-                    after graduating in the winter of 2016. My primary focus was initially on the battery
-                    management system for their mobile x-ray machines. Later, I was tasked with automating the
-                    software validation of their OnSight 3D Extremity System. This device used Cone Beam Computed
-                    Tomography (CBCT) technology to reconstruct a series of x-rays into a 3D model. Because the
-                    software behind their products was developed from the same branch, I was able to write these
-                    automated tests in a way that made them agnostic to the product itself.<br>
-                  </p>
-
-                  <div class="slideshow-container">
-                    <div class="mySlides">
-                      <img id="slider_image" src="" /><p id="slider_caption"></p>
-                    </div>
-                    <a class="prev" onclick="CarestreamSlides(CarestreamSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                    <a class="next" onclick="CarestreamSlides(CarestreamSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-                  </div>
-
+                  I started working at Carestream in the summer of 2015 and continued there until shortly
+                  after graduating in the winter of 2016. My primary focus was initially on the battery
+                  management system for their mobile x-ray machines. Later, I was tasked with automating the
+                  software validation of their OnSight 3D Extremity System. This device used Cone Beam Computed
+                  Tomography (CBCT) technology to reconstruct a series of x-rays into a 3D model. Because the
+                  software behind their products was developed from the same branch, I was able to write these
+                  automated tests in a way that made them agnostic to the product itself.<br>
                 </div>
+
+                <div id="Carestream_Slider" class="slideshow-container"></div>
+                <script>add_slider("Carestream", "Main")</script>
+
               </div>
             </div>
           </div>

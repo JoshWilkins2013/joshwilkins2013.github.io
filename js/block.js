@@ -1,4 +1,4 @@
-var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
+var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com/"
 var SlideIndex= 1;
 
 function Slides(n, image_paths, name) {
@@ -63,9 +63,6 @@ function place_blocks(items, col_name) {
 
       first_src = s3bucket_path + images[0];
 
-      images = images.join(",")
-      images = images.replaceAll("img", "/img")
-
       block_content += "<img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" />\n</div>\n"
       block_content += "<a class=\"prev\" onclick=\'Slides(SlideIndex -= 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
       block_content += "<a class=\"next\" onclick=\'Slides(SlideIndex += 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
@@ -121,21 +118,45 @@ function viewAlbum(element, albumName) {
       var gallery_content = row_starter + column_starter;
 
       first_col_items.forEach(image => {
-        gallery_content += '<img style="width: 100%; padding: 10 0 10 0;" src="' + bucketUrl + image + '"/>\n';
+        gallery_content += '<img style="width: 100%; margin: 10 0 10 0; border: solid 2px black" src="' + bucketUrl + image + '"/>\n';
       });
 
       gallery_content += '</div>\n' + column_starter; // end the column
       second_col_items.forEach(image => {
-        gallery_content += '<img style="width: 100%; padding: 10 0 10 0;" src="' + bucketUrl + image + '"/>\n';
+        gallery_content += '<img style="width: 100%; margin: 10 0 10 0; border: solid 2px black" src="' + bucketUrl + image + '"/>\n';
       });
 
       gallery_content += '</div>\n' + column_starter;  // end the column
       third_col_items.forEach(image => {
-        gallery_content += '<img style="width: 100%; padding: 10 0 10 0;" src="' + bucketUrl + image + '"/>\n';
+        gallery_content += '<img style="width: 100%; margin: 10 0 10 0; border: solid 2px black" src="' + bucketUrl + image + '"/>\n';
       });
 
       gallery_content += '</div>\n</div>'; // end the column and the row
       document.getElementById(albumName.slice(0, -1).split("/").pop() + "_Content").innerHTML = gallery_content;  // Replace block content with gallery
     });
   }
+}
+
+function add_slider(folder_name, place_name) {
+  SlideIndex = 1;
+  prefix_path = "img/" + folder_name + "/" + place_name + "/"
+
+  var images = [];
+  // Get all folder names in img/travel folder
+  s3.listObjects({ Prefix: prefix_path }, function (err, data) {
+    for (const row of data.Contents) {
+      images.push(row.Key)
+    }
+
+    images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
+    var block_content = "<div class=\"mySlides\">\n"
+
+    first_src = s3bucket_path + images[0];
+
+    block_content += "<img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" />\n</div>\n"
+    block_content += "<a class=\"prev\" onclick=\'Slides(SlideIndex -= 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
+    block_content += "<a class=\"next\" onclick=\'Slides(SlideIndex += 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
+
+    document.getElementById(folder_name + "_Slider").innerHTML = block_content;
+  });
 }

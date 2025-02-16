@@ -1,37 +1,3 @@
-var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
-
-var slider_div ="\
-<div class=\"slideshow-container\">\
-  <div class=\"mySlides\">\
-    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
-  </div>\
-  <a class=\"prev\" onclick=\"SafranSlides(SafranSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-  <a class=\"next\" onclick=\"SafranSlides(SafranSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-</div>"
-
-var albums = {
-            "Safran": [
-                "/img/Safran/Wavefront.png",
-                "/img/Safran/Anechoic.png",
-                "/img/Safran/Broadsim.png",
-                "/img/Safran/Broadsim_Duo.png",
-                "/img/Safran/SecureSync.png",
-                "/img/Safran/Skydel.png"
-			],
-			"Pentek": [
-                "/img/Safran/Pentek/Radio.png",
-                "/img/Safran/Pentek/Architecture.png"
-			]
-}
-
-var SafranSlideIndex = 1;
-SafranSlides(SafranSlideIndex);
-function SafranSlides(n) {
-  if (n > albums["Safran"].length) {SafranSlideIndex = 1}
-  if (n < 1) {SafranSlideIndex = albums["Safran"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["Safran"][SafranSlideIndex-1];
-}
-
 function TestSuite() {
     var description = "	I developed and fully automated a comprehensive suite of test procedures to validate the \
 	RF performance of the entire Broadsim product line. The system was designed to support the testing of all \
@@ -45,6 +11,7 @@ function TestSuite() {
     document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 function MetricDefinition() {
@@ -61,6 +28,7 @@ function MetricDefinition() {
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Metric Definition";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 function IEEE_Report() {
@@ -75,6 +43,7 @@ function IEEE_Report() {
 	demonstrate how some of these tests could be conducted without relying on expensive equipment.<br><br>\
     <iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\IEEE_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 }
 
 function ReportGeneration() {
@@ -87,6 +56,7 @@ function ReportGeneration() {
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Report Generation";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 function WF_Report() {
@@ -97,6 +67,7 @@ function WF_Report() {
 	on a generic spec sheet. Below is an example of one of these reports, with the PDF organized by metric.<br><br>\
     <iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Wavefront_Report.pdf#view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 }
 
 function InstrumentAutomation() {
@@ -108,6 +79,7 @@ function InstrumentAutomation() {
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Automating Hardware";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 function Wavefront_Enhancement() {
@@ -124,6 +96,7 @@ function Wavefront_Enhancement() {
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 function Shared_LO() {
@@ -139,6 +112,7 @@ function Shared_LO() {
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "Shared LO Architecture";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 function LO_Leakage() {
@@ -153,6 +127,7 @@ function LO_Leakage() {
 	inter-element phase stability of less than 0.1 degrees.<br><br>\
 	<iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Research\\LO_Leakage.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 }
 
 function Environmental_Compensation() {
@@ -164,6 +139,7 @@ function Environmental_Compensation() {
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "Environmental Compensation";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 function Calibration_Procedures() {
@@ -177,6 +153,7 @@ function Calibration_Procedures() {
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "Calibration Enhancements";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };
 
 //function Research() {
@@ -187,6 +164,7 @@ function Calibration_Procedures() {
 //	document.getElementById("details-title").innerHTML = "Research and Development";
 //    document.getElementById("details-subtitle").innerHTML = "";
 //    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Slider").innerHTML = "";
 //};
 //
 //function ZIF() {
@@ -195,6 +173,7 @@ function Calibration_Procedures() {
 //	document.getElementById("details-title").innerHTML = "Research and Development";
 //    document.getElementById("details-subtitle").innerHTML = "Zero-IF";
 //    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Slider").innerHTML = "";
 //};
 //
 //function ZIF_Architecture() {
@@ -202,6 +181,7 @@ function Calibration_Procedures() {
 //	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>\
 //	<iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Research\\ZIF_Architecture.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
 //    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Slider").innerHTML = "";
 //}
 //
 //function ZIF_Advantages() {
@@ -209,13 +189,8 @@ function Calibration_Procedures() {
 //	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>\
 //	<iframe src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com\\Storage\\Safran\\Research\\ZIF_Advantages.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
 //    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Slider").innerHTML = "";
 //}
-
-function PentekSlides(n) {
-  if (n > albums["Pentek"].length) {SafranSlideIndex = 1}
-  if (n < 1) {SafranSlideIndex = albums["Pentek"].length}
-  document.getElementById("slider_image").innerHTML = s3bucket_path + albums["Pentek"][SafranSlideIndex-1];
-}
 
 function Pentek() {
     SafranSlideIndex = 1;
@@ -224,7 +199,8 @@ function Pentek() {
 	a computer.<br><br>"
 	document.getElementById("details-title").innerHTML = "Research and Development";
     document.getElementById("details-subtitle").innerHTML = "Small Form-Factor SDRs";
-    document.getElementById("details-description").innerHTML = description + slider_div;
+    document.getElementById("details-description").innerHTML = description;
+    add_slider("Safran", "Pentek");
 };
 
 function PhaseCal() {
@@ -232,4 +208,5 @@ function PhaseCal() {
 	document.getElementById("details-title").innerHTML = "Phase Calibration";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Slider").innerHTML = "";
 };

@@ -1,60 +1,3 @@
-var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
-
-var slider_div ="\
-<div class=\"slideshow-container\">\
-  <div class=\"mySlides\">\
-    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
-  </div>\
-  <a class=\"prev\" onclick=\"MCCSlides(MCCSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-  <a class=\"next\" onclick=\"MCCSlides(MCCSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-</div>"
-
-var albums = {
-		"Campus": [
-			"/img/MCC/MCC_Campus/Main_Campus.png",
-			"/img/MCC/MCC_Campus/Campus_Center.png",
-			"/img/MCC/MCC_Campus/Campus_Map.png"
-		],
-		"ENR153": [
-			"/img/Robotics/McLaren_F1/Front.jpg",
-			"/img/Robotics/McLaren_F1/Back.jpg",
-			"/img/Robotics/McLaren_F1/Inside.jpg",
-			"/img/Robotics/McLaren_F1/Gears.jpg",
-			"/img/Robotics/McLaren_F1/Top.jpg",
-			"/img/Robotics/McLaren_F1/McLarenF1_Front.jpg",
-			"/img/Robotics/McLaren_F1/McLarenF1_Back.jpg"
-		],
-		"ENR157": [
-			"/img/MCC/ENR157/UserInterface.png",
-			"/img/MCC/ENR157/Subsystems.png",
-			"/img/MCC/ENR157/BlockDiagram.png",
-			"/img/MCC/ENR157/Flowchart.png"
-		],
-		"ENR161": [
-			"/img/MCC/ENR161/LabViewCode.png",
-			"/img/MCC/ENR161/CompetitionResults.png"
-		],
-		"ENR251": [
-			"/img/MCC/ENR251/ENR251.png",
-			"/img/MCC/ENR251/MathModel.png",
-			"/img/MCC/ENR251/500gForce.png"
-		],
-		"ENR254": [
-			"/img/MCC/ENR254/ButterworthHPF.png",
-			"/img/MCC/ENR254/ActiveLPF.png",
-			"/img/MCC/ENR254/PassiveLPF.png"
-		]
-}
-
-var MCCSlideIndex = 1;
-
-MCCSlides(1);
-function MCCSlides(n) {
-  if (n > albums["Campus"].length) {MCCSlideIndex = 1}
-  if (n < 1) {MCCSlideIndex = albums["Campus"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["Campus"][MCCSlideIndex-1];
-}
-
 function MCC_Transcript() {
 	var description = "<iframe src=\"Storage\\MCC\\Transcript.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
 	document.getElementById("details-title").innerHTML = "Transcript";
@@ -62,7 +5,6 @@ function MCC_Transcript() {
 };
 
 function ENR153() {
-    MCCSlideIndex = 1;
 	var description = "An introduction to solid modeling, computer aided manufacturing, the engineering design process, and machine shop operations. \
 	SolidWorks will be used to design parts and assemblies. CamWorks will be used to create tool paths for common 2.5 axis milling operations. \
 	Prototyping will be done using CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
@@ -70,15 +12,9 @@ function ENR153() {
 	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports.<br><br>\
     <a onclick=\"ENR153_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Graphing & Machining"
-	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR153Slides");
-	ENR153Slides(1);
+	document.getElementById("details-description").innerHTML = description
+	add_slider("MCC_Slider", "ENR153");
 };
-
-function ENR153Slides(n) {
-  if (n > albums["ENR153"].length) {MCCSlideIndex = 1}
-  if (n < 1) {MCCSlideIndex = albums["ENR153"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["ENR153"][MCCSlideIndex-1];
-}
 
 function ENR153_Report() {
     var description = "<iframe src=\"Storage\\MCC\\ENR153_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
@@ -86,22 +22,15 @@ function ENR153_Report() {
 }
 
 function ENR157() {
-    MCCSlideIndex = 1;
 	var description = "This course introduces the basic logic functions, components and methodologies used in the design of digital systems. \
 	This course covers basic logic gates, boolean algebra, number systems, digital arithmetic, combinational logic circuits, multiplexers, \
 	decoders, flip-flops and registers. Digital system applications will include counters, magnitude comparators, ADCs, DACs, \
 	feedback control, sensor interfacing, and signal conditioning. Schematic capture and VHDL programming will be implemented in a digital system on an FPGA.\
 	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation.<br><br>"
 	document.getElementById("details-title").innerHTML = "Digital Electronics & Microcontrollers"
-	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR157Slides");
-	ENR157Slides(1);
+	document.getElementById("details-description").innerHTML = description;
+	add_slider("MCC_Slider", "ENR157");
 };
-
-function ENR157Slides(n) {
-  if (n > albums["ENR157"].length) {MCCSlideIndex = 1}
-  if (n < 1) {MCCSlideIndex = albums["ENR157"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["ENR157"][MCCSlideIndex-1];
-}
 
 function ENR157_Report() {
     var description = "<iframe src=\"Storage\\MCC\\ENR157_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
@@ -109,21 +38,14 @@ function ENR157_Report() {
 }
 
 function ENR161() {
-    MCCSlideIndex = 1;
 	var description = "An introduction to solving a variety of engineering related problems using Microsoft Excel and LabVIEW.\
 	Excel topics include functions, graphing, matrices, linear regression, statistics, and root finding. LabVIEW topics \
 	include a variety of data types, functions, loops, case structures, and graphical user interfaces. LabVIEW programs will \
 	include linear algebra, graphing, and data analysis. A final design project will be implemented using LabVIEW and LEGO Mindstorms robotics.<br><br>"
 	document.getElementById("details-title").innerHTML = "Engineering Computing I"
-	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR161Slides");
-	ENR161Slides(1);
+	document.getElementById("details-description").innerHTML = description;
+	add_slider("MCC_Slider", "ENR161");
 };
-
-function ENR161Slides(n) {
-  if (n > albums["ENR161"].length) {MCCSlideIndex = 1}
-  if (n < 1) {MCCSlideIndex = albums["ENR161"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["ENR161"][MCCSlideIndex-1];
-}
 
 function ENR161_Report() {
     var description = "<iframe src=\"Storage\\MCC\\ENR161_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
@@ -131,7 +53,6 @@ function ENR161_Report() {
 }
 
 function ENR251() {
-    MCCSlideIndex = 1;
 	var description = "A foundational course that focuses on the study of forces and their effects on objects \
 	at rest. Students will learn to analyze static equilibrium, including how forces and moments interact within \
 	structures such as beams, trusses, and frames. Topics include force systems, free-body diagrams, equilibrium \
@@ -140,15 +61,9 @@ function ENR251() {
 	students will develop the skills to assess and design stable structures, which are essential for careers in \
 	civil, mechanical, and aerospace engineering.<br><br>"
 	document.getElementById("details-title").innerHTML = "Statics"
-	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR251Slides");
-	ENR251Slides(1);
+	document.getElementById("details-description").innerHTML = description;
+	add_slider("MCC_Slider", "ENR251");
 };
-
-function ENR251Slides(n) {
-  if (n > albums["ENR251"].length) {MCCSlideIndex = 1}
-  if (n < 1) {MCCSlideIndex = albums["ENR251"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["ENR251"][MCCSlideIndex-1];
-}
 
 function ENR251_Report() {
     var description = "<iframe src=\"Storage\\MCC\\ENR251_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
@@ -168,7 +83,6 @@ function ENR253() {
 };
 
 function ENR254() {
-    MCCSlideIndex = 1;
 	var description = "Builds on the concepts learned in Circuit Analysis I, with a focus on more advanced \
 	techniques and AC circuit analysis. Topics include complex impedance, phasor analysis, reactive components \
 	(inductors and capacitors), resonance, and transient response in RLC circuits. Students will also explore \
@@ -177,15 +91,9 @@ function ENR254() {
 	This course is crucial for students pursuing careers in electrical engineering, electronics, and \
 	communications, providing the knowledge needed to analyze and design more complex circuits.<br><br>"
 	document.getElementById("details-title").innerHTML = "Circuit Analysis II"
-	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("MCCSlides", "ENR254Slides");
-	ENR254Slides(1);
+	document.getElementById("details-description").innerHTML = description;
+	add_slider("MCC_Slider", "ENR254");
 };
-
-function ENR254Slides(n) {
-  if (n > albums["ENR254"].length) {MCCSlideIndex = 1}
-  if (n < 1) {MCCSlideIndex = albums["ENR254"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["ENR254"][MCCSlideIndex-1];
-}
 
 function ENR254_Report() {
     var description = "<iframe src=\"Storage\\MCC\\ENR254_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"

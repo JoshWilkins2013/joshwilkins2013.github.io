@@ -1,5 +1,6 @@
 ---
 title: Microchip
+header: <img src='https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Banners/Microchip_Banner.png'>
 category: Experience
 order: 2
 icon: dashboard
@@ -7,7 +8,6 @@ icon: dashboard
 <html>
   {% include head.html %}
   <body>
-    {% assign header-title = "<img src='https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Banners/Microchip_Banner.png'>" %}
 	{% include header.html %}
 	<div class="d-flex align-items-stretch">
       {% include sidebar.html %}
@@ -95,16 +95,11 @@ icon: dashboard
                     maser even; the standard for timekeeping technology. Such precision created many challenges
                     in the design process and required the utmost attention to detail.
                   </p>
-
-                  <div class="slideshow-container">
-                    <div class="mySlides">
-                      <img id="slider_image" src="" /><p id="slider_caption"></p>
-                    </div>
-                    <a class="prev" onclick="MicrochipSlides(MicrochipSlideIndex -= 1)"><p class="arrow">&#10094;</p></a>
-                    <a class="next" onclick="MicrochipSlides(MicrochipSlideIndex += 1)"><p class="arrow">&#10095;</p></a>
-                  </div>
-
                 </div>
+
+                <div id="Microchip_Slider" class="slideshow-container"></div>
+                <script>add_slider("Microchip", "Main")</script>
+
               </div>
             </div>
           </div>

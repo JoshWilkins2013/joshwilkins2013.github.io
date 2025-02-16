@@ -1,33 +1,3 @@
-var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
-
-var slider_div ="\
-<div class=\"slideshow-container\">\
-  <div class=\"mySlides\">\
-    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
-  </div>\
-  <a class=\"prev\" onclick=\"RaytheonSlides(RaytheonSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-  <a class=\"next\" onclick=\"RaytheonSlides(RaytheonSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-</div>"
-
-var albums = {
-		"Raytheon": [
-		    "/img/Raytheon/Radar.png",
-		    "/img/Raytheon/Space.png",
-		    "/img/Raytheon/Missile.png",
-		    "/img/Raytheon/Missile_Launch.png",
-		    "/img/Raytheon/Aircraft.png"
-		]
-}
-
-var RaytheonSlideIndex = 1;
-
-RaytheonSlides(RaytheonSlideIndex);
-function RaytheonSlides(n) {
-  if (n > albums["Raytheon"].length) {RaytheonSlideIndex = 1}
-  if (n < 1) {RaytheonSlideIndex = albums["Raytheon"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["Raytheon"][RaytheonSlideIndex-1];
-}
-
 function CSM() {
 	var description = "I developed a versatile synthesizer module that was integrated into larger, more complex \
 	systems. As such, this module was designed with flexibility in mind, enabling it to be used across multiple \
@@ -47,6 +17,7 @@ function CSM() {
     document.getElementById("details-title").innerHTML = "Synthesizer Module";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Raytheon_Slider").innerHTML = "";
 }
 
 function LBR() {
@@ -62,6 +33,7 @@ function LBR() {
     document.getElementById("details-title").innerHTML = "L-Band Receiver";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Raytheon_Slider").innerHTML = "";
 }
 
 function XLC() {
@@ -78,6 +50,7 @@ function XLC() {
     document.getElementById("details-title").innerHTML = "X-L Band Converter";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Raytheon_Slider").innerHTML = "";
 }
 
 //function ADS() {

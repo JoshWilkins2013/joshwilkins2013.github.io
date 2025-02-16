@@ -1,44 +1,3 @@
-var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com"
-
-var slider_div ="\
-<div class=\"slideshow-container\">\
-  <div class=\"mySlides\">\
-    <img id=\"slider_image\" /><p id=\"slider_caption\"></p>\
-  </div>\
-  <a class=\"prev\" onclick=\"CarestreamSlides(CarestreamSlideIndex -= 1)\"><p class=\"arrow\">&#10094;</p></a>\
-  <a class=\"next\" onclick=\"CarestreamSlides(CarestreamSlideIndex += 1)\"><p class=\"arrow\">&#10095;</p></a>\
-</div>"
-
-var albums = {
-		"Carestream": [
-		    "/img/Carestream/X-Ray_Reconstruction.png",
-			"/img/Carestream/CBCT.png",
-			"/img/Carestream/Revo.png",
-			"/img/Carestream/Box.png",
-			"/img/Carestream/Desk.png"
-		],
-		"Bucky": [
-            "/img/Carestream/Bucky.png",
-            "/img/Carestream/Bucky2.png"
-        ]
-}
-
-var CarestreamSlideIndex = 1;
-
-CarestreamSlides(CarestreamSlideIndex);
-function CarestreamSlides(n) {
-  if (n > albums["Carestream"].length) {CarestreamSlideIndex = 1}
-  if (n < 1) {CarestreamSlideIndex = albums["Carestream"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["Carestream"][CarestreamSlideIndex-1];
-//  document.getElementById("slider_caption").innerHTML = albums["Carestream"][CarestreamSlideIndex-1];
-}
-
-function BuckySlides(n) {
-  if (n > albums["Bucky"].length) {CarestreamSlideIndex = 1}
-  if (n < 1) {CarestreamSlideIndex = albums["Bucky"].length}
-  document.getElementById("slider_image").src = s3bucket_path + albums["Bucky"][CarestreamSlideIndex-1];
-}
-
 function Battery() {
 	var description = "I was responsible for researching and developing battery life enhancement designs to \
 	improve the longevity of Carestream\'s mobile x-ray machine. The DRX-Revolution, as it\'s called, \
@@ -49,23 +8,22 @@ function Battery() {
     two papers on \
     <a href=\"javascript:;\" onclick=\"Balancing1_Paper()\">Switched Capacitors</a> and \
 	<a href=\"javascript:;\" onclick=\"Balancing2_Paper()\">Cell Balancing</a> \
-	were part of my proposal to accomplish this.<br><br> \
-	<div id=\"battery_description\">\
-	  <img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/SwitchedCaps.png\" width=50%>\
-	</div>"
+	were part of my proposal to accomplish this.<br><br>"
+	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/SwitchedCaps.png\" width=50%>"
     document.getElementById("details-title").innerHTML = "Battery Life Enhancement";
     document.getElementById("details-subtitle").innerHTML = "";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Carestream_Slider").innerHTML = image;
 }
 
 function Balancing1_Paper() {
     var description = "<iframe src=\"Storage/Carestream/Balancing1.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("battery_description").innerHTML = description;
+    document.getElementById("Carestream_Slider").innerHTML = description;
 }
 
 function Balancing2_Paper() {
     var description = "<iframe src=\"Storage/Carestream/Balancing2.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("battery_description").innerHTML = description;
+    document.getElementById("Carestream_Slider").innerHTML = description;
 }
 
 function task11() {
@@ -74,25 +32,25 @@ function task11() {
 	a large sheet of aluminum that acted as a heat-sink for the dissipated energy. The voltage of the batteries was \
 	monitored and recorded during discharge for evaluation and analysis. I then wrote excel macros in VBA to determine \
 	the rate of discharge in each one of the batteries, plotted the results, and evaluated their performance. It was \
-	vital to understand existing behavior before any improvements to the system could be made.<br><br>\
-	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/AGM.png\" width=50%>"
+	vital to understand existing behavior before any improvements to the system could be made.<br><br>"
+	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/AGM.png\" width=50%>"
     document.getElementById("details-title").innerHTML = "Battery Life Enhancement";
     document.getElementById("details-subtitle").innerHTML = "AGM Lead-Acid Battery Test Fixture";
     document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Carestream_Slider").innerHTML = image;
 };
 
 function task13() {
-    CarestreamSlideIndex = 1;
 	var description = "A digital x-ray cassette is a flat panel used in digital radiography (DR) systems to \
 	capture X-ray images. Unlike traditional film-based cassettes that use photographic film to capture the image, \
 	digital cassettes use electronic sensors that convert X-ray energy into electrical signals. The signals are \
 	processed and converted into images and promptly displayed on a computer. These cassettes can often offer \
 	better image quality than traditional cassettes at a reduced exposure to radiation. Part of my job at Carestream \
 	was to diagnose failures on the PCB\'s within these cassettes and propose possible improvements.<br><br>"
-    document.getElementById("details-subtitle").innerHTML = "";
-	document.getElementById("details-description").innerHTML = description + slider_div.replaceAll("CarestreamSlides", "BuckySlides");
 	document.getElementById("details-title").innerHTML = "Digital X-Ray Cassettes";
-	BuckySlides(1);
+    document.getElementById("details-subtitle").innerHTML = "";
+	document.getElementById("details-description").innerHTML = description;
+	add_slider("Carestream", "Cassette");
 };
 
 function task21() {
@@ -103,11 +61,12 @@ function task21() {
 	accurately and comprehensively verified the functionality of the software. I also designed and implemented custom \
 	scripts to fully automate the machine calibration processes, reducing manual intervention and increasing \
 	precision in all calibration tasks. This allowed for faster, more reliable testing cycles and helped maintain \
-	consistent performance across all systems resulting in a higher-quality product.<br><br>\
-	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/Framework.png\" width=50%>"
+	consistent performance across all systems resulting in a higher-quality product.<br><br>"
+	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/Framework.png\" width=50%>"
+	document.getElementById("details-title").innerHTML = "Automation Framework";
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Automation Framework";
+	document.getElementById("Carestream_Slider").innerHTML = image;
 };
 
 function task22() {
@@ -116,11 +75,12 @@ function task22() {
 	engineers act as a bridge, receiving updates from developers on new features and areas under development. \
 	They report any identified bugs to developers for resolution before they reach the QA team. Meanwhile, QA stays \
 	informed about both development and testing progress to ensure the software is thoroughly tested and meets \
-	quality standards. This seamless communication ensured a more efficient and effective testing process.<br><br>\
-	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/Automation.png\" width=50%>"
+	quality standards. This seamless communication ensured a more efficient and effective testing process.<br><br>"
+	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/Automation.png\" width=50%>"
+	document.getElementById("details-title").innerHTML = "Communication";
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Communication";
+	document.getElementById("Carestream_Slider").innerHTML = image;
 };
 
 function task23() {
@@ -128,11 +88,12 @@ function task23() {
 	ensure team alignment and to quickly address any outstanding issues. I also implemented Test-Driven \
 	Development (TDD) practices to maintain high-quality software which allowed for early bug detection, better \
 	code structure, and improved overall stability. This resulted in a more efficient workflow and a smoother \
-	release process.<br><br>\
-	<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/TDD.png\" width=50%>"
+	release process.<br><br>"
+	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Carestream/TDD.png\" width=50%>"
+	document.getElementById("details-title").innerHTML = "Agile";
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Agile";
+	document.getElementById("Carestream_Slider").innerHTML = image;
 };
 
 function task24() {
@@ -141,7 +102,8 @@ function task24() {
 	(primarily interns), and ensuring clear communication between the QA team and software developers regarding \
 	changes to the software. Additionally, I took on the responsibility of training the new, official Automation \
 	Test Lead shortly before my departure from Carestream."
+	document.getElementById("details-title").innerHTML = "Leadership / Management";
 	document.getElementById("details-subtitle").innerHTML = "";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Leadership / Management";
+	document.getElementById("Carestream_Slider").innerHTML = "";
 };
