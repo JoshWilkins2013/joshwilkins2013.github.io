@@ -1,10 +1,3 @@
-function LifeAtDSU() {
-	var description = "After a year working full-time as an electrical engineer at Microsemi, I started attending\
-    classes at Dakota State University (DSU)."
-	document.getElementById("details-title").innerHTML = "Life at DSU";
-	document.getElementById("details-description").innerHTML = description;
-};
-
 function INFS762() {
 	var description = "This course focuses on the concepts, techniques, and tools used to manage and analyze \
 	large datasets. Topics include the design and architecture of data warehouses, data modeling, ETL \
@@ -15,7 +8,7 @@ function INFS762() {
 	in business, healthcare, and other industries."
 	document.getElementById("details-title").innerHTML = "Data Warehousing and Data Mining";
 	document.getElementById("details-description").innerHTML = description;
-	document.getElementById("details-extra").innerHTML = "";
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
 
 function INFS772() {
@@ -29,6 +22,7 @@ function INFS772() {
 	and implementing analytics algorithms using Python."
 	document.getElementById("details-title").innerHTML = "Programming for Data Analytics";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
 
 function INFS774() {
@@ -41,6 +35,7 @@ function INFS774() {
 	and communication of analytical results."
 	document.getElementById("details-title").innerHTML = "Big Data Analytics";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
 
 function STAT700() {
@@ -51,17 +46,11 @@ function STAT700() {
 	statistical algorithms. Students will develop proficiency in writing efficient, reproducible code to solve \
 	complex statistical problems and gain hands-on experience in using statistical programming to \
 	support data-driven decision-making.<br><br>\
-    <div id=\"STAT700_description\">\
-      <a onclick=\"STAT700_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
-    </div>"
+    <a onclick=\"load_pdf(\'RIT\', \'Storage/DSU/STAT700.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Statistical Programming";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
-
-function STAT700_Report() {
-    var description = "<iframe src=\"Storage\\DSU\\STAT700_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("STAT700_description").innerHTML = description;
-}
 
 function STAT701() {
 	var description = "Builds upon knowledge of SLR, MLR, ANOVA, and basics of statistical inference. The class will\
@@ -72,6 +61,7 @@ function STAT701() {
 	and large-scale inference."
 	document.getElementById("details-title").innerHTML = "Modern Applied Statistics I";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
 
 function STAT702() {
@@ -81,6 +71,7 @@ function STAT702() {
 	with an overview of statistical prediction analysis relevant to business intelligence and analytics."
 	document.getElementById("details-title").innerHTML = "Modern Applied Statistics II";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
 
 function INFS768() {
@@ -93,6 +84,7 @@ function INFS768() {
 	emphasized. Utilization of predictive analytics software is incorporated."
 	document.getElementById("details-title").innerHTML = "Predictive Analytics for Decision Making";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
 
 function INFS770() {
@@ -104,6 +96,7 @@ function INFS770() {
 	delivering the findings to an audience in an effective manner. Utilization of predictive analysis software is incorporated."
 	document.getElementById("details-title").innerHTML = "Advanced Data Mining Applications";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 };
 
 function ECON730() {
@@ -116,6 +109,7 @@ function ECON730() {
     and the introduction of software tools that enhance the summary and presentation of economic information in a professional setting."
     document.getElementById("details-title").innerHTML = "Economics For Decision Making";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 }
 
 function BADM712() {
@@ -128,4 +122,5 @@ function BADM712() {
     investment opportunities, and make informed financial decisions in a rapidly changing business environment."
     document.getElementById("details-title").innerHTML = "Advanced Business Finance";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("DSU_Slider").innerHTML = "";
 }

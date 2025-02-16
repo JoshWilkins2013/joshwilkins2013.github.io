@@ -1,9 +1,3 @@
-function RIT_Transcript() {
-	var description = "<iframe src=\"Storage\\RIT\\Transcript.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-	document.getElementById("details-title").innerHTML = "Transcript";
-    document.getElementById("details-description").innerHTML = description;
-};
-
 function EEEE220() {
 	var description = "In the first part, the course covers the design of digital systems using a hardware description\
 	language. In the second part, it covers the design of large digital systems using the computer\
@@ -16,6 +10,7 @@ function EEEE220() {
 	a background in C programming."
 	document.getElementById("details-title").innerHTML = "Digital Systems II";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE260() {
@@ -26,6 +21,7 @@ function EEEE260() {
 	metal-oxide-semiconductor (MOS) capacitors and MOS field-effect transistors."
 	document.getElementById("details-title").innerHTML = "Intro to Semiconductor Devices";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE346() {
@@ -35,6 +31,7 @@ function EEEE346() {
 	have the working knowledge of C++. Projects will be assigned to build your C++ programming skills."
 	document.getElementById("details-title").innerHTML = "Advanced Programming";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE353() {
@@ -55,6 +52,7 @@ function EEEE353() {
 	Response (IIR) filters is introduced."
 	document.getElementById("details-title").innerHTML = "Linear Systems";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE374() {
@@ -74,6 +72,7 @@ function EEEE374() {
 	projects with state-of-art EM modeling tools."
 	document.getElementById("details-title").innerHTML = "EM Fields & Transmission Lines";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE381() {
@@ -85,17 +84,11 @@ function EEEE381() {
 	topics include the frequency response of amplifiers, semiconductor diodes and diode circuits (including \
 	rectifiers and clamping circuits), and the use of Zener diodes for voltage regulation. Students will also \
 	learn to design ideal op-amp circuits in both non-inverting and inverting configurations.<br><br>\
-	<div id=\"EEEE381_description\">\
-      <a onclick=\"EEEE381_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
-    </div>"
+    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE381_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Electronics I";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
-
-function EEEE381_Report() {
-    var description = "<iframe src=\"Storage\\RIT\\EEEE381_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("EEEE381_description").innerHTML = description;
-}
 
 function EEEE414() {
 	var description = "This course introduces students to the study of linear continuous-time classical control systems,\
@@ -108,17 +101,11 @@ function EEEE414() {
 	PID control; root-locus analysis and design; frequency-response design and Nyquist stability. A\
 	laboratory will provide students with hands-on analysis and design-build-test experience, and\
 	includes the use of computer-aided design software such as MATLAB.<br><br>\
-    <div id=\"EEEE414_description\">\
-      <a onclick=\"EEEE414_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
-    </div>"
+    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE414_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Classical Control";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
-
-function EEEE414_Report() {
-    var description = "<iframe src=\"Storage\\RIT\\EEEE414_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("EEEE414_description").innerHTML = description;
-}
 
 function EEEE482() {
 	var description = "This course is the second in a two-course sequence focused on analog and digital \
@@ -130,6 +117,7 @@ function EEEE482() {
 	CMOS logic networks, and advanced topics such as dynamic CMOS logic, memory, and low-power logic techniques."
 	document.getElementById("details-title").innerHTML = "Electronics II";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE483() {
@@ -141,6 +129,7 @@ function EEEE483() {
 	with practical case studies to reinforce learning."
 	document.getElementById("details-title").innerHTML = "Mechatronics";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE484() {
@@ -151,17 +140,11 @@ function EEEE484() {
 	Phase-locked loop and its application. Introduction to digital communication. Binary ASK, FSK\
 	and PSK. Noise effects. Optimum detection: matched filters, maximum-likelihood reception.\
 	Computer simulation.<br><br>\
-    <div id=\"EEEE484_description\">\
-      <a onclick=\"EEEE484_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
-    </div>"
+    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE484_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Communication Systems";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
-
-function EEEE484_Report() {
-    var description = "<iframe src=\"Storage\\RIT\\EEEE484_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("EEEE484_description").innerHTML = description;
-}
 
 function EEEE485() {
 	var description = "This course will cover basic electrical and mechanical engineering topics related to Robotics,\
@@ -172,17 +155,11 @@ function EEEE485() {
 	addition, robotics system modeling, control, and applications will be explored. Students will\
 	design electronic interfaces and controllers for mechanical devices. Finally, sensor and actuator\
 	selection, installation, and application strategies will be explored.<br><br>\
-    <div id=\"EEEE485_description\">\
-      <a onclick=\"EEEE485_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
-    </div>"
+    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/EEEE485_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Robotic Systems";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
-
-function EEEE485_Report() {
-    var description = "<iframe src=\"Storage\\RIT\\EEEE485_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("EEEE485_description").innerHTML = description;
-}
 
 function EEEE497() {
 	var description = "MSD-I is the first half of a two-semester design course oriented to the solution of engineering\
@@ -192,11 +169,10 @@ function EEEE497() {
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
 	which is fully tested and documented.<br><br>\
-    <div id=\"EEEE498_description\">\
-      <a onclick=\"EEEE498_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
-    </div>"
+    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Senior Design Project I";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE498() {
@@ -207,17 +183,11 @@ function EEEE498() {
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
 	which is fully tested and documented.<br><br>\
-    <div id=\"EEEE498_description\">\
-      <a onclick=\"EEEE498_Report()\" target=\"_blank\"><button type=\"submit\">Final Report</button></a>\
-    </div>"
+    <a onclick=\"load_pdf(\'RIT\', \'Storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
 	document.getElementById("details-title").innerHTML = "Senior Design Project II";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
-
-function EEEE498_Report() {
-    var description = "<iframe src=\"Storage\\RIT\\VArm_Report.pdf#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById("EEEE498_description").innerHTML = description;
-}
 
 function EEEE579() {
 	var description = "A study of the various techniques for the design of filters to meet the given specifications. The\
@@ -229,6 +199,7 @@ function EEEE579() {
 	filter network design; frequency dependent negative resistance networks; switched capacitor filters."
 	document.getElementById("details-title").innerHTML = "Analog Filter Design";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE593() {
@@ -239,6 +210,7 @@ function EEEE593() {
 	concepts such as multipath fading channels, spread spectrum, and OFDM."
 	document.getElementById("details-title").innerHTML = "Digital Data Communication";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE661() {
@@ -251,6 +223,7 @@ function EEEE661() {
 	observers and their realizations."
 	document.getElementById("details-title").innerHTML = "Modern Control Theory";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function EEEE663() {
@@ -267,6 +240,7 @@ function EEEE663() {
 	priority inversion, and hardware-software co-design."
 	document.getElementById("details-title").innerHTML = "RTOS & Embedded Systems";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function MATH326() {
@@ -280,6 +254,7 @@ function MATH326() {
 	critical role in problem-solving."
 	document.getElementById("details-title").innerHTML = "Boundary Value Problems";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function MATH381() {
@@ -291,6 +266,7 @@ function MATH381() {
 	Emphasis is placed on both theoretical understanding and practical problem-solving using complex function theory."
 	document.getElementById("details-title").innerHTML = "Complex Variables";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };
 
 function MATH441() {
@@ -303,4 +279,5 @@ function MATH441() {
 	theory, and symmetry."
 	document.getElementById("details-title").innerHTML = "Abstract Algebra";
 	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("RIT_Slider").innerHTML = "";
 };

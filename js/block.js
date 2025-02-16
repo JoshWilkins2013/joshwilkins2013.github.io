@@ -1,13 +1,16 @@
 var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com/"
-var SlideIndex= 1;
 
-function Slides(n, image_paths, name) {
+var SliderIndices = {};  // Keep track of each blocks slider individually
+
+function Slides(direction, image_paths, name) {
+  let n = (direction === '+') ? SliderIndices[name] + 1 : SliderIndices[name] - 1;
   var image_array = image_paths.split(",");
-  if (n > image_array.length - 1) {SlideIndex = 1}
-  if (n < 1) {SlideIndex = image_array.length - 1}
-  current_image_path = image_array[SlideIndex-1];
-  current_image_name = current_image_path.split("/").at(-1).split(".")[0].replaceAll("_", " ");
-  document.getElementById(name + "_Image").src = s3bucket_path + current_image_path.trim();
+  if (n > image_array.length - 1) {SliderIndices[name] = 0}
+  else if (n < 0) {SliderIndices[name] = image_array.length - 1}
+  else {SliderIndices[name] = n}
+  var current_image_path = image_array[SliderIndices[name]];
+//  current_image_name = current_image_path.split("/").at(-1).split(".")[0].replaceAll("_", " ");
+  document.getElementById(name + "_Image").src = s3bucket_path + current_image_path;
 //  if (!current_image_path.includes("img/Travel/") && !current_image_path.includes("img/About_Me/") ) {
 //    document.getElementById(name + "_Caption").innerHTML = current_image_name;  // Don't caption travel images
 //  }
@@ -15,12 +18,12 @@ function Slides(n, image_paths, name) {
 
 function load_html(project_name, html_path) {
     var description = "<iframe src=" + html_path + " style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById(project_name + "_Content").innerHTML = description;
+    document.getElementById(project_name + "_Slider").innerHTML = description;
 }
 
 function load_pdf(project_name, pdf_path) {
     var description = "<iframe src=" + pdf_path + "#toolbar=0&view=FitH\" style=\"width: 100%;border: none;\"></iframe>"
-    document.getElementById(project_name + "_Content").innerHTML = description;
+    document.getElementById(project_name + "_Slider").innerHTML = description;
 }
 
 function convert_to_gallery(items) {
@@ -84,10 +87,10 @@ function finish_block_content(block_content, images, place_name, col_name) {
   var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com/"
 
   first_src = s3bucket_path + images[0];
-
+  SliderIndices[place_name] = 0;
   block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n</div>\n"
-  block_content += "<a class=\"prev\" onclick=\'Slides(SlideIndex -= 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
-  block_content += "<a class=\"next\" onclick=\'Slides(SlideIndex += 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
+  block_content += "<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
+  block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
 
   document.getElementById(col_name).insertAdjacentHTML("beforeend", block_content + "</div>\n</div>\n</div>\n</div>");  // Replace block content with gallery
 }
@@ -158,7 +161,6 @@ function viewAlbum(element, albumName) {
 }
 
 function add_slider(folder_name, place_name) {
-  SlideIndex = 1;
   prefix_path = "img/" + folder_name + "/" + place_name + "/"
 
   var images = [];
@@ -173,9 +175,10 @@ function add_slider(folder_name, place_name) {
 
     first_src = s3bucket_path + images[0];
 
+    SliderIndices[place_name] = 0;
     block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n</div>\n"
-    block_content += "<a class=\"prev\" onclick=\'Slides(SlideIndex -= 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
-    block_content += "<a class=\"next\" onclick=\'Slides(SlideIndex += 1, \"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
+    block_content += "<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
+    block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
 
     document.getElementById(folder_name + "_Slider").innerHTML = block_content;
   });
