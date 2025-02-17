@@ -6,9 +6,7 @@ function INFS762() {
 	will learn how to apply these methods to uncover patterns, trends, and insights from large datasets, using \
 	tools like SQL, Python, and specialized data mining software. The course emphasizes practical applications \
 	in business, healthcare, and other industries."
-	document.getElementById("details-title").innerHTML = "Data Warehousing and Data Mining";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Data Warehousing and Data Mining", "", description, "");
 };
 
 function INFS772() {
@@ -20,9 +18,7 @@ function INFS772() {
 	use Python for effective data analysis.  Specific topics addressed include: vector computation and mathematics\
 	with NumPy, statistical computation with SciPy, working with tabular data with Pandas,\
 	and implementing analytics algorithms using Python."
-	document.getElementById("details-title").innerHTML = "Programming for Data Analytics";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Programming for Data Analytics", "", description, "");
 };
 
 function INFS774() {
@@ -33,9 +29,7 @@ function INFS774() {
 	like Hadoop, MapReduce, HDFS, and NoSQL, as well as analytics methods such as predictive models, text analysis, \
 	and streaming data. Students will gain hands-on experience with state-of-the-art tools for data visualization \
 	and communication of analytical results."
-	document.getElementById("details-title").innerHTML = "Big Data Analytics";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Big Data Analytics", "", description, "");
 };
 
 function STAT700() {
@@ -45,11 +39,9 @@ function STAT700() {
 	skills for working with real-world datasets, performing exploratory data analysis, and implementing \
 	statistical algorithms. Students will develop proficiency in writing efficient, reproducible code to solve \
 	complex statistical problems and gain hands-on experience in using statistical programming to \
-	support data-driven decision-making.<br><br>\
-    <a onclick=\"load_pdf(\'DSU\', \'storage/DSU/STAT700_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Statistical Programming";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	support data-driven decision-making.\
+    <button onclick=\"load_pdf(\'DSU\', \'storage/DSU/STAT700_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("DSU", "Statistical Programming", "", description, "");
 };
 
 function STAT701() {
@@ -57,11 +49,8 @@ function STAT701() {
 	start by covering statistical graphics and the associated modern statistical computing language(s). The next\
 	section of the class will focus on non- and semi-parametric	methods with a focus on the application and\
 	interpretation of the methods. The last section of the class will focus on longitudinal and repeated measure\
-	models and conclude with an overview of techniques from meta-analysis\
-	and large-scale inference."
-	document.getElementById("details-title").innerHTML = "Modern Applied Statistics I";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	models and conclude with an overview of techniques from meta-analysis and large-scale inference."
+	UpdateBlock("DSU", "Modern Applied Statistics I", "", description, "");
 };
 
 function STAT702() {
@@ -69,9 +58,7 @@ function STAT702() {
 	Component Analysis, Multidimensional Scaling, and Cluster Analysis. From there we will move on to an introduction\
 	to supervised learning methods and pattern recognition with a focus on algorithmic methods. The course will finish\
 	with an overview of statistical prediction analysis relevant to business intelligence and analytics."
-	document.getElementById("details-title").innerHTML = "Modern Applied Statistics II";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Modern Applied Statistics II", "", description, "");
 };
 
 function INFS768() {
@@ -82,9 +69,7 @@ function INFS768() {
 	and neural networks, association analysis techniques such as market basket analysis, and cluster analysis techniques\
 	such as K-means clustering. Applications of each of the techniques for decision-making applications will be\
 	emphasized. Utilization of predictive analytics software is incorporated."
-	document.getElementById("details-title").innerHTML = "Predictive Analytics for Decision Making";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Predictive Analytics for Decision Making", "", description, "");
 };
 
 function INFS770() {
@@ -94,9 +79,7 @@ function INFS770() {
 	variable transformation, model building, and model comparison will be covered. Students will participate in one\
 	or more major data mining projects in the course. Through formal presentations students will gain experience in\
 	delivering the findings to an audience in an effective manner. Utilization of predictive analysis software is incorporated."
-	document.getElementById("details-title").innerHTML = "Advanced Data Mining Applications";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Advanced Data Mining Applications", "", description, "");
 };
 
 function ECON730() {
@@ -107,9 +90,7 @@ function ECON730() {
     and international trade. Technology integration includes: The use of Internet-based resources to supply data for analysis and information \
     on current issues relevant to the course; the use of simulations, games, and computer applications to reinforce economic concepts; \
     and the introduction of software tools that enhance the summary and presentation of economic information in a professional setting."
-    document.getElementById("details-title").innerHTML = "Economics For Decision Making";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Economics For Decision Making", "", description, "");
 }
 
 function BADM712() {
@@ -120,7 +101,5 @@ function BADM712() {
     statistical analysis, financial forecasting, and optimization, to analyze financial markets, investments, \
     and corporate financial strategies. Students will develop the skills to interpret financial data, assess \
     investment opportunities, and make informed financial decisions in a rapidly changing business environment."
-    document.getElementById("details-title").innerHTML = "Advanced Business Finance";
-	document.getElementById("DSU_Description").innerHTML = description;
-	document.getElementById("DSU_Slider").innerHTML = "";
+	UpdateBlock("DSU", "Advanced Business Finance", "", description, "");
 }

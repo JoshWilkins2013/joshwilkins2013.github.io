@@ -14,10 +14,7 @@ function CSM() {
     Choosing the right synthesizer architecture depends on factors such as required frequency range, signal \
     purity, cost constraints, and system complexity. My work on this synthesizer module involved evaluating these \
     factors and selecting the best approach to ensure reliable performance across multiple product applications."
-    document.getElementById("details-title").innerHTML = "Synthesizer Module";
-    document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("Raytheon_Description").innerHTML = description;
-    document.getElementById("Raytheon_Slider").innerHTML = "";
+    UpdateBlock("Raytheon", "Synthesizer Module", "", description, "");
 }
 
 function LBR() {
@@ -30,10 +27,7 @@ function LBR() {
 	to the precise frequency of the incoming signal using specially designed filters. Since these signals are often \
 	encoded, the receiver also needs to demodulate them. The signals are then converted into usable data through \
 	Digital-to-Analog Converters (DACs), and the processed data is further interpreted or utilized on an FPGA."
-    document.getElementById("details-title").innerHTML = "L-Band Receiver";
-    document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("Raytheon_Description").innerHTML = description;
-    document.getElementById("Raytheon_Slider").innerHTML = "";
+	UpdateBlock("Raytheon", "L-Band Receiver", "", description, "");
 }
 
 function XLC() {
@@ -47,22 +41,15 @@ function XLC() {
 	the ground stations or receivers may be set up to work in the L-band. By converting the signal, you ensure \
 	smoother processing and compatibility between different systems. In some cases, the transmitted signals are \
 	out of your control, and in others, processing is simply more efficient at a particular frequency."
-    document.getElementById("details-title").innerHTML = "X-L Band Converter";
-    document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("Raytheon_Description").innerHTML = description;
-    document.getElementById("Raytheon_Slider").innerHTML = "";
+    UpdateBlock("Raytheon", "X-L Band Converter", "", description, "");
 }
 
 //function ADS() {
-//	var description = ""
-//    document.getElementById("details-title").innerHTML = "Keysight ADS";
-//    document.getElementById("details-subtitle").innerHTML = "";
-//    document.getElementById("Raytheon_Description").innerHTML = description;
+//	  var description = ""
+//    UpdateBlock("Raytheon", "Keysight ADS", "", description, "");
 //}
 //
 //function Filters() {
-//	var description = ""
-//    document.getElementById("details-title").innerHTML = "Filter Design";
-//    document.getElementById("details-subtitle").innerHTML = "";
-//    document.getElementById("Raytheon_Description").innerHTML = description;
+//    var description = ""
+//    UpdateBlock("Raytheon", "Filter Design", "", description, "");
 //}

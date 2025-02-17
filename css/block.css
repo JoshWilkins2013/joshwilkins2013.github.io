@@ -35,6 +35,21 @@
   margin-bottom: 4px;
 }
 
+.block-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.block-description button {
+  margin-top: 12px;
+}
+
+.block-description a {
+  display: contents;
+}
+
 @media (max-width: 991px) {}
 
 /* ========================================================== */

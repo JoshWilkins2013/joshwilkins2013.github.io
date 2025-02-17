@@ -8,9 +8,7 @@ function EEEE220() {
 	The lab sessions enforce and complement the concepts and design principles exposed in the\
 	lecture through the use of CAD tools and emulation in a commercial FPGA. This course assumes\
 	a background in C programming."
-	document.getElementById("details-title").innerHTML = "Digital Systems II";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Digital Systems II", "", description, "");
 };
 
 function EEEE260() {
@@ -19,9 +17,7 @@ function EEEE260() {
 	physics of carrier concentration, motion in crystals, energy band models, drift and diffusion\
 	currents) as well as the operation of pn junction diodes, bipolar junction transistors (BJT),\
 	metal-oxide-semiconductor (MOS) capacitors and MOS field-effect transistors."
-	document.getElementById("details-title").innerHTML = "Intro to Semiconductor Devices";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Intro to Semiconductor Devices", "", description, "");
 };
 
 function EEEE346() {
@@ -29,9 +25,7 @@ function EEEE346() {
 	structures, functions, and arrays), pointers, classes, operator overloading, inheritance, polymorphism,\
 	data structures, class string, and STL. At the end of the semester, everyone will\
 	have the working knowledge of C++. Projects will be assigned to build your C++ programming skills."
-	document.getElementById("details-title").innerHTML = "Advanced Programming";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Advanced Programming", "", description, "");
 };
 
 function EEEE353() {
@@ -50,9 +44,7 @@ function EEEE353() {
 	and Laplace transform is also covered. Finally, an introduction to the design of digital filters,\
 	which includes filter block diagrams for Finite Impulse Response (FIR) and Infinite Impulse\
 	Response (IIR) filters is introduced."
-	document.getElementById("details-title").innerHTML = "Linear Systems";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Linear Systems", "", description, "");
 };
 
 function EEEE374() {
@@ -70,9 +62,7 @@ function EEEE374() {
 	matching techniques, TE and TM waves in rectangular waveguides. experiments using stateof-art\
 	RF equipment illustrating fundamental wave propagation and reflection concepts, design\
 	projects with state-of-art EM modeling tools."
-	document.getElementById("details-title").innerHTML = "EM Fields & Transmission Lines";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "EM Fields & Transmission Lines", "", description, "");
 };
 
 function EEEE381() {
@@ -83,11 +73,9 @@ function EEEE381() {
 	stages (including differential and cascode amplifiers), and the design of multistage amplifiers. Additional \
 	topics include the frequency response of amplifiers, semiconductor diodes and diode circuits (including \
 	rectifiers and clamping circuits), and the use of Zener diodes for voltage regulation. Students will also \
-	learn to design ideal op-amp circuits in both non-inverting and inverting configurations.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE381_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Electronics I";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	learn to design ideal op-amp circuits in both non-inverting and inverting configurations.\
+    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE381_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("RIT", "Electronics I", "", description, "");
 };
 
 function EEEE414() {
@@ -100,11 +88,9 @@ function EEEE414() {
 	control properties; relationships between stability margins and transient behavior; lead, lag, and\
 	PID control; root-locus analysis and design; frequency-response design and Nyquist stability. A\
 	laboratory will provide students with hands-on analysis and design-build-test experience, and\
-	includes the use of computer-aided design software such as MATLAB.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE414_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Classical Control";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	includes the use of computer-aided design software such as MATLAB.\
+    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE414_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("RIT", "Classical Control", "", description, "");
 };
 
 function EEEE482() {
@@ -115,9 +101,7 @@ function EEEE482() {
 	in both BJT and MOSFET amplifiers. The digital portion introduces the principles of digital circuits using \
 	NMOS and CMOS technologies, including the behavior of NMOS and CMOS inverters, combinational and sequential \
 	CMOS logic networks, and advanced topics such as dynamic CMOS logic, memory, and low-power logic techniques."
-	document.getElementById("details-title").innerHTML = "Electronics II";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Electronics II", "", description, "");
 };
 
 function EEEE483() {
@@ -127,9 +111,7 @@ function EEEE483() {
 	systems, utilizing the MATLAB environment for simulation, analysis, and control of mechatronic systems. \
 	The course also introduces the application of digital signal processors and microcontrollers in mechatronics, \
 	with practical case studies to reinforce learning."
-	document.getElementById("details-title").innerHTML = "Mechatronics";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Mechatronics", "", description, "");
 };
 
 function EEEE484() {
@@ -139,11 +121,9 @@ function EEEE484() {
 	methods (e.g. AM and FM) for continuous signals. Carrier detection and synchronization.\
 	Phase-locked loop and its application. Introduction to digital communication. Binary ASK, FSK\
 	and PSK. Noise effects. Optimum detection: matched filters, maximum-likelihood reception.\
-	Computer simulation.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE484_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Communication Systems";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	Computer simulation.\
+    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE484_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("RIT", "Communication Systems", "", description, "");
 };
 
 function EEEE485() {
@@ -154,11 +134,9 @@ function EEEE485() {
 	drives, bearing) and concepts (motion, dynamics equations, and force and torque analysis). In\
 	addition, robotics system modeling, control, and applications will be explored. Students will\
 	design electronic interfaces and controllers for mechanical devices. Finally, sensor and actuator\
-	selection, installation, and application strategies will be explored.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE485_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Robotic Systems";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	selection, installation, and application strategies will be explored.\
+    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE485_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("RIT", "Robotic Systems", "", description, "");
 };
 
 function EEEE497() {
@@ -168,11 +146,9 @@ function EEEE497() {
 	environment. Working in multidisciplinary teams and following an engineering design process,\
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
-	which is fully tested and documented.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Senior Design Project I";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	which is fully tested and documented.\
+    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("RIT", "Senior Design Project I", "", description, "");
 };
 
 function EEEE498() {
@@ -182,11 +158,9 @@ function EEEE498() {
 	environment. Working in multidisciplinary teams and following an engineering design process,\
 	students will assess customer needs and engineering specifications, evaluate concepts,\
 	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
-	which is fully tested and documented.<br><br>\
-    <a onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Senior Design Project II";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	which is fully tested and documented.\
+    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("RIT", "Senior Design Project II", "", description, "");
 };
 
 function EEEE579() {
@@ -197,9 +171,7 @@ function EEEE579() {
 	and Bessel-Thompson polynomials; standard filter stages; magnitude and frequency scaling;\
 	low-pass filter design; design of high-pass, band-pass and band-reject filters; passive ladder\
 	filter network design; frequency dependent negative resistance networks; switched capacitor filters."
-	document.getElementById("details-title").innerHTML = "Analog Filter Design";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Analog Filter Design", "", description, "");
 };
 
 function EEEE593() {
@@ -208,9 +180,7 @@ function EEEE593() {
 	band-limited and distorting channels, filter design, equalizers, and optimal detection for channels \
 	with memory. It also explores synchronization methods, non-linear modulation, and introduces advanced \
 	concepts such as multipath fading channels, spread spectrum, and OFDM."
-	document.getElementById("details-title").innerHTML = "Digital Data Communication";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Digital Data Communication", "", description, "");
 };
 
 function EEEE661() {
@@ -221,9 +191,7 @@ function EEEE661() {
 	conversion of one form to the other, minimal realization, solution of state equations,\
 	controllability, observability, design of control systems for desired performance, state feedback,\
 	observers and their realizations."
-	document.getElementById("details-title").innerHTML = "Modern Control Theory";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Modern Control Theory", "", description, "");
 };
 
 function EEEE663() {
@@ -238,9 +206,7 @@ function EEEE663() {
 	Some fundamental material on real-time operating systems and multiprocessor considerations\
 	for real-time systems will also be presented. Examples include scheduling algorithms,\
 	priority inversion, and hardware-software co-design."
-	document.getElementById("details-title").innerHTML = "RTOS & Embedded Systems";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "RTOS & Embedded Systems", "", description, "");
 };
 
 function MATH326() {
@@ -252,9 +218,7 @@ function MATH326() {
 	problems. Emphasis is placed on both analytical techniques and computational methods, with applications \
 	in physics, engineering, and other scientific fields where boundary conditions play a \
 	critical role in problem-solving."
-	document.getElementById("details-title").innerHTML = "Boundary Value Problems";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Boundary Value Problems", "", description, "");
 };
 
 function MATH381() {
@@ -264,9 +228,7 @@ function MATH381() {
 	conformal mapping. The course also covers applications of complex analysis in solving real-world problems \
 	in physics and engineering, particularly in fluid dynamics, electromagnetism, and signal processing. \
 	Emphasis is placed on both theoretical understanding and practical problem-solving using complex function theory."
-	document.getElementById("details-title").innerHTML = "Complex Variables";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Complex Variables", "", description, "");
 };
 
 function MATH441() {
@@ -277,7 +239,5 @@ function MATH441() {
 	these algebraic structures underpin many areas of mathematics and its applications. Students will explore \
 	the theoretical foundations of algebra, with applications in areas such as cryptography, coding \
 	theory, and symmetry."
-	document.getElementById("details-title").innerHTML = "Abstract Algebra";
-	document.getElementById("RIT_Description").innerHTML = description;
-	document.getElementById("RIT_Slider").innerHTML = "";
+	UpdateBlock("RIT", "Abstract Algebra", "", description, "");
 };

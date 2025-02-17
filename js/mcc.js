@@ -3,10 +3,9 @@ function ENR153() {
 	SolidWorks will be used to design parts and assemblies. CamWorks will be used to create tool paths for common 2.5 axis milling operations. \
 	Prototyping will be done using CNC mills, lathes, and a 3D printer. Parametric modeling techniques that preserve design intent with dimensioning, \
 	geometric relations, external references, equations, and design tables will be emphasized. A design-build project will require students to build a working prototype \
-	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports.<br><br>\
-    <a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR153_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Graphing & Machining"
-	document.getElementById("MCC_Description").innerHTML = description
+	to the instructor's specifications and then implement a redesign of it. Students will document their design process in both written and oral reports.\
+    <button onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR153_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("MCC", "Graphing & Machining", "", description, "");
 	add_slider("MCC", "ENR153");
 };
 
@@ -15,10 +14,9 @@ function ENR157() {
 	This course covers basic logic gates, boolean algebra, number systems, digital arithmetic, combinational logic circuits, multiplexers, \
 	decoders, flip-flops and registers. Digital system applications will include counters, magnitude comparators, ADCs, DACs, \
 	feedback control, sensor interfacing, and signal conditioning. Schematic capture and VHDL programming will be implemented in a digital system on an FPGA.\
-	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR157_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Digital Electronics & Microcontrollers"
-	document.getElementById("MCC_Description").innerHTML = description;
+	The course will culminate in a team design-build project requiring prototype demonstration, written documentation and presentation.\
+	<button onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR157_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("MCC", "Digital Electronics & Microcontrollers", "", description, "");
 	add_slider("MCC", "ENR157");
 };
 
@@ -26,10 +24,9 @@ function ENR161() {
 	var description = "An introduction to solving a variety of engineering related problems using Microsoft Excel and LabVIEW.\
 	Excel topics include functions, graphing, matrices, linear regression, statistics, and root finding. LabVIEW topics \
 	include a variety of data types, functions, loops, case structures, and graphical user interfaces. LabVIEW programs will \
-	include linear algebra, graphing, and data analysis. A final design project will be implemented using LabVIEW and LEGO Mindstorms robotics.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', 'storage/MCC/ENR161_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Engineering Computing I"
-	document.getElementById("MCC_Description").innerHTML = description;
+	include linear algebra, graphing, and data analysis. A final design project will be implemented using LabVIEW and LEGO Mindstorms robotics.\
+	<button onclick=\"load_pdf(\'MCC\', 'storage/MCC/ENR161_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("MCC", "Engineering Computing I", "", description, "");
 	add_slider("MCC", "ENR161");
 };
 
@@ -40,10 +37,9 @@ function ENR251() {
 	equations, centroids, and moments of inertia. The course emphasizes problem-solving techniques for analyzing \
 	structures under various loading conditions, using both analytical and graphical methods. Through this course, \
 	students will develop the skills to assess and design stable structures, which are essential for careers in \
-	civil, mechanical, and aerospace engineering.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR251_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Statics"
-	document.getElementById("MCC_Description").innerHTML = description;
+	civil, mechanical, and aerospace engineering.\
+	<button onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR251_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("MCC", "Statics", "", description, "");
 	add_slider("MCC", "ENR251");
 };
 
@@ -55,9 +51,7 @@ function ENR253() {
 	emphasizes hands-on learning with practical applications, helping students develop the skills needed to \
 	analyze and design basic electrical circuits. This course is essential for students pursuing careers in \
 	electrical engineering, electronics, and related fields."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Circuit Analysis I"
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Circuit Analysis I", "", description, "");
 };
 
 function ENR254() {
@@ -67,10 +61,9 @@ function ENR254() {
 	the analysis of filters, coupled circuits, and two-port networks. The course emphasizes the application of \
 	these concepts to real-world electrical systems, using both analytical methods and computational tools. \
 	This course is crucial for students pursuing careers in electrical engineering, electronics, and \
-	communications, providing the knowledge needed to analyze and design more complex circuits.<br><br>\
-	<a onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR254_Report.pdf\')\" target=\"_blank\"><button type=\"submit\">Final Report</button></a><br><br>"
-	document.getElementById("details-title").innerHTML = "Circuit Analysis II"
-	document.getElementById("MCC_Description").innerHTML = description;
+	communications, providing the knowledge needed to analyze and design more complex circuits.\
+	<button onclick=\"load_pdf(\'MCC\', \'storage/MCC/ENR254_Report.pdf\')\">Final Report</button>"
+	UpdateBlock("MCC", "Circuit Analysis II", "", description, "");
 	add_slider("MCC", "ENR254");
 };
 
@@ -82,18 +75,14 @@ function ENR256() {
 	will include solving real-world engineering problems, designing structural elements, and assessing material \
 	failure using concepts like stress-strain relationships and failure theories. Students will also gain proficiency \
 	in using analytical tools and computational methods for material analysis."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Mechanics of Materials"
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Mechanics of Materials", "", description, "");
 };
 
 function ENR259() {
 	var description = "Students will work in teams to solve an engineering design problem of their choice subject to approval from the instructor. \
 	Students will be encouraged to choose a project from an intercollegiate engineering design competition. Teams will design and build a working prototype, \
 	keep an engineering notebook, submit a weekly time sheets, create a final design report, and make a final oral presentation."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Engineering Design Lab"
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Engineering Design Lab", "", description, "");
 };
 
 function ENR261() {
@@ -102,9 +91,7 @@ function ENR261() {
 	solutions. Pseudo-code, and flowcharts are used to develop a structured approach to the problem solution which will often require the development of user-defined \
 	functions and decision making programming constructs utilized in short script files. Some larger projects may include the development of a graphical user interface (GUI)\
 	to handle the program inputs, solution options and outputs."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Engineering Computing II";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Engineering Computing II", "", description, "");
 };
 
 function MTH211() {
@@ -115,9 +102,7 @@ function MTH211() {
 	including calculating areas, volumes, and work. The course emphasizes both theoretical understanding and \
 	practical problem-solving skills, providing the foundation for more advanced study in mathematics, \
 	physics, engineering, and other technical fields."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Calculus II";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Calculus II", "", description, "");
 };
 
 function MTH212() {
@@ -128,9 +113,7 @@ function MTH212() {
 	fundamental theorems of calculus in higher dimensions, such as Stokes\' Theorem and the Divergence Theorem. \
 	This course is essential for students pursuing careers in engineering, physics, computer science, and other \
 	technical disciplines, providing the mathematical foundation for analyzing complex systems in multiple dimensions."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Calculus III";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Calculus III", "", description, "");
 };
 
 function MTH220() {
@@ -140,9 +123,7 @@ function MTH220() {
 	and sequences, and how to apply these concepts to solve problems in computer science, cryptography, and other \
 	fields. The course emphasizes problem-solving, proof techniques, and the foundations of theoretical computer \
 	science. This course is essential for students pursuing careers in mathematics, computer science, and engineering."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Discrete Mathematics";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Discrete Mathematics", "", description, "");
 };
 
 function MTH225() {
@@ -151,9 +132,7 @@ function MTH225() {
 	undetermined coefficients, variation of parameters, autonomous systems of two first order equations, series solutions about ordinary points, \
 	and the Laplace Transform. In addition to analytical methods, quantitative and qualitative analysis will be employed through the use of Euler’s Method, \
 	phase lines, phase planes, and slope fields."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Differential Equations";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Differential Equations", "", description, "");
 };
 
 function MTH230() {
@@ -164,9 +143,7 @@ function MTH230() {
 	vector spaces. Students will also explore how linear algebra is used in fields like engineering, computer \
 	science, economics, and physics. Through problem-solving and computational tools, students will develop the \
 	skills needed to apply linear algebra concepts to real-world scenarios."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Linear Algebra";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Linear Algebra", "", description, "");
 };
 
 function CHE151() {
@@ -174,9 +151,7 @@ function CHE151() {
 	in science or engineering. It is a mathematical approach to the principles of chemistry and assumes that students have had an above average preparation in chemistry. \
 	Topics include a brief review of problem solving using dimensional analysis, graphing, and significant figures; chemical stoichiometry; gas laws; thermochemistry; \
 	an in-depth treatment of atomic structure, periodicity, and chemical bonding; phase relationships."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "General College Chemistry I";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "General College Chemistry I", "", description, "");
 };
 
 function PHY161() {
@@ -187,9 +162,7 @@ function PHY161() {
 	also gain experience with lab experiments to reinforce theoretical concepts and enhance their ability to apply \
 	physics to everyday phenomena. This course is essential for students pursuing careers in engineering, \
 	physical sciences, and related fields."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "University Physics I";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "University Physics I", "", description, "");
 };
 
 function PHY261() {
@@ -200,9 +173,7 @@ function PHY261() {
 	methods. Students will also engage in laboratory work to deepen their comprehension of concepts and demonstrate \
 	practical applications. This course is crucial for students pursuing careers in engineering, physical sciences, \
 	and other technical fields."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "University Physics II";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "University Physics II", "", description, "");
 };
 
 function PHY262() {
@@ -213,9 +184,7 @@ function PHY262() {
 	course emphasizes both the mathematical foundations and the experimental evidence behind these theories. It is \
 	designed for students pursuing advanced studies in physics, engineering, and other scientific disciplines, \
 	providing a foundation for understanding the modern technological world."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Modern Physics";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Modern Physics", "", description, "");
 };
 
 function CSC202() {
@@ -223,7 +192,5 @@ function CSC202() {
 	Microcontroller architecture will be stressed. Topics include Synchronous and Asynchronous Input/Output, Analog to Digital Conversion, Pulse Width Modulation, Timer/Counters, \
 	Interrupts and Parallel Port Programming. Laboratory work will focus on program development, implementation and debugging techniques. Several programming projects will be assigned \
 	to be completed outside of class and in lab. A final project and student presentation are required."
-	document.getElementById("MCC_Description").innerHTML = description;
-	document.getElementById("details-title").innerHTML = "Embedded C & Assembly";
-	document.getElementById("MCC_Slider").innerHTML = "";
+	UpdateBlock("MCC", "Embedded C & Assembly", "", description, "");
 };

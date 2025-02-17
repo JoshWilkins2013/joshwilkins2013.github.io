@@ -1,17 +1,23 @@
 function TestSuite() {
-    var description = "	I developed and fully automated a comprehensive suite of test procedures to validate the \
+    var description = "I developed and fully automated a comprehensive suite of test procedures to validate the \
 	RF performance of the entire Broadsim product line. The system was designed to support the testing of all \
 	existing products as well as any new radios that could potentially be installed or used in future designs. \
 	It also generated extremely detailed reports with consistent formatting and it highlighted key performance \
 	metrics. These reports were used internally to refine system design and used externally to foster \
 	transparency and trust with potential buyers. This tool also played a crucial role in the development \
 	of an accurate and competitive specification sheet, making it easier for consumers to compare our \
-	product with others. This initiative had a significant financial impact, influencing multi-million \
-	dollar sales.<br><br>"
-    document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
-    document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	product with others. This initiative had a significant financial impact, influencing multi-million dollar sales."
+    UpdateBlock("Safran", "Broadsim Automated Test Suite", "", description, "");
+};
+
+function ReportGeneration() {
+	var description = "After identifying the appropriate test metrics for our products, I developed several test \
+	procedures to measure and validate their performance. These procedures were then automated making the \
+	tests more efficient, detailed, and consistent. This also enabled us to quickly validate products before \
+	shipment and provided a more accurate representation of each unit\'s performance, as opposed to relying \
+	on a generic spec sheet. Below is an example of one of these reports, with the PDF organized by metric.\
+	<button onclick=\"load_pdf(\'Safran\', \'storage/Safran/Wavefront_Report.pdf\')\">Example Report</button>"
+	UpdateBlock("Safran", "Broadsim Automated Test Suite", "Report Generation", description, "");
 };
 
 function MetricDefinition() {
@@ -23,25 +29,9 @@ function MetricDefinition() {
 	In the process, it became clear that this issue extended beyond our company and was common across many similar \
 	products in the market. Key performance metrics were often overlooked or poorly defined. To address this, I \
 	developed and submitted a paper to IEEE to help clarify these metrics, raise awareness of the issue, and \
-	demonstrate how some of these tests could be conducted without relying on expensive equipment.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Safran', 'storage/Safran/IEEE_Report.pdf')\" href=\"javascript:;\">Intra-Signal Metrics</a></button>"
-	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
-    document.getElementById("details-subtitle").innerHTML = "Metric Definition";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
-};
-
-function ReportGeneration() {
-	var description = "After identifying the appropriate test metrics for our products, I developed several test \
-	procedures to measure and validate their performance. These procedures were then automated making the \
-	tests more efficient, detailed, and consistent. This also enabled us to quickly validate products before \
-	shipment and provided a more accurate representation of each unit\'s performance, as opposed to relying \
-	on a generic spec sheet. Below is an example of one of these reports, with the PDF organized by metric.<br><br>\
-	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Safran', 'storage/Safran/Wavefront_Report.pdf')\" href=\"javascript:;\">Example Report</a></button>"
-	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
-    document.getElementById("details-subtitle").innerHTML = "Report Generation";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	demonstrate how some of these tests could be conducted without relying on expensive equipment.\
+	<button onclick=\"load_pdf(\'Safran\', \'storage/Safran/IEEE_Report.pdf\')\">Intra-Signal Metrics</button>"
+	UpdateBlock("Safran", "Broadsim Automated Test Suite", "Metric Definition", description, "");
 };
 
 function InstrumentAutomation() {
@@ -49,11 +39,8 @@ function InstrumentAutomation() {
 	and managing the tools and instruments used for testing it. Fortunately, the API\'s for our products were written \
 	well and there is a loose instrument control standard using PyVISA and SCPI commands. I leveraged these \
 	foundations to develop generic product and instrument libraries capable of interacting with and control most \
-	of our products and test equipment.<br><br>"
-	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
-    document.getElementById("details-subtitle").innerHTML = "Automating Hardware";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	of our products and test equipment."
+	UpdateBlock("Safran", "Broadsim Automated Test Suite", "Automating Hardware", description, "");
 };
 
 function Wavefront_Enhancement() {
@@ -66,11 +53,8 @@ function Wavefront_Enhancement() {
 	introduced a more efficient method for phase alignment calibration across frequency and power. Additionally, \
 	I updated the real-time phase calibration process to compensate for inter-element phase drift and temperature \
 	variations. After all improvements were made, the Broadsim Wavefront could be fully aligned to within 0.25 degrees \
-	over time, temperature, power, and frequency with a phase stability of 0.1 degrees!<br><br>"
-	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
-    document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	over time, temperature, power, and frequency with a phase stability of 0.1 degrees!"
+	UpdateBlock("Safran", "Broadsim Wavefront Enhancements", "", description, "");
 };
 
 function Shared_LO() {
@@ -82,11 +66,8 @@ function Shared_LO() {
     <a href=\"javascript:;\" onclick=\"load_pdf('Safran', 'storage/Safran/Research/LO_Leakage.pdf')\">this paper</a> for additional information. After the change, \
     phase alignment improved by a factor of three, and phase stability improved by a factor of ten. As a result, \
 	the Broadsim Wavefront was able to align the output of eight different radios to within 0.5 degrees, with \
-	inter-element phase stability of less than 0.1 degrees.<br><br>"
-	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
-    document.getElementById("details-subtitle").innerHTML = "Shared LO Architecture";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	inter-element phase stability of less than 0.1 degrees."
+	UpdateBlock("Safran", "Broadsim Wavefront Enhancements", "Shared LO Architecture", description, "");
 };
 
 function Environmental_Compensation() {
@@ -94,11 +75,8 @@ function Environmental_Compensation() {
 	phase alignment drift caused by temperature variations. This enhancement was implemented after the other \
 	changes to the Wavefront, enabling a more refined compensation algorithm. As a result, the system was able \
 	to phase-align all radio outputs to within ±0.25 degrees over both temperature and time, even during runs \
-	lasting several days.<br><br>"
-	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
-    document.getElementById("details-subtitle").innerHTML = "Environmental Compensation";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	lasting several days."
+	UpdateBlock("Safran", "Broadsim Wavefront Enhancements", "Environmental Compensation", description, "");
 };
 
 function Calibration_Procedures() {
@@ -108,62 +86,46 @@ function Calibration_Procedures() {
 	calibrated to this model by collecting a coarser dataset and extrapolating it to fit the model. Prior to \
 	calibration, the Wavefront’s phase alignment was about ±8 degrees across frequency and power. After \
 	implementing the calibration process, this was improved to around ±0.25 degrees, representing a more \
-	than 32-fold improvement.<br><br>"
-	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
-    document.getElementById("details-subtitle").innerHTML = "Calibration Enhancements";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	than 32-fold improvement."
+	UpdateBlock("Safran", "Broadsim Wavefront Enhancements", "Calibration Enhancements", description, "");
 };
 
 //function Research() {
-//	var description = "I conducted a lot of research for Safran to keep up to date on the capabilites of the latest \
-//	and greatest Software Defined Radios (SDRs) currently available on the market or soon to be released. Some of \
-//	these included the (ADI one), the VProtean board from Vanteon in an M.2 form factor, and the 8-channel version \
-//	from Pentek."
-//	document.getElementById("details-title").innerHTML = "Research and Development";
-//    document.getElementById("details-subtitle").innerHTML = "";
-//    document.getElementById("Safran_Description").innerHTML = description;
-//    document.getElementById("Safran_Slider").innerHTML = "";
+//    var description = "I conducted a lot of research for Safran to keep up to date on the capabilites of the latest \
+//    and greatest Software Defined Radios (SDRs) currently available on the market or soon to be released. Some of \
+//    these included the (ADI one), the VProtean board from Vanteon in an M.2 form factor, and the 8-channel version \
+//    from Pentek."
+//    UpdateBlock("Safran", "Research and Development", "", description, "");
 //};
 //
 //function ZIF() {
-//	var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
-//	document.getElementById("details-title").innerHTML = "Research and Development";
-//    document.getElementById("details-subtitle").innerHTML = "Zero-IF";
-//    document.getElementById("Safran_Description").innerHTML = description;
-//    document.getElementById("Safran_Slider").innerHTML = "";
+//    var description = "<button><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
+//    <button><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
+//    UpdateBlock("Safran", "Research and Development", "Zero-IF", description, "");
 //};
 //
 //function ZIF_Architecture() {
-//    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
+//    var description = "<button><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
+//	<button><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
 //    document.getElementById("Safran_Description").innerHTML = description;
 //    load_pdf('Safran', 'storage/Safran/ZIF_Architecture.pdf')
 //}
 //
 //function ZIF_Advantages() {
-//    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
-//	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
+//    var description = "<button><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
+//	<button><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
 //    document.getElementById("Safran_Description").innerHTML = description;
 //    load_pdf('Safran', 'storage/Safran/ZIF_Advantages.pdf')
 //}
 
 function Pentek() {
-    SafranSlideIndex = 1;
-	var description = "The latest SDRs from Pentek were very interesting as they have. Essentially what this \
-	means is the large cabinet-scale Wavefront systems can be miniaturized into a much smaller form-factor such as \
-	a computer.<br><br>"
-	document.getElementById("details-title").innerHTML = "Research and Development";
-    document.getElementById("details-subtitle").innerHTML = "Small Form-Factor SDRs";
-    document.getElementById("Safran_Description").innerHTML = description;
-    add_slider("Safran", "Pentek");
+    var description = "The latest SDRs from Pentek were very interesting as they have. Essentially what this means is \
+	the large cabinet-scale Wavefront systems can be miniaturized into a much smaller form-factor such as a computer."
+	UpdateBlock("Safran", "Research and Development", "Small Form-Factor SDRs", description, "");
+	add_slider("Safran", "Pentek");
 };
 
 function PhaseCal() {
 	var description = ""
-	document.getElementById("details-title").innerHTML = "Phase Calibration";
-    document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("Safran_Description").innerHTML = description;
-    document.getElementById("Safran_Slider").innerHTML = "";
+	UpdateBlock("Safran", "Phase Calibration", "", description, "");
 };

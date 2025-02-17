@@ -87,7 +87,7 @@ function place_blocks(items, col_name) {
       images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
       if (description_file != "") {
         fetch(s3bucket_path + description_file).then(response => response.text()).then(text => {
-          block_content += "<div id=\"" + place_name + "_Description\" >" + text + "</div>";
+          block_content += "<div class=\"block-description\" id=\"" + place_name + "_Description\" >" + text + "</div>";
           finish_block_content(block_content, images, place_name, col_name);
         });
       } else {
@@ -207,4 +207,11 @@ function toggle_lightbox(element) {
     $('.navbar-brand').toggle();
     $('.navbar-navigation').toggle();
     $('.header-title-text').toggle();
+}
+
+function UpdateBlock(place_name, title, subtitle, description, image) {
+    document.getElementById(place_name + "_Title").innerHTML = title;
+    document.getElementById(place_name + "_Subtitle").innerHTML = subtitle;
+    document.getElementById(place_name + "_Description").innerHTML = description;
+    document.getElementById(place_name + "_Slider").innerHTML = image;
 }

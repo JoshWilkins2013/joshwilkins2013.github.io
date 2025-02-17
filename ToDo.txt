@@ -13,7 +13,6 @@ General:
     - Fix Captions and make sure slider buttons overlap only image, not caption
 - Update Safran more
     - Fix commented blocks
-- Fix some spacing issues in blocks (after descriptions)
 - Add more project pictures now that s3 buckets are being used
 - Reports are removed on expansion
 
