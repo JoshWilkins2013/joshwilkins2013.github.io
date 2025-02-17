@@ -1,6 +1,5 @@
 General:
 - Remove expanding icon on index page
-- Rename block.js to gallery.js?
 - Remove button on pdf or html load
 - Move descriptions into json files?
 - Sidebar collapses before next page loads sometimes
@@ -16,9 +15,12 @@ General:
 - Go through pictures, add any 'projects' I think I should add
 - Update Safran more
     - Fix commented blocks
+- Fix some spacing issues in blocks (after descriptions)
 - Slider should overlay with lightbox
 - Not all images that should be lightboxed are
 - Go through all pictures, can add more now that s3 buckets are being used
+- Remove "custom.css" references in embedded html files
+- Arrows should not overlay reports
 
 Possible Enhancements:
 - Sub-Projects for larger projects such as the kitchen?

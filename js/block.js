@@ -69,6 +69,7 @@ function place_blocks(items, col_name) {
         }
       }
 
+      images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
       if (description_file != "") {
         fetch(s3bucket_path + description_file).then(response => response.text()).then(text => {
           block_content += "<div id=\"" + place_name + "_Description\" >" + text + "</div>";
@@ -132,6 +133,7 @@ function viewAlbum(element, albumName) {
       for (const row of data.Contents) {
         images.push(row.Key)
       }
+      images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
       images = images.filter(item => !item.endsWith('.txt'));
       const { first_col_items, second_col_items, third_col_items } = convert_to_gallery(images);
 
