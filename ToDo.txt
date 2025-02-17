@@ -1,5 +1,5 @@
 General:
-- Fix index page (remove block.html)
+- Remove expanding icon on index page
 - Rename block.js to gallery.js?
 - Remove button on pdf or html load
 - Move descriptions into json files?
@@ -17,6 +17,8 @@ General:
 - Update Safran more
     - Fix commented blocks
 - Slider should overlay with lightbox
+- Not all images that should be lightboxed are
+- Go through all pictures, can add more now that s3 buckets are being used
 
 Possible Enhancements:
 - Sub-Projects for larger projects such as the kitchen?
@@ -24,4 +26,4 @@ Possible Enhancements:
 - Add skill proficiencies?
 - Animate things - image sliders, experience & education block refreshes, etc.
 - Formspree thanks redirect no longer exists on free plan
-- No way to view gallery of images on phone
+- Add method of viewing gallery of images on phone

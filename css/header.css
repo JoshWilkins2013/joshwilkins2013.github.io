@@ -179,19 +179,3 @@ nav.navbar .dropdown .dropdown-menu.active {
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
-
-/* ========================================================== */
-/*     Navbar Media Query
-/* ========================================================== */
-@media (max-width: 1199px) {
-  nav.navbar .search-inner form input {
-    font-size: 1.25rem !important;
-  }
-  nav.navbar .search-inner form button.submit {
-    position: absolute;
-    font-size: 2rem;
-    top: 50px;
-    display: block;
-    width: 100%;
-  }
-}

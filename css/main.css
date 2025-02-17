@@ -24,6 +24,12 @@ p {
   line-height: 1.7;
 }
 
+img {
+  border-radius: 8px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px black ;
+}
+
 i,
 span,
 strong {
