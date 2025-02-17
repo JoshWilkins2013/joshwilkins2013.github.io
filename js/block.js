@@ -91,9 +91,9 @@ function finish_block_content(block_content, images, place_name, col_name) {
 
   first_src = s3bucket_path + images[0];
   SliderIndices[place_name] = 0;
-  block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n</div>\n"
+  block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n"
   block_content += "<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
-  block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
+  block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n</div>\n"
 
   document.getElementById(col_name).insertAdjacentHTML("beforeend", block_content + "</div>\n</div>\n</div>\n</div>");  // Replace block content with gallery
 }
@@ -145,17 +145,17 @@ function viewAlbum(element, albumName) {
       var gallery_content = row_starter + column_starter;
 
       first_col_items.forEach(image => {
-        gallery_content += '<span onclick=\'toggle_lightbox(this)\'><img style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
+        gallery_content += '<span><img onclick=\'toggle_lightbox(this)\' style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
       });
 
       gallery_content += '</div>\n' + column_starter; // end the column
       second_col_items.forEach(image => {
-        gallery_content += '<span onclick=\'toggle_lightbox(this)\'><img style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
+        gallery_content += '<span><img onclick=\'toggle_lightbox(this)\' style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
       });
 
       gallery_content += '</div>\n' + column_starter;  // end the column
       third_col_items.forEach(image => {
-        gallery_content += '<span onclick=\'toggle_lightbox(this)\'><img style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
+        gallery_content += '<span><img onclick=\'toggle_lightbox(this)\' style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
       });
 
       gallery_content += '</div>\n</div>'; // end the column and the row
@@ -179,14 +179,17 @@ function add_slider(folder_name, place_name) {
 
     first_src = s3bucket_path + images[0];
     SliderIndices[place_name] = 0;
-    block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n</div>\n"
+    block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n"
     block_content += "<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
-    block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n"
+    block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n</div>\n"
 
     document.getElementById(folder_name + "_Slider").innerHTML = block_content;
   });
 }
 
 function toggle_lightbox(element) {
-    $(element).toggleClass('lightbox');
+    $(element).parent().toggleClass('lightbox');
+    $('.navbar-brand').toggle();
+    $('.navbar-navigation').toggle();
+    $('.header-title-text').toggle();
 }

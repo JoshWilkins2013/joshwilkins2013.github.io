@@ -68,12 +68,13 @@
 }
 
 .prev, .next {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
   padding: 0 16px 0 16px;
-  margin-bottom: 20px;
   color: white;
   font-weight: bold;
   font-size: 18px;
