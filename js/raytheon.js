@@ -16,7 +16,7 @@ function CSM() {
     factors and selecting the best approach to ensure reliable performance across multiple product applications."
     document.getElementById("details-title").innerHTML = "Synthesizer Module";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Raytheon_Description").innerHTML = description;
     document.getElementById("Raytheon_Slider").innerHTML = "";
 }
 
@@ -32,7 +32,7 @@ function LBR() {
 	Digital-to-Analog Converters (DACs), and the processed data is further interpreted or utilized on an FPGA."
     document.getElementById("details-title").innerHTML = "L-Band Receiver";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Raytheon_Description").innerHTML = description;
     document.getElementById("Raytheon_Slider").innerHTML = "";
 }
 
@@ -49,7 +49,7 @@ function XLC() {
 	out of your control, and in others, processing is simply more efficient at a particular frequency."
     document.getElementById("details-title").innerHTML = "X-L Band Converter";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Raytheon_Description").innerHTML = description;
     document.getElementById("Raytheon_Slider").innerHTML = "";
 }
 
@@ -57,12 +57,12 @@ function XLC() {
 //	var description = ""
 //    document.getElementById("details-title").innerHTML = "Keysight ADS";
 //    document.getElementById("details-subtitle").innerHTML = "";
-//    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Raytheon_Description").innerHTML = description;
 //}
 //
 //function Filters() {
 //	var description = ""
 //    document.getElementById("details-title").innerHTML = "Filter Design";
 //    document.getElementById("details-subtitle").innerHTML = "";
-//    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Raytheon_Description").innerHTML = description;
 //}

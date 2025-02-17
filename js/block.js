@@ -17,15 +17,30 @@ function Slides(direction, image_paths, name) {
 }
 
 function load_html(project_name, html_path) {
-    var src = s3bucket_path + html_path + "#toolbar=0&view=FitH";
-    var description = "<iframe src=\"" + src + "\" style=\"width: 100%;border: none;\"></iframe>";
-    document.getElementById(project_name + "_Slider").innerHTML = description;
+  var src = s3bucket_path + html_path + "#toolbar=0&view=FitH";
+  var description = "<iframe src=\"" + src + "\" style=\"width: 100%;border: none;\"></iframe>";
+  document.getElementById(project_name + "_Slider").innerHTML = description;
+  remove_button(project_name);
 }
 
 function load_pdf(project_name, pdf_path) {
-    var src = s3bucket_path + pdf_path + "#toolbar=0&view=FitH";
+  var src = s3bucket_path + pdf_path + "#toolbar=0&view=FitH";
+
+  if (project_name != "About_Me") {  // Don't remove all breaks on resume
     var description = "<iframe src=\"" + src + "\" style=\"width: 100%;border: none;\"></iframe>";
     document.getElementById(project_name + "_Slider").innerHTML = description;
+    remove_button(project_name);
+  } else {
+    var description = "<iframe src=\"" + src + "\" style=\"height: 100%; width: 100%;border: none;\"></iframe>";
+    document.getElementById(project_name + "_Content").innerHTML = description;
+  }
+}
+
+function remove_button(project_name) {
+  // Hide the button that loaded the html/pdf file. Also remove extra <br> tags
+  var description_object = document.getElementById(project_name + "_Description");
+  description_object.innerHTML = description_object.innerHTML.replaceAll("<br>", "")
+  $('#' + project_name + "_Description").find('button').hide();
 }
 
 function convert_to_gallery(items) {

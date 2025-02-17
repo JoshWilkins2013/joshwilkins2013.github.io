@@ -79,6 +79,7 @@
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
+  background-color: rgba(0,0,0,0.2);
 
     /* Prevent highlighting of directional arrows */
   -ms-user-select: none; /* Internet Explorer/Edge */

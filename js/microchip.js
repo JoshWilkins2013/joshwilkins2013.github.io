@@ -10,7 +10,7 @@ function Synthesizer() {
 	ensuring high precision.<br><br>"
     document.getElementById("details-title").innerHTML = "12 GHz Synthesizer";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "Synth");
 }
 
@@ -21,7 +21,7 @@ function Prototype() {
 	updated to include modular EMI-shielded PCBs, allowing for future replacement of specific components to\
 	facilitate potential performance enhancements.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "Full Scale Prototype";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "Prototype");
 };
 
@@ -33,7 +33,7 @@ function OutputPower() {
 	while maximizing the potential output power.<br><br>\
 	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Microchip', 'storage/Microchip/OutputPowerController.pdf')\" href=\"javascript:;\">Analysis</a></button><br><br>"
     document.getElementById("details-subtitle").innerHTML = "Output Power Controller";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "Power");
 };
 
@@ -43,7 +43,7 @@ function Boards() {
 	and an active power splitter board to distribute the reference oscillator to other parts of the system. \
     I also developed boards to simplify the interchangeability of components such as the reference oscillator.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "Associated Board Spins";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "PCB");
 };
 
@@ -56,9 +56,9 @@ function TempDependence() {
 	add-on device, which extracted the cleanest signal from the synthesizer and digitally tuned the temperature \
 	dependency out.<br><br>\
 	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Microchip', 'storage/Microchip/TemperatureDependence.pdf')\" href=\"javascript:;\">Analysis</a></button><br><br>"
-	var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Microchip/Misc/DividerBox.png\" width=100%><p>Divider Box</p>"
+	var image = "<div class=\"mySlides\"><span onclick=\'toggle_lightbox(this)\'><img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Microchip/Misc/DividerBox.png\" width=100%></span></div>"
     document.getElementById("details-subtitle").innerHTML = "Temperature Dependency Testing";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     document.getElementById("Microchip_Slider").innerHTML = image;
 };
 
@@ -70,7 +70,7 @@ function Filters() {
 	the temperature ramp (stepped or continuous) and generates the corresponding coefficients to best fit the tempco\
 	profile.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "Microstrip Filter Designs";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "Filters");
 };
 
@@ -86,10 +86,10 @@ function AtomicClock() {
     more efficient and accurate way of determining clock performance on a larger scale. Additionally, the GUI \
     facilitated the enhancement and testing of temperature compensation algorithms and offered easy access \
     to plot specific datasets, such as board temperature and frequency.<br><br>"
-    var image = "<img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Microchip/AtomicClock/GUI.png\" width=75%><p>User Interface</p>"
+    var image = "<div class=\"mySlides\"><span onclick=\'toggle_lightbox(this)\'><img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/Microchip/AtomicClock/GUI.png\" width=75%></span></div>"
     document.getElementById("details-title").innerHTML = "Atomic Clock GUI";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     document.getElementById("Microchip_Slider").innerHTML = image;
 }
 
@@ -101,7 +101,7 @@ function Aging() {
 	understand how long this process will take. This script was developed to estimate the aging rate of our \
 	products.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "Predicting Long Term Aging Rates";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "AtomicClock/Aging");
 };
 
@@ -113,7 +113,7 @@ function ADev() {
 	which helped reduce variance and improve the accuracy of the results. While this approach was more complex \
 	than simply averaging a few numbers or vectors, it proved to be effective and worked as expected.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "Long Term ADev Rates";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "AtomicClock/ADev");
 };
 
@@ -126,7 +126,7 @@ function Tempco() {
 	profile.<br><br>\
 	<a onclick=\"load_html('Microchip', 'storage/Microchip/SteppedInputResponse.html')\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>"
     document.getElementById("details-subtitle").innerHTML = "Temperature Compensation";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "AtomicClock/Tempco");
 };
 
@@ -138,7 +138,7 @@ function DataAnalysis() {
 	root causes. For example, one issue was traced back to a change in the manufacturing process of the on-board \
 	TCXO, while another was linked to an internal tracking algorithm within the atomic clock.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "Data Analysis";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "AtomicClock/DataAnalysis");
 };
 
@@ -156,7 +156,7 @@ function Embedded() {
 	<a href=\"https://github.com/JoshWilkins2013/BBB\" target=\"_blank\">Repository</a><br><br>"
     document.getElementById("details-title").innerHTML = "Real Time Embedded System";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "BBB");
 };
 
@@ -167,7 +167,7 @@ function SPI() {
 	communication protocol was a critical part of this real-time embedded system and provided the basis for \
 	all of the other tools I created on the Beaglebone Black PRUs.<br><br>"
     document.getElementById("details-subtitle").innerHTML = "Generic SPI Communication Protocol";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "BBB/SPI");
 };
 
@@ -178,7 +178,7 @@ function AltPhaseNoise() {
 	step recovery diode.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/JupyterNotebooks/tree/master/Work/AltPhaseNoiseMeasSys\" target=\"_blank\">Repository</a><br><br>"
     document.getElementById("details-subtitle").innerHTML = "Phase Noise Measurement System";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     load_html('Microchip', 'storage/Microchip/AltPhaseNoiseMeasSys.html');
 };
 
@@ -188,7 +188,7 @@ function AddPhase() {
 	more robust systems to be created. It also helped define the underlying effect phase noise has on allan deviation.<br><br>\
 	<a href=\"https://github.com/JoshWilkins2013/Tools/tree/master/AddPhaseNoise\" target=\"_blank\">Repository</a><br><br>"
     document.getElementById("details-subtitle").innerHTML = "Phase Noise Profile Generator";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "BBB/Inject");
 };
 
@@ -206,7 +206,7 @@ function Quantization() {
 	<a onclick=\"QuantizationAnalysis()\" href=\"javascript:;\"><button type=\"submit\" class=\"submit\">Analysis</button></a><br><br>"
     document.getElementById("details-title").innerHTML = "Informative Presentations";
     document.getElementById("details-subtitle").innerHTML = "Minimizing Quantization Error";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     add_slider("Microchip", "Quantization");
 };
 
@@ -217,7 +217,7 @@ function QuantizationAnalysis() {
 	this presentation in an attempt to illustrate that quantization noise can be reduced within a system. In fact, \
 	the typical SNR due to quantization error is about 6 dB per bit, but by preconditioning the signal, this error \
 	can be reduced to improve the SNR to about 10 dB per bit!<br><br>"
-	document.getElementById("details-description").innerHTML = description;
+	document.getElementById("Microchip_Description").innerHTML = description;
     load_html('Microchip', 'storage/Microchip/QuantizationError.html')
 };
 
@@ -229,7 +229,7 @@ function Structures() {
 	control flow, lambda functions, generators,	and exception handling.<br><br>"
 	document.getElementById("details-title").innerHTML = "Informative Presentations";
     document.getElementById("details-subtitle").innerHTML = "Python Data Structures";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     load_html('Microchip', 'storage/Microchip/Structures.html')
 };
 
@@ -241,7 +241,7 @@ function Jupyter() {
 	Markdown, Python, and Magic commands..<br><br>"
     document.getElementById("details-title").innerHTML = "Informative Presentations";
     document.getElementById("details-subtitle").innerHTML = "Introduction to Jupyter";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     load_html('Microchip', 'storage/Microchip/Jupyter.html')
 };
 
@@ -259,7 +259,7 @@ function AgileSync() {
 	script efficiently handled the task and kept everything in sync."
     document.getElementById("details-title").innerHTML = "Noteworthy Mentions";
     document.getElementById("details-subtitle").innerHTML = "Agile Database Sync Tool";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     document.getElementById("Microchip_Slider").innerHTML = "";
 };
 
@@ -273,6 +273,6 @@ function Other() {
 	accuracy using Python and Jupyter Notebook.<br><br>"
     document.getElementById("details-title").innerHTML = "Noteworthy Mentions";
     document.getElementById("details-subtitle").innerHTML = "Secondary Job Functions";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Microchip_Description").innerHTML = description;
     document.getElementById("Microchip_Slider").innerHTML = "";
 };

@@ -10,7 +10,7 @@ function TestSuite() {
 	dollar sales.<br><br>"
     document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -27,7 +27,7 @@ function MetricDefinition() {
 	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Safran', 'storage/Safran/IEEE_Report.pdf')\" href=\"javascript:;\">Intra-Signal Metrics</a></button>"
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Metric Definition";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -40,7 +40,7 @@ function ReportGeneration() {
 	<button type=\"submit\" class=\"submit\"><a onclick=\"load_pdf('Safran', 'storage/Safran/Wavefront_Report.pdf')\" href=\"javascript:;\">Example Report</a></button>"
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Report Generation";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -52,7 +52,7 @@ function InstrumentAutomation() {
 	of our products and test equipment.<br><br>"
 	document.getElementById("details-title").innerHTML = "Broadsim Automated Test Suite";
     document.getElementById("details-subtitle").innerHTML = "Automating Hardware";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -69,7 +69,7 @@ function Wavefront_Enhancement() {
 	over time, temperature, power, and frequency with a phase stability of 0.1 degrees!<br><br>"
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -85,7 +85,7 @@ function Shared_LO() {
 	inter-element phase stability of less than 0.1 degrees.<br><br>"
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "Shared LO Architecture";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -97,7 +97,7 @@ function Environmental_Compensation() {
 	lasting several days.<br><br>"
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "Environmental Compensation";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -111,7 +111,7 @@ function Calibration_Procedures() {
 	than 32-fold improvement.<br><br>"
 	document.getElementById("details-title").innerHTML = "Broadsim Wavefront Enhancements";
     document.getElementById("details-subtitle").innerHTML = "Calibration Enhancements";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
 
@@ -122,7 +122,7 @@ function Calibration_Procedures() {
 //	from Pentek."
 //	document.getElementById("details-title").innerHTML = "Research and Development";
 //    document.getElementById("details-subtitle").innerHTML = "";
-//    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Description").innerHTML = description;
 //    document.getElementById("Safran_Slider").innerHTML = "";
 //};
 //
@@ -131,21 +131,21 @@ function Calibration_Procedures() {
 //	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
 //	document.getElementById("details-title").innerHTML = "Research and Development";
 //    document.getElementById("details-subtitle").innerHTML = "Zero-IF";
-//    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Description").innerHTML = description;
 //    document.getElementById("Safran_Slider").innerHTML = "";
 //};
 //
 //function ZIF_Architecture() {
 //    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
 //	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
-//    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Description").innerHTML = description;
 //    load_pdf('Safran', 'storage/Safran/ZIF_Architecture.pdf')
 //}
 //
 //function ZIF_Advantages() {
 //    var description = "<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Architecture()\" href=\"javascript:;\">ZIF Architecture</a></button>\
 //	<button type=\"submit\" class=\"submit\"><a onclick=\"ZIF_Advantages()\" href=\"javascript:;\">ZIF Advantages</a></button>"
-//    document.getElementById("details-description").innerHTML = description;
+//    document.getElementById("Safran_Description").innerHTML = description;
 //    load_pdf('Safran', 'storage/Safran/ZIF_Advantages.pdf')
 //}
 
@@ -156,7 +156,7 @@ function Pentek() {
 	a computer.<br><br>"
 	document.getElementById("details-title").innerHTML = "Research and Development";
     document.getElementById("details-subtitle").innerHTML = "Small Form-Factor SDRs";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     add_slider("Safran", "Pentek");
 };
 
@@ -164,6 +164,6 @@ function PhaseCal() {
 	var description = ""
 	document.getElementById("details-title").innerHTML = "Phase Calibration";
     document.getElementById("details-subtitle").innerHTML = "";
-    document.getElementById("details-description").innerHTML = description;
+    document.getElementById("Safran_Description").innerHTML = description;
     document.getElementById("Safran_Slider").innerHTML = "";
 };
