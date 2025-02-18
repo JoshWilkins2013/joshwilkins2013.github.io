@@ -23,19 +23,19 @@ icon: dashboard
 
                 <table class="table table-striped table-sm">
                   <tbody>
-                    <tr class="first-row" onclick="CSM()">
+                    <tr class="first-row" onclick="UpdateBlock('{{page.title}}', 'CSM')">
                       <th style="color:#cc5200"><div>Synthesizer Module</div></th>
                     </tr>
-                    <tr onclick="LBR()">
+                    <tr onclick="UpdateBlock('{{page.title}}', 'LBR')">
                       <th style="color:#cc5200"><div>L-Band Receiver</div></th>
                     </tr>
-                    <tr onclick="XLC()">
+                    <tr onclick="UpdateBlock('{{page.title}}', 'XLC')">
                       <th style="color:#cc5200"><div>X-L Band Converter</div></th>
                     </tr>
-<!--					  <tr onclick="ADS()">-->
+<!--					  <tr onclick="UpdateBlock('{{page.title}}', 'ADS')">-->
 <!--                        <th style="color:#cc5200">Keysight ADS</th>-->
 <!--                      </tr>-->
-<!--                      <tr onclick="Filters()">-->
+<!--                      <tr onclick="UpdateBlock('{{page.title}}', 'Filters')">-->
 <!--                        <th style="color:#cc5200">Filter Design</th>-->
 <!--                      </tr>-->
                   </tbody>

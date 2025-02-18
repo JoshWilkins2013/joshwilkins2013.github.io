@@ -26,13 +26,13 @@ icon: dashboard
                   <tbody>
                     <tr class="first-row">
                       <th style="color:#cc5200">
-                        <div class="expandable-row" onclick="Battery()">Battery Life Enhancement ⬎</div>
+                        <div class="expandable-row" onclick="UpdateBlock('{{page.title}}', 'Battery')">Battery Life Enhancement ⬎</div>
                         <ul class="collapse" style="margin-bottom:0">
-                          <li style="color:#8a8d93" onclick="TestFixture()"><div>AGM Lead-Acid Battery Test Fixture</div></li>
+                          <li style="color:#8a8d93" onclick="UpdateBlock('{{page.title}}', 'TestFixture')"><div>AGM Lead-Acid Battery Test Fixture</div></li>
                         </ul>
                       </th>
                     </tr>
-                    <tr onclick="Cassettes()">
+                    <tr onclick="UpdateBlock('{{page.title}}', 'Cassettes')">
                       <th style="color:#cc5200"><div>Digital X-Ray Cassettes</div></th>
                     </tr>
                   </tbody>
@@ -47,16 +47,16 @@ icon: dashboard
 
                 <table class="table table-striped table-sm">
                   <tbody>
-                    <tr class="first-row" onclick="Automation()">
+                    <tr class="first-row" onclick="UpdateBlock('{{page.title}}', 'Automation')">
                       <th style="color:#cc5200"><div>Automation Test Framework Management</div></th>
                     </tr>
-                    <tr onclick="Communication()">
+                    <tr onclick="UpdateBlock('{{page.title}}', 'Communication')">
                       <th style="color:#cc5200"><div>Intra-Division Communication Improvements</div></th>
                     </tr>
-                    <tr onclick="Agile()">
+                    <tr onclick="UpdateBlock('{{page.title}}', 'Agile')">
                       <th style="color:#cc5200"><div>Agile Practices: Scrum and Test Driven Development</div></th>
                     </tr>
-                    <tr onclick="Leadership()">
+                    <tr onclick="UpdateBlock('{{page.title}}', 'Leadership')">
                       <th style="color:#cc5200"><div>Leadership / Management</div></th>
                     </tr>
                   </tbody>

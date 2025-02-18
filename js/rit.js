@@ -1,243 +1,261 @@
-function EEEE220() {
-	var description = "In the first part, the course covers the design of digital systems using a hardware description\
-	language. In the second part, it covers the design of large digital systems using the computer\
-	design methodology, and culminates with the design of a reduced instruction set central\
-	processing unit, associated memory and input/output peripherals. The course focuses on the\
-	design, capture, simulation, and verification of major hardware components such as: the datapath,\
-	the control unit, the central processing unit, the system memory, and the I/O modules.\
-	The lab sessions enforce and complement the concepts and design principles exposed in the\
-	lecture through the use of CAD tools and emulation in a commercial FPGA. This course assumes\
-	a background in C programming."
-	UpdateBlock("RIT", "Digital Systems II", "", description, "");
-};
-
-function EEEE260() {
-	var description = "An introductory course on the fundamentals of semiconductor physics and principles of operation\
-	of basic devices. Topics include semiconductor fundamentals (crystal structure, statistical\
-	physics of carrier concentration, motion in crystals, energy band models, drift and diffusion\
-	currents) as well as the operation of pn junction diodes, bipolar junction transistors (BJT),\
-	metal-oxide-semiconductor (MOS) capacitors and MOS field-effect transistors."
-	UpdateBlock("RIT", "Intro to Semiconductor Devices", "", description, "");
-};
-
-function EEEE346() {
-	var description = "Introduction to Object-Oriented Programming in C++. Topics will be review of C (control\
-	structures, functions, and arrays), pointers, classes, operator overloading, inheritance, polymorphism,\
-	data structures, class string, and STL. At the end of the semester, everyone will\
-	have the working knowledge of C++. Projects will be assigned to build your C++ programming skills."
-	UpdateBlock("RIT", "Advanced Programming", "", description, "");
-};
-
-function EEEE353() {
-	var description = "Linear Systems provides the foundations of continuous and discrete signal and system analysis\
-	and modeling. Topics include a description of continuous linear systems via differential equations,\
-	a description of discrete systems via difference equations, input-output relationship of\
-	continuous and discrete linear systems, the continuous time convolution integral, the discrete\
-	time convolution sum, application of convolution principles to system response calculations,\
-	exponential and trigonometric forms of Fourier series and their properties, Fourier transforms\
-	including energy spectrum and energy spectral density. Sampling of continuous time signals\
-	and the sampling theorem, the Laplace, Z and DTFT. The solution of differential equations and\
-	circuit analysis problems using Laplace transforms, transfer functions of physical systems, block\
-	diagram algebra and transfer function realization is also covered. A comprehensive study of\
-	the z transform and its inverse, which includes system transfer function concepts, system frequency\
-	response and its interpretation, and the relationship of the z transform to the Fourier\
-	and Laplace transform is also covered. Finally, an introduction to the design of digital filters,\
-	which includes filter block diagrams for Finite Impulse Response (FIR) and Infinite Impulse\
-	Response (IIR) filters is introduced."
-	UpdateBlock("RIT", "Linear Systems", "", description, "");
-};
-
-function EEEE374() {
-	var description = "The course provides the foundations of EM fields, static and time varying, and a study of propagation,\
-	reflection and transmissions of electromagnetic waves in unbounded regions and in\
-	transmission lines. Topics include the following: electric field intensity and potential, Guass'\
-	Law, polarization, electric flux density, dielectric constant and boundary conditions, Poisson's\
-	and Laplace's equations, methods of images, steady electric current and conduction current\
-	density, vector magnetic potential, Biot-Savart law, magnetization, magnetic field intensity,\
-	permeability, boundary conditions, Faraday's law, Maxwell's equations and the continuity equation.\
-	Time harmonic EM fields, wave equations, uniform plane waves, polarization, Poynting\
-	theorem and power, reflection and transmission from multiple dielectric interfaces, transmission\
-	line equations, transients on transmission lines, pulse and step excitations, reflection\
-	diagrams, sinusoidal steady state solutions, standing waves, the Smith Chart and impedance\
-	matching techniques, TE and TM waves in rectangular waveguides. experiments using stateof-art\
-	RF equipment illustrating fundamental wave propagation and reflection concepts, design\
-	projects with state-of-art EM modeling tools."
-	UpdateBlock("RIT", "EM Fields & Transmission Lines", "", description, "");
-};
-
-function EEEE381() {
-	var description = "This course is the first in a two-part sequence on analog electronic circuit design, \
-	covering fundamental concepts and techniques. Topics include the current-voltage characteristics of MOSFETs, \
-	DC and small-signal analysis of MOS devices and circuits, and the design of single-stage MOS amplifiers. The \
-	course also explores DC biasing circuits, such as current sources and mirrors, two-transistor amplifier \
-	stages (including differential and cascode amplifiers), and the design of multistage amplifiers. Additional \
-	topics include the frequency response of amplifiers, semiconductor diodes and diode circuits (including \
-	rectifiers and clamping circuits), and the use of Zener diodes for voltage regulation. Students will also \
-	learn to design ideal op-amp circuits in both non-inverting and inverting configurations.\
-    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE381_Report.pdf\')\">Final Report</button>"
-	UpdateBlock("RIT", "Electronics I", "", description, "");
-};
-
-function EEEE414() {
-	var description = "This course introduces students to the study of linear continuous-time classical control systems,\
-	their behavior, design, and use in augmenting engineering system performance. The course is\
-	based on classical control methods using Laplace-transforms, block-diagrams, root-locus, and\
-	frequency-domain analysis. Topics include: Laplace-transform review; Bode plot review; system\
-	modeling for control; relationships of transfer-function poles and zeros to time-response behaviors;\
-	stability analysis; steady-state error, error constants, and error specification; feedback\
-	control properties; relationships between stability margins and transient behavior; lead, lag, and\
-	PID control; root-locus analysis and design; frequency-response design and Nyquist stability. A\
-	laboratory will provide students with hands-on analysis and design-build-test experience, and\
-	includes the use of computer-aided design software such as MATLAB.\
-    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE414_Report.pdf\')\">Final Report</button>"
-	UpdateBlock("RIT", "Classical Control", "", description, "");
-};
-
-function EEEE482() {
-	var description = "This course is the second in a two-course sequence focused on analog and digital \
-	electronic circuit analysis and design. The analog portion includes DC and small-signal analysis of bipolar \
-	junction transistor (BJT) circuits, BJT DC biasing, and the design of simple and compound BJT amplifier \
-	stages. It also covers multi-stage BJT amplifiers, op-amps, frequency response, and feedback and stability \
-	in both BJT and MOSFET amplifiers. The digital portion introduces the principles of digital circuits using \
-	NMOS and CMOS technologies, including the behavior of NMOS and CMOS inverters, combinational and sequential \
-	CMOS logic networks, and advanced topics such as dynamic CMOS logic, memory, and low-power logic techniques."
-	UpdateBlock("RIT", "Electronics II", "", description, "");
-};
-
-function EEEE483() {
-	var description = "This course covers the fundamental principles of electric machines, focusing on sensors and \
-	actuators, particularly high-performance electromechanical motion devices such as permanent-magnet DC motors, \
-	synchronous motors, and stepper motors. It explores power electronics and control systems for electromechanical \
-	systems, utilizing the MATLAB environment for simulation, analysis, and control of mechatronic systems. \
-	The course also introduces the application of digital signal processors and microcontrollers in mechatronics, \
-	with practical case studies to reinforce learning."
-	UpdateBlock("RIT", "Mechatronics", "", description, "");
-};
-
-function EEEE484() {
-	var description = "Introduction to Communication Systems provides the basics of the formation, transmission\
-	and reception of information over communication channels. Spectral density and correlation\
-	descriptions for deterministic and stationary random signals. Amplitude and angle modulation\
-	methods (e.g. AM and FM) for continuous signals. Carrier detection and synchronization.\
-	Phase-locked loop and its application. Introduction to digital communication. Binary ASK, FSK\
-	and PSK. Noise effects. Optimum detection: matched filters, maximum-likelihood reception.\
-	Computer simulation.\
-    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE484_Report.pdf\')\">Final Report</button>"
-	UpdateBlock("RIT", "Communication Systems", "", description, "");
-};
-
-function EEEE485() {
-	var description = "This course will cover basic electrical and mechanical engineering topics related to Robotics,\
-	including but not limited to: basic electrical and electronics components (resistors, capacitors,\
-	inductors, diodes, transistors, op-amps, timers) and concepts (sensors, signal conditioning,\
-	oscillators) and basic mechanical components (chains, gears, ratchets and pawl belt and chain\
-	drives, bearing) and concepts (motion, dynamics equations, and force and torque analysis). In\
-	addition, robotics system modeling, control, and applications will be explored. Students will\
-	design electronic interfaces and controllers for mechanical devices. Finally, sensor and actuator\
-	selection, installation, and application strategies will be explored.\
-    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE485_Report.pdf\')\">Final Report</button>"
-	UpdateBlock("RIT", "Robotic Systems", "", description, "");
-};
-
-function EEEE497() {
-	var description = "MSD-I is the first half of a two-semester design course oriented to the solution of engineering\
-	problems. The mission is to enhance engineering education through a capstone design\
-	experience that integrates engineering theory, principles and processes within a collaborative\
-	environment. Working in multidisciplinary teams and following an engineering design process,\
-	students will assess customer needs and engineering specifications, evaluate concepts,\
-	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
-	which is fully tested and documented.\
-    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\">Final Report</button>"
-	UpdateBlock("RIT", "Senior Design Project I", "", description, "");
-};
-
-function EEEE498() {
-	var description = "MSD-II is the second half of a two-semester design course oriented to the solution of engineering\
-	problems. The mission is to enhance engineering education through a capstone design\
-	experience that integrates engineering theory, principles and processes within a collaborative\
-	environment. Working in multidisciplinary teams and following an engineering design process,\
-	students will assess customer needs and engineering specifications, evaluate concepts,\
-	resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
-	which is fully tested and documented.\
-    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\">Final Report</button>"
-	UpdateBlock("RIT", "Senior Design Project II", "", description, "");
-};
-
-function EEEE579() {
-	var description = "A study of the various techniques for the design of filters to meet the given specifications. The\
-	emphasis is on the design of active filters using op amps. The following topics are discussed\
-	in detail: Review of transfer functions, Bode diagrams and the analysis of op amp circuits;\
-	ideal filter characteristics, approximations to the ideal filter using Butterworth, Chebyshev\
-	and Bessel-Thompson polynomials; standard filter stages; magnitude and frequency scaling;\
-	low-pass filter design; design of high-pass, band-pass and band-reject filters; passive ladder\
-	filter network design; frequency dependent negative resistance networks; switched capacitor filters."
-	UpdateBlock("RIT", "Analog Filter Design", "", description, "");
-};
-
-function EEEE593() {
-	var description = "This course covers the principles and practices of modern digital data communication \
-	systems. Topics include pulse code modulation, error probabilities, M-ary signaling, AWGN channels, \
-	band-limited and distorting channels, filter design, equalizers, and optimal detection for channels \
-	with memory. It also explores synchronization methods, non-linear modulation, and introduces advanced \
-	concepts such as multipath fading channels, spread spectrum, and OFDM."
-	UpdateBlock("RIT", "Digital Data Communication", "", description, "");
-};
-
-function EEEE661() {
-	var description = "This course deals with a complete description of physical systems its analysis and design of\
-	controllers to achieve desired performance. The emphasis in the course will be on continuous\
-	linear systems. Major topics are: state space representation of physical systems, similarities/\
-	differences between input-output representation (transfer function) and state spate representations,\
-	conversion of one form to the other, minimal realization, solution of state equations,\
-	controllability, observability, design of control systems for desired performance, state feedback,\
-	observers and their realizations."
-	UpdateBlock("RIT", "Modern Control Theory", "", description, "");
-};
-
-function EEEE663() {
-	var description = "This first course in a graduate elective sequence will begin by presenting a general road map of\
-	real-time and embedded systems. The course will be conducted in a studio class/lab format with\
-	lecture material interspersed with laboratory work. This course will introduce a representative\
-	family of microcontrollers that will exemplify unique positive features as well as limitations\
-	of microcontrollers in embedded and real-time systems. These microcontrollers will then be\
-	used as external, independent performance monitors of more complex real-time systems. The\
-	majority of the course will present material on a commercial real-time operating system and\
-	using it for programming projects on development systems and embedded target systems.\
-	Some fundamental material on real-time operating systems and multiprocessor considerations\
-	for real-time systems will also be presented. Examples include scheduling algorithms,\
-	priority inversion, and hardware-software co-design."
-	UpdateBlock("RIT", "RTOS & Embedded Systems", "", description, "");
-};
-
-function MATH326() {
-	var description = "A course that focuses on the mathematical methods used to solve differential equations \
-	with specified values (boundary conditions) at the boundaries of the domain. The course covers a range of \
-	topics including the theory and solution techniques for ordinary and partial differential equations, the \
-	method of separation of variables, eigenvalue problems, and Fourier series. Students will also study \
-	Sturm-Liouville theory, Green\'s functions, and the use of transform methods in solving boundary value \
-	problems. Emphasis is placed on both analytical techniques and computational methods, with applications \
-	in physics, engineering, and other scientific fields where boundary conditions play a \
-	critical role in problem-solving."
-	UpdateBlock("RIT", "Boundary Value Problems", "", description, "");
-};
-
-function MATH381() {
-	var description = "This course explores the theory and applications of functions of complex variables. Topics \
-	include the complex plane, analytic functions, Cauchy-Riemann equations, contour integration, and the Cauchy \
-	Integral Theorem. Students will study techniques such as Taylor and Laurent series, residue calculus, and \
-	conformal mapping. The course also covers applications of complex analysis in solving real-world problems \
-	in physics and engineering, particularly in fluid dynamics, electromagnetism, and signal processing. \
-	Emphasis is placed on both theoretical understanding and practical problem-solving using complex function theory."
-	UpdateBlock("RIT", "Complex Variables", "", description, "");
-};
-
-function MATH441() {
-	var description = "A course that introduces students to the study of algebraic structures and their \
-	properties. Topics include groups, subgroups, group homomorphisms, rings, fields, and vector spaces, \
-	along with related concepts such as group actions, quotient structures, and polynomial rings. The course \
-	emphasizes the development of formal mathematical proof techniques and provides a deep understanding of how \
-	these algebraic structures underpin many areas of mathematics and its applications. Students will explore \
-	the theoretical foundations of algebra, with applications in areas such as cryptography, coding \
-	theory, and symmetry."
-	UpdateBlock("RIT", "Abstract Algebra", "", description, "");
-};
+block_info = {
+"EEEE220": {
+    "title": "Digital Systems II",
+    "subtitle": "",
+    "description": "In the first part, the course covers the design of digital systems using a hardware description\
+                    language. In the second part, it covers the design of large digital systems using the computer\
+                    design methodology, and culminates with the design of a reduced instruction set central\
+                    processing unit, associated memory and input/output peripherals. The course focuses on the\
+                    design, capture, simulation, and verification of major hardware components such as: the datapath,\
+                    the control unit, the central processing unit, the system memory, and the I/O modules.\
+                    The lab sessions enforce and complement the concepts and design principles exposed in the\
+                    lecture through the use of CAD tools and emulation in a commercial FPGA. This course assumes\
+                    a background in C programming.",
+    "image": ""
+},
+"EEEE260": {
+    "title": "Intro to Semiconductor Devices",
+    "subtitle": "",
+    "description": "An introductory course on the fundamentals of semiconductor physics and principles of operation\
+                    of basic devices. Topics include semiconductor fundamentals (crystal structure, statistical\
+                    physics of carrier concentration, motion in crystals, energy band models, drift and diffusion\
+                    currents) as well as the operation of pn junction diodes, bipolar junction transistors (BJT),\
+                    metal-oxide-semiconductor (MOS) capacitors and MOS field-effect transistors.",
+    "image": ""
+},
+"EEEE346": {
+    "title": "Advanced Programming",
+    "subtitle": "",
+    "description": "Introduction to Object-Oriented Programming in C++. Topics will be review of C (control\
+                    structures, functions, and arrays), pointers, classes, operator overloading, inheritance, polymorphism,\
+                    data structures, class string, and STL. At the end of the semester, everyone will\
+                    have the working knowledge of C++. Projects will be assigned to build your C++ programming skills.",
+    "image": ""
+},
+"EEEE353": {
+    "title": "Linear Systems",
+    "subtitle": "",
+    "description": "Linear Systems provides the foundations of continuous and discrete signal and system analysis\
+                    and modeling. Topics include a description of continuous linear systems via differential equations,\
+                    a description of discrete systems via difference equations, input-output relationship of\
+                    continuous and discrete linear systems, the continuous time convolution integral, the discrete\
+                    time convolution sum, application of convolution principles to system response calculations,\
+                    exponential and trigonometric forms of Fourier series and their properties, Fourier transforms\
+                    including energy spectrum and energy spectral density. Sampling of continuous time signals\
+                    and the sampling theorem, the Laplace, Z and DTFT. The solution of differential equations and\
+                    circuit analysis problems using Laplace transforms, transfer functions of physical systems, block\
+                    diagram algebra and transfer function realization is also covered. A comprehensive study of\
+                    the z transform and its inverse, which includes system transfer function concepts, system frequency\
+                    response and its interpretation, and the relationship of the z transform to the Fourier\
+                    and Laplace transform is also covered. Finally, an introduction to the design of digital filters,\
+                    which includes filter block diagrams for Finite Impulse Response (FIR) and Infinite Impulse\
+                    Response (IIR) filters is introduced.",
+    "image": ""
+},
+"EEEE374": {
+    "title": "EM Fields & Transmission Lines",
+    "subtitle": "",
+    "description": "The course provides the foundations of EM fields, static and time varying, and a study of propagation,\
+                    reflection and transmissions of electromagnetic waves in unbounded regions and in\
+                    transmission lines. Topics include the following: electric field intensity and potential, Guass'\
+                    Law, polarization, electric flux density, dielectric constant and boundary conditions, Poisson's\
+                    and Laplace's equations, methods of images, steady electric current and conduction current\
+                    density, vector magnetic potential, Biot-Savart law, magnetization, magnetic field intensity,\
+                    permeability, boundary conditions, Faraday's law, Maxwell's equations and the continuity equation.\
+                    Time harmonic EM fields, wave equations, uniform plane waves, polarization, Poynting\
+                    theorem and power, reflection and transmission from multiple dielectric interfaces, transmission\
+                    line equations, transients on transmission lines, pulse and step excitations, reflection\
+                    diagrams, sinusoidal steady state solutions, standing waves, the Smith Chart and impedance\
+                    matching techniques, TE and TM waves in rectangular waveguides. experiments using stateof-art\
+                    RF equipment illustrating fundamental wave propagation and reflection concepts, design\
+                    projects with state-of-art EM modeling tools.",
+    "image": ""
+},
+"EEEE381": {
+    "title": "Electronics I",
+    "subtitle": "",
+    "description": "This course is the first in a two-part sequence on analog electronic circuit design, \
+                    covering fundamental concepts and techniques. Topics include the current-voltage characteristics of MOSFETs, \
+                    DC and small-signal analysis of MOS devices and circuits, and the design of single-stage MOS amplifiers. The \
+                    course also explores DC biasing circuits, such as current sources and mirrors, two-transistor amplifier \
+                    stages (including differential and cascode amplifiers), and the design of multistage amplifiers. Additional \
+                    topics include the frequency response of amplifiers, semiconductor diodes and diode circuits (including \
+                    rectifiers and clamping circuits), and the use of Zener diodes for voltage regulation. Students will also \
+                    learn to design ideal op-amp circuits in both non-inverting and inverting configurations.\
+                    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE381_Report.pdf\')\">Final Report</button>",
+    "image": ""
+},
+"EEEE414": {
+    "title": "Classical Control",
+    "subtitle": "",
+    "description": "This course introduces students to the study of linear continuous-time classical control systems,\
+                    their behavior, design, and use in augmenting engineering system performance. The course is\
+                    based on classical control methods using Laplace-transforms, block-diagrams, root-locus, and\
+                    frequency-domain analysis. Topics include: Laplace-transform review; Bode plot review; system\
+                    modeling for control; relationships of transfer-function poles and zeros to time-response behaviors;\
+                    stability analysis; steady-state error, error constants, and error specification; feedback\
+                    control properties; relationships between stability margins and transient behavior; lead, lag, and\
+                    PID control; root-locus analysis and design; frequency-response design and Nyquist stability. A\
+                    laboratory will provide students with hands-on analysis and design-build-test experience, and\
+                    includes the use of computer-aided design software such as MATLAB.\
+                    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE414_Report.pdf\')\">Final Report</button>",
+    "image": ""
+},
+"EEEE482": {
+    "title": "Electronics II",
+    "subtitle": "",
+    "description": "This course is the second in a two-course sequence focused on analog and digital \
+                    electronic circuit analysis and design. The analog portion includes DC and small-signal analysis of bipolar \
+                    junction transistor (BJT) circuits, BJT DC biasing, and the design of simple and compound BJT amplifier \
+                    stages. It also covers multi-stage BJT amplifiers, op-amps, frequency response, and feedback and stability \
+                    in both BJT and MOSFET amplifiers. The digital portion introduces the principles of digital circuits using \
+                    NMOS and CMOS technologies, including the behavior of NMOS and CMOS inverters, combinational and sequential \
+                    CMOS logic networks, and advanced topics such as dynamic CMOS logic, memory, and low-power logic techniques.",
+    "image": ""
+},
+"EEEE483": {
+    "title": "Mechatronics",
+    "subtitle": "",
+    "description": "This course covers the fundamental principles of electric machines, focusing on sensors and \
+                    actuators, particularly high-performance electromechanical motion devices such as permanent-magnet DC motors, \
+                    synchronous motors, and stepper motors. It explores power electronics and control systems for electromechanical \
+                    systems, utilizing the MATLAB environment for simulation, analysis, and control of mechatronic systems. \
+                    The course also introduces the application of digital signal processors and microcontrollers in mechatronics, \
+                    with practical case studies to reinforce learning.",
+    "image": ""
+},
+"EEEE484": {
+    "title": "Communication Systems",
+    "subtitle": "",
+    "description": "Introduction to Communication Systems provides the basics of the formation, transmission and reception of information \
+                    over communication channels. Spectral density and correlation descriptions for deterministic and stationary random \
+                    signals. Amplitude and angle modulation methods (e.g. AM and FM) for continuous signals. Carrier detection and \
+                    synchronization. Phase-locked loop and its application. Introduction to digital communication. Binary ASK, FSK and \
+                    PSK. Noise effects. Optimum detection: matched filters, maximum-likelihood reception.Computer simulation.\
+                    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE484_Report.pdf\')\">Final Report</button>",
+    "image": ""
+},
+"EEEE485": {
+    "title": "Robotic Systems",
+    "subtitle": "",
+    "description": "This course will cover basic electrical and mechanical engineering topics related to Robotics,\
+                    including but not limited to: basic electrical and electronics components (resistors, capacitors,\
+                    inductors, diodes, transistors, op-amps, timers) and concepts (sensors, signal conditioning,\
+                    oscillators) and basic mechanical components (chains, gears, ratchets and pawl belt and chain\
+                    drives, bearing) and concepts (motion, dynamics equations, and force and torque analysis). In\
+                    addition, robotics system modeling, control, and applications will be explored. Students will\
+                    design electronic interfaces and controllers for mechanical devices. Finally, sensor and actuator\
+                    selection, installation, and application strategies will be explored.\
+                    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/EEEE485_Report.pdf\')\">Final Report</button>",
+    "image": ""
+},
+"EEEE497": {
+    "title": "Senior Design Project I",
+    "subtitle": "",
+    "description": "MSD-I is the first half of a two-semester design course oriented to the solution of engineering problems. The \
+                    mission is to enhance engineering education through a capstone design experience that integrates engineering \
+                    theory, principles and processes within a collaborative environment. Working in multidisciplinary teams and \
+                    following an engineering design process, students will assess customer needs and engineering specifications, \
+                    evaluate concepts, resolve major technical hurdles, and employ rigorous engineering principles to design a \
+                    prototype which is fully tested and documented.\
+                    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\">Final Report</button>",
+    "image": ""
+},
+"EEEE498": {
+    "title": "Senior Design Project II",
+    "subtitle": "",
+    "description": "MSD-II is the second half of a two-semester design course oriented to the solution of engineering\
+                    problems. The mission is to enhance engineering education through a capstone design\
+                    experience that integrates engineering theory, principles and processes within a collaborative\
+                    environment. Working in multidisciplinary teams and following an engineering design process,\
+                    students will assess customer needs and engineering specifications, evaluate concepts,\
+                    resolve major technical hurdles, and employ rigorous engineering principles to design a prototype\
+                    which is fully tested and documented.\
+                    <button onclick=\"load_pdf(\'RIT\', \'storage/RIT/VArm_Report.pdf\')\">Final Report</button>",
+    "image": ""
+},
+"EEEE579": {
+    "title": "Analog Filter Design",
+    "subtitle": "",
+    "description": "A study of the various techniques for the design of filters to meet the given specifications. The\
+                    emphasis is on the design of active filters using op amps. The following topics are discussed\
+                    in detail: Review of transfer functions, Bode diagrams and the analysis of op amp circuits;\
+                    ideal filter characteristics, approximations to the ideal filter using Butterworth, Chebyshev\
+                    and Bessel-Thompson polynomials; standard filter stages; magnitude and frequency scaling;\
+                    low-pass filter design; design of high-pass, band-pass and band-reject filters; passive ladder\
+                    filter network design; frequency dependent negative resistance networks; switched capacitor filters.",
+    "image": ""
+},
+"EEEE593": {
+    "title": "Digital Data Communication",
+    "subtitle": "",
+    "description": "This course covers the principles and practices of modern digital data communication \
+                    systems. Topics include pulse code modulation, error probabilities, M-ary signaling, AWGN channels, \
+                    band-limited and distorting channels, filter design, equalizers, and optimal detection for channels \
+                    with memory. It also explores synchronization methods, non-linear modulation, and introduces advanced \
+                    concepts such as multipath fading channels, spread spectrum, and OFDM.",
+    "image": ""
+},
+"EEEE661": {
+    "title": "Modern Control Theory",
+    "subtitle": "",
+    "description": "This course deals with a complete description of physical systems its analysis and design of controllers \
+                    to achieve desired performance. The emphasis in the course will be on continuous linear systems. Major \
+                    topics are: state space representation of physical systems, similarities/differences between input-output \
+                    representation (transfer function) and state spate representations, conversion of one form to the other, \
+                    minimal realization, solution of state equations, controllability, observability, design of control systems \
+                    for desired performance, state feedback, observers and their realizations.",
+    "image": ""
+},
+"EEEE663": {
+    "title": "RTOS & Embedded Systems",
+    "subtitle": "",
+    "description": "This first course in a graduate elective sequence will begin by presenting a general road map of\
+                    real-time and embedded systems. The course will be conducted in a studio class/lab format with\
+                    lecture material interspersed with laboratory work. This course will introduce a representative\
+                    family of microcontrollers that will exemplify unique positive features as well as limitations\
+                    of microcontrollers in embedded and real-time systems. These microcontrollers will then be\
+                    used as external, independent performance monitors of more complex real-time systems. The\
+                    majority of the course will present material on a commercial real-time operating system and\
+                    using it for programming projects on development systems and embedded target systems.\
+                    Some fundamental material on real-time operating systems and multiprocessor considerations\
+                    for real-time systems will also be presented. Examples include scheduling algorithms,\
+                    priority inversion, and hardware-software co-design.",
+    "image": ""
+},
+"MATH326": {
+    "title": "Boundary Value Problems",
+    "subtitle": "",
+    "description": "A course that focuses on the mathematical methods used to solve differential equations \
+                    with specified values (boundary conditions) at the boundaries of the domain. The course covers a range of \
+                    topics including the theory and solution techniques for ordinary and partial differential equations, the \
+                    method of separation of variables, eigenvalue problems, and Fourier series. Students will also study \
+                    Sturm-Liouville theory, Green\'s functions, and the use of transform methods in solving boundary value \
+                    problems. Emphasis is placed on both analytical techniques and computational methods, with applications \
+                    in physics, engineering, and other scientific fields where boundary conditions play a \
+                    critical role in problem-solving.",
+    "image": ""
+},
+"MATH381": {
+    "title": "Complex Variables",
+    "subtitle": "",
+    "description": "This course explores the theory and applications of functions of complex variables. Topics \
+                    include the complex plane, analytic functions, Cauchy-Riemann equations, contour integration, and the Cauchy \
+                    Integral Theorem. Students will study techniques such as Taylor and Laurent series, residue calculus, and \
+                    conformal mapping. The course also covers applications of complex analysis in solving real-world problems \
+                    in physics and engineering, particularly in fluid dynamics, electromagnetism, and signal processing. \
+                    Emphasis is placed on both theoretical understanding and practical problem-solving using complex function theory.",
+    "image": ""
+},
+"MATH441": {
+    "title": "Abstract Algebra",
+    "subtitle": "",
+    "description": "A course that introduces students to the study of algebraic structures and their \
+                    properties. Topics include groups, subgroups, group homomorphisms, rings, fields, and vector spaces, \
+                    along with related concepts such as group actions, quotient structures, and polynomial rings. The course \
+                    emphasizes the development of formal mathematical proof techniques and provides a deep understanding of how \
+                    these algebraic structures underpin many areas of mathematics and its applications. Students will explore \
+                    the theoretical foundations of algebra, with applications in areas such as cryptography, coding \
+                    theory, and symmetry.",
+    "image": ""
+}}

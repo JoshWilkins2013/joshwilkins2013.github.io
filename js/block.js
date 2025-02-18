@@ -25,13 +25,12 @@ function load_html(project_name, html_path) {
 
 function load_pdf(project_name, pdf_path) {
   var src = s3bucket_path + pdf_path + "#toolbar=0&view=FitH";
+  var description = "<iframe src=\"" + src + "\" style=\"width: 100%;border: none;\"></iframe>";
 
   if (project_name != "About_Me") {  // Don't remove all breaks on resume
-    var description = "<iframe src=\"" + src + "\" style=\"width: 100%;border: none;\"></iframe>";
     document.getElementById(project_name + "_Slider").innerHTML = description;
     remove_button(project_name);
   } else {
-    var description = "<iframe src=\"" + src + "\" style=\"height: 100%; width: 100%;border: none;\"></iframe>";
     document.getElementById(project_name + "_Content").innerHTML = description;
   }
 }
@@ -74,7 +73,7 @@ function place_blocks(items, col_name) {
         var block_content = "<div class=\"block\">\n"
         var place_name = place_path.slice(0,-1).split("/").pop();
         block_content += "<h4 class=\"block-header\" id=\"Block_Title\">" + place_name.replaceAll("_", " ") + "<i onclick=\"viewAlbum(this, \'" + place_path + "\')\" class=\"fas fa-plus-square\"></i></h4>\n"
-        block_content += "<div style=\"padding-top: 10px;\" id=\"" + place_name + "_Content" + "\">\n"
+        block_content += "<div id=\"" + place_name + "_Content" + "\">\n"
 
         var file = row.Key;
         if (file.includes(".txt")){
@@ -84,33 +83,32 @@ function place_blocks(items, col_name) {
         }
       }
 
+      block_content += "<div class=\"block-description\" id=\"" + place_name + "_Description\" >";
       images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
       if (description_file != "") {
         fetch(s3bucket_path + description_file).then(response => response.text()).then(text => {
-          block_content += "<div class=\"block-description\" id=\"" + place_name + "_Description\" >" + text + "</div>";
-          finish_block_content(block_content, images, place_name, col_name);
+          block_content += text + "</div>\n<div id=\"" + place_name + "_Slider_Container\" class=\"slideshow-container\">\n";
+          block_content = finish_block_content(block_content, images, place_name, col_name);
+          document.getElementById(col_name).insertAdjacentHTML("beforeend", block_content + "</div>\n</div>\n</div>\n</div>");  // Replace block content with gallery
         });
       } else {
-        finish_block_content(block_content, images, place_name, col_name);
+        block_content += "</div>\n<div id=\"" + place_name + "_Slider_Container\" class=\"slideshow-container\">\n";
+        block_content = finish_block_content(block_content, images, place_name, col_name);
+        document.getElementById(col_name).insertAdjacentHTML("beforeend", block_content + "</div>\n</div>\n</div>\n</div>");  // Replace block content with gallery
       }
-
     });
   });
 }
 
-function finish_block_content(block_content, images, place_name, col_name) {
-  var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com/"
-  block_content += "<div id=\"" + place_name + "_Slider_Container\" class=\"slideshow-container\">\n";
+function finish_block_content(block_content, images, place_name) {
   block_content += "<div id=\"" + place_name + "_Slider\" class=\"mySlides\">\n"
-  var s3bucket_path = "https://joshwilkins2013.s3.us-east-2.amazonaws.com/"
 
   first_src = s3bucket_path + images[0];
   SliderIndices[place_name] = 0;
   block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n"
   block_content += "<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
   block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n</div>\n"
-
-  document.getElementById(col_name).insertAdjacentHTML("beforeend", block_content + "</div>\n</div>\n</div>\n</div>");  // Replace block content with gallery
+  return block_content;
 }
 
 function fill_page(prefix_path) {
@@ -155,7 +153,7 @@ function viewAlbum(element, albumName) {
       var href = this.request.httpRequest.endpoint.href;  // 'this' references the AWS.Request instance that represents the response
       var bucketUrl = href + "joshwilkins2013" + "/";
 
-      var row_starter = "<div id=\"" + place_name + "_Slider\" style=\"padding-top: 10px;\" class=\"row\">\n";
+      var row_starter = "<div id=\"" + place_name + "_Slider\" class=\"row\">\n";
       var column_starter = "<div class=\"col-lg-4\">\n";
       var gallery_content = row_starter + column_starter;
 
@@ -190,14 +188,7 @@ function add_slider(folder_name, place_name) {
     }
 
     images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
-    var block_content = "<div class=\"mySlides\">\n"
-
-    first_src = s3bucket_path + images[0];
-    SliderIndices[place_name] = 0;
-    block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n"
-    block_content += "<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
-    block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n</div>\n"
-
+    var block_content = finish_block_content("", images, place_name)
     document.getElementById(folder_name + "_Slider").innerHTML = block_content;
   });
 }
@@ -209,9 +200,20 @@ function toggle_lightbox(element) {
     $('.header-title-text').toggle();
 }
 
-function UpdateBlock(place_name, title, subtitle, description, image) {
-    document.getElementById(place_name + "_Title").innerHTML = title;
-    document.getElementById(place_name + "_Subtitle").innerHTML = subtitle;
-    document.getElementById(place_name + "_Description").innerHTML = description;
-    document.getElementById(place_name + "_Slider").innerHTML = image;
+function UpdateBlock(place_name, block_key) {
+    document.getElementById(place_name + "_Title").innerHTML = block_info[block_key]["title"];
+    document.getElementById(place_name + "_Subtitle").innerHTML = block_info[block_key]["subtitle"];
+    document.getElementById(place_name + "_Description").innerHTML = block_info[block_key]["description"];
+
+    slider_name = block_info[block_key]["image"];
+    if (slider_name === "") {
+        document.getElementById(place_name + "_Slider").innerHTML = "";  // No image or slider
+    } else if (slider_name.includes("png")) {  // Just a single image
+        image = "<div class=\"mySlides\"><span onclick=\'toggle_lightbox(this)\'><img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/" + place_name + "/" + slider_name + "\"></span></div>";
+        document.getElementById(place_name + "_Slider").innerHTML = image;  // No image or slider
+    } else if (slider_name.includes(".html")) {  // html file in place of images
+        load_html(place_name, "storage/" + place_name + "/" + slider_name);
+    } else {
+        add_slider(place_name, slider_name);
+    }
 }
