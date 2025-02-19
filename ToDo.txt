@@ -8,8 +8,6 @@ General:
     - Resize images for efficiency?
     - Add more travel images, auto sort by date?
     - Fix Captions and make sure slider buttons overlap only image, not caption
-- Update Safran more
-    - Fix commented blocks
 - Add more project pictures now that s3 buckets are being used
 - Reports are removed on expansion
 
@@ -19,4 +17,6 @@ Possible Enhancements:
 - Formspree thanks redirect no longer exists on free plan
 - Add skill proficiencies?
 - Verify seo jekyll tag
-- Remove margin off first row of album images in expanded block
+
+- Minimize lightbox doesn't work off image for analytics or travel
+- How to handle videos (such as ambilight video)?

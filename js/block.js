@@ -73,6 +73,7 @@ function place_blocks(items, col_name) {
         var block_content = "<div class=\"block\">\n"
         var place_name = place_path.slice(0,-1).split("/").pop();
         block_content += "<h4 class=\"block-header\" id=\"Block_Title\">" + place_name.replaceAll("_", " ") + "<i onclick=\"viewAlbum(this, \'" + place_path + "\')\" class=\"fas fa-plus-square\"></i></h4>\n"
+        block_content += "<div><h6 style=\"margin-top: 8px; color:#FFFFFF\"></h6></div>"
         block_content += "<div id=\"" + place_name + "_Content" + "\">\n"
 
         var file = row.Key;
@@ -83,7 +84,10 @@ function place_blocks(items, col_name) {
         }
       }
 
-      block_content += "<div class=\"block-description\" id=\"" + place_name + "_Description\" >";
+      if (!place_path.includes("Travel")){
+        block_content += "<div class=\"block-description\" id=\"" + place_name + "_Description\" >";
+      }
+
       images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
       if (description_file != "") {
         fetch(s3bucket_path + description_file).then(response => response.text()).then(text => {
@@ -153,6 +157,7 @@ function viewAlbum(element, albumName) {
       var href = this.request.httpRequest.endpoint.href;  // 'this' references the AWS.Request instance that represents the response
       var bucketUrl = href + "joshwilkins2013" + "/";
 
+      var place_name = albumName.slice(0, -1).split("/").pop();
       var row_starter = "<div id=\"" + place_name + "_Slider\" class=\"row\">\n";
       var column_starter = "<div class=\"col-lg-4\">\n";
       var gallery_content = row_starter + column_starter;
@@ -172,7 +177,7 @@ function viewAlbum(element, albumName) {
       });
 
       gallery_content += '</div>\n</div>'; // end the column and the row
-      document.getElementById(albumName.slice(0, -1).split("/").pop() + "_Slider_Container").innerHTML = gallery_content;  // Replace block content with gallery
+      document.getElementById(place_name + "_Slider_Container").innerHTML = gallery_content;  // Replace block content with gallery
     });
   }
 }
@@ -213,6 +218,8 @@ function UpdateBlock(place_name, block_key) {
         document.getElementById(place_name + "_Slider").innerHTML = image;  // No image or slider
     } else if (slider_name.includes(".html")) {  // html file in place of images
         load_html(place_name, "storage/" + place_name + "/" + slider_name);
+    } else if (slider_name.includes(".pdf")) {  // html file in place of images
+        load_pdf(place_name, "storage/" + place_name + "/" + slider_name);
     } else {
         add_slider(place_name, slider_name);
     }
