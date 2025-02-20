@@ -10,7 +10,12 @@ function Slides(direction, image_paths, name) {
   else {SliderIndices[name] = n}
   var current_image_path = image_array[SliderIndices[name]];
 //  current_image_name = current_image_path.split("/").at(-1).split(".")[0].replaceAll("_", " ");
-  document.getElementById(name + "_Image").src = s3bucket_path + current_image_path;
+  var image_source = s3bucket_path + current_image_path;
+  if (!current_image_path.includes('.mp4')) {
+    document.getElementById(name + "_Image").innerHTML = "<img src=\"" + image_source + "\" alt=\"image\" />";
+  } else {
+    document.getElementById(name + "_Image").innerHTML = "<video width=100% muted=True controls><source src=\"" + image_source + "\"type=\"video/mp4\"></video>";
+  }
 //  if (!current_image_path.includes("img/Travel/") && !current_image_path.includes("img/About_Me/") ) {
 //    document.getElementById(name + "_Caption").innerHTML = current_image_name;  // Don't caption travel images
 //  }
@@ -60,6 +65,7 @@ function convert_to_gallery(items) {
 }
 
 function place_blocks(items, col_name) {
+  // For Project and Travel pages
   var gallery_content = "<div id=\"" + col_name + "\" class=\"col-lg-4\">\n"
   document.getElementById("row_content").insertAdjacentHTML("beforeend", gallery_content);
   items.forEach(place_item => {
@@ -109,8 +115,13 @@ function finish_block_content(block_content, images, place_name) {
 
   first_src = s3bucket_path + images[0];
   SliderIndices[place_name] = 0;
-  block_content += "<span onclick=\'toggle_lightbox(this)\'><img id=\"" + place_name + "_Image" + "\" src=\"" + first_src + "\" alt=\"image\" /></span>\n"
-  block_content += "<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
+  block_content += "<span id=\"" + place_name + "_Image" + "\"onclick=\'toggle_lightbox(this)\'>";
+  if (!first_src.includes(".mp4")) {
+    block_content += "<img src=\"" + first_src + "\" alt=\"image\" />"
+  } else {
+    block_content += "<video width=100% muted=True controls><source src=\"" + first_src + "\"type=\"video/mp4\"></video>";
+  }
+  block_content += "</span>\n<a class=\"prev\" onclick=\'Slides(\"-\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10094;</p></a>\n";
   block_content += "<a class=\"next\" onclick=\'Slides(\"+\" ,\"" + images + "\", \"" + place_name + "\")\' style=\"margin-bottom: 0;\"><p class=\"arrow\">&#10095;</p></a>\n</div>\n"
   return block_content;
 }
@@ -141,14 +152,16 @@ function viewAlbum(element, albumName) {
 
   $(element).toggleClass('fa-plus-square fa-minus-square')
   if(current_col.classList.contains("col-lg-12")) {  // Restore slider in smaller block
-    var slider_content = $('#' + place_name + "_Slider").find('img').length;
-    if (slider_content >= 1) {  // Don't replace pdf or html if loaded after block expansion
+    var any_images = $('#' + place_name + "_Slider").find('img').length;
+    var any_videos = $('#' + place_name + "_Slider").find('video').length;
+    if (any_images >= 1 || any_videos >= 1) {  // Don't replace pdf or html if loaded after block expansion
       block_content.innerHTML = original_content;
     }
   } else {
     original_content = block_content.innerHTML;  // Keep track of original slider data to restore on block shrinkage
-    var slider_content = $('#' + place_name + "_Slider").find('img').length;
-    if (slider_content >= 1) {
+    var any_images = $('#' + place_name + "_Slider").find('img').length;
+    var any_videos = $('#' + place_name + "_Slider").find('video').length;
+    if (any_images >= 1 || any_videos >= 1) {  // Don't replace pdf or html if loaded after block expansion
       s3.listObjects({ Prefix: albumName }, function (err, data) {
         var images = [];
         for (const row of data.Contents) {
@@ -188,12 +201,19 @@ function viewAlbum(element, albumName) {
 
 function add_gallery_item(bucketUrl, image, index, arr) {
   if (index === 0 && !image.includes('Travel')) { // Dont need top padding on top row elements
-    gallery_item = '<div style="padding-bottom:10;"><span onclick=\'toggle_lightbox(this)\'><img style="width: 100%;" src="' + bucketUrl + image + '"/></span></div>\n';
+    gallery_item = '<div style="padding-bottom:10;"><span onclick=\'toggle_lightbox(this)\'>';
   } else if (index === arr.length - 1) {  // Don't need bottom padding on bottom row elements
-    gallery_item = '<div style="padding-top:10;"><span onclick=\'toggle_lightbox(this)\'><img style="width: 100%;" src="' + bucketUrl + image + '"/></span></div>\n';
+    gallery_item = '<div style="padding-top:10;"><span onclick=\'toggle_lightbox(this)\'>';
   } else {  // All other gallery items need padding on top and bottom
-    gallery_item  = '<div style="padding:10 0 10 0;"><span onclick=\'toggle_lightbox(this)\'><img style="width: 100%;" src="' + bucketUrl + image + '"/></span></div>\n';
+    gallery_item  = '<div style="padding:10 0 10 0;"><span onclick=\'toggle_lightbox(this)\'>';
   }
+
+  if (!image.includes(".mp4")) {
+    gallery_item += '<img style="width: 100%;" src="' + bucketUrl + image + '"/>';
+  } else {
+    gallery_item += '<video width=100% muted=True controls><source src="' + bucketUrl + image + '"type="video/mp4"></video>';
+  }
+  gallery_item += "</span></div>\n";
   return gallery_item;
 }
 
@@ -221,6 +241,7 @@ function toggle_lightbox(element) {
 }
 
 function UpdateBlock(place_name, block_key) {
+    // For education and experience blocks that are updated on click
     document.getElementById(place_name + "_Title").innerHTML = block_info[block_key]["title"];
     document.getElementById(place_name + "_Subtitle").innerHTML = block_info[block_key]["subtitle"];
     document.getElementById(place_name + "_Description").innerHTML = block_info[block_key]["description"];

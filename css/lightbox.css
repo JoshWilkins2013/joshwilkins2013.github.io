@@ -3,6 +3,11 @@ span img {
   cursor: zoom-in;
 }
 
+span video {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
 /* Overlay entire screen */
 .lightbox {
   cursor: -webkit-zoom-out;
@@ -33,6 +38,15 @@ span img {
 }
 
 .lightbox img {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  object-fit: contain;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightbox video {
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
   object-fit: contain;
