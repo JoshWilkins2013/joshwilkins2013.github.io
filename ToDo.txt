@@ -9,7 +9,7 @@ General:
     - Add more travel images, auto sort by date?
     - Fix Captions and make sure slider buttons overlap only image, not caption
 - Add more project pictures now that s3 buckets are being used
-- Reports are removed on expansion
+- Gallery items are not replaced back to original on travel page
 
 Possible Enhancements:
 - Figure out async functions, promises, and .then() functions to clean-up block.js
@@ -18,5 +18,4 @@ Possible Enhancements:
 - Add skill proficiencies?
 - Verify seo jekyll tag
 
-- Minimize lightbox doesn't work off image for analytics or travel
 - How to handle videos (such as ambilight video)?

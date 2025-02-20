@@ -96,7 +96,7 @@ function place_blocks(items, col_name) {
           document.getElementById(col_name).insertAdjacentHTML("beforeend", block_content + "</div>\n</div>\n</div>\n</div>");  // Replace block content with gallery
         });
       } else {
-        block_content += "</div>\n<div id=\"" + place_name + "_Slider_Container\" class=\"slideshow-container\">\n";
+        block_content += "<div id=\"" + place_name + "_Slider_Container\" class=\"slideshow-container\">\n";
         block_content = finish_block_content(block_content, images, place_name, col_name);
         document.getElementById(col_name).insertAdjacentHTML("beforeend", block_content + "</div>\n</div>\n</div>\n</div>");  // Replace block content with gallery
       }
@@ -133,53 +133,68 @@ function viewAlbum(element, albumName) {
   var current_col = element.closest(".col-lg-4");  // Find block associated with clicked +
   var place_name = albumName.slice(0, -1).split('/').pop();
   var block_content = document.getElementById(place_name + "_Content");
-
+  console.log(place_name + "_Content")
   var current_block = $(element.closest(".block"));  // Find block associated with clicked +
   $(".block").not(current_block).toggle().promise().then(function() {
     current_block.parent().toggleClass('col-lg-12');  // Then enlarge it
   });
 
   $(element).toggleClass('fa-plus-square fa-minus-square')
-
   if(current_col.classList.contains("col-lg-12")) {  // Restore slider in smaller block
-    block_content.innerHTML = original_content;
+    var slider_content = $('#' + place_name + "_Slider").find('img').length;
+    if (slider_content >= 1) {  // Don't replace pdf or html if loaded after block expansion
+      block_content.innerHTML = original_content;
+    }
   } else {
     original_content = block_content.innerHTML;  // Keep track of original slider data to restore on block shrinkage
-    s3.listObjects({ Prefix: albumName }, function (err, data) {
-      var images = [];
-      for (const row of data.Contents) {
-        images.push(row.Key)
-      }
-      images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
-      images = images.filter(item => !item.endsWith('.txt'));
-      const { first_col_items, second_col_items, third_col_items } = convert_to_gallery(images);
+    var slider_content = $('#' + place_name + "_Slider").find('img').length;
+    if (slider_content >= 1) {
+      s3.listObjects({ Prefix: albumName }, function (err, data) {
+        var images = [];
+        for (const row of data.Contents) {
+          images.push(row.Key)
+        }
+        images = images.filter(item => !item.endsWith('/')); // Sometimes the pull gets the folder name with it?
+        images = images.filter(item => !item.endsWith('.txt'));
+        const { first_col_items, second_col_items, third_col_items } = convert_to_gallery(images);
+        var href = this.request.httpRequest.endpoint.href;  // 'this' references the AWS.Request instance that represents the response
+        var bucketUrl = href + "joshwilkins2013" + "/";
 
-      var href = this.request.httpRequest.endpoint.href;  // 'this' references the AWS.Request instance that represents the response
-      var bucketUrl = href + "joshwilkins2013" + "/";
+        var place_name = albumName.slice(0, -1).split("/").pop();
+        var row_starter = "<div id=\"" + place_name + "_Slider\" class=\"row\">\n";
+        var column_starter = "<div class=\"col-lg-4\">\n";
+        var gallery_content = row_starter + column_starter;
 
-      var place_name = albumName.slice(0, -1).split("/").pop();
-      var row_starter = "<div id=\"" + place_name + "_Slider\" class=\"row\">\n";
-      var column_starter = "<div class=\"col-lg-4\">\n";
-      var gallery_content = row_starter + column_starter;
+        first_col_items.forEach((image, index, arr) => {
+          gallery_content += add_gallery_item(bucketUrl, image, index, arr)
+        });
 
-      first_col_items.forEach(image => {
-        gallery_content += '<span><img onclick=\'toggle_lightbox(this)\' style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
+        gallery_content += '</div>\n' + column_starter; // end the column
+        second_col_items.forEach((image, index, arr) => {
+          gallery_content += add_gallery_item(bucketUrl, image, index, arr)
+        });
+
+        gallery_content += '</div>\n' + column_starter; // end the column
+        third_col_items.forEach((image, index, arr) => {
+          gallery_content += add_gallery_item(bucketUrl, image, index, arr)
+        });
+
+        gallery_content += '</div>\n</div>'; // end the column and the row
+        document.getElementById(place_name + "_Slider_Container").innerHTML = gallery_content;  // Replace block content with gallery
       });
-
-      gallery_content += '</div>\n' + column_starter; // end the column
-      second_col_items.forEach(image => {
-        gallery_content += '<span><img onclick=\'toggle_lightbox(this)\' style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
-      });
-
-      gallery_content += '</div>\n' + column_starter;  // end the column
-      third_col_items.forEach(image => {
-        gallery_content += '<span><img onclick=\'toggle_lightbox(this)\' style="width: 100%; margin: 10 0 10 0" src="' + bucketUrl + image + '"/></span>\n';
-      });
-
-      gallery_content += '</div>\n</div>'; // end the column and the row
-      document.getElementById(place_name + "_Slider_Container").innerHTML = gallery_content;  // Replace block content with gallery
-    });
+    }
   }
+}
+
+function add_gallery_item(bucketUrl, image, index, arr) {
+  if (index === 0 && !image.includes('Travel')) { // Dont need top padding on top row elements
+    gallery_item = '<div style="padding-bottom:10;"><span onclick=\'toggle_lightbox(this)\'><img style="width: 100%;" src="' + bucketUrl + image + '"/></span></div>\n';
+  } else if (index === arr.length - 1) {  // Don't need bottom padding on bottom row elements
+    gallery_item = '<div style="padding-top:10;"><span onclick=\'toggle_lightbox(this)\'><img style="width: 100%;" src="' + bucketUrl + image + '"/></span></div>\n';
+  } else {  // All other gallery items need padding on top and bottom
+    gallery_item  = '<div style="padding:10 0 10 0;"><span onclick=\'toggle_lightbox(this)\'><img style="width: 100%;" src="' + bucketUrl + image + '"/></span></div>\n';
+  }
+  return gallery_item;
 }
 
 function add_slider(folder_name, place_name) {
@@ -200,7 +215,7 @@ function add_slider(folder_name, place_name) {
 
 function toggle_lightbox(element) {
     $(element).parent().toggleClass('lightbox');
-    $('.navbar-brand').toggle();
+    $('.navbar-brand').toggle(); // Hide header elements so that lightbox appears to cover entire window
     $('.navbar-navigation').toggle();
     $('.header-title-text').toggle();
 }
