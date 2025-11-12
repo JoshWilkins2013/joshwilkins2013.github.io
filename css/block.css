@@ -46,10 +46,6 @@
   margin-top: 12px;
 }
 
-.block-description a {
-  display: contents;
-}
-
 @media (max-width: 991px) {}
 
 /* ========================================================== */

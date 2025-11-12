@@ -90,7 +90,7 @@ function place_blocks(items, col_name) {
         }
       }
 
-      if (!place_path.includes("Travel")){
+      if (description_file !== ""){
         block_content += "<div class=\"block-description\" id=\"" + place_name + "_Description\" >";
       }
 
