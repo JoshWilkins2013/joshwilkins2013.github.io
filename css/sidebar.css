@@ -4,7 +4,7 @@ nav#sidebar {
   top: 71px;
   bottom: 0;
   background: #2d3035;
-  color: #6a6c70;
+  color: var(--text-color);
   border-right: 1px solid #000;
   overflow-y: auto;
 }
@@ -54,7 +54,7 @@ nav#sidebar ul a:hover {
 }
 
 nav#sidebar ul a:hover i {
-  color: #cc5200;
+  color: var(--link-color);
 }
 
 /* List item icons */
@@ -80,11 +80,11 @@ nav#sidebar li::before {
 }
 
 nav#sidebar li.active::before {
-  background: #cc5200;
+  background: var(--link-color);
 }
 
 nav#sidebar li.active a {
-  color: #cc5200;
+  color: var(--link-color);
 }
 
 nav#sidebar p{
@@ -93,11 +93,11 @@ nav#sidebar p{
 
 /* Highlights associated list and sub list items */
 .highlight i {
-  color: #cc5200;
+  color: var(--link-color);
 }
 
 .highlight p {
-  color: #cc5200;
+  color: var(--link-color);
   display: inline;
 }
 
@@ -119,6 +119,7 @@ nav#sidebar p{
   }
   .brand-text {
     display: none;
+    color: var(--text-color) !important;
   }
   .sidebar-toggle {
     display: none;
@@ -150,7 +151,7 @@ nav#sidebar p{
 #social-icons i {
   margin: 0 !important;
   padding-top: 5px;
-  color: #cc5200;
+  color: var(--link-color);
   width: 30px;
   height: 30px;
 }
@@ -168,7 +169,7 @@ nav#sidebar p{
   top: 0;
   width: 30px;
   height: 30px;
-  border: 1px solid #cc5200;
+  border: 1px solid var(--link-color);
   border-radius: 3px;
   -webkit-transform: rotate(45deg);
       moz-transform: rotate(45deg);
@@ -182,7 +183,7 @@ nav#sidebar p{
 }
 
 #social-icons i:hover::after{
-  background: #cc5200;
+  background: var(--link-color);
   border: 1px solid #000000;
   z-index: -1;
 }

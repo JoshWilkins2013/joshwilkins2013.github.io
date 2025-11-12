@@ -4,12 +4,12 @@
 
 .table td,
 .table th {
-  color: #8a8d93;
+  color: var(--text-color);
   border-color: black;
 }
 
 .table thead th {
-  border-bottom: 1px solid  #8a8d93;
+  border-bottom: 1px solid  var(--text-color);
 }
 
 .first-row th {
@@ -41,5 +41,5 @@ tr div:hover {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: #282b2f;
+  background-color: #051318;
 }

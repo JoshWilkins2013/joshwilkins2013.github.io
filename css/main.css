@@ -1,6 +1,16 @@
 /* ========================================================== */
+/*     GLOBAL COLOR SCHEME
+/* ========================================================== */
+
+:root {
+  --link-color: #ff4500;  /* #007bff looks decent */
+  --text-color: #babfca;
+}
+
+/* ========================================================== */
 /*     GENERAL
 /* ========================================================== */
+
 body {
   position: relative;
   font-family: "Muli", sans-serif;
@@ -8,7 +18,7 @@ body {
   font-weight: normal;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #001321;
   caret-color: red;
 }
 
@@ -16,7 +26,7 @@ a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: inline-block;
-  color: #cc5200;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -98,14 +108,6 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
   font-weight: normal;
 }
 
-.text-primary {
-  color: #cc5200 !important;
-}
-
-a.text-primary:focus, a.text-primary:hover {
-  color: #ff0c0c !important;
-}
-
 /* ========================================================== */
 /*     ScrollBar
 /* ========================================================== */
@@ -127,7 +129,7 @@ a.text-primary:focus, a.text-primary:hover {
 
   padding: 20px;
   background: #2d3035;
-  color: #8a8d93;
+  color: var(--text-color);
   border-top: solid black 1px;
 }
 
@@ -139,7 +141,7 @@ button {
   font-family: inherit;
 
   font-weight: normal;
-  border: 1px solid #cc5200;
+  border: 1px solid var(--link-color);
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
   line-height: 1.25;
@@ -147,15 +149,15 @@ button {
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 
-  color: #cc5200;
+  color: var(--link-color);
   background-color: transparent;
   background-image: none;
 }
 
 button:hover {
   color: #000000;
-  background-color: #cc5200;
-  border-color: #cc5200;
+  background-color: var(--link-color);
+  border-color: var(--link-color);
 }
 
 button:focus {

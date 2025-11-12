@@ -1,7 +1,7 @@
 .block {
   padding: 12 20 20 20;
-  background: #2d3035;
-  color: #8a8d93;
+  background: #0e2a35;
+  color: #babfca;
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
@@ -11,7 +11,7 @@
 .block-header {
   position: relative;
   text-align: center;
-  color: #cc5200;
+  color: var(--link-color);
   padding-bottom: 8px;
   margin-bottom: 0px;
   border-bottom:solid 4px black;
@@ -20,7 +20,7 @@
 .alt-header {
   position: relative;
   text-align: start;
-  color: #8a8d93;
+  color: var(--text-color);
   padding-bottom: 8px;
   margin-bottom: 0px;
   border-bottom:solid 4px black;
@@ -30,7 +30,7 @@
   position: absolute;
   bottom: 0px;
   right: 8px;
-  color: #8a8d93;
+  color: var(--text-color);
   font-size: .5em;
   margin-bottom: 4px;
 }
@@ -154,7 +154,7 @@
   top: -10;
   font-size: 25px;
   padding: 5px;
-  color: #cc5200;
+  color: var(--link-color);
 }
 
 .block-header h4 {

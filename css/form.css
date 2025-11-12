@@ -4,7 +4,7 @@ textarea {
 }
 
 textarea:focus {
-  border: 3px solid #cc5200 !important;
+  border: 3px solid var(--link-color); !important;
 }
 
 input.input-material {
@@ -16,5 +16,5 @@ input.input-material {
 }
 
 input.input-material:focus {
-  border: 3px solid #cc5200;
+  border: 3px solid var(--link-color);
 }
