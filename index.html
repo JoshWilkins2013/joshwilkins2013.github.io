@@ -1,6 +1,6 @@
 ---
 title: index
-header: Home Page
+header: Welcome !
 ---
 <html>
   {% include head.html %}
@@ -10,54 +10,126 @@ header: Home Page
       {% include sidebar.html %}
       <div class="page-content">
         <div class="container-fluid">
-          <div style="padding: 0 10 0 10" class="col-lg-12">
-            <div id="About_Me_Content" class="block">
-              <div class="block-header"><h4 id="About_Me_Title">About Me</h4></div>
-              <div><h6 id="About_Me_Subtitle" style="margin-top: 8px; color:#FFFFFF"></h6></div>
-              <div class="block-description" id="About_Me_Description">
-                I grew up in the small town of Avon, NY, and graduated from high school in the spring of 2013,
-                ranking 4th in my class. From there I attended school at Monroe Community College (MCC), earning an
-                associate degree in Engineering Science. I transferred to the Rochester Institute of Technology
-                (RIT), where I completed a Bachelor's degree in Electrical Engineering. I completed the five-year
-                program in just 3.5 years, graduating in the top 1% of my class.<br><br>
+          <div id="row_content" class="row">
 
-                While pursuing my education, I gained valuable experience at Carestream Health, beginning as an
-                electrical test technician and later advancing to lead software automation tester. After graduating
-                from RIT, I moved from Rochester to Danvers, MA, to join the Frequency and Timing Division at
-                Microsemi (now Microchip). During my time there, I gained critical experience in the Position,
-                Navigation, and Timing (PNT) domain, along with exposure to RF concepts, applied statistical
-                analysis, and hardware automation.<br><br>
+            <div id="First_Col" class="col-lg-6">
 
-                Despite my contributions at Microsemi, career growth opportunities were limited, largely due to
-                the company's acquisition. When the Director of Engineering left to join Raytheon, he offered me
-                a position with a significant pay increase (over 30%). Transitioning to Raytheon was an easy
-                decision. However, my tenure there began just as the COVID-19 pandemic emerged, leading to a
-                fully remote work arrangement from day one. This flexibility allowed me to relocate back to
-                Rochester, where I was able to purchase a home.<br><br>
+              <div class="block">
+                <div class="block-header"><h4 id="About_Me_Title">Who Am I ?</h4></div>
+                <div><h6 id="About_Me_Subtitle" style="margin-top: 8px; color:#FFFFFF"></h6></div>
+                <div id="About_Me_Content">
+                  <div id="About_Me_Description">
+                      Hey there - I'm Josh Wilkins. Welcome to my personal website! Here you'll find anything and everything
+                      you'd ever want to know about me. Feel free to <a href="contact.html">reach out to me</a> about anything!<br><br>
+                  </div>
+                </div>
 
-                About a year after moving back to Rochester, I was given the ultimatum to either return to MA or
-                to resign. I chose to seek new opportunities, which led me to Orolia Defense (now Safran
-                Federal Systems). At Safran, I gained extensive knowledge about GNSS technology. However,
-                challenges such as frequent managerial changes and the lack of technical leadership prompted me
-                to leave after about a year.<br><br>
-
-                I am deeply passionate about learning and am eager to transition into a data-driven field.
-                Throughout my career, I have focused on projects that harness the power of data in innovative ways.
-                Some highlights include developing training models to calibrate hardware, creating tools to
-                standardize and synchronize disparate databases, and building real-time interfaces to
-                interact with and analyze the frequency data from multiple atomic clocks simultaneously.
-
-                I encourage you to reach out to me <a href="./contact">here</a>. Whether you'd like to introduce
-                yourself, propose project ideas, or discuss job opportunities, I’d love to connect! I’m also
-                excited about the prospect of collaborating on new and innovative projects with people!
-                <button onclick="load_pdf('About_Me', 'storage/About_Me/Resume.pdf')">R&eacutesum&eacute</button>
+                <div id="About_Me_Slider" class="slideshow-container"></div>
+                <script>add_slider("About_Me", "Main")</script>
               </div>
 
-              <div id="About_Me_Slider" class="slideshow-container"></div>
-              <script>add_slider("About_Me", "Main")</script>
+              <div class="block col-lg-12">
+                <div class="block-header"><h4>Proficiencies</h4></div>
+                <div class="row">
+                  <div class="col-lg-6" style="text-align: left">
+                    <div><h6 style="margin-top: 8px; color:#FFFFFF">Electrical</h6></div>
+                    <ul style="padding-left: 30px;">
+                      <li>Altium Designer
+                      <li>Keysight Software
+                        <ul>
+                          <li>ADS<li>Momentum EM<li>SystemVue
+                        </ul>
+                      <li>Mentor Graphics
+                        <ul>
+                          <li>xDX Designer<li>PADS Layout
+                        </ul>
+                      <li>LTspice
+                    </ul>
+                    <div><h6 style="margin-top: 8px; color:#FFFFFF">Software</h6></div>
+                    <ul style="padding-left: 30px;margin:0">
+                      <li>Python<li>Matlab<li>C, C++<li>Julia, R<li>React
+                      <li>Typescript<li>HTML<li>CSS<li>SQL<li>PGAdmin
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-6" style="text-align: left">
+                    <div><h6 style="margin-top: 8px; color:#FFFFFF">Hardware Testing</h6></div>
+                    <ul style="padding-left: 30px;">
+                      <li>Signal Analyzer<li>Network Analyzer<li>Spectrum Analyzer<li>Signal generators
+                      <li>Oscilloscopes<li>Digital Multimeters<li>RF Power Meters<li>Soldering
+                    </ul>
+
+                  <div><h6 style="margin-top: 8px; color:#FFFFFF">Other</h6></div>
+                  <ul style="padding-left: 30px;margin:0">
+                    <li>Microsoft Visio<li>CA Agile Central<li>Jira<li>Confluence<li>Solidworks<li>Silicon Expert
+                  </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div id="Second_Col" class="col-lg-6">
+
+              <div class="block" style="text-align: left">
+                <div class="block-header"><h4 id="Summary_Title">Quick Summary</h4></div>
+                <div><h6 id="Summary_Subtitle" style="margin-top: 8px; color:#FFFFFF"></h6></div>
+                <div id="Summary_Content">
+                  <div id="Summary_Description">
+                    <ul style="padding-left: 30px;margin:0">
+                      <li>Born and raised in Avon, NY
+                      <li>Bachelor's Degree in Electrical Engineering from RIT
+                      <li>Sr. Hardware Automation Test Engineer
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block col-lg-12">
+                <div class="block-header"><h4>Hobbies</h4></div>
+                <div class="row">
+                  <div class="col-lg-6" style="text-align: left">
+                    <div><h6 style="margin-top: 8px; color:#FFFFFF">Sports</h6></div>
+                    <ul style="padding-left: 30px;">
+                      <li>Soccer<li>Pickleball<li>Biking<li>Racquetball<li>Skiing<li>Ping Pong
+                    </ul>
+                    <div><h6 style="margin-top: 8px; color:#FFFFFF">Building</h6></div>
+                    <ul style="padding-left: 30px;margin:0">
+                      <li>Woodworking<li>Solid Modeling<li>Home Improvement<li>3D Printing
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-6" style="text-align: left">
+                    <div><h6 style="margin-top: 8px; color:#FFFFFF">Traveling</h6></div>
+                    <ul style="padding-left: 30px;">
+                      <li>Hiking<li>Sightseeing<li>Exploring<li>Kayaking
+                    </ul>
+
+                  <div><h6 style="margin-top: 8px; color:#FFFFFF">Electronics</h6></div>
+                  <ul style="padding-left: 30px;">
+                    <li>Arduino<li>Raspberry Pi
+                  </ul>
+                  <div><h6 style="margin-top: 8px; color:#FFFFFF">Gaming</h6></div>
+                  <ul style="padding-left: 30px;margin:0">
+                    <li>Video Games<li>Card Games<li>Board Games
+                  </ul>
+
+                  </div>
+                </div>
+
+              </div>
+            
+              <div class="block">
+                <div class="block-header"><h4 id="Resume_Title">R&eacutesum&eacute</h4></div>
+                <div><h6 id="Resume_Subtitle" style="margin-top: 8px; color:#FFFFFF"></h6></div>
+                <div id="Resume_Content">
+                  <iframe src="https://joshwilkins2013.s3.us-east-2.amazonaws.com/storage/About_Me/Resume.pdf#toolbar=0&view=FitV&#zoom=FitH" style="width:100%;height:auto;border: none;aspect-ratio:8.5/11;"></iframe>
+                </div>
+              </div>
 
             </div>
           </div>
+
         </div>
 		{% include footer.html %}
       </div>

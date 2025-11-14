@@ -121,9 +121,6 @@ nav#sidebar p{
     display: none;
     color: var(--text-color) !important;
   }
-  .sidebar-toggle {
-    display: none;
-  }
   .header-title-text {
     left: 0px !important;
   }

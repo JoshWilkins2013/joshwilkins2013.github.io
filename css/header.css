@@ -66,15 +66,6 @@ nav.navbar a.nav-link {
   color: var(--link-color);
 }
 
-.navbar-navigation {
-  position: absolute;
-  right: 20px;
-}
-
-.navbar-navigation span {
-  margin: 5px;
-}
-
 .avatar {
   display: inline-block;
   width: 60px;
@@ -113,72 +104,4 @@ nav.navbar a.nav-link {
 
 .header-title img{
   height: 75%;
-}
-
-/* ========================================================== */
-/*     NavBar Drop-Down Menu (Navigation Menu)
-/* ========================================================== */
-.dropdown-menu {
-  color: var(--link-color);
-  background: #2d3035;
-  left: auto;
-  border: 2px solid #393c43;
-  -webkit-box-shadow: 0 0 15px rgba(34, 37, 42, 0.95);
-  box-shadow: 0 0 15px rgba(34, 37, 42, 0.95);
-  padding: 0px 20px 10px 20px;
-  z-index: 9999 !important;
-  right: 0 !important;
-  min-width: 200px;
-}
-
-.dropdown-menu a {
-  padding: 5px 15px !important;
-}
-
-.dropdown-menu strong {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  display: block;
-  text-decoration: underline;
-}
-
-.dropdown-menu ul a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9em !important;
-}
-
-.dropdown-menu ul a:hover {
-  color: var(--link-color); !important;
-}
-
-nav.navbar .dropdown .dropdown-menu.active {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-
-.single h6{
-  margin: 10px -10px -10px -15px;
-  display: block;
-  text-decoration: underline;
-}
-
-.single a:hover {
-  background: none;
-  color: white !important;
-}
-
-/* ========================================================== */
-/*     NavBar Drop-down Effect
-/* ========================================================== */
-nav.navbar .dropdown .dropdown-menu {
-  -webkit-transform: translateY(50px);
-  transform: translateY(50px);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-nav.navbar .dropdown .dropdown-menu.active {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
 }

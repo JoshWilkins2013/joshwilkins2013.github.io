@@ -19,26 +19,5 @@
       <h4 class="header-title-text" id="header-text"><a style='text-decoration: none' href={{page.title | downcase}}>{{page.header}}</a></h4>
     </div>
 
-    <div class="navbar-navigation">
-      <span class="dropdown"><a href="javascript:;" data-toggle="dropdown" class="nav-link"><p id="nav-link-text">Navigate </p><i style="margin-left: 5;" class="fa fa-bars"></i></a>
-        <ul class="dropdown-menu">
-          <li class="single"><a href="index"><h6>HOME</h6></a></li>
-          {% assign categories = site.pages | group_by: 'category' | sort: 'name' | reverse %}
-          {% for cat in categories %}
-            <li><strong class="text-uppercase">{{ cat.name }}</strong>
-              <ul class="list-unstyled">
-                {% assign items = cat.items | sort: 'order' %}
-                {% for item in items %}
-                  <li><a href="{{item.title | slugify}}">{{item.title }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-          <li class="single"><a href="travel"><h6>TRAVEL</h6></a></li>
-          <li class="single"><a href="contact"><h6>CONTACT</h6></a></li>
-        </ul>
-      </span>
-    </div>
-
   </nav>
 </header>

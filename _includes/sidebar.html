@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/sidebar.css" id="theme-stylesheet">
 <nav id="sidebar">
   <ul class="list-unstyled">
-    <li class="{% if page.url == '/' %} highlight {% endif %}"><a href="index"><i class="icon-home"></i><p class="highlight">Home</p></a>
+    <li class="{% if page.url == '/' %} highlight {% endif %}"><a href="index"><i class="icon-user"></i><p class="highlight">About Me</p></a>
 
     <!-- Figuring out which category is active -->
     {% assign categories = site.pages | group_by: 'category' | sort: 'name' | reverse %}

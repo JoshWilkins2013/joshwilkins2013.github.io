@@ -236,7 +236,6 @@ function add_slider(folder_name, place_name) {
 function toggle_lightbox(element) {
     $(element).parent().toggleClass('lightbox');
     $('.navbar-brand').toggle(); // Hide header elements so that lightbox appears to cover entire window
-    $('.navbar-navigation').toggle();
     $('.header-title-text').toggle();
 }
 
