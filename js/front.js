@@ -12,17 +12,27 @@ var s3 = new AWS.S3({
 
 let previous_screen_width = $(window).width();
 
+function hideSidebar() {
+    // Hide the sidebar, avatar, etc.
+    $('.brand-text').hide();
+    $('.avatar-link').hide();
+    $('#sidebar').hide();
+    $(".page-content").width("100%")
+    $(".header-title-text").css("left", "0");
+    $(".sidebar-toggle").find('i').attr('class', 'fa fa-long-arrow-right arrow');
+}
+
 function handleScreenResize() {
-    // Hide sidebar on smaller screens by default.
-    // Also hide if resizing to smaller window size
+    // Hide sidebar stuff if shrinking screen past 1199 px wide
     const current_width = $(window).width();
     if (current_width < previous_screen_width && current_width <= 1199) {
-        $('.brand-text').hide();
-        $('.avatar-link').hide();
-        $('#sidebar').hide();
-        $(".page-content").width("100%")
-        $(".header-title-text").css("left", "0");
-        $(".sidebar-toggle").find('i').attr('class', 'fa fa-long-arrow-right arrow');
+        hideSidebar();
+    }
+    // Show avatar if screen growing and sidebar is open
+    var arrow_dir = $(".sidebar-toggle").find('i').attr('class')
+    if (current_width > previous_screen_width && current_width >= 1199 && arrow_dir === 'fa fa-long-arrow-left arrow') {
+        $('.brand-text').show();
+        $('.avatar-link').show();
     }
     previous_screen_width = current_width
 }
@@ -31,7 +41,11 @@ $(function () {
     // ------------------------------------------------------- //
     // Handling resizing events
     // ------------------------------------------------------ //
-    handleScreenResize()  // Run once in beginning to handle small screen sizes
+
+    // Hide sidebar if page load starts with small screen size
+    if($(window).width() <= 1199) {
+        hideSidebar();
+    }
 
     $(window).on('resize', function(){
         handleScreenResize()
@@ -56,17 +70,19 @@ $(function () {
             $('.brand-text').hide();
             $('.avatar-link').hide();
             $(this).find('i').attr('class', 'fa fa-long-arrow-right arrow');
-            $('.header-title-text').css('left', '0px');
 
-            $("#sidebar").animate({width: '0'}, { duration: 500, queue: false });
+//            $('.header-title-text').css('left', '0px');
+
+            $("#sidebar").animate({width: '0px'}, { duration: 500, queue: false });
             $(".page-content").animate({width: '100%'}, { duration: 500, queue: false });
+            $('.header-title-text').animate({left: '0px'}, { duration: 500, queue: false });
         } else {
             // Show sidebar, shrink page content and footer
             $('.brand-text').show();
             $('.avatar-link').show();
             $('#sidebar').show();
             $(this).find('i').attr('class', 'fa fa-long-arrow-left arrow');
-            $('.header-title-text').css('left', '140px');
+            $('.header-title-text').animate({left: '140px'}, { duration: 500, queue: false });
 
             $("#sidebar").animate({width: '280px'}, { duration: 500, queue: false });
             var newWidth = ($(".page-content").width() - 280);

@@ -11,7 +11,7 @@ from PIL import Image, ImageOps
 image_extensions = ['.jpg', '.png']
 
 current_dir =  Path.cwd()
-aws_dir = Path(r"C:\Users\Terminator\Downloads\New folder\img\Travel\Wyoming_2007")
+aws_dir = Path(r"C:\Users\Terminator\Downloads\New folder\img\About_Me")
 all_items = list(aws_dir.rglob("*"))
 
 for item in all_items:
@@ -31,9 +31,13 @@ for item in all_items:
         if not small_folder.exists():
             os.makedirs(small_folder)
 
-        item_fixed_extension = item.with_suffix(item.suffix.lower())
-        new_img.save(small_folder / item_fixed_extension.name)
+        # RGBA (images with transparency) must be saved as png
+        if img.mode in ('RGBA', 'P'):
+            item_fixed_extension = item.with_suffix('.png')
+        else:
+            item_fixed_extension = item.with_suffix(item.suffix.lower())
 
+        new_img.save(small_folder / item_fixed_extension.name)
 
         medium_width = 800
         medium_height = int(round(medium_width / new_aspect_ratio, 0))
@@ -44,9 +48,7 @@ for item in all_items:
         if not medium_folder.exists():
             os.makedirs(medium_folder)
 
-        item_fixed_extension = item.with_suffix(item.suffix.lower())
         new_img.save(medium_folder / item_fixed_extension.name)
-
 
         full_folder = item.parent / "original"
         if not full_folder.exists():
