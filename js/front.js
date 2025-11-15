@@ -10,7 +10,33 @@ var s3 = new AWS.S3({
   params: { Bucket: "joshwilkins2013" }
 });
 
+let previous_screen_width = $(window).width();
+
+function handleScreenResize() {
+    // Hide sidebar on smaller screens by default.
+    // Also hide if resizing to smaller window size
+    const current_width = $(window).width();
+    if (current_width < previous_screen_width && current_width <= 1199) {
+        $('.brand-text').hide();
+        $('.avatar-link').hide();
+        $('#sidebar').hide();
+        $(".page-content").width("100%")
+        $(".header-title-text").css("left", "0");
+        $(".sidebar-toggle").find('i').attr('class', 'fa fa-long-arrow-right arrow');
+    }
+    previous_screen_width = current_width
+}
+
 $(function () {
+    // ------------------------------------------------------- //
+    // Handling resizing events
+    // ------------------------------------------------------ //
+    handleScreenResize()  // Run once in beginning to handle small screen sizes
+
+    $(window).on('resize', function(){
+        handleScreenResize()
+    });
+
     // ------------------------------------------------------- //
     // Adding fade effect to dropdowns
     // ------------------------------------------------------ //
@@ -25,36 +51,54 @@ $(function () {
     // Sidebar Toggle Display
     // ------------------------------------------------------ //
     $('.sidebar-toggle').on('click', function () {
-        $('.brand-text').toggle();
-        $('.avatar-link').toggle();
-
         if($(this).find('i').attr('class') == 'fa fa-long-arrow-left arrow') {
+            // Hide sidebar, expand page content and footer
+            $('.brand-text').hide();
+            $('.avatar-link').hide();
             $(this).find('i').attr('class', 'fa fa-long-arrow-right arrow');
             $('.header-title-text').css('left', '0px');
-            $(".page-content").animate({"width": '100%'});
+
+            $("#sidebar").animate({width: '0'}, { duration: 500, queue: false });
+            $(".page-content").animate({width: '100%'}, { duration: 500, queue: false });
         } else {
+            // Show sidebar, shrink page content and footer
+            $('.brand-text').show();
+            $('.avatar-link').show();
+            $('#sidebar').show();
             $(this).find('i').attr('class', 'fa fa-long-arrow-left arrow');
             $('.header-title-text').css('left', '140px');
 
+            $("#sidebar").animate({width: '280px'}, { duration: 500, queue: false });
             var newWidth = ($(".page-content").width() - 280);
-            $(".page-content").animate({width:newWidth}, {duration:500, complete:function(){
+            $(".page-content").animate({width:newWidth}, {duration:500, queue: false, complete:function(){
                 $(".page-content").width("calc(100% - 280px)"); }
             });
+
+        // Check media type / screen size
+        if ($(window).width() <= 1199) {
+            $('.brand-text').hide();
+            $('.avatar-link').hide();
+        }
+
         }
     });
 
     // ------------------------------------------------------- //
     // Sidebar Collapsing Non-Active Items
     // ------------------------------------------------------ //
-    $('.sidebar-category').on('click', function () {
-        var current_state = $(this).find('ul').css('display');
-        $(this).find('ul').animate({height: 'toggle'});  // Animate opening/closing of selected sidebar category
-        $(this).find('i').next().next().toggleClass('fa-angle-down fa-angle-left')
+    $('.sidebar-category').on('click', function (event) {
+        if (event.target.className !== 'sidebar_link') { // Check if the clicked element is a span
 
-        $('.sidebar-category').not(this).each(function() {
-          $(this).find('ul').hide();  // Hide all other sidebar categories
-          $(this).find('i').next().next().attr('class', 'fas fa-angle-left')
-        });
+            var current_state = $(this).find('ul').css('display');
+            $(this).find('ul').animate({height: 'toggle'});  // Animate opening/closing of selected sidebar category
+            $(this).find('i').next().next().toggleClass('fa-angle-down fa-angle-left')
+
+
+            $('.sidebar-category').not(this).each(function() {
+              $(this).find('ul').hide();  // Hide all other sidebar categories
+              $(this).find('i').next().next().attr('class', 'fas fa-angle-left')
+            });
+        }
     });
 
     // ------------------------------------------------------- //

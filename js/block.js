@@ -72,7 +72,8 @@ function place_blocks(items, col_name) {
     var images = [];
     var place_path = place_item.Prefix
     var description_file = "";
-    s3.listObjects({ Prefix: place_path }, function (err, data) {
+    small_place_path = place_path + "small"
+    s3.listObjects({ Prefix: small_place_path }, function (err, data) {
       description_file = "";
       for (const row of data.Contents) {
 
@@ -127,9 +128,9 @@ function finish_block_content(block_content, images, place_name) {
 }
 
 function fill_page(prefix_path) {
+  // Get all folder names in img/travel folder
   prefix_path = prefix_path.replaceAll("-", "_");
   s3.listObjects({ Prefix: prefix_path, Delimiter: "/" }, function (err, data) {
-    // Get all folder names in img/travel folder
     const { first_col_items, second_col_items, third_col_items } = convert_to_gallery(data.CommonPrefixes);
     place_blocks(first_col_items, "First_Col");
     place_blocks(second_col_items, "Second_Col");
@@ -144,7 +145,6 @@ function viewAlbum(element, albumName) {
   var current_col = element.closest(".col-lg-4");  // Find block associated with clicked +
   var place_name = albumName.slice(0, -1).split('/').pop();
   var block_content = document.getElementById(place_name + "_Content");
-  console.log(place_name + "_Content")
   var current_block = $(element.closest(".block"));  // Find block associated with clicked +
   $(".block").not(current_block).toggle().promise().then(function() {
     current_block.parent().toggleClass('col-lg-12');  // Then enlarge it
@@ -162,7 +162,8 @@ function viewAlbum(element, albumName) {
     var any_images = $('#' + place_name + "_Slider").find('img').length;
     var any_videos = $('#' + place_name + "_Slider").find('video').length;
     if (any_images >= 1 || any_videos >= 1) {  // Don't replace pdf or html if loaded after block expansion
-      s3.listObjects({ Prefix: albumName }, function (err, data) {
+      var small_album = albumName + "small"
+      s3.listObjects({ Prefix: small_album }, function (err, data) {
         var images = [];
         for (const row of data.Contents) {
           images.push(row.Key)
@@ -222,7 +223,8 @@ function add_slider(folder_name, place_name) {
 
   var images = [];
   // Get all folder names in img/travel folder
-  s3.listObjects({ Prefix: prefix_path }, function (err, data) {
+  small_prefix_path = prefix_path + "small"
+  s3.listObjects({ Prefix: small_prefix_path }, function (err, data) {
     for (const row of data.Contents) {
       images.push(row.Key)
     }
@@ -249,7 +251,7 @@ function UpdateBlock(place_name, block_key) {
     if (slider_name === "") {
         document.getElementById(place_name + "_Slider").innerHTML = "";  // No image or slider
     } else if (slider_name.includes("png")) {  // Just a single image
-        image = "<div class=\"mySlides\"><span onclick=\'toggle_lightbox(this)\'><img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/" + place_name + "/" + slider_name + "\"></span></div>";
+        image = "<div class=\"mySlides\"><span onclick=\'toggle_lightbox(this)\'><img src=\"https://joshwilkins2013.s3.us-east-2.amazonaws.com/img/" + place_name + "/small/" + slider_name + "\"></span></div>";
         document.getElementById(place_name + "_Slider").innerHTML = image;  // No image or slider
     } else if (slider_name.includes(".html")) {  // html file in place of images
         load_html(place_name, "storage/" + place_name + "/" + slider_name);

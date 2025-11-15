@@ -12,14 +12,9 @@
 /* ========================================================== */
 
 body {
-  position: relative;
   font-family: "Muli", sans-serif;
   font-size: 1rem;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #212529;
-  background-color: #001321;
-  caret-color: red;
+  background-color: #2d3035;
 }
 
 a {
@@ -124,6 +119,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 /* ========================================================== */
 .footer {
   position: absolute;
+  height: 67px;
   bottom: -67px;
   width: 100%;
 
